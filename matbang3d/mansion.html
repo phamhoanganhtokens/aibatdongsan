@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bất Động Sản - Dự Án Biệt Thự Nghỉ Dưỡng Ven Biển</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premium: {
+                            gold: '#C5A059',
+                            dark: '#1A1A1A',
+                            charcoal: '#2D2D2D',
+                            slate: '#F8F9FA',
+                            teal: '#2A5D67'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                        serif: ['"Times New Roman"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFDFD;
+            color: #2D2D2D;
+            overflow-x: hidden;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+        }
+        .report-content {
+            font-family: "Times New Roman", Times, serif;
+            text-align: justify;
+            line-height: 1.8;
+            color: #1A1A1A;
+            font-size: 1.15rem;
+        }
+        .premium-card {
+            background: white;
+            border: 1px solid #E5E7EB;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .premium-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: #C5A059;
+        }
+        .section-divider {
+            height: 2px;
+            width: 80px;
+            background: #C5A059;
+            margin: 1.5rem 0;
+        }
+        .img-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        .img-container img {
+            transition: transform 0.6s ease;
+        }
+        .img-container:hover img {
+            transform: scale(1.05);
+        }
+        .badge {
+            background: #C5A059;
+            color: white;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .report-content {
+                text-align: left; /* Better for very narrow screens */
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="glass-header sticky top-0 z-50 py-4 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center transition-all duration-300">
+        <div class="flex flex-col items-center md:items-start">
+            <h1 class="font-display font-bold text-2xl tracking-tighter text-premium-dark">
+                AI BẤT ĐỘNG SẢN
+            </h1>
+            <div class="h-0.5 w-12 bg-premium-gold mt-1"></div>
+        </div>
+        <nav class="mt-4 md:mt-0">
+            <a href="www.phamhoanganhtokens.com" target="_blank" class="font-display font-medium text-premium-gold hover:text-premium-teal transition-colors text-sm tracking-widest uppercase border-b border-transparent hover:border-premium-gold">
+                www.phamhoanganhtokens.com
+            </a>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        
+        <!-- Project Overview Section -->
+        <section class="mb-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <span class="text-premium-gold font-semibold tracking-widest uppercase text-sm">Giới Thiệu</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-premium-dark mt-2 mb-6">Thông tin dự án</h2>
+                    <div class="section-divider"></div>
+                    
+                    <div class="bg-premium-slate p-8 rounded-lg border-l-4 border-premium-gold shadow-sm">
+                        <h3 class="font-display font-bold text-lg mb-4 text-premium-charcoal">Yêu Cầu & Thông Số</h3>
+                        <p class="text-gray-700 leading-relaxed italic mb-4">
+                            "Thiết kế mặt bằng 3D Biệt thự Nghỉ dưỡng Ven biển Sang trọng theo phong cách Tân cổ điển (Neoclassical)."
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-premium-gold mr-2">✦</span>
+                                <span class="text-sm">Quy mô: 1 trệt, 2 lầu và 1 tầng hầm/bán hầm</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-premium-gold mr-2">✦</span>
+                                <span class="text-sm">Tiện ích: Hồ bơi vô cực, hầm rượu, khu giải trí cao cấp</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-premium-gold mr-2">✦</span>
+                                <span class="text-sm">Vật liệu: Đá cẩm thạch, gỗ tự nhiên, Smart Home</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="premium-card p-2 rounded shadow-2xl">
+                        <div class="img-container">
+                            <img src='https://opal.google/board/blobs/0964fb5d-4855-4b8c-8e77-4471b55a1508' alt='Phối cảnh biệt thự' class="w-full h-auto object-cover rounded shadow-inner">
+                        </div>
+                        <div class="p-3 text-center">
+                            <p class="text-xs font-medium uppercase tracking-widest text-gray-500">Hình ảnh tham khảo mặt dựng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Floor Plans Section -->
+        <section class="mb-24">
+            <div class="text-center mb-16">
+                <span class="text-premium-gold font-semibold tracking-widest uppercase text-sm">Kiến Trúc Không Gian</span>
+                <h2 class="font-display text-4xl font-bold text-premium-dark mt-2">Mặt Bằng 3D Các Tầng</h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Floor 1 -->
+                <div class="premium-card rounded-lg overflow-hidden flex flex-col">
+                    <div class="img-container bg-gray-100 aspect-video">
+                        <img src='https://opal.google/board/blobs/03ca8a2b-1ff6-4dde-aff8-99c555d12ecf' alt='Mặt bằng Tầng hầm' class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 badge">Level 0</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-display font-bold text-xl mb-2">Mặt bằng Tầng hầm & Bán hầm</h4>
+                        <p class="text-gray-600 text-sm">Khu vực gara, hầm rượu và không gian giải trí riêng tư.</p>
+                    </div>
+                </div>
+
+                <!-- Floor 2 -->
+                <div class="premium-card rounded-lg overflow-hidden flex flex-col">
+                    <div class="img-container bg-gray-100 aspect-video">
+                        <img src='https://opal.google/board/blobs/20a4b53a-4b7b-432e-8103-0436d1a703aa' alt='Mặt bằng Tầng trệt' class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 badge">Level 1</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-display font-bold text-xl mb-2">Mặt bằng Tầng trệt</h4>
+                        <p class="text-gray-600 text-sm">Không gian sinh hoạt chung, sảnh đón và hồ bơi vô cực hướng biển.</p>
+                    </div>
+                </div>
+
+                <!-- Floor 3 -->
+                <div class="premium-card rounded-lg overflow-hidden flex flex-col">
+                    <div class="img-container bg-gray-100 aspect-video">
+                        <img src='https://opal.google/board/blobs/29bd8719-280f-465e-b533-255301079305' alt='Mặt bằng Lầu 1' class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 badge">Level 2</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-display font-bold text-xl mb-2">Mặt bằng Lầu 1</h4>
+                        <p class="text-gray-600 text-sm">Các phòng Master Suite sang trọng với ban công view đại dương.</p>
+                    </div>
+                </div>
+
+                <!-- Floor 4 -->
+                <div class="premium-card rounded-lg overflow-hidden flex flex-col">
+                    <div class="img-container bg-gray-100 aspect-video">
+                        <img src='https://opal.google/board/blobs/24a9d36d-be94-4433-a567-16f49bc9e8ed' alt='Mặt bằng Lầu 2' class="w-full h-full object-cover">
+                        <div class="absolute top-4 left-4 badge">Level 3</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-display font-bold text-xl mb-2">Mặt bằng Lầu 2</h4>
+                        <p class="text-gray-600 text-sm">Không gian Executive, phòng Grand Master và sân thượng lounge.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Report Section -->
+        <section class="max-w-4xl mx-auto bg-white shadow-2xl p-8 md:p-16 border-t-8 border-premium-gold mb-20">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-3xl font-bold text-premium-dark uppercase tracking-tight mb-4">Báo Cáo Chi Tiết Thiết Kế</h2>
+                <div class="w-24 h-1 bg-premium-gold mx-auto"></div>
+            </div>
+
+            <div class="report-content">
+                <p class="font-bold text-center text-lg mb-2">BÁO CÁO THIẾT KẾ KIẾN TRÚC CHÍNH THỨC</p>
+                <p class="font-bold text-center text-md mb-6 uppercase">DỰ ÁN: BIỆT THỰ NGHỈ DƯỠNG VEN BIỂN SANG TRỌNG</p>
+                
+                <p class="text-sm italic text-gray-600 mb-8">
+                    Ngày xuất báo cáo: 19:09, ngày 14 tháng 04 năm 2026<br>
+                    Chịu trách nhiệm lập: Ban Giám đốc Điều hành AI (CEO AI Agent)
+                </p>
+
+                <hr class="border-gray-200 my-8">
+
+                <h5 class="font-bold mb-4 uppercase">1. THÔNG TIN TỔNG QUAN DỰ ÁN</h5>
+                <ul class="list-none space-y-1 mb-6 pl-4">
+                    <li>• Tên dự án: Biệt thự Nghỉ dưỡng Ven biển Sang trọng</li>
+                    <li>• Ngôn ngữ kiến trúc: Tân cổ điển (Neoclassical) kết hợp hài hòa với âm hưởng sinh thái ven biển.</li>
+                    <li>• Quy mô cấu trúc: 04 tầng chức năng bao gồm: 01 Tầng hầm/Bán hầm, 01 Tầng trệt, Lầu 1 và Lầu 2.</li>
+                    <li>• Tiện ích định danh: Hồ bơi vô cực vươn mình ra đại dương, hầm rượu vang lưu trữ chuyên nghiệp, tổ hợp giải trí cá nhân cao cấp.</li>
+                    <li>• Hệ vật liệu chủ đạo: Đá cẩm thạch (Marble) nguyên khối, gỗ tự nhiên cao cấp, phào chỉ thạch cao/PU tinh xảo và hệ thống nhà thông minh (Smart Home) tích hợp chiếu sáng sinh học.</li>
+                </ul>
+
+                <h5 class="font-bold mb-4 uppercase">2. TRIẾT LÝ THIẾT KẾ: SỰ GIAO THOA GIỮA DI SẢN CỔ ĐIỂN VÀ THIÊN NHIÊN BẢN ĐỊA</h5>
+                <p class="mb-6">
+                    Dự án được kiến tạo dựa trên triết lý "Tôn bản ngã – Cảm thiên nhiên". Kiến trúc Tân cổ điển với tính đối xứng chuẩn mực, phào chỉ tinh tế và những vòm cửa vươn cao được sử dụng để khẳng định vị thế và sự trường tồn. Tuy nhiên, sự nặng nề của cổ điển truyền thống được rũ bỏ hoàn toàn nhờ cách bố trí không gian mở, tận dụng tối đa vách kính khổ lớn để thu trọn cảnh quan đại dương vào từng góc nhìn. Đây là sự giao thoa hoàn mỹ giữa nét quyền quý của giới thượng lưu và sự tự do, khoáng đạt của biển cả.
+                </p>
+
+                <h5 class="font-bold mb-4 uppercase">3. CHI TIẾT QUY HOẠCH KHÔNG GIAN KIẾN TRÚC</h5>
+
+                <h6 class="font-bold mb-2">3.1. Tầng hầm/Bán hầm: Nền tảng của sự xa xỉ thầm lặng</h6>
+                <p class="mb-4">
+                    Không gian được thiết kế dựa trên nguyên tắc tối ưu hóa địa hình dốc ven vách đá, tạo ra một tầng bán hầm vừa riêng tư vừa thoáng đãng. Khu vực này bao gồm gara ô tô rộng rãi, hầm rượu cổ điển với hệ thống kệ gỗ đen tuyền cao cấp, và tổ hợp giải trí với phòng chiếu phim tại gia.
+                </p>
+                <div class="my-8">
+                    <img src='https://opal.google/board/blobs/03ca8a2b-1ff6-4dde-aff8-99c555d12ecf' alt='Chi tiết hầm' class="w-full rounded-md shadow-md border border-gray-100">
+                </div>
+
+                <h6 class="font-bold mb-2">3.2. Tầng trệt: Khúc tráng ca của không gian mở</h6>
+                <p class="mb-4">
+                    Là trái tim của căn biệt thự, nơi ranh giới giữa nội thất và ngoại thất bị xóa nhòa hoàn toàn. Không gian sảnh đón thông tầng lộng lẫy kết nối trực tiếp với khu vực bàn ăn và bếp mở hướng biển. Toàn diện tích này mở rộng ra hồ bơi vô cực vươn mình ra đại dương.
+                </p>
+                <div class="my-8">
+                    <img src='https://opal.google/board/blobs/20a4b53a-4b7b-432e-8103-0436d1a703aa' alt='Chi tiết tầng trệt' class="w-full rounded-md shadow-md border border-gray-100">
+                </div>
+
+                <h6 class="font-bold mb-2">3.3. Lầu 1: Không gian nghỉ dưỡng cá nhân hóa</h6>
+                <p class="mb-4">
+                    Được thiết kế để mang lại sự tĩnh tại và đề cao tính riêng tư. Bao gồm 02 phòng ngủ Master sang trọng với ban công riêng biệt hướng biển. Vùng đệm là thư viện và phòng sinh hoạt chung tinh tế, sử dụng tone màu trung tính và vật liệu cao cấp.
+                </p>
+                <div class="my-8">
+                    <img src='https://opal.google/board/blobs/29bd8719-280f-465e-b533-255301079305' alt='Chi tiết lầu 1' class="w-full rounded-md shadow-md border border-gray-100">
+                </div>
+
+                <h6 class="font-bold mb-2">3.4. Lầu 2: Tầm nhìn độc bản của chủ nhân</h6>
+                <p class="mb-4">
+                    Tầng cao nhất biểu trưng cho quyền lực và sự tận hưởng tuyệt đối. Sở hữu phòng Grand Master Suite với khu vực tắm vòm nhìn toàn cảnh biển, phòng làm việc Executive uy nghiêm và sân thượng lounge ngoài trời đẳng cấp.
+                </p>
+                <div class="my-8">
+                    <img src='https://opal.google/board/blobs/24a9d36d-be94-4433-a567-16f49bc9e8ed' alt='Chi tiết lầu 2' class="w-full rounded-md shadow-md border border-gray-100">
+                </div>
+
+                <h5 class="font-bold mb-4 uppercase">4. GIẢI PHÁP KỸ THUẬT VÀ VẬT LIỆU CHUYÊN SÂU</h5>
+                <ul class="list-none space-y-2 mb-6 pl-4">
+                    <li>• <strong>Giải pháp Ánh sáng:</strong> Ứng dụng hệ thống Smart Lighting tự động điều chỉnh theo nhịp sinh học, tôn vinh các chi tiết kiến trúc vào ban đêm.</li>
+                    <li>• <strong>Vật liệu:</strong> Sử dụng đá Marble Calacatta, gỗ Óc chó (Walnut) và hệ kính Low-E đa tầng chống tia UV, đảm bảo tính thẩm mỹ đi cùng độ bền vĩnh cửu trong môi trường biển.</li>
+                </ul>
+
+                <h5 class="font-bold mb-4 uppercase">5. TỔNG KẾT</h5>
+                <p class="mb-10">
+                    Dự án "Biệt thự Nghỉ dưỡng Ven biển Sang trọng" thiết lập một chuẩn mực mới cho bất động sản hàng hiệu: Nơi sự xa xỉ đồng hành cùng thiên nhiên nguyên bản.
+                </p>
+
+                <hr class="border-gray-200 my-8">
+                <p class="text-center text-sm font-sans tracking-widest text-premium-gold">
+                    Thông tin chi tiết tại: <a href="www.phamhoanganhtokens.com" target="_blank" class="hover:underline">www.phamhoanganhtokens.com</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Simple Custom Cursor/Interaction Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Subtle header change on scroll
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 50) {
+                    header.classList.add('py-2', 'shadow-lg');
+                    header.classList.remove('py-4');
+                } else {
+                    header.classList.add('py-4');
+                    header.classList.remove('py-2', 'shadow-lg');
+                }
+            });
+
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.premium-card, section').forEach(el => {
+                el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
