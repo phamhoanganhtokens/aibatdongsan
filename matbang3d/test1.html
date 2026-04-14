@@ -1,1 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bất Động Sản | Báo Cáo Thiết Kế Căn Hộ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Outfit:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            charcoal: '#1A1A1A',
+                            slate: '#2D3436',
+                            gold: '#C5A059',
+                            teal: '#4A7C7A',
+                            accent: '#F4F7F6',
+                        },
+                    },
+                    fontFamily: {
+                        display: ['Montserrat', 'sans-serif'],
+                        body: ['Outfit', 'sans-serif'],
+                        serif: ['Times New Roman', 'Times', 'serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F8FAFB;
+            color: #1A1A1A;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        .justified-report {
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .premium-gradient {
+            background: linear-gradient(135deg, #1A1A1A 0%, #2D3436 100%);
+        }
+        .accent-border {
+            border-left: 4px solid #C5A059;
+        }
+        .image-hover {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .image-hover:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="font-body">
 
+    <!-- Header Section -->
+    <header class="premium-gradient text-white py-12 px-6 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-gold opacity-10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+        <div class="max-w-6xl mx-auto flex flex-col items-center text-center space-y-4">
+            <h1 class="font-display text-4xl md:text-6xl font-bold tracking-tight">
+                AI <span class="text-brand-gold">Bất Động Sản</span>
+            </h1>
+            <a href="www.phamhoanganhtokens.com" target="_blank" class="text-brand-gold hover:text-white transition-colors duration-300 font-medium text-lg tracking-widest border-b border-brand-gold/30 pb-1">
+                www.phamhoanganhtokens.com
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-16 space-y-24">
+
+        <!-- Project Overview Section -->
+        <section class="space-y-10">
+            <div class="flex items-center space-x-4">
+                <div class="h-px bg-brand-gold flex-grow"></div>
+                <h2 class="font-display text-3xl font-bold uppercase tracking-widest text-brand-slate px-4 text-center">Thông tin dự án</h2>
+                <div class="h-px bg-brand-gold flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div class="glass-card p-8 rounded-3xl accent-border space-y-6 order-2 lg:order-1">
+                    <h3 class="text-xl font-bold text-brand-slate mb-4">Thông số bất động sản</h3>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between border-b border-gray-100 pb-2">
+                            <span class="text-gray-500">Loại hình</span>
+                            <span class="font-semibold">Căn hộ chung cư</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2">
+                            <span class="text-gray-500">Diện tích</span>
+                            <span class="font-semibold">75 m²</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2">
+                            <span class="text-gray-500">Phòng ngủ</span>
+                            <span class="font-semibold">02</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2">
+                            <span class="text-gray-500">Phòng vệ sinh</span>
+                            <span class="font-semibold">02</span>
+                        </li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2">
+                            <span class="text-gray-500">Phong cách</span>
+                            <span class="font-semibold">Hiện đại (Modern)</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-500">Tông màu</span>
+                            <span class="font-semibold">Trắng sáng chủ đạo</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4 order-1 lg:order-2">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl image-hover">
+                        <img src='https://opal.google/board/blobs/470b1d1c-a81c-4403-a8b0-aca192d28a23' alt='media_4' class="w-full h-auto object-cover" />
+                    </div>
+                    <p class="text-sm text-gray-400 italic text-center">Phối cảnh tham khảo tổng thể dự án</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Floor Plans Section -->
+        <section class="space-y-12">
+            <div class="text-center space-y-2">
+                <h2 class="font-display text-3xl font-bold uppercase tracking-widest text-brand-slate">Mặt Bằng 3D Các Tầng</h2>
+                <p class="text-brand-gold font-medium">Bố trí không gian chi tiết và trực quan</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Floor Plan 1 -->
+                <div class="group">
+                    <div class="glass-card rounded-3xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl">
+                        <div class="p-4 bg-brand-slate text-white text-center font-semibold tracking-wide">
+                            Mặt bằng Tầng 1 / Tổng thể
+                        </div>
+                        <div class="p-2 overflow-hidden">
+                            <img src='https://opal.google/board/blobs/90adf6df-55d5-475f-9334-887ba9dd543a' alt='media_1' class="w-full h-auto image-hover rounded-2xl" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floor Plan 2 -->
+                <div class="group">
+                    <div class="glass-card rounded-3xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl">
+                        <div class="p-4 bg-brand-slate text-white text-center font-semibold tracking-wide">
+                            Phối cảnh Chi tiết 3D
+                        </div>
+                        <div class="p-2 overflow-hidden">
+                            <img src='https://opal.google/board/blobs/90adf6df-55d5-475f-9334-887ba9dd543a' alt='media_2' class="w-full h-auto image-hover rounded-2xl" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Report Section -->
+        <section class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-3xl font-bold uppercase tracking-widest text-brand-slate">Báo Cáo Chi Tiết Thiết Kế</h2>
+            </div>
+
+            <div class="glass-card p-10 md:p-20 rounded-sm shadow-inner relative">
+                <!-- Decorative element for document look -->
+                <div class="absolute top-4 left-4 right-4 h-1 bg-brand-gold/10"></div>
+                
+                <div class="font-serif text-lg text-brand-slate space-y-8 justified-report">
+                    <div class="text-center space-y-2">
+                        <p class="font-bold text-2xl uppercase tracking-tighter">CÔNG TY THIẾT KẾ VÀ XÂY DỰNG KIẾN TRÚC CAO CẤP</p>
+                        <div class="h-0.5 w-32 bg-brand-slate mx-auto my-4"></div>
+                        <p class="font-bold text-xl uppercase">BÁO CÁO THIẾT KẾ CUỐI CÙNG</p>
+                        <p class="font-bold text-lg">DỰ ÁN: CĂN HỘ HIỆN ĐẠI NHIỆT ĐỚI (MODERN TROPICAL APARTMENT)</p>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row justify-between border-b border-gray-200 pb-4 italic">
+                        <p><strong>Ngày báo cáo:</strong> 14 tháng 04 năm 2026</p>
+                        <p><strong>Thời gian:</strong> 16:09</p>
+                        <p><strong>Người phê duyệt:</strong> Giám đốc Điều hành (CEO)</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h3 class="font-bold text-xl border-l-4 border-brand-slate pl-4">I. TỔNG QUAN DỰ ÁN</h3>
+                        <p>Bản báo cáo này tổng kết phương án thiết kế cuối cùng cho dự án căn hộ chung cư với diện tích 75m², được tinh chỉnh để đáp ứng nhu cầu sống tiện nghi, thẩm mỹ và gần gũi với thiên nhiên. Thiết kế là sự giao thoa tinh tế giữa ngôn ngữ hiện đại (Modern) và cảm hứng nhiệt đới (Tropical), tạo nên một không gian sống thanh bình, thoáng đãng ngay giữa lòng đô thị.</p>
+                        <ul class="list-disc list-inside pl-4">
+                            <li><strong>Diện tích:</strong> 75m²</li>
+                            <li><strong>Cơ cấu:</strong> 01 Phòng khách liên thông bếp, 02 Phòng ngủ, 02 Nhà vệ sinh (WC).</li>
+                            <li><strong>Phong cách chủ đạo:</strong> Hiện đại Nhiệt đới (Modern Tropical).</li>
+                            <li><strong>Tông màu chính:</strong> Trắng sáng chủ đạo kết hợp màu gỗ tự nhiên ấm áp.</li>
+                        </ul>
+
+                        <h3 class="font-bold text-xl border-l-4 border-brand-slate pl-4">II. GIẢI PHÁP KIẾN TRÚC VÀ CƠ SỞ THIẾT KẾ</h3>
+                        <p>Dựa trên yêu cầu tối ưu hóa không gian và ánh sáng, đội ngũ kiến trúc sư đã triển khai các giải pháp trọng tâm sau:</p>
+                        <p>1. <strong>Sự kết hợp vật liệu:</strong> Sử dụng sơn trắng cao cấp làm nền tảng để tạo cảm giác mở rộng diện tích. Gỗ tự nhiên được ứng dụng tại sàn, hệ tủ và các chi tiết trang trí nhằm cân bằng lại sắc lạnh của tông trắng, mang đến sự ấm cúng.</p>
+                        <p>2. <strong>Ngôn ngữ Tropical:</strong> Điểm nhấn của dự án là việc đưa gạch thông gió vào không gian nội thất. Đây không chỉ là giải pháp kỹ thuật giúp đối lưu không khí mà còn là chi tiết nghệ thuật tạo ra hiệu ứng đổ bóng độc đáo vào các thời điểm trong ngày.</p>
+                        <p>3. <strong>Tối ưu hóa ánh sáng:</strong> Sử dụng hệ cửa kính lùa cường lực sát trần (floor-to-ceiling) để xóa nhòa ranh giới giữa bên trong và bên ngoài, tận dụng tối đa nguồn sáng tự nhiên và mở rộng tầm nhìn.</p>
+
+                        <h3 class="font-bold text-xl border-l-4 border-brand-slate pl-4">III. CHI TIẾT CÁC KHU VỰC CHỨC NĂNG</h3>
+                        <div class="space-y-4">
+                            <p><strong>1. Khu vực sinh hoạt chung (Phòng khách & Bếp):</strong> Thiết kế theo lối mở (Open Plan) nhằm tạo sự thông suốt cho căn hộ. Bếp được thiết kế chữ L tối giản với thiết bị âm tủ hiện đại. Bàn ăn được bố trí tại vị trí trung tâm, kết nối giữa khu vực nấu nướng và thư giãn.</p>
+                            <p><strong>2. Phòng ngủ Master & Phòng ngủ phụ:</strong> Master sở hữu hệ thống cửa sổ kính lớn, trang bị tủ quần áo âm tường bằng gỗ. Phòng ngủ phụ thiết kế linh hoạt, duy trì phong cách đồng nhất.</p>
+                            <p><strong>3. Hệ thống vệ sinh (WC):</strong> Tối ưu hóa bằng vách kính cường lực, sử dụng gạch ốp lát tông xám nhạt hiện đại.</p>
+                        </div>
+
+                        <h3 class="font-bold text-xl border-l-4 border-brand-slate pl-4">IV. CÁC TÍNH NĂNG KỸ THUẬT NỔI BẬT</h3>
+                        <ul class="list-disc list-inside pl-4">
+                            <li><strong>Thông gió tự nhiên:</strong> Nhờ vào hệ thống gạch thông gió kiến trúc được bố trí tại các vị trí chiến lược.</li>
+                            <li><strong>Hệ thống chiếu sáng:</strong> Kết hợp giữa ánh sáng tự nhiên ban ngày và hệ thống LED vàng (3000K) ban đêm.</li>
+                            <li><strong>Vật liệu bền vững:</strong> Ưu tiên gỗ tự nhiên và vật liệu thân thiện môi trường.</li>
+                        </ul>
+
+                        <h3 class="font-bold text-xl border-l-4 border-brand-slate pl-4">V. PHỤ LỤC HÌNH ẢNH THIẾT KẾ</h3>
+                        <p>Dưới đây là hình ảnh tham khảo phong cách nội thất đã được lựa chọn:</p>
+                        <div class="my-8 rounded-xl overflow-hidden shadow-lg">
+                            <img src='https://opal.google/board/blobs/ab8229d6-fe22-437d-a47a-60378ce91c8f' alt='media_3' class="w-full h-auto" />
+                        </div>
+
+                        <h3 class="font-bold text-xl border-l-4 border-brand-slate pl-4">VI. KẾT LUẬN</h3>
+                        <p>Phương án thiết kế căn hộ 75m² theo phong cách Hiện đại Nhiệt đới đã đạt được sự cân bằng hoàn hảo giữa công năng và thẩm mỹ. Dự án đã sẵn sàng để chuyển sang giai đoạn thi công hoàn thiện.</p>
+
+                        <div class="pt-16 flex flex-col items-end">
+                            <p class="font-bold uppercase">GIÁM ĐỐC ĐIỀU HÀNH</p>
+                            <p class="italic text-gray-500 mt-2">(Đã ký)</p>
+                            <div class="mt-4 w-40 h-20 border border-dashed border-gray-300 flex items-center justify-center text-gray-300 text-xs">
+                                DẤU CÔNG TY
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Page numbers feel for premium look -->
+                <div class="mt-20 text-center text-gray-400 font-serif text-sm">
+                    - Trang 1/1 -
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Simple Custom Footer (No legal text) -->
+    <div class="w-full h-24 flex items-center justify-center border-t border-gray-100 bg-white">
+        <p class="font-display font-bold text-brand-slate opacity-20 tracking-widest text-sm">AI BẤT ĐỘNG SẢN</p>
+    </div>
+
+</body>
+</html>
