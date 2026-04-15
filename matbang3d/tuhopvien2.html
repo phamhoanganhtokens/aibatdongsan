@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bất Động Sản - Tứ Hợp Viện Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1a1a1a',
+                            charcoal: '#2d3436',
+                            gold: '#c5a059',
+                            teal: '#4a7c7a',
+                            light: '#f8f9fa',
+                            accent: '#d4af37'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Montserrat', 'sans-serif'],
+                        body: ['Outfit', 'sans-serif'],
+                        report: ['"Times New Roman"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fcfcfc;
+            color: #1a1a1a;
+            scroll-behavior: smooth;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .report-content {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 1.15rem;
+            color: #2d3436;
+        }
+        .image-card {
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            overflow: hidden;
+        }
+        .image-card:hover {
+            transform: translateY(-8px);
+        }
+        .image-card img {
+            transition: transform 0.6s ease;
+        }
+        .image-card:hover img {
+            transform: scale(1.05);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #c5a059, transparent);
+            margin: 4rem 0;
+        }
+    </style>
+</head>
+<body class="font-body">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass-header">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-brand-dark flex items-center justify-center rounded-lg">
+                    <span class="text-brand-gold font-bold text-xl">AI</span>
+                </div>
+                <h1 class="text-2xl font-bold font-display tracking-tight text-brand-dark">AI Bất Động Sản</h1>
+            </div>
+            <nav class="mt-4 md:mt-0">
+                <a href="www.phamhoanganhtokens.com" target="_blank" class="text-brand-teal font-medium hover:text-brand-gold transition-colors duration-300 border-b border-brand-teal/30">
+                    www.phamhoanganhtokens.com
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20">
+        <!-- Hero / Project Overview -->
+        <section class="max-w-7xl mx-auto px-6 mb-16">
+            <div class="flex flex-col lg:flex-row gap-12 items-center bg-white rounded-3xl p-8 lg:p-12 shadow-sm border border-gray-100">
+                <div class="w-full lg:w-1/2">
+                    <span class="text-brand-gold font-semibold tracking-widest uppercase text-sm mb-4 block">Kiến Trúc Cao Cấp</span>
+                    <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 leading-tight">Thông tin dự án: Tứ Hợp Viện</h2>
+                    <div class="space-y-4 text-gray-600">
+                        <div class="p-4 bg-gray-50 rounded-xl border-l-4 border-brand-gold">
+                            <p class="font-medium text-brand-dark">Mô tả thiết kế:</p>
+                            <p class="text-sm mt-1 italic">"Chào CEO AI Agent của AI Bất Động Sản, tôi muốn thiết kế mặt bằng 3D cho công trình Tứ Hợp Viện dựa trên hình ảnh phối cảnh tổng thể đính kèm..."</p>
+                        </div>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-brand-teal mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Kiến trúc Á Đông truyền thống</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-brand-teal mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Bố cục 4 khối nhà (Thiên Tỉnh)</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-brand-teal mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Mái ngói xám & Cột gỗ tròn</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-brand-teal mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Tiểu cảnh phong thủy tối ưu</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <div class="relative group rounded-2xl overflow-hidden shadow-2xl">
+                        <img src='https://opal.google/board/blobs/651b6151-bb3c-4d21-bb56-4735220052f8' alt='Phối cảnh tổng thể' class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded-lg text-sm font-semibold shadow-sm">
+                            Phối cảnh tổng thể
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Floor Plans Section -->
+        <section class="max-w-7xl mx-auto px-6 py-12">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-display text-brand-dark mb-4">Mặt Bằng 3D Các Tầng</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Mô phỏng chi tiết không gian kiến trúc với góc nhìn 3D trực quan, thể hiện trọn vẹn ý đồ phân bổ công năng.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- House 1 -->
+                <div class="image-card bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
+                    <img src='https://opal.google/board/blobs/d572f10d-2725-45b4-9f6a-0945b5c7b19e' alt='Mặt bằng Tầng 1 - Chính Phòng' class="w-full aspect-[4/3] object-cover rounded-xl mb-6">
+                    <div class="px-2">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Mặt Bằng Chính Phòng</h3>
+                        <p class="text-sm text-gray-500">Khu vực trung tâm phía Bắc, bao gồm không gian thờ tự và phòng khách gia chủ.</p>
+                    </div>
+                </div>
+
+                <!-- House 2 -->
+                <div class="image-card bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
+                    <img src='https://opal.google/board/blobs/c01692d5-28ac-466b-a9cd-e31117dd53bf' alt='Mặt bằng Sương Phòng' class="w-full aspect-[4/3] object-cover rounded-xl mb-6">
+                    <div class="px-2">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Mặt Bằng Sương Phòng</h3>
+                        <p class="text-sm text-gray-500">Hai khối nhà cánh Đông và Tây dành cho khách và phòng trà đạo.</p>
+                    </div>
+                </div>
+
+                <!-- House 3 -->
+                <div class="image-card bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
+                    <img src='https://opal.google/board/blobs/9d105709-b087-4e52-aa37-1393ebf2678d' alt='Mặt bằng Đảo Tọa' class="w-full aspect-[4/3] object-cover rounded-xl mb-6">
+                    <div class="px-2">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Mặt Bằng Đảo Tọa</h3>
+                        <p class="text-sm text-gray-500">Khối nhà phía Nam tích hợp bếp ăn và các phòng chức năng phụ trợ.</p>
+                    </div>
+                </div>
+
+                <!-- House 4 -->
+                <div class="image-card bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
+                    <img src='https://opal.google/board/blobs/a22ef03e-f66d-4e25-bbae-533a3b5ac35d' alt='Sân Trung Tâm' class="w-full aspect-[4/3] object-cover rounded-xl mb-6">
+                    <div class="px-2">
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Sân Trung Tâm (Thiên Tỉnh)</h3>
+                        <p class="text-sm text-gray-500">Trái tim của công trình với tiểu cảnh, hồ cá và hành lang bao quanh.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-4xl mx-auto"></div>
+
+        <!-- Detailed Report Section -->
+        <section class="max-w-4xl mx-auto px-6 py-12">
+            <div class="bg-white p-10 md:p-16 shadow-2xl rounded-sm border-t-8 border-brand-gold relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+                    <svg class="w-32 h-32 text-brand-charcoal" fill="currentColor" viewBox="0 0 24 24"><path d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z"/></svg>
+                </div>
+
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-display font-bold uppercase tracking-widest text-brand-charcoal mb-4">Báo Cáo Chi Tiết Thiết Kế</h2>
+                    <div class="w-20 h-1 bg-brand-gold mx-auto"></div>
+                </div>
+
+                <div class="report-content">
+                    <p class="font-bold text-xl mb-2 text-center">BÁO CÁO THIẾT KẾ CHI TIẾT DỰ ÁN TỨ HỢP VIỆN TRUYỀN THỐNG Á ĐÔNG</p>
+                    <p class="text-center mb-8">Ngày thực hiện: 15 tháng 04 năm 2026<br>Thời gian: 22:07</p>
+
+                    <p class="mb-6">Kính gửi Quý đối tác và Khách hàng,</p>
+                    
+                    <p class="mb-6">Với tư cách là CEO AI Agent của AI Bất Động Sản, tôi hân hạnh trình bày báo cáo thiết kế chi tiết cho dự án "Tứ Hợp Viện Truyền Thống Á Đông". Công trình là sự kết hợp hoàn hảo giữa tinh hoa kiến trúc cổ truyền và các giải pháp không gian hiện đại, mang lại một không gian sống thanh tịnh, đẳng cấp và giàu giá trị văn hóa.</p>
+
+                    <h4 class="font-bold text-lg mt-8 mb-4">1. TỔNG QUAN KIẾN TRÚC VÀ Ý TƯỞNG THIẾT KẾ</h4>
+                    <p class="mb-6">Dự án được xây dựng dựa trên nguyên lý bố cục Tứ Hợp Viện kinh điển với cấu trúc khép kín, bảo mật và hướng nội. Trung tâm của toàn bộ công trình là một sân chung (thiên tỉnh), đóng vai trò là lá phổi xanh và nguồn sáng chính cho mọi gian nhà.</p>
+                    <p class="mb-6">Hệ mái ngói màu xám đặc trưng kết hợp với các cột gỗ tròn và hành lang kết nối tạo nên một tổng thể thống nhất, uy nghi nhưng không kém phần thanh thoát. Sự lưu chuyển khí và ánh sáng tự nhiên được tính toán tỉ mỉ để len lỏi vào từng gian phòng thông qua hệ thống cửa bức bàn và cửa sổ hoa văn gỗ.</p>
+
+                    <h4 class="font-bold text-lg mt-8 mb-4">2. CÁC GIẢI PHÁP KỸ THUẬT VÀ VẬT LIỆU</h4>
+                    <p class="mb-4">- <strong>Giải pháp chiếu sáng và thông gió:</strong> Tận dụng tối đa diện tích sân giữa để tạo hiệu ứng giếng trời tự nhiên. Các gian nhà đều có mặt tiền hướng về sân trung tâm, giúp tối ưu hóa việc đón gió và ánh sáng mặt trời.</p>
+                    <p class="mb-4">- <strong>Vật liệu chủ đạo:</strong> Sử dụng gỗ tự nhiên tông màu trầm (nâu gụ, hạt dẻ) cho toàn bộ hệ thống khung cột và nội thất. Sàn nhà và lối đi được lát gạch xám và đá tự nhiên, tạo cảm giác cổ kính, vững chãi và mát mẻ.</p>
+                    <p class="mb-6">- <strong>Bố cục kết nối:</strong> Hệ thống hành lang có mái che bao quanh sân trung tâm giúp cư dân có thể di chuyển giữa các khối nhà một cách thuận tiện trong mọi điều kiện thời tiết mà vẫn cảm nhận được không gian ngoài trời.</p>
+
+                    <h4 class="font-bold text-lg mt-8 mb-4">3. CHI TIẾT CÁC KHỐI NHÀ VÀ TÍNH NĂNG CHÍNH</h4>
+                    
+                    <div class="my-10">
+                        <p class="font-bold mb-4">3.1. Khối Chính Phòng (Nhà Chính)</p>
+                        <p class="mb-6">Vị trí: Phía Bắc, là khối nhà cao nhất và quan trọng nhất. Công năng: Không gian thờ tự trang nghiêm ở chính giữa, phòng khách chính sang trọng và phòng ngủ của gia chủ. Nội thất gỗ chạm trổ tinh xảo khẳng định vị thế của chủ nhân.</p>
+                        <div class="my-6 border-4 border-gray-50 rounded-lg overflow-hidden">
+                            <img src='https://opal.google/board/blobs/d572f10d-2725-45b4-9f6a-0945b5c7b19e' alt='Chi tiết Chính Phòng' class="w-full">
+                        </div>
+                    </div>
+
+                    <div class="my-10">
+                        <p class="font-bold mb-4">3.2. Khối Sương Phòng (Nhà Cánh)</p>
+                        <p class="mb-6">Vị trí: Hai bên Đông và Tây của sân trung tâm. Công năng: Dành cho con cháu hoặc khách lưu trú. Tích hợp không gian trà đạo và phòng đọc sách yên tĩnh, mang lại cảm giác thiền định và thư thái.</p>
+                        <div class="my-6 border-4 border-gray-50 rounded-lg overflow-hidden">
+                            <img src='https://opal.google/board/blobs/c01692d5-28ac-466b-a9cd-e31117dd53bf' alt='Chi tiết Sương Phòng' class="w-full">
+                        </div>
+                    </div>
+
+                    <div class="my-10">
+                        <p class="font-bold mb-4">3.3. Khối Đảo Tọa (Nhà Phía Trước)</p>
+                        <p class="mb-6">Vị trí: Phía Nam, đối diện Chính phòng. Công năng: Bố trí nhà bếp hiện đại trong vỏ bọc truyền thống, phòng ăn rộng lớn cho các bữa cơm gia đình và các phòng chức năng phụ trợ. Thiết kế ưu tiên sự ngănắp và tiện dụng.</p>
+                        <div class="my-6 border-4 border-gray-50 rounded-lg overflow-hidden">
+                            <img src='https://opal.google/board/blobs/9d105709-b087-4e52-aa37-1393ebf2678d' alt='Chi tiết Đảo Tọa' class="w-full">
+                        </div>
+                    </div>
+
+                    <div class="my-10">
+                        <p class="font-bold mb-4">3.4. Sân Trung Tâm</p>
+                        <p class="mb-6">Vị trí: Trái tim của Tứ Hợp Viện. Công năng: Tiểu cảnh sân vườn, hồ cá, hòn non bộ và cây xanh bonsai. Lối đi lát đá xám tự nhiên tạo nên một không gian thiên nhiên tĩnh lặng và cân bằng phong thủy cho toàn bộ dinh thự.</p>
+                        <div class="my-6 border-4 border-gray-50 rounded-lg overflow-hidden">
+                            <img src='https://opal.google/board/blobs/a22ef03e-f66d-4e25-bbae-533a3b5ac35d' alt='Chi tiết Sân Trung Tâm' class="w-full">
+                        </div>
+                    </div>
+
+                    <h4 class="font-bold text-lg mt-8 mb-4">4. KẾT LUẬN</h4>
+                    <p class="mb-6">Bản thiết kế Tứ Hợp Viện này không chỉ là một công trình nhà ở thông thường mà là một tác phẩm nghệ thuật, nơi các giá trị truyền thống được gìn giữ và phát huy thông qua công nghệ 3D hiện đại. Chúng tôi tin rằng không gian này sẽ mang lại trải nghiệm sống đỉnh cao cho quý chủ nhân.</p>
+                    
+                    <p class="mt-12">Trân trọng,</p>
+                    <p class="mt-2 font-bold italic">CEO AI Agent</p>
+                    <p class="font-bold text-brand-dark">AI Bất Động Sản (phamhoanganhtokens.com)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA section -->
+        <section class="max-w-7xl mx-auto px-6 py-20 text-center">
+            <div class="hero-gradient p-12 rounded-3xl shadow-2xl">
+                <h3 class="text-3xl font-display font-bold text-white mb-6">Bạn quan tâm đến thiết kế này?</h3>
+                <p class="text-gray-300 mb-8 max-w-xl mx-auto">Liên hệ với chúng tôi để nhận tư vấn chuyên sâu về các mẫu Tứ Hợp Viện hiện đại và đẳng cấp nhất.</p>
+                <a href="www.phamhoanganhtokens.com" target="_blank" class="inline-block bg-brand-gold hover:bg-brand-accent text-brand-dark font-bold px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl">
+                    Liên Hệ Ngay
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Smooth entry animations for sections
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
