@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bất Động Sản - Dự án Tứ Hợp Viện</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1a1a1a',
+                            charcoal: '#2d3436',
+                            gold: '#b2945e',
+                            teal: '#4a7c7a',
+                            accent: '#8e735b',
+                            bg: '#f9f9f9',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Montserrat', 'sans-serif'],
+                        body: ['Lato', 'sans-serif'],
+                        report: ['"Times New Roman"', 'serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            color: #2d3436;
+            font-family: 'Lato', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .report-container {
+            font-family: "Times New Roman", Times, serif;
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-hover {
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        .image-hover img {
+            transition: transform 0.5s ease;
+        }
+        
+        .image-hover:hover img {
+            transform: scale(1.05);
+        }
+
+        .gradient-border {
+            border-left: 4px solid #b2945e;
+            padding-left: 1.5rem;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .accent-underline::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #b2945e;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="glass-header sticky top-0 z-50 py-4 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+            <h1 class="font-display font-bold text-2xl tracking-tighter text-brand-dark uppercase">
+                AI <span class="text-brand-gold">Bất Động Sản</span>
+            </h1>
+        </div>
+        <nav>
+            <a href="www.phamhoanganhtokens.com*" target="_blank" class="font-body text-sm font-semibold text-brand-charcoal hover:text-brand-gold transition-colors duration-300 flex items-center gap-2">
+                www.phamhoanganhtokens.com
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 md:px-8 py-12">
+        
+        <!-- Hero Title Section -->
+        <section class="mb-20 text-center fade-in">
+            <span class="text-brand-gold font-display font-semibold tracking-widest uppercase text-xs mb-3 block">Kiến Trúc & Quy Hoạch</span>
+            <h2 class="text-4xl md:text-6xl font-serif text-brand-dark mb-6">Tứ Hợp Viện Truyền Thống</h2>
+            <div class="w-24 h-1 bg-brand-gold mx-auto"></div>
+        </section>
+
+        <!-- Project Overview Section -->
+        <section class="mb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-5 section-card p-8 fade-in">
+                    <h3 class="font-display font-bold text-xl mb-6 accent-underline">Thông tin dự án</h3>
+                    <div class="space-y-4">
+                        <div class="flex flex-col border-b border-gray-100 pb-3">
+                            <span class="text-xs text-gray-400 uppercase tracking-wide">Tên dự án</span>
+                            <span class="font-medium text-brand-charcoal">Thiết kế mặt bằng 3D Tứ Hợp Viện</span>
+                        </div>
+                        <div class="flex flex-col border-b border-gray-100 pb-3">
+                            <span class="text-xs text-gray-400 uppercase tracking-wide">Phong cách</span>
+                            <span class="font-medium text-brand-charcoal">Truyền thống Á Đông (Thiên Tỉnh)</span>
+                        </div>
+                        <div class="flex flex-col border-b border-gray-100 pb-3">
+                            <span class="text-xs text-gray-400 uppercase tracking-wide">Đơn vị thực hiện</span>
+                            <span class="font-medium text-brand-charcoal">CEO AI Agent - AI Bất Động Sản</span>
+                        </div>
+                        <div class="mt-8">
+                            <p class="text-sm leading-relaxed text-gray-600 italic">
+                                "Tái hiện một không gian sống đậm chất văn hóa Á Đông, kết hợp hài hòa giữa sự tôn nghiêm truyền thống và tiện nghi hiện đại."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 fade-in" style="animation-delay: 0.2s;">
+                    <div class="image-hover shadow-2xl">
+                        <img src='https://opal.google/board/blobs/3f9ba352-a0a8-4137-b25d-2a88c1549e39' alt='media_9' class="w-full h-full object-cover" />
+                    </div>
+                    <p class="text-center text-xs text-gray-400 mt-4 uppercase tracking-widest">Phối cảnh tham khảo tổng thể</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Floor Plans Section -->
+        <section class="mb-24 bg-brand-dark rounded-3xl p-8 md:p-16 text-white shadow-2xl">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h3 class="text-3xl font-display font-bold mb-2">Mặt Bằng 3D Các Tầng</h3>
+                    <p class="text-gray-400 font-body">Mô phỏng chi tiết không gian kiến trúc</p>
+                </div>
+                <div class="hidden md:block h-px flex-grow bg-gray-800 mx-8 mb-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Image 1 -->
+                <div class="group">
+                    <div class="image-hover bg-brand-charcoal aspect-video mb-4 relative">
+                        <img src='https://opal.google/board/blobs/7220f4ef-4faa-4521-a407-c88db79872a5' alt='media_1' class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-40"></div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-brand-gold font-bold">01</span>
+                        <h4 class="font-display font-semibold text-lg">Mặt bằng Chính phòng (Main Hall)</h4>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="group">
+                    <div class="image-hover bg-brand-charcoal aspect-video mb-4 relative">
+                        <img src='https://opal.google/board/blobs/46ff5660-3cc2-45a6-912c-6891a10dd903' alt='media_2' class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-40"></div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-brand-gold font-bold">02</span>
+                        <h4 class="font-display font-semibold text-lg">Mặt bằng Sương phòng (Side House)</h4>
+                    </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="group">
+                    <div class="image-hover bg-brand-charcoal aspect-video mb-4 relative">
+                        <img src='https://opal.google/board/blobs/ea44e24a-1bcd-448e-83af-0abc28d7d0e5' alt='media_3' class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-40"></div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-brand-gold font-bold">03</span>
+                        <h4 class="font-display font-semibold text-lg">Mặt bằng Đảo tọa (Front Building)</h4>
+                    </div>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="group">
+                    <div class="image-hover bg-brand-charcoal aspect-video mb-4 relative">
+                        <img src='https://opal.google/board/blobs/f0fe73c3-0476-4705-850a-90447db30074' alt='media_4' class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-40"></div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-brand-gold font-bold">04</span>
+                        <h4 class="font-display font-semibold text-lg">Phối cảnh Sân trung tâm (Central Courtyard)</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Report Section -->
+        <section class="max-w-4xl mx-auto mb-24 bg-white p-12 md:p-20 shadow-xl rounded-sm border-t-8 border-brand-gold">
+            <h3 class="text-2xl font-serif text-brand-dark mb-12 text-center uppercase tracking-widest border-b pb-6">Báo Cáo Chi Tiết Thiết Kế</h3>
+            
+            <div class="report-container">
+                <p><strong>BÁO CÁO THIẾT KẾ TỔNG THỂ: TỨ HỢP VIỆN TRUYỀN THỐNG Á ĐÔNG</strong></p>
+                <p><strong>Người thực hiện:</strong> CEO AI Agent – Hệ thống AI Bất Động Sản<br>
+                <strong>Thời gian cập nhật:</strong> 22:06, Ngày 15 tháng 04 năm 2026</p>
+                
+                <hr class="my-8 border-gray-100">
+
+                <h4 class="font-bold text-lg mb-4">1. TỔNG QUAN DỰ ÁN VÀ TRIẾT LÝ THIẾT KẾ</h4>
+                <p>Dự án thiết kế Tứ Hợp Viện được thực hiện với mục tiêu tái hiện một không gian sống đậm chất văn hóa Á Đông, kết hợp hài hòa giữa sự tôn nghiêm truyền thống và tiện nghi hiện đại. Dựa trên thông số bất động sản và yêu cầu từ phía khách hàng, kiến trúc được xây dựng theo bố cục đối xứng tuyệt đối qua trục Bắc - Nam, lấy sân trung tâm (Thiên Tỉnh) làm linh hồn của toàn bộ công trình. Triết lý thiết kế tập trung vào sự kết nối giữa con người và thiên nhiên, đề cao tính phong thủy và sự bền vững của vật liệu tự nhiên.</p>
+
+                <h4 class="font-bold text-lg mt-8 mb-4">2. PHÂN TÍCH KIẾN TRÚC VÀ GIẢI PHÁP KỸ THUẬT</h4>
+                <p><strong>Bố cục không gian:</strong> Công trình bao gồm bốn khối nhà bao quanh một sân chung, tạo nên một hệ sinh thái khép kín, an ninh nhưng vẫn đảm bảo sự thông thoáng. Các khối nhà được kết nối bằng hệ thống hành lang có mái che (lang đạo), giúp di chuyển thuận tiện và tạo ra các khoảng đệm thị giác thú vị.</p>
+                <p><strong>Giải pháp kỹ thuật và vật liệu:</strong></p>
+                <ul class="list-disc pl-8 mb-4">
+                    <li><strong>Hệ mái:</strong> Sử dụng ngói âm dương màu xám đậm với độ dốc lớn, kết hợp với các đầu mái uốn cong truyền thống, giúp tối ưu hóa việc thoát nước và điều hòa nhiệt độ.</li>
+                    <li><strong>Vật liệu chủ đạo:</strong> Gỗ tự nhiên tông màu trầm (Gụ, Trắc) được sử dụng cho hệ cột, xà gồ và cửa bức bàn. Sàn nhà được lát gạch xám hoặc đá tự nhiên để giữ vẻ cổ kính.</li>
+                    <li><strong>Ánh sáng và thông gió:</strong> Thiết kế tận dụng tối đa ánh sáng tự nhiên từ sân giữa (Thiên tỉnh). Hệ thống cửa nan chớp và cửa bức bàn cho phép gió lưu thông xuyên suốt qua các gian nhà, giảm thiểu điện năng tiêu thụ.</li>
+                </ul>
+
+                <h4 class="font-bold text-lg mt-8 mb-4">3. CHI TIẾT CÔNG NĂNG CÁC PHÂN KHU (MẶT BẰNG 3D)</h4>
+
+                <div class="my-10">
+                    <p class="font-bold italic">3.1. Chính phòng (Khối nhà phía Bắc) – Không gian tôn nghiêm</p>
+                    <p>Đây là khối nhà cao nhất và quan trọng nhất, nơi thể hiện vị thế của gia chủ. Không gian trung tâm là phòng thờ trang trọng với án gian gỗ và hoành phi câu đối. Phía trước là phòng khách chính tiếp khách quý, phía trong là phòng ngủ Master với nội thất gỗ tinh xảo.</p>
+                    <div class="my-6 border-4 border-gray-50 shadow-md">
+                        <img src='https://opal.google/board/blobs/7220f4ef-4faa-4521-a407-c88db79872a5' alt='media_5' class="w-full" />
+                    </div>
+                </div>
+
+                <div class="my-10">
+                    <p class="font-bold italic">3.2. Sương phòng (Hai khối nhà bên Đông - Tây) – Không gian tĩnh tâm</p>
+                    <p>Là khu vực dành cho con cháu hoặc khách lưu trú. Thiết kế tích hợp phòng ngủ ấm cúng và phòng trà đạo. Các cửa sổ hoa văn nan chéo mở ra góc nhìn thanh bình hướng về sân vườn trung tâm.</p>
+                    <div class="my-6 border-4 border-gray-50 shadow-md">
+                        <img src='https://opal.google/board/blobs/46ff5660-3cc2-45a6-912c-6891a10dd903' alt='media_6' class="w-full" />
+                    </div>
+                </div>
+
+                <div class="my-10">
+                    <p class="font-bold italic">3.3. Đảo tọa (Khối nhà phía Nam) – Khu vực hậu cần</p>
+                    <p>Tập trung các công năng phục vụ đời sống thường nhật bao gồm bếp nấu hiện đại, phòng ăn rộng cho gia đình 8 người và các phòng chức năng phụ trợ (kho, phòng giặt). Lối vào chính được trang trí bằng bình gốm và tranh thủy mặc, tạo ấn tượng ngay từ khi bước vào.</p>
+                    <div class="my-6 border-4 border-gray-50 shadow-md">
+                        <img src='https://opal.google/board/blobs/ea44e24a-1bcd-448e-83af-0abc28d7d0e5' alt='media_7' class="w-full" />
+                    </div>
+                </div>
+
+                <div class="my-10">
+                    <p class="font-bold italic">3.4. Sân trung tâm (Thiên tỉnh) – Lá phổi xanh</p>
+                    <p>Lối đi chính lát đá xanh, hai bên là tiểu cảnh bonsai, hồ cá Koi và đèn đá trang trí. Đây không chỉ là không gian thẩm mỹ mà còn là nơi gắn kết các thành viên trong gia đình thông qua các hoạt động ngoài trời.</p>
+                    <div class="my-6 border-4 border-gray-50 shadow-md">
+                        <img src='https://opal.google/board/blobs/f0fe73c3-0476-4705-850a-90447db30074' alt='media_8' class="w-full" />
+                    </div>
+                </div>
+
+                <hr class="my-12 border-gray-100">
+
+                <h4 class="font-bold text-lg mb-4">4. KẾT LUẬN</h4>
+                <p>Bản thiết kế Tứ Hợp Viện không chỉ đáp ứng hoàn hảo về mặt công năng mà còn là một tác phẩm nghệ thuật kiến trúc, tôn vinh các giá trị di sản. Sự kết hợp giữa tông màu gỗ trầm, gạch ngói xám và nghệ thuật sắp đặt ánh sáng đã tạo nên một không gian sống đẳng cấp, trường tồn cùng thời gian.</p>
+
+                <div class="mt-12">
+                    <p><strong>Trân trọng,</strong><br>
+                    <strong>CEO AI Agent – Hệ thống AI Bất Động Sản</strong></p>
+                    <p class="italic text-sm text-gray-500 mt-2">*Mọi chi tiết về dịch vụ vui lòng truy cập: www.phamhoanganhtokens.com*</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Space -->
+    <div class="h-20"></div>
+
+</body>
+</html>
