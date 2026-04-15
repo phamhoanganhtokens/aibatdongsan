@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bất Động Sản - Dự Án Biệt Thự Vách Núi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1a1a',
+                        secondary: '#2d2d2d',
+                        accent: '#c5a059', // Muted Gold
+                        bgLight: '#f8f9fa',
+                        charcoal: '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                        serif: ['Times New Roman', 'serif'],
+                        premium: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #1a1a1a;
+            scroll-behavior: smooth;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .report-text {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .premium-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .premium-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .section-divider {
+            height: 4px;
+            width: 60px;
+            background: #c5a059;
+            margin: 1.5rem 0;
+        }
+        .image-container img {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+        .gradient-overlay {
+            background: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 glass-header px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg">
+                    <span class="text-accent font-bold text-xl">AI</span>
+                </div>
+                <h1 class="text-2xl font-display font-bold tracking-tight text-primary">AI Bất Động Sản</h1>
+            </div>
+            <a href="www.phamhoanganhtokens.com" target="_blank" class="text-accent font-medium hover:text-primary transition-colors duration-300 border-b-2 border-accent/20 hover:border-primary">
+                www.phamhoanganhtokens.com
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12 space-y-24">
+
+        <!-- Project Hero/Overview Section -->
+        <section id="thong-tin-du-an" class="animate-fade-in">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-accent font-semibold tracking-widest uppercase text-sm">Dự Án Kiến Trúc</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-primary leading-tight">Biệt Thự Nghỉ Dưỡng Sinh Thái Trên Vách Núi</h2>
+                    <div class="section-divider"></div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 space-y-4">
+                        <h3 class="font-display font-bold text-lg text-primary">Thông số dự án</h3>
+                        <p class="text-gray-600 italic">"Thiết kế mặt bằng 3D Biệt thự Nghỉ dưỡng Sinh thái trên Vách núi. Quy mô gồm 1 trệt và 1 lầu với các mảng kính lớn thay thế tường, kiến trúc hiện đại tối giản."</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 text-sm font-medium text-charcoal">
+                            <li class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-accent"></div> 1 Trệt, 1 Lầu</li>
+                            <li class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-accent"></div> Hồ bơi vô cực</li>
+                            <li class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-accent"></div> Hệ mái xanh (Green Roof)</li>
+                            <li class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-accent"></div> Phong cách Zen tối giản</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative group rounded-3xl overflow-hidden shadow-2xl">
+                    <img src='https://opal.google/board/blobs/30b527bf-a76a-453e-8594-1c49d3b63180' alt='media_6' class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <p class="text-xs uppercase tracking-widest opacity-80">Hình ảnh tham khảo</p>
+                        <p class="text-lg font-display font-semibold">Cảm hứng kiến trúc</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Floor Plans Section -->
+        <section id="mat-bang-3d" class="space-y-12">
+            <div class="text-center space-y-4">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-primary">Mặt Bằng 3D Các Tầng</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Phân tích chi tiết không gian kiến trúc thông qua mô phỏng 3D hiện đại, tối ưu hóa công năng và tầm nhìn.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Ground Floor -->
+                <div class="premium-card overflow-hidden group">
+                    <div class="image-container relative aspect-[4/3] overflow-hidden bg-gray-200">
+                        <img src='https://opal.google/board/blobs/a50242d6-2b88-43b7-ba04-5d856a3de21d' alt='media_1' class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                            <span class="text-white font-medium">Tầng Trệt: Khu vực sinh hoạt chung & Master Suite</span>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-display font-bold text-primary">Mặt bằng Tầng Trệt</h4>
+                        <p class="text-gray-500 text-sm mt-2">Kết nối trực tiếp hồ bơi vô cực & sàn deck</p>
+                    </div>
+                </div>
+
+                <!-- First Floor -->
+                <div class="premium-card overflow-hidden group">
+                    <div class="image-container relative aspect-[4/3] overflow-hidden bg-gray-200">
+                        <img src='https://opal.google/board/blobs/eb82bd24-fc51-475d-8a31-64b96d16817e' alt='media_2' class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                            <span class="text-white font-medium">Tầng Lầu: Không gian riêng tư & Vườn mái</span>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h4 class="text-xl font-display font-bold text-primary">Mặt bằng Tầng Lầu</h4>
+                        <p class="text-gray-500 text-sm mt-2">Tầm nhìn 360 độ & Hệ mái sinh thái</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Report Section -->
+        <section id="bao-cao-chi-tiet" class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+            <div class="bg-primary px-8 py-10 md:px-12 text-center text-white">
+                <h2 class="text-2xl md:text-3xl font-display font-semibold tracking-wide">BÁO CÁO CHI TIẾT THIẾT KẾ</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
+            </div>
+            
+            <div class="p-8 md:p-16 max-w-4xl mx-auto report-text text-charcoal">
+                <!-- Inner images as requested in report content -->
+                <div class="mb-10 text-center border-b pb-8">
+                    <p class="font-bold text-lg mb-2">BIỆT THỰ NGHỈ DƯỠNG SINH THÁI TRÊN VÁCH NÚI</p>
+                    <p class="text-sm">Ngày thực hiện: 15 tháng 04 năm 2026 | Thời gian: 21:20</p>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-bold text-xl uppercase border-l-4 border-accent pl-4 mb-4">I. TỔNG QUAN DỰ ÁN</h3>
+                        <p>Dự án Biệt thự Nghỉ dưỡng Sinh thái trên Vách núi là một tuyệt tác kiến trúc hiện đại, được thiết kế để trở thành biểu tượng của sự sang trọng tinh tế và sự hòa quyện tuyệt đối với thiên nhiên hùng vĩ. Với vị trí đắc địa trên đỉnh vách đá cao, dự án không chỉ cung cấp một không gian sống đẳng cấp mà còn mang lại trải nghiệm cảm xúc mạnh mẽ thông qua tầm nhìn vô cực hướng về phía thung lũng.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-xl uppercase border-l-4 border-accent pl-4 mb-4">II. PHÂN TÍCH KIẾN TRÚC VÀ ĐỊA HÌNH</h3>
+                        <p><strong>1. Phong cách kiến trúc:</strong> Công trình theo đuổi phong cách Hiện đại Tối giản (Modern Minimalism) kết hợp chặt chẽ với kiến trúc Ưa sinh học (Biophilic Design). Cấu trúc của biệt thự bao gồm các khối hộp màu đen nhám (matte black) được sắp đặt giật cấp, tạo nên sự chuyển động nhịp nhàng và hiện đại trên nền địa hình hiểm trở.</p>
+                        <p><strong>2. Giải pháp địa hình:</strong> Tận dụng tối đa lợi thế của vách núi, các kiến trúc sư đã sử dụng giải pháp kết cấu sàn và mái dạng công-xôn (cantilever) vươn ra khỏi khối đá. Điều này không chỉ giúp mở rộng diện tích sử dụng mà còn tạo hiệu ứng "bay" cho công trình, xóa bỏ sự nặng nề của các khối bê tông truyền thống.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-xl uppercase border-l-4 border-accent pl-4 mb-4">III. CHI TIẾT CÁC TẦNG VÀ GIẢI PHÁP THIẾT KẾ</h3>
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">1. Tầng trệt: Không gian mở và Kết nối vô tận</h4>
+                            <p>Tầng trệt được thiết kế như một không gian mở hoàn toàn, loại bỏ các vách ngăn kiên cố để đón trọn luồng sinh khí và ánh sáng tự nhiên. Hệ vách kính cường lực khổ lớn tạo tầm nhìn không giới hạn. Phòng ngủ Master đảm bảo sự riêng tư nhưng vẫn giữ được sự kết nối trực tiếp với bên ngoài qua sàn gỗ (deck) và hồ bơi vô cực tràn viền bằng đá đen.</p>
+                            <div class="my-8 rounded-xl overflow-hidden shadow-lg border-2 border-accent/20">
+                                <img src='https://opal.google/board/blobs/a50242d6-2b88-43b7-ba04-5d856a3de21d' alt='media_3' class="w-full h-auto" />
+                                <p class="bg-bgLight py-2 text-center text-sm italic font-sans">Mặt bằng 3D Tầng trệt</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold mb-2">2. Tầng lầu: Sự riêng tư giữa mây trời</h4>
+                            <p>Tầng lầu là nơi dành cho phòng ngủ phụ hoặc phòng làm việc, được thiết kế như một "vọng lâu" hiện đại. Bốn mặt kính trong suốt cho phép quan sát toàn cảnh thung lũng. Hệ mái xanh (Green Roof) là giải pháp kỹ thuật thông minh giúp cách nhiệt tự nhiên và tăng tính thẩm mỹ sinh thái.</p>
+                            <div class="my-8 rounded-xl overflow-hidden shadow-lg border-2 border-accent/20">
+                                <img src='https://opal.google/board/blobs/eb82bd24-fc51-475d-8a31-64b96d16817e' alt='media_4' class="w-full h-auto" />
+                                <p class="bg-bgLight py-2 text-center text-sm italic font-sans">Mặt bằng 3D Tầng lầu</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-xl uppercase border-l-4 border-accent pl-4 mb-4">IV. GIẢI PHÁP KỸ THUẬT VÀ VẬT LIỆU</h3>
+                        <p>Dự án ưu tiên sử dụng các loại vật liệu cao cấp, bền bỉ: Đá tự nhiên màu tối, gỗ rừng tông trầm, khung thép chịu lực đen và kính cường lực chống tia UV. Hệ thống chiếu sáng thông minh với tông vàng ấm tạo nên sự tương phản nghệ thuật với không gian mây mù bên ngoài.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-xl uppercase border-l-4 border-accent pl-4 mb-4">V. TRIẾT LÝ NỘI THẤT</h3>
+                        <p>Nội thất được định hướng theo phong cách Zen tối giản. Mọi vật dụng đều được chọn lọc kỹ lưỡng với tiêu chí "ít nhưng chất", đảm bảo sự tiện nghi nhưng không làm xao nhãng vẻ đẹp của thiên nhiên bên ngoài.</p>
+                    </div>
+
+                    <div class="pt-8 border-t border-gray-200">
+                        <h3 class="font-bold text-xl uppercase border-l-4 border-accent pl-4 mb-4">VI. KẾT LUẬN</h3>
+                        <p>Biệt thự Nghỉ dưỡng Sinh thái trên Vách núi không chỉ là một công trình lưu trú, mà là một tác phẩm nghệ thuật tôn vinh sự bền vững và thẩm mỹ hiện đại. Đây là không gian lý tưởng cho những ai khao khát tìm về sự tĩnh lặng giữa thiên nhiên.</p>
+                        
+                        <div class="mt-12 space-y-2">
+                            <p class="font-bold italic">Ký tên,</p>
+                            <p class="font-bold text-accent">CEO AI Agent</p>
+                            <p class="font-bold">AI Bất Động Sản</p>
+                        </div>
+                        
+                        <div class="mt-12 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                            <img src='https://opal.google/board/blobs/46173d3c-077c-413f-a234-6326c0026757' alt='media_5' class="w-full h-auto" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Simple Footer (As per restriction: No legal/copyright hallucination, but instructed for copyright for AI Bat Dong San in Section 1.2) -->
+    <footer class="mt-24 py-12 px-6 bg-primary text-white text-center">
+        <div class="max-w-7xl mx-auto space-y-4">
+            <p class="font-display font-bold text-xl tracking-wider">AI BẤT ĐỘNG SẢN</p>
+            <p class="text-gray-400 text-sm">Kiến tạo không gian sống tương lai qua trí tuệ nhân tạo</p>
+            <div class="pt-8 border-t border-white/10 text-gray-500 text-xs">
+                © AI Bất Động Sản. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
