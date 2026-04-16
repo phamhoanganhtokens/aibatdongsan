@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Zenith Apex Villa | AI Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premium: {
+                            gold: '#C5A059',
+                            dark: '#121212',
+                            charcoal: '#1A1A1A',
+                            slate: '#2D3436',
+                            light: '#F8F9FA',
+                            accent: '#0D9488',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Montserrat', 'sans-serif'],
+                        body: ['Outfit', 'sans-serif'],
+                        report: ['"Times New Roman"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F8F9FA;
+            color: #1A1A1A;
+            scroll-behavior: smooth;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .premium-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .premium-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+        }
+        .report-content {
+            font-family: "Times New Roman", Times, serif;
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+        .image-overlay {
+            background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 50%);
+        }
+        .section-divider {
+            height: 4px;
+            width: 60px;
+            background: #C5A059;
+            margin: 1.5rem 0;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #1A1A1A 0%, #C5A059 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-premium-gold/30">
+
+    <!-- Header Section -->
+    <header class="glass-nav sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-premium-dark flex items-center justify-center rounded-lg">
+                    <span class="text-premium-gold font-bold text-xl">AI</span>
+                </div>
+                <h1 class="text-2xl font-display font-extrabold tracking-tight text-premium-dark uppercase">AI Bất Động Sản</h1>
+            </div>
+            <nav>
+                <a href="www.phamhoanganhtokens.com" target="_blank" class="text-premium-gold hover:text-premium-dark font-semibold transition-colors duration-300 flex items-center gap-2">
+                    www.phamhoanganhtokens.com
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 space-y-24">
+
+        <!-- Project Overview Section -->
+        <section id="thong-tin-du-an" class="animate-in fade-in duration-1000">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-block px-4 py-1.5 bg-premium-gold/10 text-premium-gold font-semibold rounded-full text-sm uppercase tracking-wider">
+                        Thông tin dự án
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-display font-extrabold leading-tight text-premium-charcoal">
+                        The Zenith Apex Villa
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Thử nghiệm thiết kế AI Bất Động Sản - Kiến trúc biệt thự siêu hiện đại trên địa hình dốc. Một sự kết hợp hoàn mỹ giữa công nghệ và thẩm mỹ kiến trúc đương đại.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+                            <span class="text-xs font-bold text-premium-gold uppercase">Vị trí</span>
+                            <p class="text-premium-dark font-medium">Sườn đồi dốc đứng, Tầm nhìn Panorama</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+                            <span class="text-xs font-bold text-premium-gold uppercase">Quy mô</span>
+                            <p class="text-premium-dark font-medium">3 Tầng + 1 Tầng Thượng</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+                            <span class="text-xs font-bold text-premium-gold uppercase">Phong cách</span>
+                            <p class="text-premium-dark font-medium">Tối giản hiện đại (Minimalist)</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-xl shadow-sm border border-gray-100">
+                            <span class="text-xs font-bold text-premium-gold uppercase">Tiện ích</span>
+                            <p class="text-premium-dark font-medium">Bể bơi vô cực, Rooftop Jacuzzi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group overflow-hidden rounded-2xl shadow-2xl">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <div class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <img src='https://opal.google/board/blobs/213a0f92-15f0-47ff-917e-0ddeaceaf95c' alt='Phối cảnh tổng thể' class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 image-overlay flex items-end p-8">
+                        <p class="text-white font-display font-medium italic">"Giao thoa giữa hình khối và thiên nhiên"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Floor Plans Section -->
+        <section id="mat-bang-3d" class="space-y-12">
+            <div class="text-center space-y-4">
+                <h2 class="text-3xl md:text-4xl font-display font-extrabold text-premium-dark uppercase tracking-wide">Mặt Bằng 3D Các Tầng</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Chi tiết phân bổ không gian và công năng sử dụng tối ưu cho từng tầng của biệt thự Zenith Apex.</p>
+                <div class="section-divider mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Floor 1 -->
+                <div class="premium-card group">
+                    <div class="relative overflow-hidden rounded-t-xl aspect-video">
+                        <img src='https://opal.google/board/blobs/ab73dfe8-0450-4476-833a-9e0438fc144d' alt='Mặt bằng Tầng 1' class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-bold text-premium-charcoal">Mặt bằng Tầng 1</h3>
+                        <p class="text-gray-500 text-sm mt-2">Phòng khách thông tầng, Bếp & Bể bơi vô cực</p>
+                    </div>
+                </div>
+
+                <!-- Floor 2 -->
+                <div class="premium-card group">
+                    <div class="relative overflow-hidden rounded-t-xl aspect-video">
+                        <img src='https://opal.google/board/blobs/92d3ce56-0cfc-42c8-aca4-ab2adfd00614' alt='Mặt bằng Tầng 2' class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-bold text-premium-charcoal">Mặt bằng Tầng 2</h3>
+                        <p class="text-gray-500 text-sm mt-2">Phòng ngủ Master & Khu vực riêng tư</p>
+                    </div>
+                </div>
+
+                <!-- Floor 3 -->
+                <div class="premium-card group">
+                    <div class="relative overflow-hidden rounded-t-xl aspect-video">
+                        <img src='https://opal.google/board/blobs/3fdf43f7-7d89-4f23-8e50-6fda076e7216' alt='Mặt bằng Tầng 3' class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-bold text-premium-charcoal">Mặt bằng Tầng 3</h3>
+                        <p class="text-gray-500 text-sm mt-2">Phòng ngủ phụ & Không gian giải trí</p>
+                    </div>
+                </div>
+
+                <!-- Rooftop -->
+                <div class="premium-card group">
+                    <div class="relative overflow-hidden rounded-t-xl aspect-video">
+                        <img src='https://opal.google/board/blobs/2d58e40f-4806-4fa4-9c7a-57baed07adb5' alt='Mặt bằng Tầng Thượng' class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-bold text-premium-charcoal">Tầng Thượng (Rooftop)</h3>
+                        <p class="text-gray-500 text-sm mt-2">Bể sục Jacuzzi & Lounge ngoài trời</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Report Section -->
+        <section id="bao-cao-chi-tiet" class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+            <div class="bg-premium-charcoal text-white p-8 md:p-12">
+                <h2 class="text-3xl md:text-4xl font-display font-bold tracking-tight">Báo Cáo Chi Tiết Thiết Kế</h2>
+                <p class="text-premium-gold/80 mt-4 font-medium italic">Phân tích chuyên sâu về kiến trúc và công năng The Zenith Apex Villa</p>
+            </div>
+            
+            <div class="p-8 md:p-16 max-w-4xl mx-auto">
+                <div class="report-content space-y-8 text-premium-charcoal">
+                    <div class="flex flex-col md:flex-row justify-between border-b pb-6 mb-8 italic text-gray-500">
+                        <div>
+                            <p><strong>Ngày lập:</strong> 16 tháng 04 năm 2026</p>
+                            <p><strong>Thời gian:</strong> 15:45 PM</p>
+                        </div>
+                        <div class="md:text-right">
+                            <p><strong>Người phê duyệt:</strong> CEO AI Agent</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl font-bold border-l-4 border-premium-gold pl-4 mt-12">I. TỔNG QUAN DỰ ÁN</h3>
+                    <p>
+                        <strong>The Zenith Apex Villa</strong> là một kiệt tác kiến trúc theo phong cách <strong>Tối giản Hiện đại Hạng sang (Ultra-Modern Minimalist Luxury)</strong>. Công trình được thiết kế để ngự trị trên một sườn đồi dốc đứng, tận dụng tối đa lợi thế địa hình để tạo ra tầm nhìn Panorama 360 độ tuyệt mỹ hướng ra thung lũng và rừng thông nguyên sinh. Triết lý thiết kế chủ đạo là sự giao thoa giữa những khối hình học mạnh mẽ và sự tĩnh lặng của thiên nhiên, tạo nên một không gian sống đẳng cấp và độc bản.
+                    </p>
+
+                    <h3 class="text-2xl font-bold border-l-4 border-premium-gold pl-4 mt-12">II. GIẢI PHÁP KIẾN TRÚC VÀ KỸ THUẬT</h3>
+                    <h4 class="font-bold underline mt-4">1. Xử lý địa hình và Kết cấu</h4>
+                    <p>
+                        Đội ngũ kiến trúc sư đã thực hiện phân tích địa hình dốc chuyên sâu để xác định hệ thống móng và cốt cao độ tối ưu. Giải pháp kỹ thuật then chốt là hệ thống <strong>kết cấu vươn dài (cantilever)</strong> táo bạo, cho phép các khối nhà nhô ra không trung mà không cần cột chống, tạo hiệu ứng thị giác về một "ngôi nhà bay" giữa rừng thông.
+                    </p>
+
+                    <h4 class="font-bold underline mt-4">2. Vật liệu và Thẩm mỹ ngoại thất</h4>
+                    <p>Công trình sử dụng các vật liệu cao cấp bền vững:</p>
+                    <ul class="list-disc pl-8 space-y-2">
+                        <li><strong>Đá trắng đánh bóng:</strong> Tạo vẻ sang trọng, phản chiếu ánh sáng tự nhiên.</li>
+                        <li><strong>Kính cường lực tràn viền (Floor-to-ceiling glass):</strong> Phá bỏ ranh giới giữa trong và ngoài nhà.</li>
+                        <li><strong>Kim loại đen mờ:</strong> Tạo điểm nhấn tương phản tinh tế trên nền đá trắng.</li>
+                        <li><strong>Bể bơi vô cực thành kính:</strong> Một giải pháp kỹ thuật cao cấp, tạo hiệu ứng nước tràn ấn tượng, là tâm điểm của kiến trúc mặt tiền.</li>
+                    </ul>
+
+                    <h4 class="font-bold underline mt-4">3. Kịch bản ánh sáng và Môi trường</h4>
+                    <p>
+                        Hệ thống ánh sáng thông minh được thiết lập để biến công trình thành một tác phẩm nghệ thuật vào ban đêm. Đèn spotlight hắt tường nhấn mạnh hình khối, kết hợp với ánh sáng vàng ấm từ nội thất và đèn LED âm bể bơi tạo nên không gian huyền ảo. Cây xanh nhiệt đới được tích hợp trực tiếp vào ban công, giúp làm mềm các khối bê tông và điều hòa vi khí hậu.
+                    </p>
+
+                    <div class="my-12 p-2 bg-gray-50 border border-gray-200 rounded-lg">
+                        <img src='https://opal.google/board/blobs/ab73dfe8-0450-4476-833a-9e0438fc144d' alt='Thiết kế Tầng 1' class="w-full rounded shadow-sm" />
+                        <p class="text-center text-sm italic mt-2 text-gray-500">Hình 1: Phối cảnh nội thất không gian sinh hoạt chung</p>
+                    </div>
+
+                    <h3 class="text-2xl font-bold border-l-4 border-premium-gold pl-4 mt-12">III. CHI TIẾT CÁC TẦNG CHỨC NĂNG</h3>
+
+                    <h4 class="font-bold mt-6">Tầng 1: Không gian Sinh hoạt chung và Thư giãn (Ground Level)</h4>
+                    <p>
+                        Tầng một được thiết kế theo sơ đồ mặt bằng mở (open floor plan), là trái tim của biệt thự. Các khu vực phòng khách thông tầng, bếp và bàn ăn được trang bị nội thất tối giản hiện đại, kết nối trực tiếp với hiên rộng và bể bơi vô cực thành kính phía trước.
+                    </p>
+
+                    <div class="my-12 p-2 bg-gray-50 border border-gray-200 rounded-lg">
+                        <img src='https://opal.google/board/blobs/92d3ce56-0cfc-42c8-aca4-ab2adfd00614' alt='Thiết kế Tầng 2' class="w-full rounded shadow-sm" />
+                        <p class="text-center text-sm italic mt-2 text-gray-500">Hình 2: Phối cảnh không gian nghỉ dưỡng riêng tư</p>
+                    </div>
+
+                    <h4 class="font-bold mt-6">Tầng 2: Không gian Nghỉ dưỡng riêng tư (Master Suites)</h4>
+                    <p>
+                        Tầng hai tập trung vào sự riêng tư và đẳng cấp cá nhân. Bao gồm các Master Suites với phòng tắm biệt lập, khu vực thay đồ cao cấp và hành lang kính chạy dọc theo khoảng thông tầng, tạo nơi thư giãn lý tưởng với ban công vươn dài tích hợp bồn cây xanh.
+                    </p>
+
+                    <div class="my-12 p-2 bg-gray-50 border border-gray-200 rounded-lg">
+                        <img src='https://opal.google/board/blobs/3fdf43f7-7d89-4f23-8e50-6fda076e7216' alt='Thiết kế Tầng 3' class="w-full rounded shadow-sm" />
+                        <p class="text-center text-sm italic mt-2 text-gray-500">Hình 3: Phối cảnh khối kiến trúc Tầng 3</p>
+                    </div>
+
+                    <h4 class="font-bold mt-6">Tầng 3: Khu vực Chức năng và Giải trí (Upper Level)</h4>
+                    <p>
+                        Được cấu thành từ các khối hộp vuông vức xếp chồng, tầng này tối ưu hóa tầm nhìn ra rừng thông. Gồm phòng ngủ phụ, phòng làm việc yên tĩnh và phòng giải trí đa phương tiện hiện đại. Sự tương phản mạnh mẽ giữa khung sắt đen và đá trắng tạo nên cá tính kiến trúc riêng biệt.
+                    </p>
+
+                    <div class="my-12 p-2 bg-gray-50 border border-gray-200 rounded-lg">
+                        <img src='https://opal.google/board/blobs/2d58e40f-4806-4fa4-9c7a-57baed07adb5' alt='Thiết kế Tầng Thượng' class="w-full rounded shadow-sm" />
+                        <p class="text-center text-sm italic mt-2 text-gray-500">Hình 4: Phối cảnh Rooftop Oasis về đêm</p>
+                    </div>
+
+                    <h4 class="font-bold mt-6">Tầng Thượng: Thiên đường Giải trí ngoài trời (Rooftop Oasis)</h4>
+                    <p>
+                        Đỉnh cao của sự sang trọng được thể hiện tại tầng thượng – nơi thư giãn tuyệt đối dưới ánh hoàng hôn với bể sục Jacuzzi hiện đại, quầy bar ngoài trời và khu vực lounge cao cấp, bao quát toàn cảnh mờ ảo của rừng thông.
+                    </p>
+
+                    <h3 class="text-2xl font-bold border-l-4 border-premium-gold pl-4 mt-12">IV. KẾT LUẬN</h3>
+                    <p>
+                        <strong>The Zenith Apex Villa</strong> không chỉ là một công trình lưu trú, mà là một biểu tượng về sự hài hòa giữa kỹ thuật xây dựng hiện đại và thẩm mỹ kiến trúc tối giản. Với sự chuẩn bị kỹ lưỡng về giải pháp kỹ thuật và sự chăm chút trong từng chi tiết floor plan, dự án hoàn toàn đáp ứng được kỳ vọng về một không gian nghỉ dưỡng siêu sang trọng, bền vững và đẳng cấp.
+                    </p>
+
+                    <div class="pt-12 border-t mt-12 text-center text-gray-400 italic">
+                        --- Hết báo cáo ---
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Specs / Process -->
+        <section class="pb-16">
+            <div class="bg-premium-gold/5 border border-premium-gold/20 rounded-2xl p-8 md:p-12">
+                <h3 class="text-2xl font-display font-bold text-premium-dark mb-8 flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-premium-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                    </svg>
+                    Quy trình Thiết kế Đặc thù
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="space-y-2">
+                        <div class="text-premium-gold font-bold text-xl">01</div>
+                        <h4 class="font-bold text-premium-charcoal">Phân tích địa hình</h4>
+                        <p class="text-sm text-gray-600">Định vị nền móng và cốt cao độ trên sườn dốc đảm bảo tính ổn định tối ưu.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-premium-gold font-bold text-xl">02</div>
+                        <h4 class="font-bold text-premium-charcoal">Cấu trúc Cantilever</h4>
+                        <h4 class="font-bold text-premium-charcoal"></h4>
+                        <p class="text-sm text-gray-600">Phát triển các khối vươn rộng tạo không gian sinh hoạt ngoài trời ấn tượng.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-premium-gold font-bold text-xl">03</div>
+                        <h4 class="font-bold text-premium-charcoal">Kết nối Open-Plan</h4>
+                        <p class="text-sm text-gray-600">Liên kết phòng khách, bếp và ban công thành một không gian liền mạch.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Simple Modern Footer Placeholder for "AI Bất Động Sản" (Text branding only) -->
+    <div class="bg-premium-charcoal py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-500 font-display text-sm tracking-widest uppercase">Thiết kế bởi AI Bất Động Sản</p>
+        </div>
+    </div>
+
+</body>
+</html>
