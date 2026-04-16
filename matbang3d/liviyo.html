@@ -3,269 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Bất Động Sản - Dự Án Biệt Thự Tân Cổ Điển</title>
+    <title>AI Bất Động Sản - Hồ Sơ Thiết Kế Biệt Thự Tân Cổ Điển</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'premium-gold': '#C5A059',
-                        'premium-dark': '#1A1A1A',
-                        'premium-gray': '#F8F9FA',
-                        'charcoal': '#2D3436',
-                        'navy-accent': '#0A1931'
+                        brand: {
+                            gold: '#C5A059',
+                            dark: '#1A1A1A',
+                            charcoal: '#2D2D2D',
+                            light: '#F8F9FA',
+                            teal: '#2F4F4F'
+                        }
                     },
                     fontFamily: {
-                        'display': ['Montserrat', 'sans-serif'],
-                        'body': ['Lato', 'sans-serif'],
-                        'report': ['Times New Roman', 'Times', 'serif']
+                        display: ['Montserrat', 'sans-serif'],
+                        body: ['Lato', 'sans-serif'],
+                        serif: ['Times New Roman', 'serif'],
+                        accent: ['Playfair Display', 'serif']
                     }
                 }
             }
         }
     </script>
     <style>
-        .glass-header {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+        body {
+            background-color: #F8F9FA;
+            color: #2D2D2D;
+            scroll-behavior: smooth;
         }
         .justified-text {
             text-align: justify;
             text-justify: inter-word;
+            line-height: 1.8;
+            font-family: 'Times New Roman', Times, serif;
         }
-        .img-hover-zoom {
-            overflow: hidden;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
-        .img-hover-zoom img {
-            transition: transform 0.5s ease;
+        .image-hover {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .img-hover-zoom:hover img {
-            transform: scale(1.05);
+        .image-hover:hover {
+            transform: scale(1.03);
         }
-        .bento-card {
-            background: white;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            border: 1px solid #f0f0f0;
+        .section-divider {
+            height: 4px;
+            width: 60px;
+            background: #C5A059;
+            margin: 1.5rem 0;
         }
-        .bento-card:hover {
-            box-shadow: 0 20px 40px -15px rgba(197, 160, 89, 0.15);
-            transform: translateY(-5px);
-        }
-        section {
-            scroll-margin-top: 100px;
+        .gradient-bg {
+            background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
         }
     </style>
 </head>
-<body class="bg-premium-gray text-charcoal font-body leading-relaxed">
+<body class="font-body">
 
     <!-- Header Section -->
-    <header class="sticky top-0 z-50 glass-header">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-premium-gold flex items-center justify-center rounded-lg shadow-lg">
-                    <span class="text-white font-display font-extrabold text-xl">AI</span>
-                </div>
-                <div>
-                    <h1 class="font-display font-extrabold text-xl tracking-tight uppercase text-premium-dark">AI Bất Động Sản</h1>
-                </div>
-            </div>
-            <nav>
-                <a href="www.phamhoanganhtokens.com" target="_blank" class="font-display text-sm font-semibold text-premium-gold hover:text-navy-accent transition-colors duration-300 flex items-center gap-2">
-                    www.phamhoanganhtokens.com
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                </a>
-            </nav>
+    <header class="gradient-bg text-white py-12 px-6 shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        </div>
+        <div class="max-w-6xl mx-auto flex flex-col items-center text-center relative z-10">
+            <h1 class="font-display font-bold text-4xl md:text-5xl tracking-tight mb-2">AI BẤT ĐỘNG SẢN</h1>
+            <div class="h-1 w-24 bg-brand-gold my-4"></div>
+            <a href="www.phamhoanganhtokens.com" target="_blank" class="text-brand-gold hover:text-white transition-colors duration-300 font-medium tracking-widest text-sm uppercase">
+                www.phamhoanganhtokens.com
+            </a>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-12 space-y-24">
+    <main class="max-w-6xl mx-auto px-4 py-12 md:py-20 space-y-24">
 
         <!-- Project Overview Section -->
-        <section id="project-info" class="relative">
-            <div class="flex flex-col lg:flex-row gap-12 items-start">
-                <div class="lg:w-1/2 space-y-6">
-                    <div class="inline-block px-4 py-1 bg-premium-gold/10 text-premium-gold rounded-full text-xs font-bold uppercase tracking-widest mb-2">
-                        Kiến Trúc & Quy Hoạch
-                    </div>
-                    <h2 class="font-display font-extrabold text-4xl md:text-5xl text-premium-dark leading-tight">Thông tin dự án</h2>
-                    <div class="space-y-4 text-lg">
-                        <p class="font-semibold text-premium-gold">Thiết kế mặt bằng 3D Biệt thự phố Tân cổ điển có Hồ bơi và Thông tầng</p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="p-4 border-l-4 border-premium-gold bg-white rounded-r-lg shadow-sm">
-                                <span class="block text-xs uppercase text-gray-400 font-bold">Phong cách</span>
-                                <span class="font-semibold">Tân cổ điển (Neoclassical)</span>
-                            </div>
-                            <div class="p-4 border-l-4 border-premium-gold bg-white rounded-r-lg shadow-sm">
-                                <span class="block text-xs uppercase text-gray-400 font-bold">Quy mô</span>
-                                <span class="font-semibold">1 Trệt, 2 Lầu, 1 Thượng</span>
-                            </div>
-                        </div>
-                    </div>
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-5 space-y-6">
+                <h2 class="font-display font-bold text-3xl text-brand-dark uppercase tracking-wide">Thông tin dự án</h2>
+                <div class="section-divider"></div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-brand-gold">
+                    <p class="font-semibold text-brand-teal mb-4 text-lg">Thiết kế mặt bằng 3D Biệt thự phố Tân cổ điển có Hồ bơi và Thông tầng</p>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-brand-gold mr-3 mt-1">✦</span>
+                            <span><strong>Phong cách:</strong> Tân cổ điển với tông màu trắng kem chủ đạo.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-brand-gold mr-3 mt-1">✦</span>
+                            <span><strong>Quy mô:</strong> 1 trệt, 2 lầu và 1 tầng thượng (rooftop).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-brand-gold mr-3 mt-1">✦</span>
+                            <span><strong>Điểm nhấn:</strong> Hệ cửa vòm thông tầng & Hồ bơi gia đình.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-brand-gold mr-3 mt-1">✦</span>
+                            <span><strong>Vật liệu:</strong> Đá marble trắng, phào chỉ tường tinh tế, khung kính đen.</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="lg:w-1/2 w-full">
-                    <div class="bento-card overflow-hidden group">
-                        <div class="relative aspect-[4/3] img-hover-zoom">
-                            <img src='https://opal.google/board/blobs/73d0cd56-884f-4491-b6c1-f3d7b2d20658' alt='Phối cảnh kiến trúc' class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all"></div>
-                            <div class="absolute bottom-6 left-6 text-white">
-                                <p class="text-sm font-semibold bg-premium-gold px-3 py-1 rounded inline-block mb-1">Hình ảnh phối cảnh</p>
-                                <h3 class="font-display font-bold text-xl drop-shadow-md">Ngoại thất biệt thự phố</h3>
-                            </div>
-                        </div>
+            </div>
+            <div class="lg:col-span-7">
+                <div class="relative group rounded-3xl overflow-hidden shadow-2xl">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-500"></div>
+                    <img src='https://opal.google/board/blobs/01dc44f7-000c-437b-b52a-a42a99c01134' alt='Phối cảnh dự án' class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute bottom-6 left-6 text-white font-display font-semibold text-xl bg-black/40 px-4 py-2 backdrop-blur-sm rounded-lg">
+                        Phối cảnh tham khảo
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- 3D Floor Plans Section -->
-        <section id="floor-plans">
-            <div class="text-center mb-16">
-                <h2 class="font-display font-extrabold text-4xl text-premium-dark mb-4 uppercase tracking-tight">Mặt Bằng 3D Các Tầng</h2>
-                <div class="w-24 h-1 bg-premium-gold mx-auto rounded-full"></div>
-                <p class="mt-6 text-gray-500 max-w-2xl mx-auto italic">Hình ảnh mô phỏng không gian nội thất và công năng chi tiết từng tầng với độ hoàn thiện cao nhất.</p>
+        <section class="space-y-12">
+            <div class="text-center">
+                <h2 class="font-display font-bold text-3xl text-brand-dark uppercase tracking-wide">Mặt Bằng 3D Các Tầng</h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="text-gray-500 max-w-2xl mx-auto mt-4 italic">Bản vẽ mô phỏng không gian 3 chiều trực quan, tối ưu hóa công năng sử dụng.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Floor Plan 1 -->
-                <div class="bento-card p-4">
-                    <div class="img-hover-zoom rounded-xl overflow-hidden shadow-inner bg-gray-100">
-                        <img src='https://opal.google/board/blobs/10839559-f546-430f-94f5-ea306f5a425b' alt='Mặt bằng Tầng 1' class="w-full aspect-square object-contain p-4">
-                    </div>
-                    <div class="mt-6 px-2">
-                        <h4 class="font-display font-bold text-xl text-premium-dark">Mặt bằng Tầng Trệt</h4>
-                        <p class="text-sm text-gray-500">Sảnh đón, Phòng khách, Bếp & Hồ bơi</p>
+                <div class="group">
+                    <div class="overflow-hidden rounded-2xl shadow-lg bg-white p-4">
+                        <div class="overflow-hidden rounded-xl bg-gray-100">
+                            <img src='https://opal.google/board/blobs/2f2d2631-3bee-46ec-b93b-4ba1d236c225' alt='Mặt bằng Tầng 1' class="w-full h-auto image-hover" />
+                        </div>
+                        <div class="mt-6 flex justify-between items-center border-t border-gray-100 pt-4">
+                            <h3 class="font-display font-bold text-lg text-brand-charcoal">Mặt bằng Tầng 1</h3>
+                            <span class="bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Level 01</span>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Floor Plan 2 -->
-                <div class="bento-card p-4">
-                    <div class="img-hover-zoom rounded-xl overflow-hidden shadow-inner bg-gray-100">
-                        <img src='https://opal.google/board/blobs/a8382ca5-0aaa-4ad4-a90a-ff8df0f490cf' alt='Mặt bằng Tầng 2' class="w-full aspect-square object-contain p-4">
-                    </div>
-                    <div class="mt-6 px-2">
-                        <h4 class="font-display font-bold text-xl text-premium-dark">Mặt bằng Tầng 1</h4>
-                        <p class="text-sm text-gray-500">Phòng ngủ Master & Sinh hoạt chung</p>
+                <div class="group">
+                    <div class="overflow-hidden rounded-2xl shadow-lg bg-white p-4">
+                        <div class="overflow-hidden rounded-xl bg-gray-100">
+                            <img src='https://opal.google/board/blobs/f18cb1fd-8093-4afa-874a-42e4c5ad2b53' alt='Mặt bằng Tầng 2' class="w-full h-auto image-hover" />
+                        </div>
+                        <div class="mt-6 flex justify-between items-center border-t border-gray-100 pt-4">
+                            <h3 class="font-display font-bold text-lg text-brand-charcoal">Mặt bằng Tầng 2</h3>
+                            <span class="bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Level 02</span>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Floor Plan 3 -->
-                <div class="bento-card p-4">
-                    <div class="img-hover-zoom rounded-xl overflow-hidden shadow-inner bg-gray-100">
-                        <img src='https://opal.google/board/blobs/748b6a5a-fcf0-4173-8876-dc88b8ee06e9' alt='Mặt bằng Tầng 3' class="w-full aspect-square object-contain p-4">
-                    </div>
-                    <div class="mt-6 px-2">
-                        <h4 class="font-display font-bold text-xl text-premium-dark">Mặt bằng Tầng 2</h4>
-                        <p class="text-sm text-gray-500">Phòng ngủ phụ & Không gian làm việc</p>
+                <div class="group">
+                    <div class="overflow-hidden rounded-2xl shadow-lg bg-white p-4">
+                        <div class="overflow-hidden rounded-xl bg-gray-100">
+                            <img src='https://opal.google/board/blobs/aefab2ab-40cb-4246-8e41-e895fa26f600' alt='Mặt bằng Tầng 3' class="w-full h-auto image-hover" />
+                        </div>
+                        <div class="mt-6 flex justify-between items-center border-t border-gray-100 pt-4">
+                            <h3 class="font-display font-bold text-lg text-brand-charcoal">Mặt bằng Tầng 3</h3>
+                            <span class="bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Level 03</span>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Floor Plan 4 -->
-                <div class="bento-card p-4">
-                    <div class="img-hover-zoom rounded-xl overflow-hidden shadow-inner bg-gray-100">
-                        <img src='https://opal.google/board/blobs/daff9538-71d1-4e9f-b594-a67fc42af751' alt='Mặt bằng Tầng Thượng' class="w-full aspect-square object-contain p-4">
-                    </div>
-                    <div class="mt-6 px-2">
-                        <h4 class="font-display font-bold text-xl text-premium-dark">Mặt bằng Tầng Thượng</h4>
-                        <p class="text-sm text-gray-500">Sân vườn, BBQ & Gym</p>
+                <div class="group">
+                    <div class="overflow-hidden rounded-2xl shadow-lg bg-white p-4">
+                        <div class="overflow-hidden rounded-xl bg-gray-100">
+                            <img src='https://opal.google/board/blobs/0e1d3b29-0287-41e7-9fe8-c78b76ed7323' alt='Mặt bằng Tầng 4' class="w-full h-auto image-hover" />
+                        </div>
+                        <div class="mt-6 flex justify-between items-center border-t border-gray-100 pt-4">
+                            <h3 class="font-display font-bold text-lg text-brand-charcoal">Mặt bằng Tầng thượng</h3>
+                            <span class="bg-brand-gold/10 text-brand-gold px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Rooftop</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Detailed Report Section -->
-        <section id="report" class="bg-white rounded-[2rem] shadow-2xl p-8 md:p-16 border border-gray-100">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="font-display font-extrabold text-3xl text-premium-dark mb-4">BÁO CÁO CHI TIẾT THIẾT KẾ</h2>
-                    <div class="flex justify-center items-center gap-4 text-sm font-semibold text-premium-gold uppercase tracking-widest">
-                        <span>Lưu hành nội bộ</span>
-                        <span class="w-1.5 h-1.5 rounded-full bg-premium-gold"></span>
-                        <span>Đẳng cấp thượng lưu</span>
+        <section class="max-w-4xl mx-auto">
+            <div class="bg-white p-8 md:p-16 shadow-2xl rounded-sm border-t-8 border-brand-charcoal relative">
+                <div class="absolute top-8 right-8 opacity-5">
+                    <svg width="120" height="120" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V7h2v9zm4 0h-2V7h2v9z"/></svg>
+                </div>
+                
+                <h2 class="font-display font-bold text-3xl text-brand-dark mb-12 text-center uppercase tracking-tight">Báo Cáo Chi Tiết Thiết Kế</h2>
+                
+                <div class="justified-text text-lg text-gray-900 space-y-8">
+                    <p class="text-center font-bold text-xl uppercase mb-10">BÁO CÁO THIẾT KẾ KIẾN TRÚC VÀ NỘI THẤT CHI TIẾT<br>DỰ ÁN: BIỆT THỰ PHỐ TÂN CỔ ĐIỂN ĐẲNG CẤP</p>
+                    
+                    <p class="italic text-sm text-gray-600 border-b pb-4 mb-6">
+                        Thời gian báo cáo: Thứ Năm, ngày 16 tháng 04 năm 2026 | 07:51 AM<br>
+                        Phụ trách: CEO AI Agent - AI Bất Động Sản
+                    </p>
+
+                    <p class="font-bold text-xl text-brand-charcoal border-l-4 border-brand-gold pl-4">I. TỔNG QUAN DỰ ÁN</p>
+                    <p>Báo cáo này trình bày phương án thiết kế kiến trúc và nội thất 3D cho công trình biệt thự phố theo phong cách Tân cổ điển (Neo-classical). Với sự kết hợp tinh tế giữa vẻ đẹp truyền thống sang trọng và tiện nghi hiện đại, công trình không chỉ là nơi ở mà còn là một tác phẩm nghệ thuật, khẳng định đẳng cấp của gia chủ.</p>
+
+                    <p class="font-bold text-xl text-brand-charcoal border-l-4 border-brand-gold pl-4">II. PHÂN TÍCH KIẾN TRÚC VÀ GIẢI PHÁP KỸ THUẬT</p>
+                    <p><strong>1. Phong cách chủ đạo:</strong> Công trình trung thành với ngôn ngữ Tân cổ điển, sử dụng tông màu trắng kem (Cream White) làm chủ đạo. Sự tinh giản các chi tiết rườm rà của cổ điển tập trung vào tỷ lệ hình khối và các đường phào chỉ tường tinh tế, tạo nên vẻ thanh lịch nhưng không kém phần uy nghi.</p>
+                    <p><strong>2. Giải pháp không gian và ánh sáng:</strong></p>
+                    <ul class="list-disc ml-6 space-y-2">
+                        <li><strong>Thông tầng (Atrium):</strong> Hệ thống thông tầng tại sảnh chính là giải pháp then chốt để mở rộng không gian theo chiều dọc, mang lại cảm giác khoáng đạt và giúp lưu thông khí cho toàn bộ căn nhà.</li>
+                        <li><strong>Hệ cửa vòm:</strong> Sử dụng các ô cửa vòm kính lớn vừa là điểm nhấn kiến trúc vừa giúp tối đa hóa ánh sáng tự nhiên, tạo sự kết nối liền mạch giữa nội thất và ngoại thất.</li>
+                        <li><strong>Hồ bơi:</strong> Bố trí chạy dọc hông nhà, không chỉ cung cấp tiện ích nghỉ dưỡng mà còn đóng vai trò là "máy điều hòa" tự nhiên cho phòng khách tầng trệt.</li>
+                    </ul>
+                    <p><strong>3. Vật liệu và Hoàn thiện:</strong> Sử dụng đá marble trắng vân mây cao cấp cho sàn và tường. Hệ phào chỉ sắc nét, kết hợp cửa kính khung đen tạo sự tương phản hiện đại. Nội thất lịch lãm kết hợp mảng xanh ban công cân bằng không gian.</p>
+
+                    <p class="font-bold text-xl text-brand-charcoal border-l-4 border-brand-gold pl-4">III. CHI TIẾT MẶT BẰNG CÔNG NĂNG 3D CÁC TẦNG</p>
+                    
+                    <div class="my-10">
+                        <p class="font-bold">1. Tầng Trệt: Không gian đón khách và Sinh hoạt chung</p>
+                        <p>Sảnh đón có trần thông tầng cực cao, tạo ấn tượng cho khách ngay từ khi bước vào. Phòng khách sang trọng có tầm nhìn trực diện ra hồ bơi bên hông thông qua hệ vách kính lớn. Khu vực bếp và phòng ăn được bố trí liên hoàn, hiện đại.</p>
+                        <div class="my-6 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                            <img src='https://opal.google/board/blobs/2f2d2631-3bee-46ec-b93b-4ba1d236c225' alt='Mặt bằng Tầng Trệt' class="w-full h-auto" />
+                        </div>
+                    </div>
+
+                    <div class="my-10">
+                        <p class="font-bold">2. Lầu 1: Không gian nghỉ dưỡng Master</p>
+                        <p>Bao gồm các phòng ngủ Master rộng rãi với ban công riêng tràn ngập cây xanh. Điểm nhấn là khu vực sinh hoạt chung tại hành lang, nơi các thành viên có thể nhìn xuống khoảng thông tầng của phòng khách, tạo sự gắn kết trong không gian kiến trúc.</p>
+                        <div class="my-6 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                            <img src='https://opal.google/board/blobs/f18cb1fd-8093-4afa-874a-42e4c5ad2b53' alt='Mặt bằng Lầu 1' class="w-full h-auto" />
+                        </div>
+                    </div>
+
+                    <div class="my-10">
+                        <p class="font-bold">3. Lầu 2: Không gian chức năng và Riêng tư</p>
+                        <p>Bố trí các phòng ngủ phụ tiện nghi dành cho người thân hoặc khách. Ngoài ra, mặt bằng còn bao gồm phòng thờ được thiết kế trang nghiêm và phòng làm việc yên tĩnh, đảm bảo sự tách biệt và tập trung.</p>
+                        <div class="my-6 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                            <img src='https://opal.google/board/blobs/aefab2ab-40cb-4246-8e41-e895fa26f600' alt='Mặt bằng Lầu 2' class="w-full h-auto" />
+                        </div>
+                    </div>
+
+                    <div class="my-10">
+                        <p class="font-bold">4. Tầng Thượng (Rooftop): Không gian thư giãn đẳng cấp</p>
+                        <p>Tận dụng tối đa không gian ngoài trời với sân vườn cao xanh mát. Bao gồm phòng tập gym hiện đại với vách kính bao quanh và khu vực nướng BBQ thư giãn với đầy đủ trang thiết bị ngoài trời, là nơi lý tưởng cho các buổi tiệc gia đình.</p>
+                        <div class="my-6 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                            <img src='https://opal.google/board/blobs/0e1d3b29-0287-41e7-9fe8-c78b76ed7323' alt='Mặt bằng Tầng Thượng' class="w-full h-auto" />
+                        </div>
+                    </div>
+
+                    <p class="font-bold text-xl text-brand-charcoal border-l-4 border-brand-gold pl-4">IV. KẾT LUẬN</p>
+                    <p>Phương án thiết kế trên đã đáp ứng hoàn hảo các yêu cầu về thẩm mỹ Tân cổ điển và tối ưu hóa công năng sử dụng. Sự kết hợp giữa vật liệu đá marble, hệ cửa vòm thông tầng và các mảng xanh đã tạo nên một không gian sống thượng lưu, hài hòa với thiên nhiên.</p>
+
+                    <div class="mt-16 text-right space-y-1">
+                        <p class="italic">Trân trọng,</p>
+                        <p class="font-bold text-xl">CEO AI Agent</p>
+                        <p class="font-bold text-brand-gold">AI Bất Động Sản</p>
+                        <p class="text-sm text-gray-500">Website: www.phamhoanganhtokens.com</p>
                     </div>
                 </div>
-
-                <!-- The Report Content with specific styling requirements -->
-                <div class="font-report text-lg leading-[1.8] text-premium-dark justified-text space-y-6">
-                    <p class="font-bold text-center text-xl underline mb-8">BÁO CÁO TỔNG HỢP CHI TIẾT THIẾT KẾ BIỆT THỰ PHỐ TÂN CỔ ĐIỂN</p>
-                    <div class="border-y border-gray-200 py-4 mb-8">
-                        <p class="font-bold">AI BẤT ĐỘNG SẢN - CEO AI AGENT</p>
-                        <p>Ngày thực hiện: Ngày 16 tháng 04 năm 2026</p>
-                        <p>Thời gian hoàn tất: 07:36 AM</p>
-                        <p>Định dạng trình bày: Font Times New Roman, Căn lề hai bên (Justify)</p>
-                    </div>
-
-                    <h3 class="font-bold text-xl">I. TỔNG QUAN KIẾN TRÚC VÀ PHONG CÁCH CHỦ ĐẠO</h3>
-                    <p>
-                        Công trình là một tuyệt tác biệt thự phố được kiến tạo theo phong cách Tân cổ điển (Modern Neoclassical), nơi sự cổ điển tinh tế giao thoa cùng hơi thở hiện đại đầy phóng khoáng. Với tông màu trắng kem (Creamy White) chủ đạo, tòa nhà toát lên vẻ thanh cao, sang trọng nhưng không kém phần ấm cúng. Điểm nhấn kiến trúc đắt giá nhất nằm ở hệ sảnh đón với cửa vòm thông tầng cao vút, không chỉ tạo sự bề thế về mặt thị giác mà còn mở ra một không gian tràn ngập ánh sáng tự nhiên.
-                    </p>
-                    <p>
-                        Sự kết hợp giữa các đường phào chỉ thanh mảnh và hệ cửa kính khung đen tương phản tạo nên một diện mạo sắc nét, mạnh mẽ mà vẫn duyên dáng. Việc bố trí hồ bơi dọc hông nhà và các mảng xanh tại ban công là giải pháp kiến trúc sinh thái, đưa thiên nhiên vào sâu trong không gian sống đô thị.
-                    </p>
-
-                    <h3 class="font-bold text-xl">II. CÁC GIẢI PHÁP KỸ THUẬT VÀ VẬT LIỆU TRIỂN KHAI</h3>
-                    <p>Để hiện thực hóa bản thiết kế đẳng cấp này, các giải pháp kỹ thuật đã được tối ưu hóa:</p>
-                    <ol class="list-decimal pl-6 space-y-2">
-                        <li><strong>Giải pháp thông tầng (Void Selection):</strong> Hệ thống sảnh chính thông tầng giúp lưu thông không khí, tối ưu ánh sáng và tạo sự kết nối theo phương đứng giữa các tầng sinh hoạt.</li>
-                        <li><strong>Vật liệu cao cấp:</strong> Sử dụng đá Marble trắng vân mây cho sàn sảnh và phòng khách để tăng độ bóng và chiều sâu. Hệ thống cửa kính cường lực khung nhôm xingfa đen đảm bảo tính thẩm mỹ và độ bền.</li>
-                        <li><strong>Cảnh quan nước:</strong> Hồ bơi hình chữ L được xử lý bằng công nghệ lọc hiện đại, kết nối trực tiếp với phòng khách qua hệ cửa vòm kính lớn, tạo nên tầm nhìn thư giãn tuyệt đối.</li>
-                        <li><strong>Mảng xanh đô thị:</strong> Tận dụng các khoảng ban công và tầng thượng để bố trí cây xanh, sàn gỗ nhựa ngoài trời chịu nước, mang lại môi trường sống trong lành.</li>
-                    </ol>
-
-                    <h3 class="font-bold text-xl">III. CHI TIẾT MẶT BẰNG 3D VÀ CÔNG NĂNG TỪNG TẦNG</h3>
-                    
-                    <div class="report-sub-section space-y-6">
-                        <p><strong>1. Tầng Trệt: Không gian đón khách và Sinh hoạt chung</strong></p>
-                        <p>Tầng trệt được thiết kế với sự phóng khoáng tối đa. Sảnh đón thông tầng rực rỡ với đèn chùm pha lê, phòng khách sang trọng có tầm nhìn bao trọn hồ bơi. Khu vực bếp nấu và phòng ăn hiện đại được ngăn cách tinh tế, tạo điều kiện thuận lợi cho các buổi tiệc gia đình.</p>
-                        <div class="my-8 rounded-lg overflow-hidden border-2 border-premium-gray">
-                            <img src='https://opal.google/board/blobs/10839559-f546-430f-94f5-ea306f5a425b' alt='3D Tầng Trệt' class="w-full">
-                        </div>
-
-                        <p><strong>2. Tầng 1: Không gian nghỉ ngơi riêng tư (Master Suites)</strong></p>
-                        <p>Tầng 1 tập trung vào sự riêng tư với các phòng ngủ Master rộng lớn, tích hợp phòng thay đồ và phòng tắm tiện nghi. Khu vực sinh hoạt chung nằm tại khoảng thông tầng là nơi lý tưởng để các thành viên gắn kết, đồng thời có thể nhìn xuống không gian phòng khách phía dưới.</p>
-                        <div class="my-8 rounded-lg overflow-hidden border-2 border-premium-gray">
-                            <img src='https://opal.google/board/blobs/a8382ca5-0aaa-4ad4-a90a-ff8df0f490cf' alt='3D Tầng 1' class="w-full">
-                        </div>
-
-                        <p><strong>3. Tầng 2: Phòng ngủ phụ và Không gian làm việc</strong></p>
-                        <p>Đáp ứng nhu cầu yên tĩnh, tầng 2 bố trí các phòng ngủ phụ với nội thất đồng bộ và một phòng làm việc chuyên nghiệp với kệ sách kịch trần. Hệ cửa sổ lớn đảm bảo mọi không gian đều được đón gió và ánh sáng tự nhiên.</p>
-                        <div class="my-8 rounded-lg overflow-hidden border-2 border-premium-gray">
-                            <img src='https://opal.google/board/blobs/748b6a5a-fcf0-4173-8876-dc88b8ee06e9' alt='3D Tầng 2' class="w-full">
-                        </div>
-
-                        <p><strong>4. Tầng Thượng: Nghỉ dưỡng và Rèn luyện sức khỏe</strong></p>
-                        <p>Tầng thượng là "ốc đảo" thư giãn của gia đình với sân vườn trên cao, khu vực BBQ ngoài trời và phòng tập Gym hiện đại với vách kính. Đây là không gian lý tưởng cho các buổi tiệc tối lung linh hoặc các hoạt động nâng cao sức khỏe vào buổi sáng.</p>
-                        <div class="my-8 rounded-lg overflow-hidden border-2 border-premium-gray">
-                            <img src='https://opal.google/board/blobs/daff9538-71d1-4e9f-b594-a67fc42af751' alt='3D Tầng Thượng' class="w-full">
-                        </div>
-                    </div>
-
-                    <h3 class="font-bold text-xl">IV. KẾT LUẬN</h3>
-                    <p>
-                        Bản thiết kế này không chỉ là một công trình nhà ở mà còn là một tác phẩm nghệ thuật khẳng định vị thế của chủ nhân. Sự hài hòa giữa tính công năng tiện nghi và vẻ đẹp thẩm mỹ Tân cổ điển đã tạo nên một không gian sống hoàn hảo, dẫn đầu xu hướng biệt thự phố hiện nay.
-                    </p>
-                    <p>
-                        Quý khách hàng có thể tham khảo thêm các dịch vụ đẳng cấp của chúng tôi tại website: <a href="www.phamhoanganhtokens.com" target="_blank" class="text-premium-gold font-bold italic">www.phamhoanganhtokens.com</a>
-                    </p>
-                    <p class="mt-12 text-right">
-                        Trân trọng,<br><br>
-                        <strong>CEO AI Agent</strong><br>
-                        AI Bất Động Sản.
-                    </p>
+                
+                <div class="mt-20 pt-8 border-t border-gray-100 text-[10px] text-gray-400 uppercase tracking-widest text-center">
+                    Ghi chú: Văn bản được trình bày theo định dạng chuẩn, căn lề đều hai bên (justified formatting), sẵn sàng cho việc in ấn và lưu trữ chính thức.
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Simple Contact CTA -->
-    <div class="bg-premium-dark py-12 px-6 mt-12 text-center">
-        <h2 class="text-white font-display text-2xl font-bold mb-4">Bạn đang có ý tưởng cho ngôi nhà trong mơ?</h2>
-        <a href="www.phamhoanganhtokens.com" target="_blank" class="inline-block bg-premium-gold text-white px-8 py-3 rounded-full font-display font-bold hover:bg-white hover:text-premium-gold transition-all duration-300">Liên hệ ngay</a>
+    <!-- Simple Footer for Brand Identity -->
+    <div class="bg-brand-charcoal py-8 border-t border-brand-gold/20">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+            <div class="font-display font-semibold text-white tracking-widest mb-4 md:mb-0">
+                AI BẤT ĐỘNG SẢN
+            </div>
+            <div class="flex space-x-6">
+                <a href="www.phamhoanganhtokens.com" target="_blank" class="hover:text-brand-gold transition-colors">Trang chủ</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">Dịch vụ</a>
+                <a href="#" class="hover:text-brand-gold transition-colors">Dự án</a>
+            </div>
+        </div>
     </div>
 
 </body>
