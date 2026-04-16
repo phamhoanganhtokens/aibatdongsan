@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bất Động Sản - Dự Án Biệt Thự Hiện Đại</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premium: {
+                            dark: '#0f172a',
+                            charcoal: '#1e293b',
+                            gold: '#a38a5e',
+                            teal: '#134e4a',
+                            slate: '#f8fafc',
+                            accent: '#c5a059'
+                        }
+                    },
+                    fontFamily: {
+                        header: ['Montserrat', 'sans-serif'],
+                        body: ['Outfit', 'sans-serif'],
+                        report: ['"Times New Roman"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fcfcfc;
+            color: #1e293b;
+            font-family: 'Outfit', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        .report-content {
+            font-family: "Times New Roman", Times, serif;
+            text-align: justify;
+            line-height: 1.8;
+            color: #1a1a1a;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #c5a059, transparent);
+        }
+        .image-hover {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .image-hover:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gradient-bg {
+            background: radial-gradient(circle at top right, #f8fafc 0%, #eff6ff 100%);
+        }
+    </style>
+</head>
+<body class="gradient-bg">
+
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 glass-card px-6 py-4 md:px-12 mb-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-premium-dark rounded-lg flex items-center justify-center text-premium-accent font-bold text-xl">AI</div>
+                <h1 class="font-header font-bold text-2xl tracking-tight text-premium-dark uppercase">AI Bất Động Sản</h1>
+            </div>
+            <a href="www.phamhoanganhtokens.com" target="_blank" class="text-premium-teal hover:text-premium-accent font-semibold transition-colors duration-300 border-b-2 border-premium-teal/20 hover:border-premium-accent">
+                www.phamhoanganhtokens.com
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 md:px-12 pb-24">
+        
+        <!-- Project Overview Section -->
+        <section class="mb-20">
+            <h2 class="section-title font-header text-3xl font-bold text-premium-dark">Thông tin dự án</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div class="glass-card p-8 rounded-2xl border-l-4 border-l-premium-accent">
+                    <p class="text-premium-accent font-bold mb-2 uppercase tracking-widest text-sm">Property Specifications</p>
+                    <h3 class="text-2xl font-bold mb-6">Thiết kế mặt bằng 3D Biệt thự Hiện đại Đa tầng trên Sườn dốc</h3>
+                    <div class="space-y-4 text-gray-700">
+                        <p class="report-content italic">"Chào CEO AI Agent của AI Bất Động Sản, tôi muốn thiết kế mặt bằng 3D cho một biệt thự hiện đại trên sườn dốc dựa trên hình ảnh đính kèm..."</p>
+                        <ul class="space-y-3 mt-4">
+                            <li class="flex items-start gap-2">
+                                <span class="text-premium-accent">✦</span>
+                                <span><strong>Kiến trúc:</strong> Hiện đại, sang trọng, khối hộp giật cấp tận dụng địa hình dốc.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-premium-accent">✦</span>
+                                <span><strong>Cấu trúc:</strong> 3 tầng chính với kính cường lực khổ lớn.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-premium-accent">✦</span>
+                                <span><strong>Vật liệu:</strong> Đá tự nhiên sáng màu, gỗ tối màu, kính Panorama.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="overflow-hidden rounded-2xl shadow-2xl">
+                        <img src='https://opal.google/board/blobs/4192246d-dba0-4bde-8f84-de2a3ba83e5a' alt='Reference Image' class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110" />
+                    </div>
+                    <div class="absolute inset-0 border-2 border-premium-accent/20 rounded-2xl pointer-events-none translate-x-4 translate-y-4 -z-10"></div>
+                    <p class="mt-6 text-sm text-gray-500 text-center font-medium">Hình ảnh tham khảo kiến trúc & địa hình</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Floor Plans Section -->
+        <section class="mb-24">
+            <div class="text-center mb-16">
+                <h2 class="section-title font-header text-4xl font-bold text-premium-dark text-center">Mặt Bằng 3D Các Tầng</h2>
+                <p class="text-gray-500 mt-2">Bản vẽ chi tiết phân bổ không gian và công năng biệt thự</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Floor 1 -->
+                <div class="flex flex-col gap-4">
+                    <div class="image-hover bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                        <img src='https://opal.google/board/blobs/6c5b0e55-961a-482a-a569-4c30099739dc' alt='Mặt bằng Tầng 1' class="w-full h-auto rounded-lg shadow-inner" />
+                    </div>
+                    <div class="text-center">
+                        <span class="inline-block px-3 py-1 bg-premium-dark text-white text-xs font-bold rounded-full mb-2">TẦNG 1</span>
+                        <h4 class="font-header font-bold text-lg">Khu vực Hồ bơi & Giải trí</h4>
+                    </div>
+                </div>
+
+                <!-- Floor 2 -->
+                <div class="flex flex-col gap-4">
+                    <div class="image-hover bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                        <img src='https://opal.google/board/blobs/5b59102e-9720-4d74-a50d-0a8dbb189d15' alt='Mặt bằng Tầng 2' class="w-full h-auto rounded-lg shadow-inner" />
+                    </div>
+                    <div class="text-center">
+                        <span class="inline-block px-3 py-1 bg-premium-dark text-white text-xs font-bold rounded-full mb-2">TẦNG 2</span>
+                        <h4 class="font-header font-bold text-lg">Không gian Sinh hoạt Chung</h4>
+                    </div>
+                </div>
+
+                <!-- Floor 3 -->
+                <div class="flex flex-col gap-4">
+                    <div class="image-hover bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                        <img src='https://opal.google/board/blobs/cccf1e0b-3209-43cc-9c62-6518546f13bd' alt='Mặt bằng Tầng 3' class="w-full h-auto rounded-lg shadow-inner" />
+                    </div>
+                    <div class="text-center">
+                        <span class="inline-block px-3 py-1 bg-premium-dark text-white text-xs font-bold rounded-full mb-2">TẦNG 3</span>
+                        <h4 class="font-header font-bold text-lg">Rooftop Lounge & Spa</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Report Section -->
+        <section class="max-w-4xl mx-auto glass-card p-10 md:p-16 rounded-3xl overflow-hidden relative">
+            <!-- Decorative Elements for the Report -->
+            <div class="absolute top-0 right-0 w-32 h-32 bg-premium-accent/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-48 h-48 bg-premium-teal/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+
+            <div class="text-center mb-12">
+                <h2 class="font-header text-4xl font-bold text-premium-dark mb-4">Báo Cáo Chi Tiết Thiết Kế</h2>
+                <div class="w-24 h-1 bg-premium-accent mx-auto"></div>
+            </div>
+
+            <div class="report-content">
+                <div class="flex flex-col items-center text-center mb-10">
+                    <p class="font-bold text-xl tracking-widest uppercase">AI BẤT ĐỘNG SẢN</p>
+                    <p class="text-sm font-semibold tracking-wider">VĂN PHÒNG TỔNG GIÁM ĐỐC ĐIỀU HÀNH</p>
+                    <div class="w-full border-t border-gray-300 my-6"></div>
+                    <h3 class="font-bold text-2xl mb-2">BÁO CÁO THIẾT KẾ CUỐI CÙNG: DỰ ÁN BIỆT THỰ HIỆN ĐẠI ĐA TẦNG TRÊN SƯỜN DỐC</h3>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 mb-8 text-sm md:text-base border-b border-gray-100 pb-6">
+                    <div>
+                        <p><strong>Ngày thực hiện:</strong> 16 tháng 04 năm 2026</p>
+                        <p><strong>Dự án:</strong> Biệt thự Cao cấp (Modern Hillside Villa)</p>
+                    </div>
+                    <div class="text-right">
+                        <p><strong>Thời gian:</strong> 08:14 AM</p>
+                        <p><strong>Phong cách:</strong> Hiện đại Tối giản</p>
+                    </div>
+                </div>
+
+                <h4 class="font-bold text-xl mt-8 mb-4 border-l-4 border-premium-accent pl-4">1. GIỚI THIỆU DỰ ÁN VÀ PHÂN TÍCH KIẾN TRÚC - ĐỊA HÌNH</h4>
+                <p class="mb-6">
+                    Dự án "Biệt thự Hiện đại Đa tầng trên Sườn dốc" là một công trình mang tính biểu tượng, được thiết kế để định nghĩa lại sự giao thoa giữa kiến trúc nhân tạo và vẻ đẹp tự nhiên của địa hình đồi núi. Với vị trí đặc thù trên một sườn dốc có tầm nhìn bao quát toàn cảnh, giải pháp kiến trúc được lựa chọn là cấu trúc giật cấp (terrace) nương theo độ dốc tự nhiên.
+                </p>
+                <p class="mb-6">
+                    Phong cách kiến trúc chủ đạo tập trung vào các hình khối hình học xếp chồng phi đối xứng, tạo nên những khoảng vươn (cantilever) táo bạo. Việc này không chỉ tạo ra diện mạo độc đáo mà còn giúp mở rộng diện tích ban công, tạo bóng đổ tự nhiên và tối ưu hóa tầm nhìn Panorama không giới hạn cho mọi không gian sống bên trong. Hệ thống đường dốc (ramp) tiếp cận gara được tính toán kỹ lưỡng về độ dốc để đảm bảo sự thuận tiện và an toàn cho các dòng xe cao cấp.
+                </p>
+
+                <h4 class="font-bold text-xl mt-8 mb-4 border-l-4 border-premium-accent pl-4">2. GIẢI PHÁP KỸ THUẬT VÀ VẬT LIỆU</h4>
+                <p class="mb-4">Để tôn lên vẻ sang trọng và sự bền vững, chúng tôi ưu tiên sử dụng các vật liệu cao cấp có khả năng chịu đựng thời tiết nhưng vẫn đảm bảo tính thẩm mỹ tinh tế:</p>
+                <ul class="list-disc ml-8 mb-6 space-y-2">
+                    <li><strong>Vật liệu bao che:</strong> Kính cường lực khổ lớn (floor-to-ceiling) giúp xóa nhòa ranh giới giữa bên trong và bên ngoài.</li>
+                    <li><strong>Ốp lát ngoại thất:</strong> Đá tự nhiên màu sáng (beige/trắng) kết hợp với các mảng tường bê tông trần tạo sự vững chãi.</li>
+                    <li><strong>Nội thất:</strong> Sàn và trần sử dụng gỗ tối màu (dark wood) tạo cảm giác ấm cúng, đối lập với tông màu trung tính của nội thất tối giản.</li>
+                    <li><strong>Cảnh quan:</strong> Tận dụng thảm thực vật địa phương và các khu vườn treo để giảm nhiệt độ bề mặt và tạo sự kết nối xanh.</li>
+                </ul>
+
+                <div class="my-10 border-t border-gray-100"></div>
+
+                <h4 class="font-bold text-xl mt-8 mb-4 border-l-4 border-premium-accent pl-4">3. MÔ TẢ CHI TIẾT CÔNG NĂNG CÁC TẦNG</h4>
+
+                <div class="space-y-12">
+                    <!-- Section 3.1 -->
+                    <div>
+                        <h5 class="font-bold text-lg mb-3">3.1. Tầng Trên Cùng (Rooftop/Tầng 3): Không Gian Thư Giãn Đẳng Cấp</h5>
+                        <p class="mb-6">Đây là khu vực cao nhất của biệt thự, được thiết kế như một ốc đảo nghỉ dưỡng riêng tư. Không gian bao gồm khu vực Lounge ngoài trời với hệ thống sofa cao cấp dưới mái che hiện đại, khu vực vườn cảnh quan xanh mát và một bồn tắm Jacuzzi/spa hướng tầm nhìn ra chân trời.</p>
+                        <div class="rounded-xl overflow-hidden shadow-lg border-4 border-white mb-4">
+                            <img src='https://opal.google/board/blobs/cccf1e0b-3209-43cc-9c62-6518546f13bd' alt='Rooftop Details' class="w-full h-auto" />
+                        </div>
+                    </div>
+
+                    <!-- Section 3.2 -->
+                    <div>
+                        <h5 class="font-bold text-lg mb-3">3.2. Tầng Giữa (Tầng 2): Tâm Điểm Sinh Hoạt Chung</h5>
+                        <p class="mb-6">Tầng 2 được thiết kế theo lối kiến trúc mở hoàn toàn. Phòng khách thông tầng tạo cảm giác bề thế, kết nối trực tiếp với khu vực phòng ăn trang trọng và bếp mở với đảo đá Marble trắng sang trọng. Phòng ngủ Master được bố trí tại vị trí đắc địa nhất của tầng này với ban công riêng rộng lớn.</p>
+                        <div class="rounded-xl overflow-hidden shadow-lg border-4 border-white mb-4">
+                            <img src='https://opal.google/board/blobs/5b59102e-9720-4d74-a50d-0a8dbb189d15' alt='Mid Floor Details' class="w-full h-auto" />
+                        </div>
+                    </div>
+
+                    <!-- Section 3.3 -->
+                    <div>
+                        <h5 class="font-bold text-lg mb-3">3.3. Tầng Dưới (Tầng 1): Khu Vực Giải Trí Và Hồ Bơi Vô Cực</h5>
+                        <p class="mb-6">Tầng thấp nhất của công trình là nơi tập trung các hoạt động rèn luyện và giải trí. Hồ bơi vô cực tràn bờ là điểm nhấn trung tâm, kết nối trực tiếp với không gian sống. Không gian bên trong bao gồm các phòng ngủ phụ cho khách, phòng gym hiện đại và phòng giải trí đa phương tiện.</p>
+                        <div class="rounded-xl overflow-hidden shadow-lg border-4 border-white mb-4">
+                            <img src='https://opal.google/board/blobs/6c5b0e55-961a-482a-a569-4c30099739dc' alt='Ground Floor Details' class="w-full h-auto" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-12 border-t-2 border-dashed border-gray-200"></div>
+
+                <h4 class="font-bold text-xl mb-4 border-l-4 border-premium-accent pl-4">4. KẾT LUẬN</h4>
+                <p class="mb-8">
+                    Bản thiết kế "Biệt thự Hiện đại Đa tầng trên Sườn dốc" không chỉ đáp ứng hoàn hảo các yêu cầu về công năng sử dụng mà còn là một tác phẩm nghệ thuật kiến trúc độc bản. Việc tận dụng tối đa địa hình dốc để phân tầng chức năng đã tạo nên những trải nghiệm không gian đa dạng và đẳng cấp. Chúng tôi tin rằng dự án này sẽ mang lại giá trị sống thượng lưu bền vững.
+                </p>
+
+                <div class="mb-12">
+                    <p class="font-bold mb-4 text-center">Phối cảnh tổng thể tham chiếu:</p>
+                    <div class="rounded-2xl overflow-hidden shadow-2xl">
+                        <img src='https://opal.google/board/blobs/c86ecd86-072a-491c-b4b5-b81b1a48e4fd' alt='Full Perspective' class="w-full h-auto" />
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-end mt-16 pb-10">
+                    <div class="text-center w-64">
+                        <p class="font-bold mb-2">Phê duyệt bởi,</p>
+                        <div class="h-16 flex items-center justify-center italic text-premium-teal font-serif text-2xl">
+                            AI Agent
+                        </div>
+                        <p class="font-bold text-lg mt-2">CEO AI Agent</p>
+                        <p class="text-premium-accent font-semibold uppercase tracking-tighter text-sm">AI Bất Động Sản</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Subtle animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                    entry.target.classList.remove('opacity-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
