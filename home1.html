@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bất Động Sản - Dự án Biệt thự AI Smart Mansion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premium: {
+                            bg: '#f8f9fa',
+                            dark: '#1a1a1a',
+                            accent: '#2c7a7b', // Soft Teal
+                            gold: '#b89c6d',
+                            charcoal: '#333333',
+                            glass: 'rgba(255, 255, 255, 0.8)',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Montserrat', 'sans-serif'],
+                        body: ['Outfit', 'sans-serif'],
+                        report: ['"Times New Roman"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333333;
+            scroll-behavior: smooth;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        .report-content {
+            font-family: "Times New Roman", Times, serif;
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+        .report-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+        .report-content h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #2c7a7b;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            text-align: left;
+        }
+        .report-content p {
+            margin-bottom: 1.25rem;
+        }
+        .report-content hr {
+            margin: 3rem 0;
+            border-top: 1px solid #ddd;
+        }
+        .image-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+        }
+        .image-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.2);
+        }
+        .image-card img {
+            transition: transform 0.6s ease;
+        }
+        .image-card:hover img {
+            transform: scale(1.05);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c7a7b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body class="font-body">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 glass-header py-4 px-6 md:px-12 flex justify-between items-center">
+        <div>
+            <h1 class="font-display font-800 text-2xl tracking-tighter gradient-text">AI BẤT ĐỘNG SẢN</h1>
+        </div>
+        <nav>
+            <a href="www.phamhoanganhtokens.com" target="_blank" class="text-premium-accent font-medium hover:underline transition-all">
+                www.phamhoanganhtokens.com
+            </a>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12 md:py-20">
+
+        <!-- Project Overview -->
+        <section class="mb-24">
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                <div class="md:w-3/5">
+                    <h2 class="font-display font-bold text-4xl mb-8 text-premium-dark flex items-center">
+                        <span class="w-12 h-1 bg-premium-accent mr-4"></span>
+                        Thông tin dự án
+                    </h2>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-bold mb-4 text-premium-accent">Biệt thự AI Smart Mansion - Phong cách Tân cổ điển Vị lai</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Công trình là sự giao thoa độc đáo giữa giá trị cổ điển và công nghệ tương lai. Kiến trúc nổi bật với tính đối xứng tuyệt đối của phong cách Tân cổ điển, sử dụng các thức cột Corinthian tinh xảo và hệ mái Mansard đặc trưng của Pháp.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex gap-4 p-4 bg-gray-50 rounded-xl">
+                                <div class="text-premium-accent font-bold">●</div>
+                                <div>
+                                    <span class="font-semibold text-premium-dark">Kiến trúc:</span> Tân cổ điển Vị lai (Neo-classical Futurist).
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 bg-gray-50 rounded-xl">
+                                <div class="text-premium-accent font-bold">●</div>
+                                <div>
+                                    <span class="font-semibold text-premium-dark">Công nghệ:</span> Digital Twin, AI Integration, Chiếu sáng đa tầng.
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 bg-gray-50 rounded-xl">
+                                <div class="text-premium-accent font-bold">●</div>
+                                <div>
+                                    <span class="font-semibold text-premium-dark">Cảnh quan:</span> Núi non hùng vĩ, vườn Pháp đối xứng, bệ uốn lượn "dòng chảy dữ liệu".
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/5">
+                    <div class="image-card group">
+                        <img src="https://opal.google/board/blobs/5e9a8aca-56e3-492c-9797-8c15fb8b606e" alt="Dự án Biệt thự AI Smart Mansion" class="w-full h-[500px] object-cover">
+                        <div class="p-4 bg-white text-center">
+                            <p class="text-sm text-gray-500 italic">Hình ảnh phối cảnh tổng thể tham khảo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Floor Plans -->
+        <section class="mb-24">
+            <h2 class="font-display font-bold text-4xl mb-12 text-premium-dark text-center">
+                Mặt Bằng 3D Các Tầng
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Floor Plan 1 -->
+                <div class="image-card bg-white">
+                    <div class="overflow-hidden">
+                        <img src="https://opal.google/board/blobs/3b426081-a9fb-4dbc-afda-e9b25534dfae" alt="Mặt bằng Tầng 1" class="w-full h-[400px] object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-display font-bold text-xl mb-2 text-premium-dark">Mặt bằng Tầng 1</h4>
+                        <p class="text-gray-500 text-sm">Phân khu sinh hoạt chung & Đại sảnh</p>
+                    </div>
+                </div>
+                <!-- Floor Plan 2 -->
+                <div class="image-card bg-white">
+                    <div class="overflow-hidden">
+                        <img src="https://opal.google/board/blobs/7f8de57e-c3ed-4449-bea6-47b1ab6b36d4" alt="Mặt bằng Tầng 2" class="w-full h-[400px] object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-display font-bold text-xl mb-2 text-premium-dark">Mặt bằng Tầng 2</h4>
+                        <p class="text-gray-500 text-sm">Phân khu riêng tư & Phòng Master</p>
+                    </div>
+                </div>
+                <!-- Floor Plan 3 -->
+                <div class="image-card bg-white">
+                    <div class="overflow-hidden">
+                        <img src="https://opal.google/board/blobs/5f508b49-2ee9-4fcb-9955-0ddb548bb7ca" alt="Mặt bằng Tầng 3" class="w-full h-[400px] object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-display font-bold text-xl mb-2 text-premium-dark">Mặt bằng Tầng Áp Mái</h4>
+                        <p class="text-gray-500 text-sm">Trung tâm điều hành AI & Giải trí</p>
+                    </div>
+                </div>
+                <!-- Floor Plan 4 -->
+                <div class="image-card bg-white">
+                    <div class="overflow-hidden">
+                        <img src="https://opal.google/board/blobs/5640a950-b408-4502-aada-691498f7b8ee" alt="Phối cảnh ngoại thất" class="w-full h-[400px] object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-display font-bold text-xl mb-2 text-premium-dark">Phối cảnh Tổng thể</h4>
+                        <p class="text-gray-500 text-sm">Giao thoa kiến trúc & Địa hình</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Report -->
+        <section class="max-w-4xl mx-auto bg-white p-10 md:p-16 rounded-[2rem] shadow-xl border border-gray-100 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-premium-accent opacity-5 rounded-bl-full"></div>
+            
+            <h2 class="font-display font-bold text-3xl mb-12 text-center text-premium-dark uppercase tracking-widest">
+                Báo Cáo Chi Tiết Thiết Kế
+            </h2>
+
+            <div class="report-content">
+                <div class="mb-10 text-right text-sm text-gray-500 italic">
+                    <p>Ngày báo cáo: 17 tháng 04 năm 2026</p>
+                    <p>Thời gian: 20:46</p>
+                    <p>Chức danh: CEO AI Agent</p>
+                </div>
+
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl font-bold border-y-2 border-premium-dark py-4 inline-block px-12">
+                        BÁO CÁO THIẾT KẾ TOÀN DIỆN:<br>DỰ ÁN BIỆT THỰ AI SMART MANSION
+                    </h2>
+                </div>
+
+                <p><strong>Phong cách thiết kế:</strong> Tân cổ điển Vị lai (Neo-classical Futurist)</p>
+
+                <hr>
+
+                <h3>I. TỔNG QUAN DỰ ÁN</h3>
+                <p>
+                    Dự án Biệt thự AI Smart Mansion đại diện cho một bước tiến mang tính đột phá trong kiến trúc nhà ở cao cấp, nơi tinh hoa cổ điển của thế kỷ 18 gặp gỡ công nghệ tương lai của kỷ nguyên số. Công trình không chỉ là một không gian sống sang trọng mà còn là một thực thể thông minh dựa trên mô hình Digital Twin, cho phép kết nối và điều hành toàn bộ hệ thống vận hành thông qua trí tuệ nhân tạo.
+                </p>
+
+                <h3>II. PHÂN TÍCH KIẾN TRÚC VÀ ĐỊA HÌNH</h3>
+                <p>
+                    Kiến trúc đặc trưng bởi tính đối xứng tuyệt đối, sử dụng hệ thức cột Corinthian tinh xảo và hệ mái Mansard xanh navy cổ điển. Sự "Vị lai" được thể hiện qua các dải sáng neon xanh chạy dọc theo các mặt cắt kiến trúc và các biểu tượng kỹ thuật số AI lơ lửng, tạo nên một hiệu ứng thị giác mạnh mẽ.
+                </p>
+                <p>
+                    Biệt thự được đặt giữa địa hình núi non hùng vĩ, tạo sự tương phản giữa nét nhân tạo tinh xảo và vẻ hoang sơ của thiên nhiên. Toàn bộ công trình tọa lạc trên một bệ trắng uốn lượn, biểu trưng cho "dòng chảy dữ liệu", kết nối không gian nhân tạo với cảnh quan sân vườn kiểu Pháp được cắt tỉa theo hình khối kỷ hà.
+                </p>
+
+                <h3>III. GIẢI PHÁP KỸ THUẬT VÀ CÔNG NGHỆ</h3>
+                <p>
+                    1. <strong>Hệ thống Digital Twin:</strong> Toàn bộ biệt thự được mô hình hóa kỹ thuật số để giám sát và điều khiển thời gian thực.
+                </p>
+                <p>
+                    2. <strong>AI Integration:</strong> Các thiết bị thông minh không chỉ dừng lại ở đồ gia dụng mà được tích hợp trực tiếp vào cấu trúc tường và nội thất gỗ, tạo nên sự liền mạch trong thẩm mỹ.
+                </p>
+                <p>
+                    3. <strong>Chiếu sáng đa tầng:</strong> Sự kết hợp giữa ánh sáng vàng ấm truyền thống từ đèn chùm pha lê và hệ thống LED neon hiện đại giúp điều chỉnh không gian theo cảm xúc và mục đích sử dụng.
+                </p>
+
+                <hr>
+
+                <h3>IV. CHI TIẾT CÔNG NĂNG CÁC TẦNG</h3>
+
+                <h4>1. Tầng Trệt: Không gian Sinh hoạt Chung và Sảnh Chính</h4>
+                <p>
+                    Tầng trệt được thiết kế như một trung tâm đón tiếp đầy quyền uy với đại sảnh thông tầng cực rộng và trần cao. Điểm nhấn là sàn đá cẩm thạch bóng gương phản chiếu hệ thống cột trụ Corinthian. Các thiết bị thông minh được ẩn khéo léo trong tường đá vôi tông màu kem. Sự giao thoa giữa đèn chùm cổ điển và chỉ LED xanh neon dọc gờ trần tạo nên một bầu không khí khác biệt.
+                </p>
+                
+                <div class="my-8 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="https://opal.google/board/blobs/3b426081-a9fb-4dbc-afda-e9b25534dfae" alt="Tầng Trệt" class="w-full">
+                </div>
+
+                <h4>2. Tầng Hai: Không gian Riêng tư và Làm việc</h4>
+                <p>
+                    Tập trung vào sự yên tĩnh và sang trọng cá nhân, tầng hai là nơi đặt các phòng ngủ Master và phòng làm việc định hướng công nghệ. Ban công rộng với lan can con tiện đá, phòng làm việc có cửa sổ vòm lớn đón ánh sáng tự nhiên. Nội thất sử dụng chất liệu gỗ bóng, da và nhung cao cấp. Các bảng điều khiển AI cảm ứng được khảm trực tiếp vào bàn làm việc gỗ và đầu giường.
+                </p>
+
+                <div class="my-8 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="https://opal.google/board/blobs/7f8de57e-c3ed-4449-bea6-47b1ab6b36d4" alt="Tầng Hai" class="w-full">
+                </div>
+
+                <h4>3. Tầng Áp Mái: Trung tâm Điều hành AI và Giải trí</h4>
+                <p>
+                    Nằm dưới hệ mái Mansard đặc trưng, đây là "bộ não" của toàn bộ căn biệt thự. Khu vực giải trí đa năng, phòng gym hiện đại và trung tâm xử lý dữ liệu AI với các màn hình hologram ảo lơ lửng. Tường nghiêng độc đáo với hệ cửa sổ mái (dormer windows) cầu kỳ, kết hợp vật liệu đá phiến tối màu và kim loại bạc.
+                </p>
+
+                <div class="my-8 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="https://opal.google/board/blobs/5f508b49-2ee9-4fcb-9955-0ddb548bb7ca" alt="Tầng Áp Mái" class="w-full">
+                </div>
+
+                <h4>4. Ngoại Thất và Cảnh Quan</h4>
+                <p>
+                    Góc nhìn toàn cảnh thể hiện sự hòa quyện tuyệt vời giữa công trình và thiên nhiên. Tường đá vôi màu kem rực rỡ dưới ánh hoàng hôn, tương phản với mái Mansard xanh navy và hệ thống neon xanh bao quanh. Lối đi trải sỏi dẫn hướng theo trục đối xứng, thảm cỏ và cây xanh được chăm sóc tự động theo mô hình vườn Pháp truyền thống.
+                </p>
+
+                <div class="my-8 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="https://opal.google/board/blobs/5640a950-b408-4502-aada-691498f7b8ee" alt="Ngoại thất" class="w-full">
+                </div>
+
+                <hr>
+
+                <h3>V. VẬT LIỆU VÀ NỘI THẤT CHỦ ĐẠO</h3>
+                <ul>
+                    <li><strong>Ngoại thất:</strong> Đá vôi cao cấp, sơn giả đá, ngói đá phiến, phù điêu thạch cao.</li>
+                    <li><strong>Nội thất:</strong> Đá cẩm thạch, gỗ tự nhiên, đồng thau, vải nhung và kính công nghệ cao.</li>
+                    <li><strong>Màu sắc:</strong> Sự kết hợp giữa tông màu kem, vàng đồng, xanh navy và điểm nhấn neon xanh điện tử.</li>
+                </ul>
+
+                <h3>VI. KẾT LUẬN</h3>
+                <p>
+                    Biệt thự AI Smart Mansion không chỉ là một công trình kiến trúc đơn thuần mà là một tác phẩm nghệ thuật vị lai, thể hiện tầm nhìn của CEO trong việc kết hợp giá trị lịch sử và sức mạnh của trí tuệ nhân tạo. Thiết kế đảm bảo sự cân bằng hoàn hảo giữa thẩm mỹ sang trọng, công năng tối ưu và sự gắn kết chặt chẽ với môi trường thiên nhiên.
+                </p>
+
+                <div class="mt-16 text-right">
+                    <p class="mb-4 italic">Ký duyệt,</p>
+                    <p class="font-bold text-lg">CEO AI Agent</p>
+                    <div class="mt-4 flex justify-end">
+                        <div class="w-32 h-1 bg-premium-dark opacity-30"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Space (Invisible based on rules, but adding padding for the end of the page) -->
+    <div class="h-20"></div>
+
+</body>
+</html>
