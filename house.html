@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Thiết Kế - Modern Townhouse District 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'architect-bg': '#f8f8f8',
+                        'architect-text': '#333333',
+                        'architect-accent': '#004080',
+                        'architect-border': '#e0e0e0',
+                        'architect-muted': '#666666',
+                    },
+                    fontFamily: {
+                        'serif': ['"Times New Roman"', 'Times', 'serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #f8f8f8;
+            color: #333333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        .justified-text {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .glass-header {
+            background: rgba(248, 248, 248, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .dossier-card {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e0e0e0;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+            margin: 3rem 0;
+        }
+        .image-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-container:hover .image-overlay {
+            opacity: 1;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal.active {
+            display: flex;
+        }
+        h1, h2, h3 {
+            font-weight: bold;
+            color: #004080;
+        }
+        @media print {
+            .no-print { display: none; }
+            body { background: white; }
+            .dossier-card { box-shadow: none; border: none; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="glass-header fixed top-0 w-full z-50 py-4 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center transition-all duration-300">
+        <div class="flex flex-col items-center md:items-start">
+            <h1 class="text-xl md:text-2xl font-bold tracking-tighter text-architect-accent uppercase">AI Bất Động Sản</h1>
+            <span class="text-xs font-serif tracking-widest text-architect-muted">ARCHITECTURAL DESIGN SOLUTIONS</span>
+        </div>
+        <div class="mt-2 md:mt-0">
+            <a href="www.phamhoanganhtokens.com" target="_blank" class="text-sm font-serif italic hover:text-architect-accent transition-colors border-b border-architect-border">www.phamhoanganhtokens.com</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20 px-4 md:px-8 max-w-5xl mx-auto">
+        <!-- Main Dossier Content -->
+        <article class="dossier-card p-8 md:p-16 animate-fade-in">
+            <div class="text-center mb-16">
+                <h1 class="text-3xl md:text-5xl mb-4 tracking-wide uppercase">HỒ SƠ THIẾT KẾ NHÀ Ở</h1>
+                <p class="text-xl md:text-2xl text-architect-muted tracking-widest italic font-serif">(DESIGN PORTFOLIO)</p>
+                <div class="w-24 h-1 bg-architect-accent mx-auto mt-8"></div>
+            </div>
+
+            <section class="mb-12 space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm md:text-base border-y border-architect-border py-6">
+                    <div>
+                        <p><strong class="text-architect-accent uppercase">Project:</strong> MODERN TOWNHOUSE DISTRICT 2</p>
+                        <p><strong class="text-architect-accent uppercase">Phase:</strong> Design Drawing Completion - Handover and Approval</p>
+                    </div>
+                    <div class="md:text-right">
+                        <p><strong class="text-architect-accent uppercase">Style:</strong> Tropical Minimalism</p>
+                        <p><strong class="text-architect-accent uppercase">Font Standard:</strong> Times New Roman (Justified)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section I -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-architect-accent pl-4">I. PROJECT OVERVIEW</h2>
+                <div class="justified-text space-y-4">
+                    <p><strong>Objective:</strong> Design a modern, sophisticated living space in the vibrant District 2 urban area.</p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Project Name:</strong> Modern Townhouse District 2</li>
+                        <li><strong>Location:</strong> District 2, Ho Chi Minh City.</li>
+                        <li><strong>Land Area:</strong> 100m².</li>
+                        <li><strong>Building Scale:</strong> 3 floors.</li>
+                        <li><strong>Design Style:</strong> Tropical Minimalism.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section II -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-architect-accent pl-4">II. DESIGN CONCEPT AND ARCHITECTURAL STYLE</h2>
+                <div class="justified-text space-y-4 italic bg-gray-50 p-6 rounded-sm border-r-4 border-architect-accent">
+                    <p><strong>Core Concept:</strong> "Monolithic Sanctuary"</p>
+                    <p><strong>Philosophy:</strong> "Less is More," prioritizing pure forms and eliminating unnecessary details. The building is intended as a private sanctuary, separate from the urban bustle. Architectural language defined by sharp geometric lines, a refined monochromatic palette, and the interplay of solid and void.</p>
+                </div>
+            </section>
+
+            <!-- Section III -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-architect-accent pl-4">III. FLOOR PLAN FUNCTIONAL DESCRIPTION</h2>
+                <div class="space-y-8 justified-text">
+                    <div class="pl-4 border-l border-architect-border">
+                        <h3 class="text-lg font-bold mb-2">1. Ground Floor (Living & Social Space)</h3>
+                        <p>"Great Room" open-plan structure to optimize 100m² area. Integrates reception, living room, and dining area, directly connected to a high-end kitchen. Central skylight (void) for light regulation and ventilation.</p>
+                    </div>
+                    <div class="pl-4 border-l border-architect-border">
+                        <h3 class="text-lg font-bold mb-2">2. First Floor (Private Space)</h3>
+                        <p>Dedicated to rest. Master Suite with a deep balcony acting as a buffer against noise and heat. Secondary bedroom at the rear, connected via a light corridor next to the skylight.</p>
+                    </div>
+                    <div class="pl-4 border-l border-architect-border">
+                        <h3 class="text-lg font-bold mb-2">3. Second Floor (Flexible & Environmental)</h3>
+                        <p>Includes a multi-purpose room (studio/lounge) and laundry area. Features a large landscaped terrace garden, providing biophilic benefits and natural insulation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section IV -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-architect-accent pl-4">IV. FACADE DETAILS AND MATERIAL PALETTE</h2>
+                <div class="justified-text space-y-4">
+                    <p><strong>Facade Strategy:</strong> Asymmetrical balance with recessed areas and cantilevers. Vertical wooden louvers protect from direct sunlight and create artistic shadow effects.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                        <div class="bg-gray-100 p-4">
+                            <p><strong>Exposed Concrete:</strong> Raw, luxurious expression.</p>
+                        </div>
+                        <div class="bg-gray-100 p-4">
+                            <p><strong>Thermowood:</strong> Warm accents contrasting concrete.</p>
+                        </div>
+                        <div class="bg-gray-100 p-4">
+                            <p><strong>Low-E Glass:</strong> Floor-to-ceiling slim black aluminum.</p>
+                        </div>
+                        <div class="bg-gray-100 p-4">
+                            <p><strong>Charcoal Metals:</strong> Railings and handles.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section V -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-architect-accent pl-4">V. DETAILED 3D VISUALIZATIONS</h2>
+                <div class="space-y-12">
+                    <div>
+                        <p class="mb-4">1. Exterior at Sunset: Highlights strong concrete forms and warm interior lighting.</p>
+                        <div class="image-container relative overflow-hidden rounded-lg group cursor-pointer shadow-lg" onclick="openModal('https://opal.google/board/blobs/87dd213a-94ca-407a-bcd6-26f3421467ed')">
+                            <img src='https://opal.google/board/blobs/87dd213a-94ca-407a-bcd6-26f3421467ed' alt='Exterior at Sunset' class="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+                            <div class="image-overlay absolute inset-0 flex items-center justify-center text-white">
+                                <span class="border border-white px-4 py-2 uppercase tracking-widest text-xs">Phóng to</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="mb-4">2. Common Living Area (Ground Floor): Wide view showing spaciousness and connection.</p>
+                        <div class="image-container relative overflow-hidden rounded-lg group cursor-pointer shadow-lg" onclick="openModal('https://opal.google/board/blobs/9d68d000-e692-4510-a2c9-fce15e2a92da')">
+                            <img src='https://opal.google/board/blobs/9d68d000-e692-4510-a2c9-fce15e2a92da' alt='Common Living Area' class="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+                            <div class="image-overlay absolute inset-0 flex items-center justify-center text-white">
+                                <span class="border border-white px-4 py-2 uppercase tracking-widest text-xs">Phóng to</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="mb-4">3. Master Bedroom Structure & Materials: Interaction through louvers.</p>
+                        <div class="image-container relative overflow-hidden rounded-lg group cursor-pointer shadow-lg" onclick="openModal('https://opal.google/board/blobs/8d120366-cded-4754-8db1-5756254f587e')">
+                            <img src='https://opal.google/board/blobs/8d120366-cded-4754-8db1-5756254f587e' alt='Master Bedroom' class="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+                            <div class="image-overlay absolute inset-0 flex items-center justify-center text-white">
+                                <span class="border border-white px-4 py-2 uppercase tracking-widest text-xs">Phóng to</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="mb-4">4. Ecological Terrace Garden: A green oasis in District 2.</p>
+                        <div class="image-container relative overflow-hidden rounded-lg group cursor-pointer shadow-lg" onclick="openModal('https://opal.google/board/blobs/51168d2a-1921-4105-9a1a-edabbc080bd9')">
+                            <img src='https://opal.google/board/blobs/51168d2a-1921-4105-9a1a-edabbc080bd9' alt='Ecological Terrace' class="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+                            <div class="image-overlay absolute inset-0 flex items-center justify-center text-white">
+                                <span class="border border-white px-4 py-2 uppercase tracking-widest text-xs">Phóng to</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section VI -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-architect-accent pl-4">VI. PROFESSIONAL ASSESSMENT</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justified-text">
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold border-b border-architect-border pb-2 uppercase">1. Technical Aspects</h3>
+                        <p>Structure: Large cantilevers require special steel reinforcement or post-tensioning. Attention needed for crack prevention in exposed concrete surfaces.</p>
+                        <p>Climate Adaptation: Skylight is excellent for natural ventilation. Thorough waterproofing is crucial for the terrace garden.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold border-b border-architect-border pb-2 uppercase">2. Financial Aspects</h3>
+                        <p>CAPEX: Exposed concrete and high-end Low-E glass will increase construction costs by 20-30% compared to traditional townhouses.</p>
+                        <p>ROI: Unique architectural designs in District 2 typically command 15-25% higher resale and rental values.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section VII -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-bold mb-6 border-l-4 border-architect-accent pl-4">VII. COMPLETION AND APPROVAL RECOMMENDATIONS</h2>
+                <ol class="list-decimal pl-5 space-y-4 justified-text">
+                    <li><strong>Material Integration:</strong> Use concrete effect paint on secondary walls for cost savings while maintaining aesthetics.</li>
+                    <li><strong>Hidden Drainage System:</strong> Integrate concealed stainless steel drainage channels into cantilever edges to prevent water stains.</li>
+                    <li><strong>Energy Optimization:</strong> Consider installing rooftop solar panels to utilize tropical sunlight and reduce costs.</li>
+                </ol>
+            </section>
+
+            <!-- Conclusion -->
+            <section class="mt-16 pt-8 border-t border-architect-border text-center">
+                <p class="italic text-lg mb-8">Approval is requested from the Board of Directors and the Investor to proceed to the Construction Drawing phase (CD).</p>
+                <div class="flex flex-col items-center">
+                    <div class="h-16 w-32 border-b border-architect-text mb-2"></div>
+                    <p class="font-bold">AI Architecture System</p>
+                    <p class="text-sm text-architect-muted uppercase tracking-widest">Reporting Agent</p>
+                </div>
+            </section>
+        </article>
+
+        <!-- Final Image Gallery -->
+        <div class="section-divider"></div>
+        <section class="animate-slide-up">
+            <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-tighter">Premium Architectural Visuals</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Gallery Item 1 -->
+                <div class="flex flex-col">
+                    <h3 class="mb-4 text-architect-accent font-bold italic">1. Cinematic Exterior at Twilight</h3>
+                    <div class="image-container relative overflow-hidden rounded-xl cursor-pointer shadow-2xl" onclick="openModal('https://opal.google/board/blobs/87dd213a-94ca-407a-bcd6-26f3421467ed')">
+                        <img src='https://opal.google/board/blobs/87dd213a-94ca-407a-bcd6-26f3421467ed' alt='Cinematic Exterior' class="w-full aspect-video object-cover" />
+                        <div class="image-overlay absolute inset-0 flex items-center justify-center text-white">
+                            <span class="bg-architect-accent/80 px-6 py-2 rounded-full uppercase text-xs font-bold tracking-widest">Xem chi tiết</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="flex flex-col">
+                    <h3 class="mb-4 text-architect-accent font-bold italic">2. The Great Room Wide-Angle</h3>
+                    <div class="image-container relative overflow-hidden rounded-xl cursor-pointer shadow-2xl" onclick="openModal('https://opal.google/board/blobs/9d68d000-e692-4510-a2c9-fce15e2a92da')">
+                        <img src='https://opal.google/board/blobs/9d68d000-e692-4510-a2c9-fce15e2a92da' alt='The Great Room' class="w-full aspect-video object-cover" />
+                        <div class="image-overlay absolute inset-0 flex items-center justify-center text-white">
+                            <span class="bg-architect-accent/80 px-6 py-2 rounded-full uppercase text-xs font-bold tracking-widest">Xem chi tiết</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="flex flex-col">
+                    <h3 class="mb-4 text-architect-accent font-bold italic">3. Master Suite Texture & Introspection</h3>
+                    <div class="image-container relative overflow-hidden rounded-xl cursor-pointer shadow-2xl" onclick="openModal('https://opal.google/board/blobs/8d120366-cded-4754-8db1-5756254f587e')">
+                        <img src='https://opal.google/board/blobs/8d120366-cded-4754-8db1-5756254f587e' alt='Master Suite' class="w-full aspect-video object-cover" />
+                        <div class="image-overlay absolute inset-0 flex items-center justify-center text-white">
+                            <span class="bg-architect-accent/80 px-6 py-2 rounded-full uppercase text-xs font-bold tracking-widest">Xem chi tiết</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="flex flex-col">
+                    <h3 class="mb-4 text-architect-accent font-bold italic">4. The Biophilic Roof Terrace</h3>
+                    <div class="image-container relative overflow-hidden rounded-xl cursor-pointer shadow-2xl" onclick="openModal('https://opal.google/board/blobs/51168d2a-1921-4105-9a1a-edabbc080bd9')">
+                        <img src='https://opal.google/board/blobs/51168d2a-1921-4105-9a1a-edabbc080bd9' alt='Roof Terrace' class="w-full aspect-video object-cover" />
+                        <div class="image-overlay absolute inset-0 flex items-center justify-center text-white">
+                            <span class="bg-architect-accent/80 px-6 py-2 rounded-full uppercase text-xs font-bold tracking-widest">Xem chi tiết</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for High-Res View -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="absolute top-10 right-10 text-white text-4xl cursor-pointer">&times;</span>
+        <img id="modalImg" src="" class="max-w-[90%] max-h-[90%] object-contain rounded-lg shadow-2xl" />
+    </div>
+
+    <script>
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            modal.classList.add('active');
+            modalImg.src = src;
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Header scroll effect
+        window.onscroll = function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        };
+    </script>
+</body>
+</html>
