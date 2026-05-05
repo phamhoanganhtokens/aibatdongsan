@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gợi Ý Hình Ảnh Bất Động Sản Isometric</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2c3e50',
+                        'accent': '#3498db',
+                        'highlight': '#e67e22',
+                        'bg-soft': '#fcfcfc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 50px rgba(0, 0, 0, 0.05)',
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fcfcfc;
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+        }
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+        /* Specific requirement for embedded content styling */
+        .content-body {
+            font-family: "Times New Roman", Times, serif;
+            text-align: justify;
+            line-height: 1.8;
+        }
+        .prompt-frame {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.05);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .prompt-frame:hover {
+            transform: translateY(-4px);
+            border-color: #3498db;
+            box-shadow: 0 10px 25px -5px rgba(52, 152, 219, 0.1);
+            background-color: #fff;
+        }
+        .prompt-frame::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: #3498db;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .prompt-frame:hover::before {
+            opacity: 1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        h1 {
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .copy-hint {
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+        .prompt-frame:hover .copy-hint {
+            opacity: 1;
+            color: #3498db;
+        }
+        /* Fade in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-bg-soft">
+
+    <div class="main-container">
+        <!-- Header -->
+        <header class="text-center mb-16 animate-fade">
+            <h1 class="font-display text-3xl md:text-5xl font-bold uppercase mb-6 leading-tight">
+                Danh Sách Gợi Ý Hình Ảnh <br/> Bất Động Sản Isometric Chuyên Nghiệp
+            </h1>
+            <div class="w-24 h-1 bg-accent mx-auto rounded-full opacity-30"></div>
+        </header>
+
+        <!-- Instructions -->
+        <section class="instructions mb-12 glass-card p-8 rounded-2xl shadow-premium animate-fade content-body" style="animation-delay: 0.1s">
+            <h2 class="font-display text-xl font-bold text-accent mb-4 uppercase tracking-wide" style="text-align: left;">Hướng dẫn sử dụng</h2>
+            <p class="text-gray-600 mb-0">
+                Bộ sưu tập này cung cấp các đoạn prompt (câu lệnh) chi tiết được tối ưu hóa cho các mô hình tạo ảnh AI, tập trung vào phong cách kiến trúc 3D Isometric nhằm mang lại cái nhìn sắc nét và chuyên nghiệp cho các mô hình kiến trúc. Người dùng chỉ cần sao chép nội dung văn bản trong các khung và dán vào các công cụ tạo ảnh AI như <strong>Midjourney, DALL-E 3, hoặc Adobe Firefly</strong> để bắt đầu sáng tạo.
+            </p>
+        </section>
+
+        <!-- Prompts Grid -->
+        <main class="space-y-6 content-body animate-fade" style="animation-delay: 0.2s">
+            
+            <!-- Prompt 1 -->
+            <div class="prompt-frame p-8 rounded-xl bg-white shadow-sm" onclick="copyToClipboard(this)">
+                <span class="prompt-title font-display text-highlight font-bold text-lg mb-3 block">1. Biệt thự hiện đại ven sông (Modern Riverside Villa)</span>
+                <p class="prompt-content italic text-gray-700">
+                    Một căn biệt thự đơn lập hiện đại với thiết kế tối giản, sử dụng các mảng kính lớn và ban công rộng. Tọa lạc bên cạnh một dòng sông hiền hòa vào khung giờ vàng (golden hour), ánh nắng mặt trời phản chiếu lấp lánh trên mặt nước và sàn gỗ ngoài trời. Khuôn viên bao gồm hồ bơi vô cực tràn bờ và sân vườn cảnh quan xanh mát. Góc nhìn isometric 3D, chi tiết sắc nét, chất lượng 8k, ánh sáng hoàng hôn ấm áp.
+                </p>
+                <span class="copy-hint block text-sm mt-4 text-right">Nhấp chuột ba lần để chọn và sao chép</span>
+            </div>
+
+            <!-- Prompt 2 -->
+            <div class="prompt-frame p-8 rounded-xl bg-white shadow-sm" onclick="copyToClipboard(this)">
+                <span class="prompt-title font-display text-highlight font-bold text-lg mb-3 block">2. Căn hộ cao cấp phong cách Địa Trung Hải (Mediterranean Luxury Apartment)</span>
+                <p class="prompt-content italic text-gray-700">
+                    Tòa nhà thấp tầng phong cách Địa Trung Hải với mái vòm, tường trắng và ban công đầy hoa giấy. Tầm nhìn hướng ra biển xanh cát trắng, sảnh đón khách sang trọng, công viên nội khu nhỏ có đài phun nước. Góc nhìn 3D isometric, phong cách thanh lịch, ánh sáng ban ngày rực rỡ, chi tiết kiến trúc tinh xảo.
+                </p>
+                <span class="copy-hint block text-sm mt-4 text-right">Nhấp chuột ba lần để chọn và sao chép</span>
+            </div>
+
+            <!-- Prompt 3 -->
+            <div class="prompt-frame p-8 rounded-xl bg-white shadow-sm" onclick="copyToClipboard(this)">
+                <span class="prompt-title font-display text-highlight font-bold text-lg mb-3 block">3. Shophouse hiện đại năng động (Dynamic Modern Shophouse)</span>
+                <p class="prompt-content italic text-gray-700">
+                    Dãy nhà phố thương mại hiện đại tại góc phố sầm uất, các cửa hàng tầng trệt sang trọng với bảng hiệu tinh tế, vỉa hè rộng có cây xanh trang trí, lối đi lát đá và khu vực ghế ngồi ngoài trời. Ánh sáng buổi chiều nhẹ nhàng làm nổi bật các khối kiến trúc mạnh mẽ. Góc nhìn 3D isometric, độ chi tiết cao, cảm giác đô thị hiện đại.
+                </p>
+                <span class="copy-hint block text-sm mt-4 text-right">Nhấp chuột ba lần để chọn và sao chép</span>
+            </div>
+
+            <!-- Prompt 4 -->
+            <div class="prompt-frame p-8 rounded-xl bg-white shadow-sm" onclick="copyToClipboard(this)">
+                <span class="prompt-title font-display text-highlight font-bold text-lg mb-3 block">4. Biệt thự sân vườn tối giản (Minimalist Garden Villa)</span>
+                <p class="prompt-content italic text-gray-700">
+                    Biệt thự nghỉ dưỡng phong cách tối giản, tông màu xám trắng chủ đạo, bao quanh bởi vườn Zen với hồ cá Koi, thảm cỏ xanh và đá trang trí. Thiết kế mái bằng, có giếng trời lấy sáng tự nhiên. Góc nhìn 3D isometric, bố cục tối giản, không gian yên bình và thư giãn, ánh sáng buổi sáng trong trẻo.
+                </p>
+                <span class="copy-hint block text-sm mt-4 text-right">Nhấp chuột ba lần để chọn và sao chép</span>
+            </div>
+
+            <!-- Prompt 5 -->
+            <div class="prompt-frame p-8 rounded-xl bg-white shadow-sm" onclick="copyToClipboard(this)">
+                <span class="prompt-title font-display text-highlight font-bold text-lg mb-3 block">5. Penthouse với vườn trên cao (Penthouse with Sky Garden)</span>
+                <p class="prompt-content italic text-gray-700">
+                    Góc nhìn isometric của một tháp căn hộ hiện đại, tập trung vào căn penthouse có vườn treo xanh mát và hồ bơi riêng. Cấu trúc kính hiện đại phản chiếu bầu trời xanh, có công viên nhỏ và lối đi bộ dưới chân tòa nhà. Ánh sáng từ trên cao tạo bóng đổ kiến trúc sắc nét. Góc nhìn 3D isometric, độ phân giải cao.
+                </p>
+                <span class="copy-hint block text-sm mt-4 text-right">Nhấp chuột ba lần để chọn và sao chép</span>
+            </div>
+
+            <!-- Prompt 6 -->
+            <div class="prompt-frame p-8 rounded-xl bg-white shadow-sm" onclick="copyToClipboard(this)">
+                <span class="prompt-title font-display text-highlight font-bold text-lg mb-3 block">6. Khu nhà phố liền kề hiện đại (Modern Townhouses)</span>
+                <p class="prompt-content italic text-gray-700">
+                    Dãy nhà phố liền kề hiện đại với thiết kế đồng bộ, mỗi căn có gara riêng và ban công xanh. Con đường sạch sẽ với đèn đường tối giản, các bồn hoa được chăm sóc kỹ lưỡng. Ánh sáng hoàng hôn cam đỏ tạo cảm giác ấm cúng. Góc nhìn 3D isometric, chân thực, phong cách sống đô thị.
+                </p>
+                <span class="copy-hint block text-sm mt-4 text-right">Nhấp chuột ba lần để chọn và sao chép</span>
+            </div>
+
+            <!-- Prompt 7 -->
+            <div class="prompt-frame p-8 rounded-xl bg-white shadow-sm" onclick="copyToClipboard(this)">
+                <span class="prompt-title font-display text-highlight font-bold text-lg mb-3 block">7. Biệt thự nghỉ dưỡng view biển (Sea-view Resort Villa)</span>
+                <p class="prompt-content italic text-gray-700">
+                    Biệt thự nghỉ dưỡng cao cấp nằm trên vách đá nhìn ra đại dương, kiến trúc mở với hiên rộng và khu vực BBQ ngoài trời bên hồ bơi. Xung quanh là hàng dừa và thảm cỏ xanh. Ánh nắng mùa hè rực rỡ làm nổi bật làn nước biển xanh ngắt và biệt thự trắng. Góc nhìn 3D isometric, phong cảnh ngoạn mục, chi tiết vật liệu đá và gỗ rõ nét.
+                </p>
+                <span class="copy-hint block text-sm mt-4 text-right">Nhấp chuột ba lần để chọn và sao chép</span>
+            </div>
+
+            <!-- Prompt 8 -->
+            <div class="prompt-frame p-8 rounded-xl bg-white shadow-sm" onclick="copyToClipboard(this)">
+                <span class="prompt-title font-display text-highlight font-bold text-lg mb-3 block">8. Khu phức hợp tối giản (Minimalist Mixed-use Complex)</span>
+                <p class="prompt-content italic text-gray-700">
+                    Tổ hợp kiến trúc kết hợp giữa shophouse bên dưới và căn hộ bên trên, phong cách hiện đại tối giản, sử dụng vật liệu bê tông trần và gỗ tự nhiên. Có quảng trường nhỏ với đài phun nước và công viên xanh mini phía trước. Ánh sáng giờ xanh (blue hour) với đèn nội thất bắt đầu lên đèn. Góc nhìn 3D isometric, quy hoạch kiến trúc tinh tế.
+                </p>
+                <span class="copy-hint block text-sm mt-4 text-right">Nhấp chuột ba lần để chọn và sao chép</span>
+            </div>
+
+            <!-- Prompt 9 -->
+            <div class="prompt-frame p-8 rounded-xl bg-white shadow-sm" onclick="copyToClipboard(this)">
+                <span class="prompt-title font-display text-highlight font-bold text-lg mb-3 block">9. Biệt thự song lập Địa Trung Hải (Mediterranean Duplex Villa)</span>
+                <p class="prompt-content italic text-gray-700">
+                    Những căn biệt thự song lập sang trọng với kiến trúc Địa Trung Hải cách tân, sân vườn chung rộng lớn, gara phía trước. Tường vôi trắng, cửa sổ gỗ màu xanh navy, mái ngói đất nung. Nắng chiều đổ bóng đẹp mắt. Góc nhìn 3D isometric, phong cách sống nghỉ dưỡng thượng lưu, đầy đủ tiện ích ngoại khu (công viên, hồ nước).
+                </p>
+                <span class="copy-hint block text-sm mt-4 text-right">Nhấp chuột ba lần để chọn và sao chép</span>
+            </div>
+
+            <!-- Prompt 10 -->
+            <div class="prompt-frame p-8 rounded-xl bg-white shadow-sm" onclick="copyToClipboard(this)">
+                <span class="prompt-title font-display text-highlight font-bold text-lg mb-3 block">10. Khu dân cư xanh hiện đại (Modern Green Residential Area)</span>
+                <p class="prompt-content italic text-gray-700">
+                    Mô hình isometric của một khu dân cư nhỏ bao gồm biệt thự, nhà phố và một tòa chung cư trung tâm, hệ thống công viên liên hoàn và kênh đào nhân tạo. Các tiện ích như sân tennis, hồ bơi và khu vui chơi trẻ em. Ánh sáng bình minh nhẹ nhàng và tươi mát. Góc nhìn 3D isometric, bao quát toàn cảnh, thể hiện cuộc sống tiện nghi và xanh.
+                </p>
+                <span class="copy-hint block text-sm mt-4 text-right">Nhấp chuột ba lần để chọn và sao chép</span>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        // Simple copy function enhancement
+        function copyToClipboard(element) {
+            const text = element.querySelector('.prompt-content').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const hint = element.querySelector('.copy-hint');
+                const originalText = hint.innerText;
+                hint.innerText = "✓ Đã sao chép vào bộ nhớ tạm!";
+                hint.classList.add('text-green-600');
+                
+                setTimeout(() => {
+                    hint.innerText = originalText;
+                    hint.classList.remove('text-green-600');
+                }, 2000);
+            });
+        }
+
+        // Handle the "triple click" hint logic naturally
+        document.querySelectorAll('.prompt-content').forEach(p => {
+            p.addEventListener('dblclick', function() {
+                const range = document.createRange();
+                range.selectNodeContents(this);
+                const selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+            });
+        });
+    </script>
+</body>
+</html>
