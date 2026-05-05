@@ -3,217 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Báo Cáo Phân Tích Đầu Tư Bất Động Sản</title>
+    <title>Báo Cáo Phân Tích Bất Động Sản - AI Bất Động Sản</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            green: '#28a745',
-                            dark: '#1a1a1a',
-                            gray: '#4a4a4a',
-                            bg: '#f8f9fa'
-                        }
-                    },
-                    fontFamily: {
-                        'serif': ['"Times New Roman"', 'Times', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        body {
-            background-color: #f4f4f5;
-            font-family: "Times New Roman", Times, serif;
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+        /* Explicitly setting Times New Roman as requested */
+        body, html {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f4f7;
             color: #333;
-            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
         }
+
         .report-container {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            max-width: 850px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            padding: 60px 80px;
+            position: relative;
+            overflow: hidden;
         }
-        h1, h2, h3 {
-            font-family: "Times New Roman", Times, serif;
-            font-weight: 700;
+
+        /* Subtle Decorative Elements */
+        .report-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #28a745, #1e7e34);
         }
-        p, li {
-            text-align: justify;
-            line-height: 1.7;
-            font-size: 1.1rem;
+
+        h1 {
+            font-size: 2.5rem;
+            color: #28a745;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
         }
-        .section-header {
-            border-bottom: 2px solid #28a745;
+
+        h2 {
+            font-size: 1.75rem;
+            color: #1a1a1a;
+            border-bottom: 1px solid #e5e7eb;
             padding-bottom: 0.5rem;
             margin-top: 2.5rem;
             margin-bottom: 1.5rem;
-            color: #28a745;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
         }
+
+        h3 {
+            font-size: 1.25rem;
+            color: #28a745;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        h3::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background-color: #28a745;
+            margin-right: 12px;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+            text-align: justify;
+        }
+
         ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            position: relative;
+            margin-bottom: 1.5rem;
             padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
         }
+
+        li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            list-style-type: none;
+        }
+
         li::before {
             content: "•";
             color: #28a745;
             font-weight: bold;
-            display: inline-block; 
+            display: inline-block;
             width: 1em;
             margin-left: -1em;
-            position: absolute;
         }
-        .header-accent {
-            height: 4px;
-            width: 60px;
-            background-color: #28a745;
-            margin: 1rem auto;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(40, 167, 69, 0.1);
-        }
-        figure img {
+
+        .highlight-box {
+            background-color: #f9fdfa;
+            border: 1px solid #e1f0e5;
+            padding: 20px;
             border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        figure {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             transition: transform 0.3s ease;
         }
-        figure:hover img {
+
+        figure img:hover {
             transform: scale(1.02);
+        }
+
+        figcaption {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 10rem;
+            color: rgba(40, 167, 69, 0.03);
+            pointer-events: none;
+            white-space: nowrap;
+            z-index: 0;
+            font-weight: bold;
+        }
+
+        .signature-section {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px dashed #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .report-container {
+                margin: 0;
+                padding: 40px 20px;
+                box-shadow: none;
+            }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.4rem; }
+        }
+
+        /* Print optimization */
+        @media print {
+            body { background-color: white; }
+            .report-container { box-shadow: none; margin: 0; width: 100%; max-width: 100%; }
         }
     </style>
 </head>
-<body class="py-12 px-4 md:px-0">
+<body>
 
-    <!-- Main Container -->
-    <article class="report-container max-w-[850px] mx-auto bg-white p-8 md:p-16 rounded-sm border border-gray-100">
+    <article class="report-container relative z-10">
+        <div class="watermark">AI BĐS</div>
         
         <!-- Header Section -->
-        <header class="text-center mb-12">
-            <div class="flex justify-between items-start mb-8">
-                <div class="text-left">
-                    <span class="text-brand-green font-bold text-xl tracking-tighter">AI BẤT ĐỘNG SẢN</span>
-                    <div class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Premium Consultation</div>
-                </div>
-                <div class="text-right text-gray-500 text-sm italic">
-                    <strong>Ngày báo cáo:</strong> 05/05/2026
-                </div>
+        <header class="text-center mb-12 relative z-20">
+            <div class="flex justify-center mb-4">
+                <div class="w-16 h-1 bg-[#28a745]"></div>
             </div>
-
-            <h1 class="text-3xl md:text-4xl text-gray-800 mb-2 leading-tight uppercase">
-                Báo Cáo Phân Tích Đầu Tư<br>Bất Động Sản Chuyên Sâu
-            </h1>
-            <div class="header-accent"></div>
-            
-            <p class="text-center text-lg mt-4">Thực hiện bởi: <strong>AI Bất Động Sản</strong></p>
-            <p class="text-center text-brand-green font-medium">
-                <a href="www.phamhoanganhtokens.com" target="_blank" class="hover:underline">www.phamhoanganhtokens.com</a>
-            </p>
+            <h1 class="uppercase tracking-widest">AI BẤT ĐỘNG SẢN</h1>
+            <p class="italic text-gray-600 mb-1">Phân Tích Chuyên Sâu - Quyết Định Thông Minh</p>
+            <p class="text-sm text-gray-500">Ngày lập báo cáo: 05/05/2026</p>
         </header>
 
-        <!-- Section I -->
-        <section>
-            <h2 class="section-header text-2xl">I. Tổng quan tài sản</h2>
-            <p class="mb-4">Thông tin cơ bản về bất động sản được phân tích dựa trên dữ liệu hiện có:</p>
-            <div class="grid md:grid-cols-2 gap-4 mb-6">
-                <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-brand-green">
-                    <span class="block text-xs uppercase text-gray-500 mb-1">Diện tích tổng thể</span>
-                    <span class="text-xl font-bold">200 m²</span>
-                </div>
-                <div class="p-4 bg-gray-50 rounded-lg border-l-4 border-brand-green">
-                    <span class="block text-xs uppercase text-gray-500 mb-1">Giá trị niêm yết</span>
-                    <span class="text-xl font-bold">39.000.000.000 VND</span>
-                </div>
-            </div>
-            <ul>
-                <li><strong>Đơn giá hiện tại:</strong> 195.000.000 VND/m2</li>
-                <li><strong>Đánh giá vị thế:</strong> Với đơn giá xấp xỉ 195 triệu đồng/m2, tài sản nằm trong phân khúc cao cấp, phản ánh vị trí đắc địa tại trung tâm hoặc các khu vực quy hoạch hạ tầng đồng bộ. Đây là một khoản đầu tư có giá trị lớn, đòi hỏi kế hoạch tài chính cực kỳ khắt khe.</li>
-            </ul>
+        <section class="mb-10 text-center">
+            <h2 class="inline-block border-none">BÁO CÁO PHÂN TÍCH ĐẦU TƯ BẤT ĐỘNG SẢN</h2>
         </section>
 
-        <!-- Visual Media Integration -->
-        <figure class="my-12 text-center">
-            <div class="inline-block p-2 bg-white border border-gray-200 shadow-sm rounded">
-                <img src='https://opal.google/board/blobs/1f55cbfb-0556-47e6-a821-607556031b76' alt='media_1' class="max-w-full h-auto mx-auto grayscale-[0.2] hover:grayscale-0 transition-all duration-500" />
+        <!-- Executive Summary / Intro -->
+        <section class="relative z-20">
+            <h3>1. Tổng Quan Bất Động Sản</h3>
+            <p>
+                Dựa trên các dữ liệu đầu vào, bất động sản tọa lạc trên diện tích 210 m2 với kích thước mặt tiền rộng 8m và đặc điểm "nở hậu" mang ý nghĩa phong thủy tốt. Đây là tài sản có tính thanh khoản cao và đa dạng trong mục đích sử dụng.
+            </p>
+            <div class="highlight-box">
+                <ul>
+                    <li><strong>Diện tích:</strong> 210 m2</li>
+                    <li><strong>Giá trị mua:</strong> 9,200,000,000 VND</li>
+                    <li><strong>Đơn giá:</strong> 43,809,524 VND/m2</li>
+                    <li><strong>Tổng vốn đầu tư ban đầu:</strong> 3,384,000,000 VND (Bao gồm vốn tự có và 2% phí giao dịch)</li>
+                </ul>
             </div>
-            <figcaption class="mt-4 text-sm text-gray-500 italic">Hình 1: Mô phỏng không gian phối cảnh tài sản phân tích</figcaption>
+        </section>
+
+        <!-- Integrated Image -->
+        <figure class="relative z-20">
+            <img src="https://opal.google/board/blobs/b4d2f5d0-971f-44a2-bf28-d54f17e9b37b" alt="Phối cảnh kiến trúc bất động sản">
+            <figcaption>Hình 1: Phối cảnh kiến trúc minh họa cho lô đất 210m2 - Phân tích bởi AI</figcaption>
         </figure>
 
-        <!-- Section II -->
-        <section>
-            <h2 class="section-header text-2xl">II. Phân tích khoản vay và dòng tiền thực tế</h2>
-            <p class="mb-4">Dựa trên kịch bản vay 100% giá trị tài sản (39 tỷ đồng) và mục tiêu chi trả 45 triệu VND/tháng của nhà đầu tư, chúng tôi ghi nhận các thông số tài chính thực tế như sau:</p>
-            <ul class="mb-6">
-                <li><strong>Tổng dư nợ vay:</strong> 39.000.000.000 VND (Tỷ lệ LTV: 100%)</li>
-                <li><strong>Khoản trả góp hàng tháng tiêu chuẩn:</strong> 327.286.582 VND (Tính toán trên lãi suất giả định 9%/năm, kỳ hạn 25 năm)</li>
-                <li><strong>Chênh lệch thanh toán hàng tháng:</strong> 282.286.582 VND (Khoản thiếu hụt so với kế hoạch 45 triệu/tháng)</li>
-                <li><strong>Thu nhập cho thuê ước tính:</strong> 113.750.000 VND/tháng (Lợi suất dự kiến 3,5%/năm)</li>
-                <li><strong>Dòng tiền ròng hàng tháng (Net Cash Flow):</strong> <span class="text-red-600 font-bold">-213.536.582 VND</span></li>
-            </ul>
-            <div class="p-6 bg-red-50 border-r-4 border-red-200 italic text-gray-700">
-                Phân tích cho thấy sự chênh lệch khổng lồ giữa kỳ vọng chi trả của nhà đầu tư và nghĩa vụ thực tế đối với ngân hàng, tạo ra áp lực tài chính âm rất lớn hàng tháng.
-            </div>
-        </section>
-
-        <!-- Section III -->
-        <section>
-            <h2 class="section-header text-2xl">III. Các chỉ số tài chính trọng yếu</h2>
-            <p class="mb-4">Dưới đây là các chỉ số đo lường hiệu quả đầu tư và mức độ an toàn trong dài hạn:</p>
+        <!-- Financial Analysis -->
+        <section class="relative z-20">
+            <h3>2. Phân Tích Đòn Bẩy Tài Chính</h3>
+            <p>
+                Việc sử dụng đòn bẩy tài chính ngân hàng được tính toán dựa trên phương thức trả góp đều (Annuity) để tối ưu hóa kế hoạch tài chính dài hạn:
+            </p>
             <ul>
-                <li><strong>Chỉ số bao phủ nợ (DSCR):</strong> <span class="font-bold">0,35</span>. Chỉ số này ở dưới mức an toàn (thường là > 1,2), cho thấy thu nhập từ tài sản chỉ đủ bù đắp 35% chi phí lãi và gốc vay.</li>
-                <li><strong>Thời gian hoàn vốn dự kiến:</strong> 28,57 năm. Một thời kỳ hoàn vốn dài, phản ánh rủi ro dòng tiền trong trung hạn.</li>
-                <li><strong>Lợi nhuận dự kiến sau 10 năm:</strong> 16.292.155.676 VND. Con số này được hình thành từ sự tăng giá bất động sản (+30,8 tỷ) và thu nhập thuê tích lũy (+18 tỷ), sau khi đã khấu trừ tổng lãi vay tích lũy trong 10 năm (-32,5 tỷ).</li>
+                <li><strong>Khoản vay ngân hàng:</strong> 6,000,000,000 VND (Chiếm 65.22% giá trị tài sản - LTV)</li>
+                <li><strong>Kỳ hạn vay:</strong> 20 năm (240 tháng)</li>
+                <li><strong>Lãi suất ưu đãi:</strong> 9.8%/năm</li>
+                <li><strong>Số tiền thanh toán hàng tháng (Gốc + Lãi):</strong> 57,108,501 VND</li>
+                <li><strong>Tổng nghĩa vụ tài chính hàng năm:</strong> 685,302,011 VND</li>
             </ul>
         </section>
 
-        <!-- Section IV -->
-        <section>
-            <h2 class="section-header text-2xl">IV. Khuyến nghị đầu tư</h2>
-            <p class="mb-4">Sau khi đánh giá toàn diện, <strong>AI Bất Động Sản</strong> đưa ra các khuyến nghị sau:</p>
-            <ul>
-                <li><strong>Rủi ro thanh khoản:</strong> Phương án vay 100% tài sản với mức trả góp 45 triệu là không khả thi. Nhà đầu tư sẽ phải đối mặt với thâm hụt tiền mặt hơn 213 triệu VND mỗi tháng.</li>
-                <li><strong>Cân đối vốn tự có:</strong> Cần xem xét lại tỷ lệ sử dụng đòn bẩy. Việc không huy động được vốn đối ứng ban đầu sẽ dẫn đến tình trạng nợ xấu nhanh chóng nếu thu nhập ngoài không đủ bù đắp thâm hụt.</li>
-                <li><strong>Tối ưu hóa giá trị:</strong> Mặc dù tiềm năng tăng giá trong 10 năm là triển vọng, nhưng chi trị lãi vay "khủng" sẽ ăn mòn đáng kể thành quả đầu tư nếu không có chiến lược tái cấu trúc nợ.</li>
-            </ul>
-        </section>
-
-        <!-- Section V -->
-        <section>
-            <h2 class="section-header text-2xl">V. Lời khuyên cuối cùng</h2>
-            <p class="mb-4">Nhà đầu tư nên thực hiện các bước sau để đảm bảo an toàn cho dự án đầu tư này:</p>
-            <ul class="mb-8">
-                <li><strong>Tăng vốn đối ứng:</strong> Nâng tỷ lệ vốn tự có lên ít nhất 50% để giảm áp lực dòng tiền hàng tháng xuống mức kiểm soát được.</li>
-                <li><strong>Tìm kiếm gói vay ưu đãi:</strong> Đàm phán các kỳ hạn ân hạn gốc hoặc lãi suất ưu đãi trong 2-3 năm đầu để có thời gian khai thác tài sản đạt hiệu quả tối đa.</li>
-                <li><strong>Cập nhật kiến thức:</strong> Thường xuyên truy cập hệ thống định giá tại <a href="www.phamhoanganhtokens.com" target="_blank" class="text-brand-green hover:underline">www.phamhoanganhtokens.com</a> để theo dõi sát sao thị trường và các công cụ hỗ trợ quyết định đầu tư thông minh.</li>
-            </ul>
-        </section>
-
-        <!-- Sign-off -->
-        <div class="mt-16 pt-8 border-t border-gray-100 flex flex-col items-center justify-center text-center">
-            <p class="text-gray-500 italic mb-2">Báo cáo được lập bởi:</p>
-            <p class="text-lg font-bold text-gray-800">Advisory Group - <span class="text-brand-green">AI Bất Động Sản</span></p>
-            <div class="mt-8 opacity-50">
-                <a href="www.phamhoanganhtokens.com" target="_blank" class="text-xs text-gray-400 hover:text-brand-green transition-colors">
-                    WWW.PHAMHOANGANHTOKENS.COM
-                </a>
+        <!-- ROI Analysis -->
+        <section class="relative z-20">
+            <h3>3. Hiệu Quả Khai Thác Và Tăng Trưởng</h3>
+            <p>
+                Chỉ số hiệu quả được đánh giá qua khả năng tạo dòng tiền từ việc cho thuê và giá trị gia tăng của đất theo thời gian:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                <div class="border-l-2 border-gray-200 pl-4">
+                    <p class="font-bold text-[#28a745] mb-1">Dòng Tiền Cho Thuê</p>
+                    <ul class="text-sm">
+                        <li><strong>Doanh thu dự kiến:</strong> 720tr/năm</li>
+                        <li><strong>NOI (Thu nhập thuần):</strong> 615,6tr/năm</li>
+                        <li><strong>Dòng tiền thuần:</strong> -69,7tr/năm</li>
+                    </ul>
+                </div>
+                <div class="border-l-2 border-gray-200 pl-4">
+                    <p class="font-bold text-[#28a745] mb-1">Tăng Trưởng Tài Sản</p>
+                    <ul class="text-sm">
+                        <li><strong>Kỳ vọng tăng giá:</strong> 8.5%/năm</li>
+                        <li><strong>Giá trị gia tăng:</strong> +782tr/năm</li>
+                        <li><strong>Tổng ROI:</strong> 21.05%</li>
+                    </ul>
+                </div>
             </div>
-        </div>
+            <p>
+                <strong>Tỷ suất lợi nhuận (Total ROI):</strong> 21.05%. Đây là con số ấn tượng, cho thấy hiệu quả sử dụng vốn cực tốt nhờ tận dụng đòn bẩy và sự tăng trưởng của thị trường.
+            </p>
+        </section>
+
+        <!-- Risk/Payment Capability -->
+        <section class="relative z-20">
+            <h3>4. Đánh Giá Khả Năng Thanh Toán</h3>
+            <p>
+                Hệ số khả năng trả nợ (DSCR) hiện đạt mức <strong>0.90</strong>. Điều này cho thấy thu nhập thuần từ việc cho thuê hiện tại chưa đủ để bao phủ hoàn toàn nghĩa vụ trả nợ ngân hàng hàng năm. Nhà đầu tư cần chuẩn bị nguồn vốn dự phòng khoảng 70 triệu đồng mỗi năm trong giai đoạn đầu để bù đắp dòng tiền.
+            </p>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="relative z-20">
+            <h3>5. Khuyến Nghị Đầu Tư</h3>
+            <p>
+                Bất động sản này là một lựa chọn <strong>TIỀM NĂNG</strong> cho mục tiêu gia tăng tài sản dài hạn. Với tỷ suất ROI tổng hợp lên đến 21.05%, mức lợi nhuận này hoàn toàn vượt xa các kênh đầu tư truyền thống khác. Đặc điểm mặt tiền rộng 8m và nở hậu là những yếu tố then chốt đảm bảo tính thanh khoản và khả năng tăng giá vượt trội so với thị trường chung.
+            </p>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="relative z-20">
+            <h3>6. Lời Khuyên Cuối Cùng</h3>
+            <p>
+                Mặc dù tài sản có khả năng tăng trưởng mạnh, nhà đầu tư cần lưu ý kiểm soát dòng tiền mặt hàng tháng. Do hệ số DSCR dưới 1.0, việc duy trì một khoản dự phòng tài chính hoặc tối ưu hóa chi phí vận hành để nâng cao NOI là điều cần thiết. Đây là phương án phù hợp cho những nhà đầu tư có thu nhập ổn định từ các nguồn khác, sử dụng bất động sản như một "ống tiết kiệm" tăng trưởng cao và bền vững.
+            </p>
+        </section>
+
+        <!-- Professional Footer -->
+        <footer class="signature-section relative z-20 text-center">
+            <div class="mb-6">
+                <p class="text-xs uppercase tracking-widest text-gray-400 mb-2">Báo cáo được xác thực bởi</p>
+                <div class="flex justify-center items-center gap-2">
+                    <span class="font-bold text-gray-800">AI BẤT ĐỘNG SẢN</span>
+                    <span class="text-gray-300">|</span>
+                    <span class="text-gray-500 italic">Smart Data Analysis</span>
+                </div>
+            </div>
+            <div class="text-sm text-gray-500">
+                <p>Website: <a href="http://www.phamhoanganhtokens.com" target="_blank" class="text-[#28a745] hover:underline transition-all">www.phamhoanganhtokens.com</a></p>
+            </div>
+        </footer>
 
     </article>
 
-    <!-- Subtle Scroll-to-top micro-animation element -->
-    <div class="fixed bottom-8 right-8 pointer-events-none opacity-20 hover:opacity-100 transition-opacity">
-        <div class="w-12 h-12 rounded-full border-2 border-brand-green flex items-center justify-center text-brand-green">
-            <span class="text-[10px] font-bold">REPORT</span>
-        </div>
-    </div>
-
+    <script>
+        // Simple animation logic for the report elements on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section, figure');
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = `opacity 0.8s ease ${index * 0.15}s, transform 0.8s ease ${index * 0.15}s`;
+                
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        });
+    </script>
 </body>
 </html>
