@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bất Động Sản | Minh họa Bất động sản Cao cấp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#C5A059',
+                            dark: '#0F172A',
+                            accent: '#1E293B',
+                            light: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fcfcfc;
+            color: #1e293b;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .property-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .property-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #C5A059 0%, #E2C285 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-body text-brand-dark leading-relaxed">
+
+    <!-- Header Section -->
+    <header class="glass-header sticky top-0 z-50 py-6 px-6 sm:px-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+                <h1 class="font-display text-2xl md:text-3xl font-bold tracking-tight flex items-center gap-2">
+                    <span class="w-8 h-8 bg-brand-dark flex items-center justify-center rounded-lg">
+                        <span class="text-white text-xs">AI</span>
+                    </span>
+                    AI Bất Động Sản
+                </h1>
+                <p class="text-xs font-medium tracking-widest uppercase text-brand-gold mt-1">Phú Mỹ Hưng • Quận 7</p>
+            </div>
+            
+            <div class="flex flex-col items-center md:items-end gap-1">
+                <a href="www.phamhoanganhtokens.com" target="_blank" class="text-sm font-medium hover:text-brand-gold transition-colors duration-300 border-b border-brand-dark/10 pb-0.5">
+                    www.phamhoanganhtokens.com
+                </a>
+                <span class="text-[10px] uppercase tracking-tighter text-slate-400 font-semibold">Cập nhật: 06/05/2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-16 pb-8 px-6 text-center animate-fade-in">
+        <div class="max-w-3xl mx-auto">
+            <span class="inline-block py-1 px-3 rounded-full bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-wider mb-4">Danh mục đặc biệt</span>
+            <h2 class="font-display text-4xl md:text-6xl font-bold tracking-tight mb-6">
+                Kiến tạo không gian <br/>
+                <span class="gold-gradient">Sống Đẳng Cấp</span>
+            </h2>
+            <p class="text-slate-500 text-lg md:text-xl font-light leading-relaxed">
+                Giải pháp minh họa kiến trúc bằng AI, mang đến cái nhìn trực quan và tinh tế nhất cho các dự án bất động sản hạng sang.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto px-6 py-12 md:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- Featured Property Card (Spans more columns) -->
+            <div class="lg:col-span-12 property-card bg-white rounded-[32px] p-4 md:p-8 border border-slate-100 shadow-sm overflow-hidden animate-slide-up">
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
+                    <!-- Image Area -->
+                    <div class="image-container overflow-hidden rounded-2xl shadow-xl">
+                        <img src='https://opal.google/board/blobs/9a75c779-160a-4d6c-96a7-d6b07e3f1b1c' alt='Minh họa Nhà phố Phú Mỹ Hưng' class="hover:scale-105 transition-transform duration-700">
+                    </div>
+
+                    <!-- Content Area -->
+                    <div class="px-2 py-4 lg:p-8">
+                        <div class="mb-6">
+                            <span class="text-brand-gold font-bold text-xs tracking-widest uppercase mb-2 block">Dự án Tiêu biểu</span>
+                            <h3 class="font-display text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                                Nhà phố liền kề Khu đô thị Phú Mỹ Hưng, Quận 7
+                            </h3>
+                            <div class="h-1 w-20 bg-brand-gold rounded-full mb-6"></div>
+                        </div>
+
+                        <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+                            Khám phá không gian sống hiện đại và đẳng cấp tại trung tâm Quận 7. Căn nhà có diện tích <span class="font-bold text-brand-dark">110 m2</span> với kích thước lý tưởng (6m x 18.3m, nở hậu 6.1m), thiết kế sang trọng, tối ưu công năng.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4 mb-10">
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                <p class="text-[10px] uppercase text-slate-400 font-bold mb-1">Mặt tiền</p>
+                                <p class="text-xl font-display font-bold text-brand-dark">6.0 m</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                <p class="text-[10px] uppercase text-slate-400 font-bold mb-1">Diện tích</p>
+                                <p class="text-xl font-display font-bold text-brand-dark">110 m²</p>
+                            </div>
+                        </div>
+
+                        <!-- Branding / Details Row -->
+                        <div class="flex flex-wrap items-center gap-6 pt-8 border-t border-slate-100">
+                            <div>
+                                <p class="text-[10px] uppercase font-bold text-slate-400 mb-1">Thương hiệu</p>
+                                <p class="text-sm font-bold text-brand-dark">AI Bất Động Sản</p>
+                            </div>
+                            <div class="h-8 w-[1px] bg-slate-200 hidden md:block"></div>
+                            <div>
+                                <p class="text-[10px] uppercase font-bold text-slate-400 mb-1">Pháp lý</p>
+                                <p class="text-sm font-bold text-brand-dark">Minh bạch 100%</p>
+                            </div>
+                            <div class="h-8 w-[1px] bg-slate-200 hidden md:block"></div>
+                            <button class="ml-auto bg-brand-dark text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-brand-gold transition-colors duration-300">
+                                Xem chi tiết
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Side features or minor grid could go here if more items existed -->
+        </div>
+    </main>
+
+    <!-- Minimalist Call to Action -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="bg-brand-accent rounded-[40px] py-16 px-8 text-center relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
+            <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full -ml-16 -mb-16"></div>
+            
+            <div class="relative z-10">
+                <h4 class="text-white font-display text-3xl md:text-4xl font-bold mb-6">Bạn quan tâm đến dự án này?</h4>
+                <p class="text-slate-300 mb-10 max-w-xl mx-auto">Kết nối với chúng tôi để nhận thông tin chi tiết về các dự án bất động sản tiềm năng tại khu vực Quận 7 và Phú Mỹ Hưng.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="www.phamhoanganhtokens.com" target="_blank" class="bg-brand-gold text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">Liên hệ tư vấn</a>
+                    <button class="bg-white/10 backdrop-blur-md text-white px-10 py-4 rounded-full font-bold hover:bg-white/20 transition-all border border-white/20">Tải Brochure</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spacer to respect NO FOOTER rule while maintaining balance -->
+    <div class="py-12"></div>
+
+    <script>
+        // Simple scroll animation trigger
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.property-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
