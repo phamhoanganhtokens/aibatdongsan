@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Phân Tích Bất Động Sản - AI Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#28a745',
+                            dark: '#1a1a1a',
+                            light: '#f8f9fa',
+                            accent: '#e9ecef',
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['"Times New Roman"', 'Times', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            color: #333;
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.6;
+        }
+        .report-container {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background-color: white;
+            padding: 3rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            border-top: 8px solid #28a745;
+        }
+        h1 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #28a745;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 0.5rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        ul {
+            margin-bottom: 1.5rem;
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+            text-align: justify;
+        }
+        .property-figure {
+            margin: 2.5rem 0;
+            text-align: center;
+        }
+        .property-figure img {
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .property-figure img:hover {
+            transform: scale(1.01);
+        }
+        .property-figure figcaption {
+            margin-top: 0.75rem;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .highlight-box {
+            background-color: #f8fcf9;
+            border-left: 4px solid #28a745;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 640px) {
+            .report-container {
+                padding: 1.5rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+            h1 { font-size: 1.75rem; }
+            h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <main class="max-w-[850px] mx-auto report-container">
+        <!-- Header -->
+        <header class="text-center mb-10 border-b border-gray-100 pb-8">
+            <div class="text-brand-green font-bold text-xl mb-2 tracking-widest uppercase">AI Bất Động Sản</div>
+            <h1 class="font-serif">BÁO CÁO PHÂN TÍCH ĐẦU TƯ BẤT ĐỘNG SẢN</h1>
+            <div class="text-gray-600 space-y-1 mt-4">
+                <p class="text-center m-0">Website: <a href="www.phamhoanganhtokens.com" target="_blank" class="hover:text-brand-green transition-colors">www.phamhoanganhtokens.com</a></p>
+                <p class="text-center m-0 italic">Ngày lập báo cáo: 06/05/2026</p>
+            </div>
+        </header>
+
+        <!-- Project Subject -->
+        <section class="mb-8">
+            <div class="bg-gray-50 p-4 rounded text-lg">
+                <p class="m-0"><strong>Dự án:</strong> Nhà phố liền kề Khu đô thị Phú Mỹ Hưng, Quận 7, TP.HCM</p>
+            </div>
+        </section>
+
+        <!-- Section 1 -->
+        <section>
+            <h2>I. Tổng quan tài sản</h2>
+            <p>Dựa trên dữ liệu thị trường hiện tại, bất động sản được phân tích là một tài sản chiến lược tại trung tâm tài chính phía Nam TP.HCM.</p>
+            <ul>
+                <li><b>Vị trí:</b> Tọa lạc tại Khu đô thị Phú Mỹ Hưng, Quận 7, TP.HCM. Đây là khu vực có tính thanh khoản cao và giá trị thương hiệu dẫn đầu thị trường bất động sản cao cấp.</li>
+                <li><b>Diện tích:</b> 110 m2 (Ngang 6m, Nở hậu 6.1m, Dài 18.3m). Yếu tố nở hậu mang ý nghĩa phong thủy tốt, thu hút tài lộc cho chủ sở hữu.</li>
+                <li><b>Giá mua:</b> 28.000.000.000 VNĐ.</li>
+                <li><b>Đơn giá đầu tư:</b> 254.545.455 VNĐ/m2.</li>
+                <li><b>Tổng vốn đầu tư ban đầu:</b> 19.200.000.000 VNĐ (Bao gồm vốn đối ứng 18 tỷ VNĐ, thuế phí chuyển nhượng 700 triệu VNĐ và chi phí sửa chữa nội thất cơ bản 500 triệu VNĐ).</li>
+            </ul>
+        </section>
+
+        <!-- Image Integration -->
+        <figure class="property-figure">
+            <img src='https://opal.google/board/blobs/4c84c25d-31f8-4323-b55f-cd25825eb948' alt='media_1' />
+            <figcaption>Mô hình minh họa kiến trúc tổng thể dự án nhà phố tại Quận 7</figcaption>
+        </figure>
+
+        <!-- Section 2 -->
+        <section>
+            <h2>II. Phân tích đòn bẩy tài chính</h2>
+            <p>Việc sử dụng đòn bẩy tài chính trong thương vụ này được cấu trúc theo hướng bảo thủ để đảm bảo an toàn vốn.</p>
+            <ul>
+                <li><b>Khoản vay ngân hàng:</b> 10.000.000.000 VNĐ.</li>
+                <li><b>Tỷ lệ LTV (Loan-to-Value):</b> 35,71%. Đây là tỷ lệ vay ở mức an toàn, giúp nhà đầu tư giảm thiểu rủi ro bị thanh lý tài sản khi thị trường biến động.</li>
+                <li><b>Giai đoạn ưu đãi (2 năm đầu):</b> Lãi suất 8,5%/năm. Nghĩa vụ trả nợ (gốc và lãi) hàng tháng ước tính khoảng 86.782.323 VNĐ.</li>
+                <li><b>Giai đoạn thả nổi (Dự kiến):</b> Lãi suất tăng lên mức 11,5%/năm. Nghĩa vụ trả nợ hàng tháng dự kiến tăng lên mức 105.264.596 VNĐ. Nhà đầu tư cần chuẩn bị dòng tiền dự phòng ổn định để bù đắp sự chênh lệch này.</li>
+            </ul>
+        </section>
+
+        <!-- Section 3 -->
+        <section>
+            <h2>III. Khả năng sinh lời & Hoàn vốn</h2>
+            <p>Phân tích tập trung vào sự kết hợp giữa dòng tiền vận hành và giá trị gia tăng của đất (Capital Appreciation).</p>
+            <ul>
+                <li><b>Dòng tiền cho thuê:</b> Khởi điểm 55.000.000 VNĐ/tháng, với kỳ vọng tăng trưởng 5% mỗi 2 năm. Hiệu suất lợi nhuận ròng từ cho thuê (Rental ROI) đạt khoảng 1,85%/năm trên tổng mức đầu tư.</li>
+                <li><b>Tăng trưởng giá trị tài sản:</b> Với kỳ vọng tăng giá 10%/năm tại khu vực Phú Mỹ Hưng, thặng dư vốn (Capital Gain) được xác định là động lực chính của biên lợi nhuận.</li>
+                <li><b>Lợi nhuận dự kiến sau 10 năm:</b> Ước tính đạt 38.417.555.201 VNĐ, tương đương tỷ suất sinh lời khoảng 137% trên số vốn tự có bỏ ra ban đầu.</li>
+                <li><b>Thời gian hoàn vốn:</b> Dự kiến là 4 năm (Thời điểm tổng giá trị tài sản cộng dòng tiền tích lũy vượt mức vốn đầu tư tự có ban đầu).</li>
+            </ul>
+        </section>
+
+        <!-- Section 4 -->
+        <section>
+            <h2>IV. Đánh giá rủi ro</h2>
+            <div class="highlight-box">
+                <ul>
+                    <li><b>Rủi ro dòng tiền (Negative Cash Flow):</b> Chỉ số DSCR (Hệ số khả năng chi trả nợ) đạt mức 0,52. Do chỉ số này thấp hơn 1.0, dòng tiền thuê hàng tháng không đủ chi trả cả gốc và lãi vay. Nhà đầu tư bắt buộc phải có nguồn thu nhập khác để bù đắp phần thiếu hụt hàng tháng.</li>
+                    <li><b>Rủi rò lãi suất:</b> Việc lãi suất thả nổi tăng cao sau giai đoạn ưu đãi sẽ gây áp lực trực tiếp lên kế hoạch tài chính cá nhân.</li>
+                    <li><b>Rủi ro lạm phát:</b> Với mức lạm phát dự kiến 4%, việc sở hữu bất động sản tại vị trí đắc địa này là kênh trú ẩn vốn cực kỳ an toàn, vì tốc độ tăng giá kỳ vọng (10%) cao hơn đáng kể so với lạm phát.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section>
+            <h2>V. Khuyến nghị đầu tư</h2>
+            <p>Dựa trên các phân tích định lượng của AI Bất Động Sản, chúng tôi đưa ra khuyến nghị: <b>CẦN CÂN NHẮC KỸ LƯỠNG.</b></p>
+            <p>Dự án này sở hữu tiềm năng tăng trưởng vốn cực kỳ mạnh mẽ nhờ vị trí độc tôn và uy tín của khu đô thị Phú Mỹ Hưng. Tuy nhiên, rào cản lớn nhất chính là áp lực dòng tiền âm hàng tháng. Đây là phương án phù hợp với những nhà đầu tư có tiềm lực tài chính vững mạnh, ưu tiên mục tiêu tích lũy tài sản và tăng trưởng dài hạn hơn là khai thác dòng tiền ngắn hạn.</p>
+        </section>
+
+        <!-- Section 6 -->
+        <section>
+            <h2>VI. Lời khuyên cuối cùng</h2>
+            <p>Để tối ưu hóa hiệu quả đầu tư cho tài sản này, AI Bất Động Sản đề xuất chiến thuật <b>"Giữ dài hạn - Quản trị dòng tiền"</b>. Nhà đầu tư nên giữ tài sản ít nhất 5-7 năm để vượt qua các chu kỳ biến động lãi suất và tận dụng tối đa đà tăng giá của bất động sản cao cấp. Đồng thời, hãy đảm bảo rằng bạn luôn có một quỹ dự phòng tài chính đủ để duy trì nghĩa vụ nợ ngân hàng trong ít nhất 1-2 năm nếu thị trường cho thuê gặp khó khăn đột biến.</p>
+            
+            <div class="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-end">
+                <div class="text-sm text-gray-500 mb-4 md:mb-0">
+                    Để được tư vấn chi tiết hơn, vui lòng truy cập:<br>
+                    <a href="www.phamhoanganhtokens.com" target="_blank" class="text-brand-green font-bold">www.phamhoanganhtokens.com</a>
+                </div>
+                <div class="text-right italic">
+                    <p class="m-0">Trân trọng,</p>
+                    <p class="m-0 font-bold not-italic text-brand-green">Đội ngũ chuyên gia AI Bất Động Sản</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Micro-animations for interactivity
+        document.querySelectorAll('li').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transition = 'all 0.2s ease';
+                item.style.transform = 'translateX(5px)';
+                item.style.color = '#1a1a1a';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translateX(0)';
+                item.style.color = '';
+            });
+        });
+    </script>
+</body>
+</html>
