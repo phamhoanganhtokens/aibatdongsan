@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thử Nghiệm Đầu Tư Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ivory': '#FCFAF7',
+                        'charcoal': '#1A1A1A',
+                        'gold-accent': '#C5A059',
+                    },
+                    fontFamily: {
+                        'serif': ['Times New Roman', 'Times', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f4f4f2;
+            color: #1a1a1a;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+        }
+        .paper-container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .test-case-frame {
+            background: white;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #C5A059;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .test-case-frame:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        .test-case-frame::after {
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-image: radial-gradient(circle, #f0f0f0 1px, transparent 1px);
+            background-size: 10px 10px;
+            opacity: 0.3;
+        }
+        .justified-text {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .heading-decoration {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .heading-decoration::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #e0e0e0;
+            margin-left: 15px;
+        }
+        .copy-hint {
+            font-size: 0.75rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            display: block;
+        }
+        @media (max-width: 640px) {
+            .paper-container {
+                margin: 10px;
+                padding: 10px;
+            }
+            .test-case-frame {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-ivory">
+
+    <div class="paper-container">
+        <!-- Header -->
+        <header class="text-center mb-12 py-8">
+            <h1 class="text-3xl md:text-4xl font-bold uppercase tracking-widest border-b-2 border-charcoal inline-block pb-2 mb-4">
+                BÁO CÁO PHÂN TÍCH KỊCH BẢN ĐẦU TƯ
+            </h1>
+            <p class="text-sm italic text-gray-600">Tổng hợp các phương án kiểm thử bất động sản thực tế - 2024</p>
+        </header>
+
+        <!-- Main Content -->
+        <main id="test-cases-root">
+            <!-- Test Case 1 -->
+            <article class="test-case-frame">
+                <span class="copy-hint">Mã kịch bản: #01</span>
+                <div class="heading-decoration">
+                    <h2 class="text-xl font-bold">Kịch bản: Nhà phố liền kề Khu đô thị Phú Mỹ Hưng, Quận 7, TP.HCM</h2>
+                </div>
+                <div class="justified-text text-lg">
+                    1. Tên kịch bản: Nhà phố liền kề Khu đô thị Phú Mỹ Hưng, Quận 7, TP.HCM<br>
+                    2. Diện tích: 110 m2<br>
+                    3. Kích thước: Ngang 6m, Nở hậu 6.1m, Dài 18.3m<br>
+                    4. Giá mua: 28 tỷ VNĐ<br>
+                    5. Số tiền vay ngân hàng: 10 tỷ VNĐ<br>
+                    6. Kỳ hạn vay: 20 năm<br>
+                    7. Lãi suất: 8.5%/năm trong 2 năm đầu, sau đó thả nổi<br>
+                    8. Cho thuê dự kiến và tăng trưởng: 55 triệu VNĐ/tháng, tăng trưởng 5% mỗi 2 năm<br>
+                    9. Tăng giá kỳ vọng: 10%/năm<br>
+                    10. Chi phí sửa chữa: 500 triệu VNĐ (nội thất cơ bản)<br>
+                    11. Thuế phí: 2.5% tổng giá trị<br>
+                    12. Lạm phát: 4%/năm<br>
+                    Phân tích giúp tôi khả năng sinh lời, thời gian hoàn vốn, rủi ro và khuyến nghị.
+                </div>
+            </article>
+
+            <!-- Test Case 2 -->
+            <article class="test-case-frame">
+                <span class="copy-hint">Mã kịch bản: #02</span>
+                <div class="heading-decoration">
+                    <h2 class="text-xl font-bold">Kịch bản: Shophouse khối đế chung cư cao cấp, Quận Cầu Giấy, Hà Nội</h2>
+                </div>
+                <div class="justified-text text-lg">
+                    1. Tên kịch bản: Shophouse khối đế chung cư cao cấp, Quận Cầu Giấy, Hà Nội<br>
+                    2. Diện tích: 85 m2<br>
+                    3. Kích thước: Ngang 7m, Nở hậu 7m, Dài 12.1m<br>
+                    4. Giá mua: 16 tỷ VNĐ<br>
+                    5. Số tiền vay ngân hàng: 7 tỷ VNĐ<br>
+                    6. Kỳ hạn vay: 15 năm<br>
+                    7. Lãi suất: 9%/năm cố định trong 3 năm<br>
+                    8. Cho thuê dự kiến và tăng trưởng: 70 triệu VNĐ/tháng, tăng trưởng 7%/năm<br>
+                    9. Tăng giá kỳ vọng: 8%/năm<br>
+                    10. Chi phí sửa chữa: 300 triệu VNĐ (nâng cấp nội thất kinh doanh)<br>
+                    11. Thuế phí: 2.5% tổng giá trị giao dịch<br>
+                    12. Lạm phát: 3.8%/năm<br>
+                    Phân tích giúp tôi khả năng sinh lời, thời gian hoàn vốn, rủi ro và khuyến nghị.
+                </div>
+            </article>
+
+            <!-- Test Case 3 -->
+            <article class="test-case-frame">
+                <span class="copy-hint">Mã kịch bản: #03</span>
+                <div class="heading-decoration">
+                    <h2 class="text-xl font-bold">Kịch bản: Đất nền dự án gần sân bay Quốc tế Long Thành, Đồng Nai</h2>
+                </div>
+                <div class="justified-text text-lg">
+                    1. Tên kịch bản: Đất nền dự án gần sân bay Quốc tế Long Thành, Đồng Nai<br>
+                    2. Diện tích: 150 m2<br>
+                    3. Kích thước: Ngang 6m, Nở hậu 6m, Dài 25m<br>
+                    4. Giá mua: 4.5 tỷ VNĐ<br>
+                    5. Số tiền vay ngân hàng: 2 tỷ VNĐ<br>
+                    6. Kỳ hạn vay: 10 năm<br>
+                    7. Lãi suất: 10.5%/năm thả nổi<br>
+                    8. Cho thuê dự kiến và tăng trưởng: 0 VNĐ (Đất trống chờ tăng giá)<br>
+                    9. Tăng giá kỳ vọng: 20%/năm<br>
+                    10. Chi phí sửa chữa: 50 triệu VNĐ (san lấp và cắm mốc)<br>
+                    11. Thuế phí: 2% giá trị giao dịch<br>
+                    12. Lạm phát: 4.2%/năm<br>
+                    Phân tích giúp tôi khả năng sinh lời, thời gian hoàn vốn, rủi ro và khuyến nghị.
+                </div>
+            </article>
+
+            <!-- Test Case 4 -->
+            <article class="test-case-frame">
+                <span class="copy-hint">Mã kịch bản: #04</span>
+                <div class="heading-decoration">
+                    <h2 class="text-xl font-bold">Kịch bản: Căn hộ 2 phòng ngủ cao cấp tại Thủ Thiêm, TP. Thủ Đức</h2>
+                </div>
+                <div class="justified-text text-lg">
+                    1. Tên kịch bản: Căn hộ 2 phòng ngủ cao cấp tại Thủ Thiêm, TP. Thủ Đức<br>
+                    2. Diện tích: 78 m2<br>
+                    3. Kích thước: Ngang 6.5m, Nở hậu 6.5m, Dài 12m<br>
+                    4. Giá mua: 9.5 tỷ VNĐ<br>
+                    5. Số tiền vay ngân hàng: 4 tỷ VNĐ<br>
+                    6. Kỳ hạn vay: 25 năm<br>
+                    7. Lãi suất: 7.5%/năm ưu đãi năm đầu<br>
+                    8. Cho thuê dự kiến và tăng trưởng: 30 triệu VNĐ/tháng, tăng trưởng 3%/năm<br>
+                    9. Tăng giá kỳ vọng: 12%/năm<br>
+                    10. Chi phí sửa chữa: 200 triệu VNĐ (nâng cấp thiết bị thông minh)<br>
+                    11. Thuế phí: 1.5% phí quản lý và lệ phí trước bạ<br>
+                    12. Lạm phát: 4%/năm<br>
+                    Phân tích giúp tôi khả năng sinh lời, thời gian hoàn vốn, rủi ro và khuyến nghị.
+                </div>
+            </article>
+
+            <!-- Test Case 5 -->
+            <article class="test-case-frame">
+                <span class="copy-hint">Mã kịch bản: #05</span>
+                <div class="heading-decoration">
+                    <h2 class="text-xl font-bold">Kịch bản: Tòa nhà chung cư mini cao tầng tại Quận Đống Đa, Hà Nội</h2>
+                </div>
+                <div class="justified-text text-lg">
+                    1. Tên kịch bản: Tòa nhà chung cư mini cao tầng tại Quận Đống Đa, Hà Nội<br>
+                    2. Diện tích: 120 m2<br>
+                    3. Kích thước: Ngang 8m, Nở hậu 8.5m, Dài 15m<br>
+                    4. Giá mua: 24 tỷ VNĐ<br>
+                    5. Số tiền vay ngân hàng: 10 tỷ VNĐ<br>
+                    6. Kỳ hạn vay: 20 năm<br>
+                    7. Lãi suất: 9.5%/năm<br>
+                    8. Cho thuê dự kiến và tăng trưởng: 120 triệu VNĐ/tháng, tăng trưởng 5%/năm<br>
+                    9. Tăng giá kỳ vọng: 7%/năm<br>
+                    10. Chi phí sửa chữa: 1.5 tỷ VNĐ (lắp đặt hệ thống PCCC tiêu chuẩn và thang máy)<br>
+                    11. Thuế phí: 3% chi phí pháp lý hoàn công và thuế<br>
+                    12. Lạm phát: 3.5%/năm<br>
+                    Phân tích giúp tôi khả năng sinh lời, thời gian hoàn vốn, rủi ro và khuyến nghị.
+                </div>
+            </article>
+
+            <!-- Test Case 6 -->
+            <article class="test-case-frame">
+                <span class="copy-hint">Mã kịch bản: #06</span>
+                <div class="heading-decoration">
+                    <h2 class="text-xl font-bold">Kịch bản: Biệt thự nghỉ dưỡng Homestay tại Bảo Lộc, Lâm Đồng</h2>
+                </div>
+                <div class="justified-text text-lg">
+                    1. Tên kịch bản: Biệt thự nghỉ dưỡng Homestay tại Bảo Lộc, Lâm Đồng<br>
+                    2. Diện tích: 450 m2<br>
+                    3. Kích thước: Ngang 15m, Nở hậu 15.5m, Dài 30m<br>
+                    4. Giá mua: 7 tỷ VNĐ<br>
+                    5. Số tiền vay ngân hàng: 3 tỷ VNĐ<br>
+                    6. Kỳ hạn vay: 15 năm<br>
+                    7. Lãi suất: 8.8%/năm<br>
+                    8. Cho thuê dự kiến và tăng trưởng: 25 triệu VNĐ/tháng, tăng trưởng 10%/năm<br>
+                    9. Tăng giá kỳ vọng: 15%/năm<br>
+                    10. Chi phí sửa chữa: 800 triệu VNĐ (thiết kế cảnh quan sân vườn)<br>
+                    11. Thuế phí: 2.2% giá trị giao dịch<br>
+                    12. Lạm phát: 4%/năm<br>
+                    Phân tích giúp tôi khả năng sinh lời, thời gian hoàn vốn, rủi ro và khuyến nghị.
+                </div>
+            </article>
+
+            <!-- Test Case 7 -->
+            <article class="test-case-frame">
+                <span class="copy-hint">Mã kịch bản: #07</span>
+                <div class="heading-decoration">
+                    <h2 class="text-xl font-bold">Kịch bản: Nhà mặt phố kinh doanh thời trang tại Quận 3, TP.HCM</h2>
+                </div>
+                <div class="justified-text text-lg">
+                    1. Tên kịch bản: Nhà mặt phố kinh doanh thời trang tại Quận 3, TP.HCM<br>
+                    2. Diện tích: 64 m2<br>
+                    3. Kích thước: Ngang 4m, Nở hậu 4.2m, Dài 16m<br>
+                    4. Giá mua: 38 tỷ VNĐ<br>
+                    5. Số tiền vay ngân hàng: 15 tỷ VNĐ<br>
+                    6. Kỳ hạn vay: 20 năm<br>
+                    7. Lãi suất: 9.2%/năm<br>
+                    8. Cho thuê dự kiến và tăng trưởng: 90 triệu VNĐ/tháng, tăng trưởng 10% mỗi 3 năm<br>
+                    9. Tăng giá kỳ vọng: 6%/năm<br>
+                    10. Chi phí sửa chữa: 400 triệu VNĐ (cải tạo mặt tiền)<br>
+                    11. Thuế phí: 2.5% tổng thuế phí<br>
+                    12. Lạm phát: 4%/năm<br>
+                    Phân tích giúp tôi khả năng sinh lời, thời gian hoàn vốn, rủi ro và khuyến nghị.
+                </div>
+            </article>
+
+            <!-- Test Case 8 -->
+            <article class="test-case-frame">
+                <span class="copy-hint">Mã kịch bản: #08</span>
+                <div class="heading-decoration">
+                    <h2 class="text-xl font-bold">Kịch bản: Đất nền phân lô vùng ven khu công nghiệp, Chơn Thành, Bình Phước</h2>
+                </div>
+                <div class="justified-text text-lg">
+                    1. Tên kịch bản: Đất nền phân lô vùng ven khu công nghiệp, Chơn Thành, Bình Phước<br>
+                    2. Diện tích: 200 m2<br>
+                    3. Kích thước: Ngang 5m, Nở hậu 5m, Dài 40m<br>
+                    4. Giá mua: 1.8 tỷ VNĐ<br>
+                    5. Số tiền vay ngân hàng: 800 triệu VNĐ<br>
+                    6. Kỳ hạn vay: 5 năm<br>
+                    7. Lãi suất: 11%/năm<br>
+                    8. Cho thuê dự kiến và tăng trưởng: 4 triệu VNĐ/tháng (cho thuê mặt bằng tạm), tăng trưởng 5%/năm<br>
+                    9. Tăng giá kỳ vọng: 25%/năm<br>
+                    10. Chi phí sửa chữa: 20 triệu VNĐ (san lấp)<br>
+                    11. Thuế phí: 2.5% tổng cộng<br>
+                    12. Lạm phát: 4.5%/năm<br>
+                    Phân tích giúp tôi khả năng sinh lời, thời gian hoàn vốn, rủi ro và khuyến nghị.
+                </div>
+            </article>
+
+            <!-- Test Case 9 -->
+            <article class="test-case-frame">
+                <span class="copy-hint">Mã kịch bản: #09</span>
+                <div class="heading-decoration">
+                    <h2 class="text-xl font-bold">Kịch bản: Shophouse thương mại Vinwonder Phú Quốc, Kiên Giang</h2>
+                </div>
+                <div class="justified-text text-lg">
+                    1. Tên kịch bản: Shophouse thương mại Vinwonder Phú Quốc, Kiên Giang<br>
+                    2. Diện tích: 100 m2<br>
+                    3. Kích thước: Ngang 5m, Nở hậu 5m, Dài 20m<br>
+                    4. Giá mua: 14 tỷ VNĐ<br>
+                    5. Số tiền vay ngân hàng: 6 tỷ VNĐ<br>
+                    6. Kỳ hạn vay: 15 năm<br>
+                    7. Lãi suất: 0% trong 2 năm đầu, sau đó 11%/năm<br>
+                    8. Cho thuê dự kiến và tăng trưởng: Cam kết 5%/năm trong 2 năm đầu, sau đó theo thị trường<br>
+                    9. Tăng giá kỳ vọng: 9%/năm<br>
+                    10. Chi phí sửa chữa: 600 triệu VNĐ (hoàn thiện thô)<br>
+                    11. Thuế phí: 2.5% giá trị giao dịch<br>
+                    12. Lạm phát: 4%/năm<br>
+                    Phân tích giúp tôi khả năng sinh lời, thời gian hoàn vốn, rủi ro và khuyến nghị.
+                </div>
+            </article>
+
+            <!-- Test Case 10 -->
+            <article class="test-case-frame">
+                <span class="copy-hint">Mã kịch bản: #10</span>
+                <div class="heading-decoration">
+                    <h2 class="text-xl font-bold">Kịch bản: Nhà nát hẻm xe hơi Quận Bình Thạnh, TP.HCM (Mua sửa bán)</h2>
+                </div>
+                <div class="justified-text text-lg">
+                    1. Tên kịch bản: Nhà nát hẻm xe hơi Quận Bình Thạnh, TP.HCM (Mua sửa bán)<br>
+                    2. Diện tích: 52 m2<br>
+                    3. Kích thước: Ngang 4m, Nở hậu 4.5m, Dài 13m<br>
+                    4. Giá mua: 6.2 tỷ VNĐ<br>
+                    5. Số tiền vay ngân hàng: 3 tỷ VNĐ<br>
+                    6. Kỳ hạn vay: 20 năm<br>
+                    7. Lãi suất: 9.5%/năm<br>
+                    8. Cho thuê dự kiến và tăng trưởng: Không (Kịch bản xây dựng hoàn thiện để bán trong 1 năm)<br>
+                    9. Tăng giá kỳ vọng: 30% sau khi hoàn công xây mới<br>
+                    10. Chi phí sửa chữa: 2.2 tỷ VNĐ (Chi phí xây dựng trọn gói)<br>
+                    11. Thuế phí: 3% bao gồm thuế TNCN và lệ phí trước bạ<br>
+                    12. Lạm phát: 4%/năm<br>
+                    Phân tích giúp tôi khả năng sinh lời, thời gian hoàn vốn, rủi ro và khuyến nghị.
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <script>
+        // Smooth hover interactions and copy-to-clipboard hint functionality
+        document.querySelectorAll('.test-case-frame').forEach(card => {
+            card.addEventListener('click', () => {
+                const range = document.createRange();
+                const selection = window.getSelection();
+                range.selectNodeContents(card.querySelector('.justified-text'));
+                selection.removeAllRanges();
+                selection.addRange(range);
+                
+                // Subtle visual feedback
+                card.style.borderColor = '#C5A059';
+                setTimeout(() => {
+                    card.style.borderColor = '#e5e7eb'; // Tailwind gray-200
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
+
