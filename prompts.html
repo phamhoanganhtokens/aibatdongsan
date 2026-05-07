@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân Tích Kiến Trúc & Prompt Isometric</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1a1a1a',
+                        'accent': '#2563eb',
+                        'accent-hover': '#1d4ed8',
+                        'paper': '#ffffff',
+                    },
+                    fontFamily: {
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #f4f4f5;
+        }
+        .document-container {
+            max-width: 850px;
+            margin: 2rem auto;
+            background-color: #ffffff;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            padding: 3rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .document-container {
+                margin: 0;
+                padding: 1.5rem;
+                width: 100%;
+            }
+        }
+        .text-justify {
+            text-align: justify;
+        }
+        .copy-button {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .copy-button:active {
+            transform: scale(0.95);
+        }
+        .prompt-block {
+            border-left: 3px solid #e5e7eb;
+            padding-left: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        h1, h2 {
+            font-weight: bold;
+            color: #000;
+        }
+        .section-title {
+            font-size: 18pt;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #1a1a1a;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+        .prompt-number {
+            font-size: 13pt;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #1a1a1a;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            display: none;
+            z-index: 100;
+            animation: slideUp 0.3s ease-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="document-container">
+        <!-- Image Section -->
+        <div class="mb-12 text-center">
+            <div class="relative inline-block group">
+                <div class="overflow-hidden rounded-sm border border-gray-200 shadow-sm">
+                    <img src='https://opal.google/board/blobs/19ceceda-452c-4672-90c7-7a1ff6604010' alt='media_1' class="max-w-full h-auto block" />
+                </div>
+                <p class="mt-3 text-sm italic text-gray-500 font-serif">Hình ảnh phân tích: Kiến trúc Tân cổ điển Pháp</p>
+            </div>
+        </div>
+
+        <!-- Analysis Section -->
+        <section class="mb-12">
+            <h2 class="section-title">Phân tích hình ảnh</h2>
+            <div class="text-justify leading-relaxed">
+                <p>
+                    Hình ảnh thể hiện một công trình kiến trúc sang trọng theo phong cách Tân cổ điển kết hợp với các đặc trưng của lâu đài Pháp và kiến trúc Beaux-Arts. Điểm nhấn nổi bật là sự đối xứng hoàn hảo trong bố cục, với khối nhà chính đồ sộ nằm ở trung tâm và các khu vườn được quy hoạch tỉ mỉ theo dạng hình học đối xứng. Tòa nhà sử dụng mái Mansard màu xanh đậm đặc trưng, kết hợp với các chi tiết phào chỉ và cột trụ được trang trí mạ vàng tinh xảo, tạo nên vẻ đẹp vương giả. Hệ thống chiếu sáng được thiết kế công phu, sử dụng ánh sáng giờ vàng để tôn vinh các đường nét kiến trúc và tạo ra bầu không khí ấm cúng nhưng uy nghiêm. Các yếu tố như đài phun nước lớn, hồ nước bao quanh và lối vào bề thế củng cố thêm tính biểu tượng về sự giàu có và địa vị của công trình.
+                </p>
+            </div>
+        </section>
+
+        <!-- Prompts Section -->
+        <section>
+            <h2 class="section-title">10 Mẫu Prompt Isometric Đề Xuất</h2>
+            
+            <div class="mt-8">
+                <!-- Prompt 1 -->
+                <div class="prompt-block">
+                    <span class="prompt-number">Prompt 1:</span>
+                    <p class="text-justify mb-3 text-[11pt]" id="p1">Phối cảnh isometric 45 độ của một dinh thự Tân cổ điển kiểu Pháp sang trọng, mái Mansard màu xanh dương đậm, tường đá trắng trang trí phù điêu mạ vàng, đài phun nước lớn ở trung tâm sân trước, vườn hoa đối xứng rực rỡ, ánh sáng ban ngày rực rỡ, siêu thực, chi tiết cực kỳ sắc nét.</p>
+                    <button onclick="copyPrompt('p1')" class="copy-button px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded uppercase tracking-wider flex items-center gap-2">
+                        <span>[Copy Prompt]</span>
+                    </button>
+                </div>
+
+                <!-- Prompt 2 -->
+                <div class="prompt-block">
+                    <span class="prompt-number">Prompt 2:</span>
+                    <p class="text-justify mb-3 text-[11pt]" id="p2">Góc nhìn isometric 30 độ của lâu đài cổ điển vào ban đêm, ánh đèn vàng ấm áp hắt ra từ các ô cửa sổ lớn, sân vườn được thắp sáng bởi đèn lồng cổ xưa, mặt hồ bao quanh phản chiếu lấp lánh, phong cách điện ảnh huyền bí.</p>
+                    <button onclick="copyPrompt('p2')" class="copy-button px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded uppercase tracking-wider flex items-center gap-2">
+                        <span>[Copy Prompt]</span>
+                    </button>
+                </div>
+
+                <!-- Prompt 3 -->
+                <div class="prompt-block">
+                    <span class="prompt-number">Prompt 3:</span>
+                    <p class="text-justify mb-3 text-[11pt]" id="p3">Hình ảnh isometric 45 độ của lâu đài giữa rừng mùa thu, lá vàng đỏ rực bao phủ xung quanh, sương mù nhẹ nhàng lan tỏa, các chi tiết phào chỉ vàng nổi bật trên nền thiên nhiên trầm mặc, chất lượng 8k siêu thực.</p>
+                    <button onclick="copyPrompt('p3')" class="copy-button px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded uppercase tracking-wider flex items-center gap-2">
+                        <span>[Copy Prompt]</span>
+                    </button>
+                </div>
+
+                <!-- Prompt 4 -->
+                <div class="prompt-block">
+                    <span class="prompt-number">Prompt 4:</span>
+                    <p class="text-justify mb-3 text-[11pt]" id="p4">Góc nhìn isometric 30 độ lâu đài phủ tuyết trắng xóa vào mùa đông, khói bốc lên từ các ống khói cổ điển, ánh hoàng hôn tím hồng rực rỡ trên bầu trời, không gian thanh bình và xa hoa dưới lớp tuyết mịn.</p>
+                    <button onclick="copyPrompt('p4')" class="copy-button px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded uppercase tracking-wider flex items-center gap-2">
+                        <span>[Copy Prompt]</span>
+                    </button>
+                </div>
+
+                <!-- Prompt 5 -->
+                <div class="prompt-block">
+                    <span class="prompt-number">Prompt 5:</span>
+                    <p class="text-justify mb-3 text-[11pt]" id="p5">Thiết kế isometric 45 độ một dinh thự ven biển theo phong cách Chateau, vách đá dựng đứng, sóng biển xanh ngắt vỗ vào chân tường bao kiên cố, hồ bơi vô cực kết nối hài hòa với vườn cổ điển, ánh sáng nhiệt đới rực rỡ.</p>
+                    <button onclick="copyPrompt('p5')" class="copy-button px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded uppercase tracking-wider flex items-center gap-2">
+                        <span>[Copy Prompt]</span>
+                    </button>
+                </div>
+
+                <!-- Prompt 6 -->
+                <div class="prompt-block">
+                    <span class="prompt-number">Prompt 6:</span>
+                    <p class="text-justify mb-3 text-[11pt]" id="p6">Góc nhìn isometric từ trên cao 45 độ tập trung vào hệ thống vườn mê cung và các bức tượng thần thoại Hy Lạp bao quanh tòa lâu đài trắng, đường nét đối xứng hoàn hảo, phong cách kiến trúc hoàng gia châu Âu tinh tế.</p>
+                    <button onclick="copyPrompt('p6')" class="copy-button px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded uppercase tracking-wider flex items-center gap-2">
+                        <span>[Copy Prompt]</span>
+                    </button>
+                </div>
+
+                <!-- Prompt 7 -->
+                <div class="prompt-block">
+                    <span class="prompt-number">Prompt 7:</span>
+                    <p class="text-justify mb-3 text-[11pt]" id="p7">Phối cảnh isometric 30 độ lâu đài phong cách Tân cổ điển hiện đại với các mảng tường kính lớn, nằm trên một hòn đảo nhân tạo biệt lập giữa đại dương, có sân đỗ trực thăng, kiến trúc sang trọng tương lai.</p>
+                    <button onclick="copyPrompt('p7')" class="copy-button px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded uppercase tracking-wider flex items-center gap-2">
+                        <span>[Copy Prompt]</span>
+                    </button>
+                </div>
+
+                <!-- Prompt 8 -->
+                <div class="prompt-block">
+                    <span class="prompt-number">Prompt 8:</span>
+                    <p class="text-justify mb-3 text-[11pt]" id="p8">Hình ảnh isometric 45 độ lâu đài vào lúc bình minh, ánh nắng vàng dịu nhẹ xuyên qua làn sương sớm, những giọt sương đọng trên thảm cỏ xanh mướt, các chi tiết mạ vàng lấp lánh phản chiếu tia nắng đầu tiên.</p>
+                    <button onclick="copyPrompt('p8')" class="copy-button px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded uppercase tracking-wider flex items-center gap-2">
+                        <span>[Copy Prompt]</span>
+                    </button>
+                </div>
+
+                <!-- Prompt 9 -->
+                <div class="prompt-block">
+                    <span class="prompt-number">Prompt 9:</span>
+                    <p class="text-justify mb-3 text-[11pt]" id="p9">Góc nhìn isometric 30 độ lâu đài cổ điển đặt trong bối cảnh thành phố xanh Solarpunk tương lai, đá trắng kết hợp với các tấm pin năng lượng mặt trời mỏng, xe bay lướt nhẹ nhàng phía trên lối vào lâu đài.</p>
+                    <button onclick="copyPrompt('p9')" class="copy-button px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded uppercase tracking-wider flex items-center gap-2">
+                        <span>[Copy Prompt]</span>
+                    </button>
+                </div>
+
+                <!-- Prompt 10 -->
+                <div class="prompt-block">
+                    <span class="prompt-number">Prompt 10:</span>
+                    <p class="text-justify mb-3 text-[11pt]" id="p10">Phối cảnh isometric 45 độ mặt sau của lâu đài, khu vực giải trí ngoài trời với hồ bơi xanh mát, rạp chiếu phim ngoài trời và các ban công rộng lớn nhìn ra phong cảnh núi non lúc chiều tà, phong cách điện ảnh rực rỡ.</p>
+                    <button onclick="copyPrompt('p10')" class="copy-button px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded uppercase tracking-wider flex items-center gap-2">
+                        <span>[Copy Prompt]</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="toast" class="toast">Đã sao chép prompt vào bộ nhớ tạm!</div>
+
+    <script>
+        function copyPrompt(id) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                showToast();
+            }).catch(err => {
+                console.error('Lỗi khi copy: ', err);
+            });
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
