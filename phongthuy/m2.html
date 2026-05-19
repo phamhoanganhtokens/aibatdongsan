@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Phong Thủy Địa Thế - AI Software Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+        :root {
+            --imperial-red: #b22222;
+            --deep-gold: #996515;
+            --charcoal: #333333;
+            --parchment: #fdfdfd;
+        }
+
+        body {
+            background-color: #e5e5e5;
+            font-family: 'Times New Roman', Times, serif;
+            color: var(--charcoal);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .report-container {
+            max-width: 950px;
+            margin: 0 auto;
+            background-color: var(--parchment);
+            padding: 60px 80px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            position: relative;
+            min-height: 297mm; /* A4 aspect ratio approximation */
+        }
+
+        h1, h2, h3 {
+            font-family: 'Times New Roman', Times, serif;
+            color: var(--charcoal);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .serif-display {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+
+        .justify-text {
+            text-align: justify;
+        }
+
+        .divider {
+            border-top: 2px solid var(--charcoal);
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .divider::after {
+            content: "";
+            display: block;
+            border-top: 1px solid var(--charcoal);
+            margin-top: 3px;
+        }
+
+        .disclaimer-box {
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            padding: 15px;
+            font-style: italic;
+            font-size: 0.85rem;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .score-badge {
+            width: 120px;
+            height: 120px;
+            border: 4px double var(--deep-gold);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            color: var(--imperial-red);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .data-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .data-table td:first-child {
+            font-weight: bold;
+            width: 30%;
+            color: #555;
+        }
+
+        .alert-box {
+            background-color: #fff5f5;
+            border-left: 5px solid var(--imperial-red);
+            padding: 15px 20px;
+            margin: 20px 0;
+        }
+
+        .solution-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 2px;
+            margin-bottom: 10px;
+        }
+
+        .intervention-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .report-container { padding: 30px 20px; width: 100%; }
+            .score-section { flex-direction: column; text-align: center; }
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .report-container { box-shadow: none; padding: 0; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="report-container">
+        <!-- Header Section -->
+        <header class="text-center mb-10">
+            <div class="flex justify-between items-end mb-8 border-b border-gray-300 pb-4">
+                <div class="text-left">
+                    <p class="font-bold text-lg">AI SOFTWARE DEVELOPMENT</p>
+                    <p class="text-sm text-gray-600">www.phamhoanganhtokens.com</p>
+                </div>
+                <div class="text-right text-sm text-gray-500 italic">
+                    Tài liệu lưu hành nội bộ - Bảo mật cao
+                </div>
+            </div>
+
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Báo Cáo Phong Thủy Địa Thế</h1>
+            <p class="text-gray-600">Dịch vụ Phân tích Bất động sản Cao cấp bởi AI Phong Thuỷ</p>
+            <div id="current-time" class="text-sm font-semibold mt-4 text-gray-700"></div>
+        </header>
+
+        <!-- Mandatory Disclaimer -->
+        <div class="disclaimer-box">
+            <strong>MIỄN TRỪ TRÁCH NHIỆM:</strong> Báo cáo này dựa trên các dữ liệu trực tuyến, bản đồ thực tế và các nguyên lý Phong Thủy hình học cơ bản. Kết quả phân tích mang tính chất tham khảo cho việc đưa ra quyết định đầu tư và bố trí không gian sống. Chúng tôi đề nghị người sử dụng dịch vụ nên tham khảo thêm ý kiến từ các chuyên gia kỹ thuật công trình và khảo sát thực tế tại hiện trường trước khi thực hiện các thay đổi cấu trúc lớn hoặc giao dịch tài chính.
+        </div>
+
+        <!-- Executive Summary & Score -->
+        <div class="score-section flex items-center justify-between bg-stone-50 p-8 border border-stone-200 mb-10">
+            <div class="flex-1 pr-8">
+                <h2 class="text-xl font-bold mb-3 italic">Tóm Lược Phân Tích</h2>
+                <p class="text-sm justify-text text-gray-700">
+                    Căn hộ tầng 38 tại trung tâm Singapore thể hiện một sự kết hợp đặc thù giữa tiềm năng kinh tế vượt trội và các thách thức môi trường đô thị hiện đại. Dữ liệu cho thấy căn hộ đạt chỉ số thanh khoản cao nhờ diện tích "Luxury Size", tuy nhiên cần các giải pháp can thiệp về "Thiên Trảm Sát" và điều tiết nhiệt độ để tối ưu hóa công năng sử dụng.
+                </p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="score-badge">
+                    <span class="text-xs font-bold text-gray-500 uppercase">Tổng Điểm</span>
+                    <span class="text-4xl font-bold text-amber-700">7.8</span>
+                    <span class="text-xs text-gray-500">/ 10</span>
+                </div>
+                <p class="mt-2 text-xs font-bold text-amber-800 uppercase tracking-widest">Khá - Tiềm Năng</p>
+            </div>
+        </div>
+
+        <!-- Section I: Property Information -->
+        <section>
+            <h2 class="section-title">I. Thông Tin Bất Động Sản</h2>
+            <table class="data-table">
+                <tr>
+                    <td>Loại hình:</td>
+                    <td>Apartment (Căn hộ chung cư cao cấp)</td>
+                </tr>
+                <tr>
+                    <td>Vị trí:</td>
+                    <td>Tầng 38, Khu vực Trung tâm (CCR), Singapore</td>
+                </tr>
+                <tr>
+                    <td>Thông số kỹ thuật:</td>
+                    <td>950 sq. ft | Xây dựng: 2021</td>
+                </tr>
+                <tr>
+                    <td>Tọa/Hướng:</td>
+                    <td>Tọa Ly (Nam) - Hướng Khảm (Bắc)</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Section II: General Overview -->
+        <section>
+            <h2 class="section-title">II. Tổng Quan Đánh Giá</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div class="p-4 bg-gray-50 border-t-2 border-green-600">
+                    <p class="text-xs font-bold text-gray-500">ĐẦU TƯ</p>
+                    <p class="text-2xl font-bold text-green-700">9.0/10</p>
+                    <p class="text-xs mt-1 italic">Thanh khoản & Lợi suất cao</p>
+                </div>
+                <div class="p-4 bg-gray-50 border-t-2 border-amber-500">
+                    <p class="text-xs font-bold text-gray-500">AN TOÀN</p>
+                    <p class="text-2xl font-bold text-amber-600">7.0/10</p>
+                    <p class="text-xs mt-1 italic">Nhiệt độ & Tiếng ồn</p>
+                </div>
+                <div class="p-4 bg-gray-50 border-t-2 border-amber-600">
+                    <p class="text-xs font-bold text-gray-500">PHONG THỦY</p>
+                    <p class="text-2xl font-bold text-amber-700">7.5/10</p>
+                    <p class="text-xs mt-1 italic">Cần hóa giải Thiên Trảm Sát</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section III: Detailed Analysis -->
+        <section>
+            <h2 class="section-title">III. Phân Tích Chi Tiết</h2>
+            
+            <h3 class="font-bold mb-2">1. Phân tích An toàn và Môi trường</h3>
+            <div class="justify-text mb-6">
+                <p class="mb-3"><strong>Rủi ro ngập lụt:</strong> Căn hộ ở tầng 38 hoàn toàn an toàn trước các đợt lũ quét (Flash Floods) thường gặp tại các khu vực thấp như Orchard hoặc Tanjong Pagar. Tuy nhiên, khả năng tiếp cận giao thông đường bộ có thể bị gián đoạn cục bộ khi có mưa lớn.</p>
+                <div class="bg-gray-100 p-4 border-l-4 border-gray-400 mb-4 italic text-sm">
+                    <strong>Ghi chú từ Slave Agent:</strong> Hiệu ứng Đảo nhiệt Đô thị (UHI) tại khu vực này có thể khiến nhiệt độ căn hộ cao hơn ngoại ô tới 6°C. Tầng 38 chịu tác động nhiệt lớn từ các tòa nhà kính xung quanh.
+                </div>
+                <p><strong>Ô nhiễm tiếng ồn & Gió:</strong> Độ ồn ghi nhận khoảng 71–73 dB từ hệ thống thông gió tòa nhà lân cận. Gió tầng cao có thể tạo ra tiếng hú hoặc rung lắc nhẹ tại cửa kính nếu không có hệ thống chắn chuyên dụng.</p>
+            </div>
+
+            <h3 class="font-bold mb-2">2. Tiềm năng Đầu tư</h3>
+            <div class="justify-text mb-6">
+                <p>Căn hộ 2 phòng ngủ 950 sq. ft được coi là loại hình <strong>"luxury size"</strong> so với tiêu chuẩn hiện nay. Điều này làm tăng sức hút đối với tệp khách hàng là chuyên gia nước ngoài. Lợi suất thuê dao động từ 2.5% - 3.5%, với tiềm năng tăng giá nhờ tuyến tàu điện ngầm Thomson-East Coast Line (TEL).</p>
+            </div>
+
+            <h3 class="font-bold mb-2">3. Đánh giá Phong thủy (Phong Thủy Học)</h3>
+            <div class="alert-box">
+                <h4 class="font-bold text-red-800 uppercase text-sm mb-1">Cảnh báo: Thiên Trảm Sát (Sky Crack Slay)</h4>
+                <p class="text-sm">Xảy ra khi căn hộ nhìn thẳng vào khe hẹp giữa hai tòa nhà cao tầng. Luồng khí bị nén (Hiệu ứng Venturi) trực xung vào ban công gây tình trạng "Tán Khí", khiến tâm trí bất an và khó tập trung.</p>
+            </div>
+            <div class="justify-text">
+                <p class="mb-3"><strong>Quang Sát:</strong> Phản chiếu từ kính các tòa nhà lân cận tạo năng lượng hỏa dư thừa, dễ gây căng thẳng thần kinh và các vấn đề thị lực.</p>
+                <p><strong>Vận 9 (2024-2043):</strong> Hướng Bắc đón Sao Cửu Tử - chủ về tài lộc và danh vọng. Đây là hướng rất tốt để mở rộng mạng lưới quan hệ và thăng tiến sự nghiệp.</p>
+            </div>
+        </section>
+
+        <!-- Section IV: Usage Assessment -->
+        <section>
+            <h2 class="section-title">IV. Đánh Giá Theo Mục Đích Sử Dụng</h2>
+            <div class="p-6 border border-stone-200 bg-stone-50 italic">
+                <p class="mb-2"><strong>Dành cho Chuyên gia làm việc từ xa:</strong></p>
+                <p class="text-sm justify-text">Vị trí làm việc tối ưu là cung <strong>Phía Nam (Cung Ly)</strong> để tận dụng năng lượng "Tọa" vững chãi, bổ trợ sự ổn định tài chính. Tuyệt đối tránh ngồi quay lưng ra ban công nơi chịu ảnh hưởng của Thiên Trảm Sát để tránh xao nhãng và áp lực vô hình.</p>
+            </div>
+        </section>
+
+        <!-- Section V: Solutions -->
+        <section>
+            <h2 class="section-title">V. Khuyến Nghị & Giải Pháp Cụ Thể</h2>
+            
+            <div class="solution-card">
+                <span class="intervention-tag bg-green-100 text-green-800">Cấp độ: Nhẹ (Light)</span>
+                <p class="text-sm"><strong>Hóa giải Quang Sát:</strong> Sử dụng phim cách nhiệt phản quang hoặc rèm cửa loại dày để giảm cường độ ánh sáng và nhiệt độ.</p>
+            </div>
+
+            <div class="solution-card">
+                <span class="intervention-tag bg-blue-100 text-blue-800">Cấp độ: Trung bình (Medium)</span>
+                <p class="text-sm"><strong>Chắn Sát Khí:</strong> Đặt các chậu cây lá to, xanh mướt (Hạnh Phúc, Kim Ngân) tại ban công làm "lá chắn khí", giúp làm chậm luồng gió từ khe hẻm.</p>
+            </div>
+
+            <div class="solution-card border-l-4 border-l-amber-600">
+                <span class="intervention-tag bg-amber-100 text-amber-800">Cấp độ: Chuyên sâu (Strong)</span>
+                <p class="text-sm"><strong>Kích hoạt Tài Lộc:</strong> Sử dụng vật phẩm hành Thủy (bể cá nhỏ/phong thủy luân) tại khu vực phía Bắc để dẫn dắt tài khí Vận 9 vào nhà một cách điều hòa.</p>
+            </div>
+        </section>
+
+        <!-- Section VI: Conclusion -->
+        <section class="mb-12">
+            <h2 class="section-title">VI. Kết Luận & Lời Khuyên</h2>
+            <div class="justify-text font-serif italic text-lg leading-relaxed">
+                "Bất động sản này sở hữu nền tảng kinh tế cực kỳ vững chắc với vị thế trung tâm và diện tích hiếm. Mặc dù tồn tại những yếu tố sát khí về địa thế do đặc thù cao tầng đô thị, nhưng hoàn toàn có thể hóa giải bằng các biện pháp can thiệp vật lý và bố trí nội thất khoa học. Đây là một lựa chọn tối ưu cho cả mục đích đầu tư dài hạn lẫn an cư cho giới tri thức."
+            </div>
+        </section>
+
+        <!-- Footer / Sign-off -->
+        <div class="divider"></div>
+        <div class="flex justify-between items-start mt-8">
+            <div class="text-sm text-gray-600">
+                <p>Người phê duyệt: <strong>AI Analyst System v4.0</strong></p>
+                <p>Mã báo cáo: #PH-SG-2024-38F</p>
+                <p>Website: www.phamhoanganhtokens.com</p>
+            </div>
+            <div class="text-right">
+                <div class="mb-2">
+                    <svg width="100" height="60" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 45C25 40 35 15 50 15C65 15 75 45 90 45" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M20 35C30 30 40 25 50 25C60 25 70 30 80 35" stroke="#999" stroke-width="1" stroke-dasharray="2 2"/>
+                    </svg>
+                </div>
+                <p class="text-xs uppercase font-bold tracking-widest text-gray-400">Chữ ký điện tử xác thực</p>
+                <p class="text-xs text-gray-400">AI Software Development Team</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Update current time dynamically
+        function updateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric', 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            };
+            const timeString = now.toLocaleDateString('vi-VN', options);
+            document.getElementById('current-time').innerText = "Thời gian thực hiện báo cáo: " + timeString;
+        }
+        updateTime();
+
+        // Add subtle interactivity
+        document.querySelectorAll('.solution-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.borderColor = '#996515';
+                card.style.transition = 'all 0.3s ease';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.borderColor = '#e0e0e0';
+            });
+        });
+    </script>
+</body>
+</html>
