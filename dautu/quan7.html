@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Dự Án AI Bất Động Sản - Quận 7</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+        :root {
+            --primary-navy: #002366;
+            --accent-gold: #C5A059;
+            --charcoal: #333333;
+            --parchment: #FAFAFA;
+            --border-light: #DDDDDD;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #E5E7EB; /* Subtle grey background to make the document "pop" */
+            color: var(--charcoal);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .document-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: var(--parchment);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            padding: 60px 80px;
+            position: relative;
+            border-top: 8px solid var(--primary-navy);
+        }
+
+        @media (max-width: 768px) {
+            .document-container {
+                width: 95%;
+                margin: 10px auto;
+                padding: 30px 20px;
+            }
+        }
+
+        h1 {
+            font-size: 30pt;
+            color: var(--primary-navy);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24pt;
+            color: var(--primary-navy);
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 5px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 16pt;
+            color: var(--charcoal);
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        p, li {
+            font-size: 12pt;
+            text-align: justify;
+            margin-bottom: 12px;
+        }
+
+        .header-strip {
+            background-color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            width: 100%;
+        }
+
+        .brand-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: var(--primary-navy);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-box {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-gold);
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .website-link {
+            font-size: 14px;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
+            margin: 40px 0;
+        }
+
+        /* Table Styling */
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid var(--border-light);
+            margin-bottom: 20px;
+        }
+
+        th {
+            background-color: var(--primary-navy);
+            color: white;
+            text-align: left;
+            padding: 12px 15px;
+            font-size: 12pt;
+            font-weight: normal;
+            border: 1px solid var(--primary-navy);
+        }
+
+        td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-light);
+            font-size: 11pt;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Callout Box */
+        .callout {
+            border-left: 4px solid var(--accent-gold);
+            background-color: #fffdf5;
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #E5F6ED;
+            color: #1A7F37;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 10pt;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* Value Engineering Callout */
+        .financial-highlight {
+            border: 1px solid var(--accent-gold);
+            background-color: #ffffff;
+            padding: 25px;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .financial-highlight::before {
+            content: "KHUYẾN NGHỊ TÀI CHÍNH";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--accent-gold);
+            color: white;
+            padding: 2px 12px;
+            font-size: 9pt;
+            font-weight: bold;
+        }
+
+        /* Footer override - ensuring minimalist display as requested but meeting structural needs */
+        .doc-footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10pt;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-strip">
+        <div class="brand-logo">
+            <div class="logo-box">AI</div>
+            <span>AI BẤT ĐỘNG SẢN</span>
+        </div>
+        <a href="www.phamhoanganhtokens.com" target="_blank" class="website-link">WWW.PHAMHOANGANHTOKENS.COM</a>
+    </header>
+
+    <main class="document-container">
+        <!-- Hero Section -->
+        <section class="text-center mb-16">
+            <span class="status-badge">Bản Thảo Chiến Lược - Lưu Hành Nội Bộ</span>
+            <h1>HỒ SƠ DỰ ÁN VÀ KẾ HOẠCH CHIẾN LƯỢC: MUA BẤT ĐỘNG SẢN QUẬN 7</h1>
+            <p class="text-center italic text-gray-600 mt-4" style="text-align: center;">
+                Dưới đây là bản Hồ sơ Dự án và Kế hoạch Chiến lược cho việc mua bất động sản tại Quận 7, TP.HCM, được tổng hợp từ phân tích hồ sơ pháp lý thực tế và dữ liệu thị trường tháng 5/2026.
+            </p>
+        </section>
+
+        <!-- Section 1: Project Brief -->
+        <section>
+            <h2>1. HỒ SƠ DỰ ÁN (PROJECT BRIEF)</h2>
+            
+            <h3>1.1. Thông tin Bất động sản Mục tiêu</h3>
+            <p>Căn cứ trên hình ảnh Giấy chứng nhận quyền sử dụng đất được cung cấp cho hội đồng đầu tư:</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hạng mục</th>
+                            <th>Thông tin chi tiết</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Địa chỉ</strong></td>
+                            <td>Số 7 đường số 39, Khu phố 6, Phường Bình Thuận, Quận 7, TP. HCM</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Chủ sở hữu</strong></td>
+                            <td>Ông Phạm Hoàng Anh (SN 1983)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Diện tích đất</strong></td>
+                            <td>117,1 m² (Sử dụng riêng)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Diện tích sàn</strong></td>
+                            <td>119,1 m² (Kết cấu: Tầng 1 + Tầng lửng)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mục đích sử dụng</strong></td>
+                            <td>Đất ở tại đô thị (Sử dụng lâu dài)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tình trạng pháp lý</strong></td>
+                            <td>Đã được cấp GCN (2016), tuy nhiên có ghi nhận <strong>Nợ tiền sử dụng đất</strong>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>1.2. Yêu cầu chiến lược</h3>
+            <ul class="list-disc ml-8 mb-6">
+                <li>Xác minh tính khả thi về pháp lý và quy hoạch tại khu vực Phường Bình Thuận.</li>
+                <li>Phân tích giá trị tài sản trong tương quan với mặt bằng giá Quận 7 năm 2026.</li>
+            </ul>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Section 2: Analysis -->
+        <section>
+            <h2>2. PHÂN TÍCH (ANALYSIS)</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3>2.1. Phân tích Pháp lý & Quy hoạch</h3>
+                    <p><strong>Vấn đề nợ thuế:</strong> Tài sản hiện đang nợ tiền sử dụng đất (theo xác nhận năm 2016). Theo Luật Đất đai 2024 có hiệu lực vào năm 2026, việc chuyển nhượng chỉ được thực hiện khi các nghĩa vụ tài chính đã hoàn tất. Người mua cần lưu ý giá trị tiền sử dụng đất sẽ được tính theo bảng giá đất sát giá thị trường của năm 2026, có thể là một khoản chi phí rất lớn.</p>
+                    <p><strong>Quy hoạch hạ tầng:</strong> Đường số 39 dự kiến mở rộng lộ giới <strong>14m</strong>. Phần diện tích xây dựng có thể bị ảnh hưởng một phần nếu thực hiện quy hoạch đồng bộ. Phường Bình Thuận hưởng lợi lớn từ việc vận hành <strong>Cầu Thủ Thiêm 4</strong> và nâng cấp nút giao Nguyễn Văn Linh giúp tăng giá trị bền vững.</p>
+                </div>
+                <div class="bg-gray-50 p-6 border border-gray-200">
+                    <h3 class="mt-0">2.2. Phân tích Tài chính & Thị trường (Tháng 5/2026)</h3>
+                    <p>So sánh giá cho thấy bất động sản tại phường Bình Thuận đang ở mức tăng trưởng ổn định nhờ hạ tầng hoàn thiện.</p>
+                    
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Loại hình</th>
+                                    <th>Khu vực</th>
+                                    <th>Đơn giá (VND/m²)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Nhà phố mục tiêu</strong></td>
+                                    <td>Nội bộ P. Bình Thuận</td>
+                                    <td><strong>175 - 280 triệu</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Nhà phố mặt tiền</td>
+                                    <td>Huỳnh Tấn Phát</td>
+                                    <td>320 - 450 triệu</td>
+                                </tr>
+                                <tr>
+                                    <td>Căn hộ cao cấp</td>
+                                    <td>Phú Mỹ Hưng</td>
+                                    <td>85 - 160 triệu</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout">
+                <p><strong>Nhận định chuyên gia:</strong> Với quy mô 117,1 m² đất ở đô thị, giá trị thô của tài sản ước tính khoảng <strong>21 - 32 tỷ VNĐ</strong>. Tuy nhiên, cần trừ đi khoản nợ thuế đất và chi phí rủi ro lộ giới khi đàm phán giá cuối cùng.</p>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Section 3: Timeline -->
+        <section>
+            <h2>3. TIẾN ĐỘ THỰC HIỆN (TIMELINE)</h2>
+            <p>Lộ trình dự kiến để hoàn tất giao dịch mua nhà tại Quận 7, đảm bảo an toàn pháp lý tuyệt đối:</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Giai đoạn</th>
+                            <th>Công việc trọng tâm</th>
+                            <th>Thời gian</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Bước 1: Thẩm định</strong></td>
+                            <td>Kiểm tra quy hoạch chi tiết 1/2000 tại Phòng Tài nguyên Môi trường Quận 7. Xác định chính xác số tiền sử dụng đất còn nợ.</td>
+                            <td>Tuần 1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bước 2: Đàm phán</strong></td>
+                            <td>Thương lượng giá dựa trên chi phí thuế đất chủ nhà phải đóng. Ký hợp đồng đặt cọc có điều khoản cam kết xóa nợ thuế.</td>
+                            <td>Tuần 2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bước 3: Công chứng</strong></td>
+                            <td>Thực hiện hợp đồng mua bán tại Văn phòng Công chứng. Chủ nhà thực hiện giải tỏa nợ thuế đất để đủ điều kiện sang tên.</td>
+                            <td>Tuần 3 - 4</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bước 4: Hoàn tất</strong></td>
+                            <td>Nộp hồ sơ chuyển nhượng và cập nhật tên trên GCN mới.</td>
+                            <td>Tuần 5 - 8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="financial-highlight">
+                <p><strong>Khuyến nghị:</strong> Khách hàng nên yêu cầu chủ nhà thực hiện tất toán nợ tiền sử dụng đất <strong>trước</strong> khi thanh toán đợt cuối hoặc khấu trừ trực tiếp số tiền này vào giá bán để người mua tự thực hiện nghĩa vụ thuế, nhằm đảm bảo quyền lợi pháp lý cao nhất trong bối cảnh các quy định về thuế đất 2026 rất nghiêm ngặt.</p>
+            </div>
+        </section>
+
+        <div class="doc-footer">
+            <div>
+                <strong>AI Bất Động Sản</strong><br>
+                Cố vấn đầu tư & Chuyên gia pháp lý
+            </div>
+            <div class="text-right">
+                Bản quyền © 2026<br>
+                <a href="www.phamhoanganhtokens.com" class="text-blue-900 underline">phamhoanganhtokens.com</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Smooth reveal for a premium feel
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.document-container');
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(20px)';
+            container.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            
+            setTimeout(() => {
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
