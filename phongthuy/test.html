@@ -1,1 +1,289 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Phong Thủy Địa Thế Master - Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#2D3436',
+                        jade: '#2D5A27',
+                        gold: '#C5A059',
+                        parchment: '#FDFCF8',
+                        accent: '#E5E7EB',
+                    },
+                    fontFamily: {
+                        serif: ['"Times New Roman"', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F9F9F9;
+            font-family: "Times New Roman", serif;
+            color: #2D3436;
+            line-height: 1.6;
+        }
+        .report-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .paper-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .scenario-card {
+            background: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            margin-bottom: 4rem;
+            padding: 3rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .scenario-card:hover {
+            border-color: #C5A059;
+        }
+        .scenario-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #2D5A27;
+        }
+        .code-block {
+            background-color: #FDFCF8;
+            border: 1px dashed #D1D5DB;
+            padding: 1.5rem;
+            font-family: "Times New Roman", serif;
+            font-style: italic;
+            margin-top: 1.5rem;
+            position: relative;
+        }
+        .label {
+            font-weight: bold;
+            color: #2D5A27;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .justified-text {
+            text-align: justify;
+        }
+        .header-rule {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #C5A059, transparent);
+            margin: 2rem 0;
+        }
+        @media (max-width: 640px) {
+            .scenario-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
 
+    <div class="report-container">
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <div class="mb-4 text-jade font-bold tracking-widest uppercase text-sm">Hồ Sơ Nghiên Cứu Hệ Thống</div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-charcoal tracking-tight">Mẫu Phong Thuỷ Địa Thế</h1>
+            <div class="header-rule"></div>
+            <div class="space-y-1">
+                <p class="text-xl text-charcoal font-semibold">AI Software Development</p>
+                <a href="www.phamhoanganhtokens.com" target="_blank" class="text-gold hover:underline transition-all">www.phamhoanganhtokens.com</a>
+            </div>
+        </header>
+
+        <!-- Introduction -->
+        <section class="mb-20 bg-white p-8 border-t-4 border-gold paper-shadow">
+            <h2 class="text-2xl font-bold mb-4 text-jade uppercase text-center italic">Lời Giới Thiệu</h2>
+            <p class="justified-text text-lg italic text-gray-700">
+                Tài liệu này trình bày các kịch bản mẫu được xây dựng dựa trên hệ thống phân tích AI Phong Thủy Địa Thế Master. Sứ mệnh của chúng tôi là áp dụng các phương pháp luận khoa học, logic và khách quan vào việc đánh giá phong thủy bất động sản. Mỗi kịch bản dưới đây đại diện cho một loại hình địa lý và cấu trúc kiến trúc điển hình, được tối ưu hóa để cung cấp cái nhìn chuyên sâu về sự tương tác giữa môi trường xây dựng và năng lượng tự nhiên.
+            </p>
+        </section>
+
+        <!-- Main Content (Scenarios) -->
+        <main class="space-y-12">
+            
+            <!-- Scenario 1 -->
+            <article class="scenario-card paper-shadow">
+                <h3 class="text-2xl font-bold mb-6 text-charcoal border-b pb-2">Mẫu 1: Căn Hộ Đô Thị Mật Độ Cao - Phân Tích Khí Lưu Cao Tầng</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-6">
+                    <div>
+                        <span class="label">Thông Tin Bất Động Sản</span>
+                        <p class="justified-text text-sm">
+                            Căn hộ cư dân tầng 22 trong tòa nhà chọc trời bằng kính và thép 40 tầng tại khu tài chính trọng điểm. Hướng căn hộ: Tây Bắc (330°). Cửa sổ kịch trần nhìn ra giao lộ bốn chiều và trạm trung chuyển công cộng. Thiết kế mở với bếp nằm tại trung tâm mặt bằng. Bị kẹp giữa hai tòa nhà cao hơn ở phía Đông và Tây, tạo hiệu ứng ống gió cục bộ.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="label">Mục Đích Sử Dụng</span>
+                        <p class="justified-text text-sm italic">
+                            Nơi ở chính cho chuyên gia cấp cao mong muốn thăng tiến sự nghiệp và sự minh mẫn trong tư duy. Phân tích tập trung vào tác động của "Xung Sát Khí" ở độ cao lớn và ảnh hưởng của bếp trung cung tới sức khỏe và sự ổn định.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="code-block">
+                    <span class="label text-xs opacity-75 italic mb-2">Dữ Liệu Hình Ảnh Yêu Cầu (Input Data)</span>
+                    <ul class="list-disc list-inside text-sm space-y-1 text-gray-600">
+                        <li>Sơ đồ mặt bằng độ phân giải cao kèm kim chỉ Nam.</li>
+                        <li>Góc nhìn toàn cảnh 180 độ từ ban công chính.</li>
+                        <li>Ảnh cửa chính chụp từ phía hành lang.</li>
+                        <li>Góc rộng sảnh chính tòa nhà nhìn từ phía đường phố.</li>
+                        <li>Ảnh chụp số đo la bàn thực tế tại tâm căn hộ.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Scenario 2 -->
+            <article class="scenario-card paper-shadow">
+                <h3 class="text-2xl font-bold mb-6 text-charcoal border-b pb-2">Mẫu 2: Nhà Ở Đơn Lập Ngoại Ô - Địa Hình Dốc & Tụ Khí</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-6">
+                    <div>
+                        <span class="label">Thông Tin Bất Động Sản</span>
+                        <p class="justified-text text-sm">
+                            Biệt thự hai tầng khung gỗ phong cách Colonial nằm cuối ngõ cụt yên tĩnh. Mặt tiền hướng Nam (180°), sân sau dốc xuống đáng kể về phía con suối tự nhiên ở ranh giới phía Bắc. Lối vào từ phía Đông Nam, uốn cong về phía gara bên hông. Cây sồi cổ thụ bao quanh, che khuất một phần lối vào chính từ đường phố.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="label">Mục Đích Sử Dụng</span>
+                        <p class="justified-text text-sm italic">
+                            Nhà ở đa thế hệ tập trung vào sức khỏe thể chất, sự trường thọ và hòa hợp gia đình. Phân tích ưu tiên vị trí "Sơn" và "Thủy" so với địa hình dốc và sự tích tụ năng lượng của ngõ cụt.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="code-block">
+                    <span class="label text-xs opacity-75 italic mb-2">Dữ Liệu Hình Ảnh Yêu Cầu (Input Data)</span>
+                    <ul class="list-disc list-inside text-sm space-y-1 text-gray-600">
+                        <li>Góc nhìn flycam toàn bộ lô đất và ngõ cụt.</li>
+                        <li>Ảnh lối vào chính từ phía mặt đường.</li>
+                        <li>Ảnh chi tiết độ dốc phía sau và khu vực suối.</li>
+                        <li>Ảnh nội thất cầu thang và sự đối xứng với cửa chính.</li>
+                        <li>Bản đồ địa hình hoặc khảo sát thực địa chi tiết.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Scenario 3 -->
+            <article class="scenario-card paper-shadow">
+                <h3 class="text-2xl font-bold mb-6 text-charcoal border-b pb-2">Mẫu 3: Cao Ốc Văn Phòng Thương Mại - Tối Ưu Hóa Tài Lộc</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-6">
+                    <div>
+                        <span class="label">Thông Tin Bất Động Sản</span>
+                        <p class="justified-text text-sm">
+                            Văn phòng cao cấp hạng A chiếm trọn tầng 10 của tòa nhà đạt chứng nhận LEED. Lối vào chính tòa nhà hướng Đông (90°), có quảng trường lớn lùi sâu và đài phun nước trang trí. Văn phòng tầng 10 có lối vào phụ hướng Tây. Xung quanh là các tòa nhà hành chính thấp hơn ở phía Nam và công viên lớn ở phía Bắc.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="label">Mục Đích Sử Dụng</span>
+                        <p class="justified-text text-sm italic">
+                            Trụ sở khu vực của một quỹ đầu tư mạo hiểm. Mục tiêu là tối ưu hóa không gian làm việc cho sự phát triển tài chính, hiệu quả ra quyết định và giữ chân nhân tài. Tập trung vào vị trí phòng CEO và tác động của ngoại cảnh thủy pháp.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="code-block">
+                    <span class="label text-xs opacity-75 italic mb-2">Dữ Liệu Hình Ảnh Yêu Cầu (Input Data)</span>
+                    <ul class="list-disc list-inside text-sm space-y-1 text-gray-600">
+                        <li>Bản vẽ mặt bằng sàn thể hiện cột chịu lực và vách ngăn.</li>
+                        <li>Ảnh quảng trường ngoại vi và đài phun nước.</li>
+                        <li>Tầm nhìn thực tế từ cửa sổ phòng CEO dự kiến.</li>
+                        <li>Ảnh khu vực thang máy và sảnh vào văn phòng.</li>
+                        <li>Ảnh 360 độ ngoại cảnh thể hiện độ cao các tòa nhà lân cận.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Scenario 4 -->
+            <article class="scenario-card paper-shadow">
+                <h3 class="text-2xl font-bold mb-6 text-charcoal border-b pb-2">Mẫu 4: Trang Trại Nông Thôn & Nghỉ Dưỡng - Chữa Lành & Tĩnh Tại</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-6">
+                    <div>
+                        <span class="label">Thông Tin Bất Động Sản</span>
+                        <p class="justified-text text-sm">
+                            Khu đất rộng 5 mẫu Anh với nhà đá thế kỷ 19 được cải tạo. Cấu trúc chính hướng Tây Nam (225°), tựa lưng vào đồi rừng dốc ở phía Đông Bắc. Một ao nhân tạo nằm cách lối vào chính khoảng 50m. Lối vào là đường mòn rải sỏi dài, thẳng tắp đâm trực diện vào cửa trước.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="label">Mục Đích Sử Dụng</span>
+                        <p class="justified-text text-sm italic">
+                            Khu nghỉ dưỡng chăm sóc sức khỏe và địa điểm lưu trú cao cấp. Phân tích xác định sự phù hợp của vùng đất cho nghệ thuật chữa lành và đánh giá hiệu ứng "Thương Sát" của con đường dài đối với cấu trúc chính.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="code-block">
+                    <span class="label text-xs opacity-75 italic mb-2">Dữ Liệu Hình Ảnh Yêu Cầu (Input Data)</span>
+                    <ul class="list-disc list-inside text-sm space-y-1 text-gray-600">
+                        <li>Góc nhìn vệ tinh thể hiện vị trí ao và đồi.</li>
+                        <li>Ảnh mặt tiền đá và lối vào chính.</li>
+                        <li>Góc nhìn con đường từ cửa trước nhìn ra ngoài.</li>
+                        <li>Ảnh nội thất khu vực "trung tâm" của ngôi nhà.</li>
+                        <li>Ảnh các mỏm đá lộ thiên hoặc đặc điểm địa chất trên đồi.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Scenario 5 -->
+            <article class="scenario-card paper-shadow">
+                <h3 class="text-2xl font-bold mb-6 text-charcoal border-b pb-2">Mẫu 5: Bất Động Sản Hỗn Hợp - Tối Ưu Hóa Giá Trị Chuyển Nhượng</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-6">
+                    <div>
+                        <span class="label">Thông Tin Bất Động Sản</span>
+                        <p class="justified-text text-sm">
+                            Tòa nhà góc ba tầng trong khu dân cư đang đô thị hóa. Tầng trệt dùng cho bán lẻ, hai tầng trên là căn hộ dạng loft. Lối vào góc hướng Đông Nam (135°). Tòa nhà nằm tại giao lộ chữ "V" nơi hai đại lộ lớn phân tách. Kiến trúc gạch xây với trần cao và các yếu tố công nghiệp lộ diện.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="label">Mục Đích Sử Dụng</span>
+                        <p class="justified-text text-sm italic">
+                            Đầu tư ngắn hạn (mua đi bán lại). Chủ sở hữu dự định cải tạo để tối đa hóa giá trị bán lại. Phân tích xác định các thay đổi cấu trúc hoặc bố cục nhằm tăng cường cảm giác "vận may" để thu hút người mua và khách thuê cao cấp.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="code-block">
+                    <span class="label text-xs opacity-75 italic mb-2">Dữ Liệu Hình Ảnh Yêu Cầu (Input Data)</span>
+                    <ul class="list-disc list-inside text-sm space-y-1 text-gray-600">
+                        <li>Ảnh thực tế giao lộ chữ "V" và dòng lưu thông phương tiện.</li>
+                        <li>Ảnh mặt tiền cửa hàng bán lẻ và mối liên hệ với vỉa hè.</li>
+                        <li>Ảnh nội thất các khu vực chuyển tiếp (cầu thang/thang máy).</li>
+                        <li>Bản thiết kế cấu trúc thể hiện hệ thống kỹ thuật hiện tại.</li>
+                        <li>Ảnh mái nhà của các tòa nhà lân cận nhìn từ tầng trên.</li>
+                    </ul>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- Signature Area (Instead of Footer) -->
+        <div class="mt-20 pt-10 border-t border-accent text-center italic text-gray-500">
+            <p>Báo cáo này được tạo tự động bởi hệ thống AI Phong Thủy Địa Thế Master.</p>
+            <p>Dữ liệu mang tính chất tham khảo chuyên môn và phục vụ mục đích tư vấn chiến lược.</p>
+            <div class="mt-6 flex justify-center space-x-4 opacity-50">
+                <span class="w-12 h-[1px] bg-charcoal self-center"></span>
+                <span class="text-xs uppercase tracking-widest">End of Report</span>
+                <span class="w-12 h-[1px] bg-charcoal self-center"></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
