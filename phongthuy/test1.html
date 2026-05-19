@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Phong Thủy Địa Thế Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+        :root {
+            --parchment: #F9F9F9;
+            --charcoal: #2D3436;
+            --jade: #004D40;
+            --gold: #C5A059;
+            --bronze: #8E6E3B;
+        }
+
+        body {
+            background-color: var(--parchment);
+            color: var(--charcoal);
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+        }
+
+        .academic-title {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+        }
+
+        .report-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .scenario-card {
+            background: white;
+            border: 1px solid #E0E0E0;
+            margin-bottom: 4rem;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .scenario-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--gold);
+        }
+
+        .scenario-header {
+            border-bottom: 2px solid var(--jade);
+            padding: 1.5rem 2rem;
+            background: linear-gradient(to right, #fcfcfc, #ffffff);
+        }
+
+        .content-section {
+            padding: 2rem;
+            text-align: justify;
+        }
+
+        .data-label {
+            color: var(--jade);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 0.5rem;
+            border-left: 3px solid var(--gold);
+            padding-left: 10px;
+        }
+
+        .copy-area {
+            background-color: #f4f4f4;
+            border-radius: 4px;
+            padding: 1.5rem;
+            font-family: 'Times New Roman', serif;
+            border: 1px inset #ddd;
+            margin-top: 1rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .report-container {
+                padding: 2rem 1rem;
+            }
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="report-container">
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <div class="inline-block border-y-2 border-[#C5A059] py-4 px-8 mb-6">
+                <h1 class="academic-title text-4xl md:text-5xl font-bold uppercase tracking-tighter">
+                    Mẫu Phong Thuỷ Địa Thế
+                </h1>
+            </div>
+            <p class="text-xl font-medium text-[#004D40] mb-2 uppercase tracking-widest">AI Software Development</p>
+            <a href="www.phamhoanganhtokens.com" target="_blank" class="text-gray-500 italic hover:text-[#C5A059] transition-colors">www.phamhoanganhtokens.com</a>
+        </header>
+
+        <!-- Introduction -->
+        <section class="mb-16 border-l-4 border-[#004D40] pl-8 py-2">
+            <h2 class="text-2xl font-bold mb-4 italic">Lời Mở Đầu</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Báo cáo này trình bày các kịch bản phân tích phong thủy địa thế dựa trên nền tảng khoa học, logic và khách quan. Chúng tôi kết hợp các nguyên lý truyền thống Đông Phương với dữ liệu kiến trúc hiện đại để đưa ra những nhận định tối ưu cho bất động sản, đảm bảo tính ứng dụng cao và sự thịnh vượng bền vững cho gia chủ.
+            </p>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Main Content (Scenarios) -->
+        
+        <!-- Scenario 1 -->
+        <div class="scenario-card">
+            <div class="scenario-header">
+                <h3 class="text-2xl font-bold text-[#2D3436]">Mẫu 1: Căn Hộ Đô Thị Cao Tầng - Tối Ưu Hóa Nhận Thức</h3>
+            </div>
+            <div class="content-section">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <span class="data-label">Thông Tin Bất Động Sản</span>
+                        <p class="mb-4">Căn hộ chung cư cao cấp rộng 1.200 sq. ft. tọa lạc tại tầng 28, xây dựng trong Vận 9 (2024) tại trung tâm đô thị mật độ cao. Tòa nhà có kiến trúc vách kính hiện đại, hướng Bắc (352°). Các yếu tố môi trường bao gồm ngã tư sầm uất ở phía Bắc và công viên công cộng có hồ lớn ở phía Đông Nam. Thiết kế nội thất theo không gian mở với "trái tim" căn nhà là bàn đảo bếp và lõi kỹ thuật.</p>
+                        
+                        <span class="data-label">Mục Đích Sử Dụng</span>
+                        <p>Chủ nhân là chuyên gia tư vấn và giao dịch tài chính tần suất cao làm việc từ xa. Mục tiêu là tối ưu hóa "Sinh Khí" (Sheng Chi) để tăng cường sự tập trung và tốc độ ra quyết định. Các mục tiêu cụ thể bao gồm giảm thiểu "Sát Khí" (Sha Chi) từ dòng giao thông tốc độ cao bên dưới và đảm bảo vị trí phòng ngủ hỗ trợ giấc ngủ phục hồi sâu.</p>
+                    </div>
+                    <div class="bg-[#FDFBF7] p-6 border-l-2 border-[#C5A059]">
+                        <span class="data-label">Yêu Cầu Hình Ảnh</span>
+                        <ul class="list-disc ml-5 space-y-2 text-sm italic">
+                            <li>Sơ đồ mặt bằng: Bản vẽ CAD kiến trúc theo tỷ lệ có chồng lớp bản đồ Bát quái 8 cung.</li>
+                            <li>Đo đạc la bàn: Phép đo kỹ thuật số từ tâm căn hộ và lối vào chính tòa nhà để đối chiếu hướng "Tọa" và "Hướng".</li>
+                            <li>Bối cảnh ngoại vi: Ảnh độ phân giải cao từ ban công chụp "Minh Đường" và các góc cạnh kiến trúc nhọn từ lân cận.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copy-area mt-8">
+                    <p class="text-xs text-gray-400 mb-2 font-sans uppercase">[Dữ liệu hệ thống - Markdown Ready]</p>
+                    <code class="text-sm block whitespace-pre-wrap">Scenario 1: High-Rise Urban Apartment | Focus: Cognitive Optimization | Orientation: North (352°) | Period: 9</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scenario 2 -->
+        <div class="scenario-card">
+            <div class="scenario-header">
+                <h3 class="text-2xl font-bold text-[#2D3436]">Mẫu 2: Biệt Thự Ngoại Ô Đa Thế Hệ - Sự Hài Hòa Thiên Địa Nhân</h3>
+            </div>
+            <div class="content-section">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <span class="data-label">Thông Tin Bất Động Sản</span>
+                        <p class="mb-4">Dinh thự biệt lập hai tầng, rộng 4.500 sq. ft. xây dựng trong Vận 7 (1998) nhưng được đại tu vào năm 2021. Bất động sản nằm trên lô đất 0.5 mẫu Anh trong một ngõ cụt với độ dốc nhẹ về phía sau. Cấu trúc chính bằng gạch và gỗ, hướng Nam (175°). Sân sau có hồ bơi nằm ở cung phía Tây và được bao quanh bởi hàng cây xanh dày đặc.</p>
+                        
+                        <span class="data-label">Mục Đích Sử Dụng</span>
+                        <p>Ngôi nhà là nơi sinh sống của gia đình đa thế hệ. Cuộc khảo sát nhằm hài hòa tam tài "Thiên - Địa - Nhân" để thúc đẩy sự trường thọ cho người già và thành tích học tập cho trẻ nhỏ. Trọng tâm là điều hòa tinh bàn Vận 7 với sự chuyển dịch năng lượng của Vận 9 hiện tại để ngăn chặn sự trì trệ về tài chính.</p>
+                    </div>
+                    <div class="bg-[#FDFBF7] p-6 border-l-2 border-[#C5A059]">
+                        <span class="data-label">Yêu Cầu Hình Ảnh</span>
+                        <ul class="list-disc ml-5 space-y-2 text-sm italic">
+                            <li>Khảo sát địa hình: Bản vẽ khảo sát đất chuyên nghiệp hiển thị các đường đồng mức cao độ và vị trí chính xác của hồ bơi.</li>
+                            <li>Tầm nhìn nội thất: Ảnh góc rộng về sảnh chính, cầu thang trung tâm và các "vị trí chỉ huy" (giường, bàn làm việc, bếp).</li>
+                            <li>Hồ sơ cải tạo: Tài liệu về các thay đổi cấu trúc năm 2021 để xác định Vận của tòa nhà đã chính thức chuyển đổi hay chưa.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copy-area mt-8">
+                    <p class="text-xs text-gray-400 mb-2 font-sans uppercase">[Dữ liệu hệ thống - Markdown Ready]</p>
+                    <code class="text-sm block whitespace-pre-wrap">Scenario 2: Suburban Multi-Generational Estate | Focus: Longevity & Academia | Orientation: South (175°) | Period: 7-9 Transition</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scenario 3 -->
+        <div class="scenario-card">
+            <div class="scenario-header">
+                <h3 class="text-2xl font-bold text-[#2D3436]">Mẫu 3: Trụ Sở Điều Hành Doanh Nghiệp - Kích Hoạt Thủy Long</h3>
+            </div>
+            <div class="content-section">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <span class="data-label">Thông Tin Bất Động Sản</span>
+                        <p class="mb-4">Văn phòng rộng 15.000 sq. ft. chiếm trọn tầng 12 của một tòa tháp thương mại đạt chứng nhận LEED, xây dựng trong Vận 8 (2015). Tòa nhà nằm trong khu tài chính với kiến trúc hành "Kim" (thép uốn cong và bề mặt phản quang). Lối vào chính hướng Đông (92°). Nội thất có phòng họp tường kính và khu vực làm việc tập trung ở trung tâm.</p>
+                        
+                        <span class="data-label">Mục Đích Sử Dụng</span>
+                        <p>Không gian phục vụ như trụ sở khu vực cho một quỹ đầu tư mạo hiểm. Mục tiêu là tối đa hóa các "Sao Tài Lộc" để cải thiện việc huy động vốn và lợi nhuận đầu tư. Phân tích tập trung vào các mô hình "Thủy Long" tạo bởi các con đường đô thị xung quanh để đảm bảo văn phòng CEO nằm ở cung vị cát tường nhất.</p>
+                    </div>
+                    <div class="bg-[#FDFBF7] p-6 border-l-2 border-[#C5A059]">
+                        <span class="data-label">Yêu Cầu Hình Ảnh</span>
+                        <ul class="list-disc ml-5 space-y-2 text-sm italic">
+                            <li>Bản đồ quy hoạch: Ảnh chụp từ drone cho thấy mối quan hệ của tòa tháp với các tòa nhà xung quanh và các mạch giao thông chính.</li>
+                            <li>Luồng lưu thông: Sơ đồ mặt bằng chú thích các đường di chuyển chính của nhân viên từ sảnh thang máy đến trạm làm việc.</li>
+                            <li>Độ chính xác la bàn: Nhiều lần đo tại sảnh chính tòa nhà và cửa nội bộ để phát hiện nhiễu điện từ từ cấu trúc thép.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copy-area mt-8">
+                    <p class="text-xs text-gray-400 mb-2 font-sans uppercase">[Dữ liệu hệ thống - Markdown Ready]</p>
+                    <code class="text-sm block whitespace-pre-wrap">Scenario 3: Corporate Executive Headquarters | Focus: Wealth Acquisition | Orientation: East (92°) | Period: 8</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scenario 4 -->
+        <div class="scenario-card">
+            <div class="scenario-header">
+                <h3 class="text-2xl font-bold text-[#2D3436]">Mẫu 4: Cơ Sở Sản Xuất Công Nghiệp - Cân Bằng Ngũ Hành</h3>
+            </div>
+            <div class="content-section">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <span class="data-label">Thông Tin Bất Động Sản</span>
+                        <p class="mb-4">Nhà kho công nghiệp và nhà máy sản xuất một tầng, rộng 60.000 sq. ft. xây dựng trong Vận 6 (1975). Cơ sở nằm trong khu công nghiệp trên địa hình bằng phẳng, hướng Tây (268°). Đặc điểm là các cửa cuốn kim loại lớn để xuất nhập hàng ở cung phía Bắc và Nam. Nội thất chia thành khu đúc nhiệt độ cao và khu đóng gói kho lạnh.</p>
+                        
+                        <span class="data-label">Mục Đích Sử Dụng</span>
+                        <p>Cơ sở được sử dụng để chế tạo kim loại chính xác. Mục tiêu của cuộc khảo sát là giảm thiểu tai nạn lao động và hỏng hóc máy móc bằng cách cân bằng "Ngũ hành", đặc biệt xử lý sự lấn lướt của hành "Hỏa" và "Kim". Một mục tiêu khác là ổn định lực lượng lao động bằng cách tối ưu hóa "Sơn Tinh" (sự ổn định) tại khu vực nhà ăn.</p>
+                    </div>
+                    <div class="bg-[#FDFBF7] p-6 border-l-2 border-[#C5A059]">
+                        <span class="data-label">Yêu Cầu Hình Ảnh</span>
+                        <ul class="list-disc ml-5 space-y-2 text-sm italic">
+                            <li>Sơ đồ hạ tầng: Bản vẽ chi tiết hiển thị vị trí của máy móc hạng nặng, lò nung và máy biến áp điện.</li>
+                            <li>Các điểm khẩu độ: Ảnh của tất cả các bến tải hàng và điểm thông gió, được dán nhãn theo độ la bàn tương ứng.</li>
+                            <li>Đặc điểm môi trường: Tài liệu về bất kỳ đường dây điện cao thế hoặc khu vực xả thải công nghiệp lân cận có thể tạo ra "Thanh Sát" hoặc "Khứ Sát".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copy-area mt-8">
+                    <p class="text-xs text-gray-400 mb-2 font-sans uppercase">[Dữ liệu hệ thống - Markdown Ready]</p>
+                    <code class="text-sm block whitespace-pre-wrap">Scenario 4: Industrial Manufacturing Facility | Focus: Safety & Stability | Orientation: West (268°) | Period: 6</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scenario 5 -->
+        <div class="scenario-card">
+            <div class="scenario-header">
+                <h3 class="text-2xl font-bold text-[#2D3436]">Mẫu 5: Cửa Hàng Bán Lẻ Sang Trọng - Hóa Giải Thương Sát</h3>
+            </div>
+            <div class="content-section">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <span class="data-label">Thông Tin Bất Động Sản</span>
+                        <p class="mb-4">Không gian bán lẻ hai tầng rộng 3.000 sq. ft. nằm tại một ngã ba chữ T sầm uất trong khu mua sắm cao cấp. Xây dựng trong Vận 9 (2024), cửa hàng có lối vào lớn thông tầng hướng Tây Nam (215°). Nội thất sử dụng đá thạch anh cao cấp (hành Thổ) và hệ thống đèn LED tích hợp. Tầng lửng phục vụ như phòng chờ VIP.</p>
+                        
+                        <span class="data-label">Mục Đích Sử Dụng</span>
+                        <p>Đây là cửa hàng biểu tượng của một thương hiệu thời trang toàn cầu. Mục tiêu chính là tối đa hóa thời gian lưu trú của khách hàng và tỷ lệ chuyển đổi. Chiến lược phong thủy bao gồm kích hoạt "Góc Tài Lộc Thứ Cấp" và quản lý năng lượng hung hãn từ ngã ba chữ T (Thương Sát) thông qua các tấm chắn kiến trúc tinh xảo và vị trí đặt quầy thu ngân.</p>
+                    </div>
+                    <div class="bg-[#FDFBF7] p-6 border-l-2 border-[#C5A059]">
+                        <span class="data-label">Yêu Cầu Hình Ảnh</span>
+                        <ul class="list-disc ml-5 space-y-2 text-sm italic">
+                            <li>Phân tích cảnh quan đường phố: Video hoặc ảnh toàn cảnh về lưu lượng giao thông tại ngã ba hướng về phía cửa hàng.</li>
+                            <li>Sơ đồ trưng bày: Bố cục từ trên xuống của các khu vực sản phẩm, gương và phòng chờ VIP để đánh giá sự lưu thông của "Khí".</li>
+                            <li>Chi tiết lối vào: Ảnh cận cảnh ngưỡng cửa và cửa chính, bao gồm kích thước của khu vực "Minh Đường" ngay bên ngoài.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copy-area mt-8">
+                    <p class="text-xs text-gray-400 mb-2 font-sans uppercase">[Dữ liệu hệ thống - Markdown Ready]</p>
+                    <code class="text-sm block whitespace-pre-wrap">Scenario 5: Luxury Retail Boutique | Focus: Customer Conversion | Orientation: Southwest (215°) | Period: 9</code>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
