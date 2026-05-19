@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Phân Tích Đầu Tư Bất Động Sản - AI Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#e9f5ec',
+                            DEFAULT: '#28a745',
+                            dark: '#1e7e34',
+                        },
+                        paper: '#fcfcfc',
+                        ink: '#2d3436'
+                    },
+                    fontFamily: {
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f4f4f7;
+            color: #2d3436;
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.6;
+        }
+        .report-container {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #1e7e34;
+            font-weight: bold;
+        }
+        p, li {
+            text-align: justify;
+            margin-bottom: 0.75rem;
+        }
+        .accent-border {
+            border-left: 4px solid #28a745;
+            padding-left: 1.5rem;
+        }
+        /* Custom bullet points */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        ul li::before {
+            content: "•";
+            color: #28a745;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1.5rem;
+            position: absolute;
+        }
+        ol {
+            counter-reset: item;
+            padding-left: 1.5rem;
+        }
+        ol li {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        ol li::before {
+            content: counter(item) ". ";
+            counter-increment: item;
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        @media print {
+            body { background-color: white; }
+            .report-container { box-shadow: none; margin: 0; width: 100%; max-width: none; }
+        }
+    </style>
+</head>
+<body class="py-12 px-4 sm:px-6 lg:px-8">
 
+    <article class="report-container max-w-4xl mx-auto bg-white p-8 md:p-16 rounded-sm border border-gray-100">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-12 border-b-2 border-brand-light pb-8">
+            <div class="flex justify-between items-center mb-6">
+                <div class="text-left">
+                    <span class="text-brand font-bold text-xl uppercase tracking-widest">AI Bất Động Sản</span>
+                </div>
+                <div class="text-right text-gray-400 text-sm italic">
+                    CONFIDENTIAL REPORT
+                </div>
+            </div>
+            
+            <h1 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 uppercase">Báo Cáo Phân Tích Đầu Tư Bất Động Sản</h1>
+            <div class="space-y-1 text-gray-600">
+                <p class="text-center italic">Ngày báo cáo: 19 tháng 05 năm 2026</p>
+                <p class="text-center font-bold">Đơn vị thực hiện: AI Bất Động Sản</p>
+                <p class="text-center text-brand">Website: <a href="www.phamhoanganhtokens.com" target="_blank" class="hover:underline">www.phamhoanganhtokens.com</a></p>
+            </div>
+        </header>
+
+        <!-- Executive Summary/Visual -->
+        <section class="mb-12">
+            <figure class="mx-auto flex flex-col items-center">
+                <div class="overflow-hidden rounded-lg shadow-lg border border-gray-200 p-2 bg-gray-50 mb-4 transition hover:shadow-xl duration-300">
+                    <img src='https://opal.google/board/blobs/796bcd90-9c1f-47d9-9aa3-5a06be9b4940' alt='Phối cảnh 3D tài sản' class="max-w-full h-auto block" />
+                </div>
+                <figcaption class="text-sm italic text-gray-500 border-t border-gray-100 pt-2 w-full text-center">
+                    Hình 1: Phối cảnh 3D minh họa kiến trúc tài sản tại khu vực vành đai xanh
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Content Body -->
+        <div class="space-y-10">
+            
+            <!-- Section 1 -->
+            <section>
+                <h3 class="text-xl font-bold mb-4 flex items-center">
+                    <span class="mr-2 text-brand">01.</span> Phân tích Tổng quan Tài sản
+                </h3>
+                <div class="accent-border">
+                    <ul>
+                        <li><strong>Vị trí & Đặc điểm:</strong> Khu đất có diện tích lớn lên đến 800 m2, tọa lạc tại vị trí đắc địa thuộc khu vực vành đai xanh ngoại ô. Đây là khu vực có mật độ cây xanh cao, không khí trong lành, mang lại giá trị lớn về không gian sống và tiềm năng phát triển phân khúc bất động sản nghỉ dưỡng cao cấp.</li>
+                        <li><strong>Địa hình:</strong> Đặc điểm địa hình dốc nhẹ hướng về phía suối tự nhiên là một ưu thế vượt trội về mặt phong thủy (tựa sơn hướng thủy) và kiến tạo cảnh quan, tạo nên sự khan hiếm và đẳng cấp cho tài sản.</li>
+                        <li><strong>Giá trị thị trường:</strong> Với tổng giá trị đầu tư là 57.000.000.000 VND, đơn giá tính trên mỗi mét vuông đạt <strong>71.250.000 VND/m2</strong>. Mức giá này phản ánh giá trị của quỹ đất lớn có cảnh quan tự nhiên đặc thù tại vùng ven đô.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section>
+                <h3 class="text-xl font-bold mb-4 flex items-center">
+                    <span class="mr-2 text-brand">02.</span> Phân tích Cơ cấu Tài chính & Khoản vay
+                </h3>
+                <div class="accent-border">
+                    <ul>
+                        <li><strong>Cơ cấu vốn:</strong> Nhà đầu tư sử dụng vốn tự có là 18.000.000.000 VND và sử dụng đòn bẩy tài chính với khoản vay 39.000.000.000 VND. Tỷ lệ LTV (Vay trên giá trị tài sản) hiện ở mức <strong>68,42%</strong>.</li>
+                        <li><strong>Nghĩa vụ trả nợ:</strong> Dựa trên lãi suất 9%/năm với kỳ hạn 20 năm, số tiền phải thanh toán hàng tháng (bao gồm cả gốc và lãi) là <strong>350.893.123 VND</strong>.</li>
+                        <li><strong>Nguồn thu từ vận hành:</strong> Thu nhập thuê từ tài sản đạt 200.000.000 VND/mỗi tháng. Tuy nhiên, mức thu này hiện thấp hơn đáng kể so với nghĩa vụ trả nợ hàng tháng cho ngân hàng.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section>
+                <h3 class="text-xl font-bold mb-4 flex items-center">
+                    <span class="mr-2 text-brand">03.</span> Đánh giá Hiệu quả Đầu tư & Chỉ số Tài chính
+                </h3>
+                <div class="bg-brand-light/20 p-6 rounded-r-lg border-l-4 border-brand">
+                    <ul>
+                        <li><strong>Dòng tiền ròng:</strong> Sau khi tính toán doanh thu cho thuê và trừ đi các nghĩa vụ nợ, dòng tiền ròng hàng tháng của dự án đang ở mức âm <span class="text-red-600 font-bold">-180.893.123 VND</span>.</li>
+                        <li><strong>Chỉ số bù đắp nghĩa vụ nợ (DSCR):</strong> Chỉ số DSCR đạt <strong>0,48</strong> (thấp hơn mức an toàn tối thiểu là 1.0), cho thấy nguồn thu nhập hoạt động hiện tại không đủ để chi trả nợ vay ngân hàng.</li>
+                        <li><strong>Tỷ suất lợi nhuận (ROI):</strong> Tỷ suất lợi nhuận trên vốn tự có trong năm đầu tiên ước tính đạt <span class="text-red-600 font-bold">-12,06%</span>. Do dòng tiền âm, thời gian hoàn vốn dựa trên thu nhập vận hành hiện không khả dụng.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Recommendations -->
+            <section class="bg-gray-50 p-8 rounded-lg shadow-inner">
+                <h2 class="text-2xl font-bold mb-6 border-b border-brand-light pb-2 uppercase tracking-wide">Khuyến nghị đầu tư</h2>
+                <p class="mb-4">Dựa trên các phân tích kỹ thuật của <strong>AI Bất Động Sản</strong>, chúng tôi đưa ra các nhận định sau:</p>
+                <ul class="space-y-4">
+                    <li><strong>Về giá trị tài sản:</strong> Đây là một tài sản có giá trị nội tại cao nhờ quỹ đất lớn và cảnh quan suối tự nhiên. Tuy nhiên, hiệu quả kinh doanh dòng tiền hiện tại đang gặp áp lực rất lớn do cơ cấu nợ quá cao so với thu nhập từ việc cho thuê.</li>
+                    <li><strong>Rủi ro tài chính:</strong> Chỉ số DSCR cực thấp (0,48) và dòng tiền âm đòi hỏi nhà đầu tư phải có nguồn thu nhập dự phòng ổn định hàng tháng để bù đắp vào khoản thanh toán ngân hàng. Việc duy trì đòn bẩy tài chính quá mức trong bối cảnh này chứa đựng rủi ro cao nếu thị trường có biến động về lãi suất hoặc mất nguồn thu tạm thời.</li>
+                </ul>
+            </section>
+
+            <!-- Final Advice -->
+            <section>
+                <h2 class="text-2xl font-bold mb-6 border-b border-brand-light pb-2 uppercase tracking-wide text-brand-dark">Lời khuyên cuối cùng</h2>
+                <p class="mb-4">Để tối ưu hóa khoản đầu tư này, nhà đầu tư nên cân nhắc các phương án sau:</p>
+                <ol class="space-y-3">
+                    <li><strong>Cơ cấu lại khoản vay:</strong> Giảm tỷ lệ vốn vay (LTV) xuống mức thấp hơn để đưa dòng tiền về trạng thái cân bằng hoặc giảm bớt áp lực bù lỗ hàng tháng.</li>
+                    <li><strong>Tối ưu hóa khai thác:</strong> Đầu tư thêm vào cảnh quan và dịch vụ để tăng giá trị cho thuê hoặc chuyển đổi sang mô hình kinh doanh cao cấp hơn nhằm cải thiện doanh thu hàng tháng.</li>
+                    <li><strong>Kỳ vọng tăng trưởng giá:</strong> Nhà đầu tư chỉ nên duy trì trạng thái hiện tại nếu xác định mục tiêu chính là tích lũy tài sản dài hạn và kỳ vọng vào sự bùng nổ giá đất tại khu vực vành đai xanh trong tương lai để bù đắp cho phần chi phí tài chính hiện tại.</li>
+                </ol>
+            </section>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-16 pt-8 border-t border-gray-300">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center text-sm">
+                <div>
+                    <p class="font-bold text-gray-800">Trân trọng,</p>
+                    <p class="text-brand font-bold mb-4">Đội ngũ chuyên gia AI Bất Động Sản</p>
+                </div>
+                <div class="text-gray-500 space-y-1 md:text-right">
+                    <p>Thông tin chi tiết tham khảo tại:</p>
+                    <a href="www.phamhoanganhtokens.com" target="_blank" class="text-brand font-medium hover:underline block">www.phamhoanganhtokens.com</a>
+                    <p class="text-xs mt-2">© 2026 AI Real Estate Consulting Services</p>
+                </div>
+            </div>
+        </footer>
+
+    </article>
+
+    <div class="max-w-4xl mx-auto mt-6 text-center text-xs text-gray-400 uppercase tracking-widest no-print">
+        Tài liệu lưu hành nội bộ - Bảo mật cấp độ 1
+    </div>
+
+</body>
+</html>
