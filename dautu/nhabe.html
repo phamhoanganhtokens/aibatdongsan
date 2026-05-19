@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bất Động Sản - Hồ Sơ Dự Án Phú Hoàng Anh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+        :root {
+            --primary-navy: #002366;
+            --charcoal: #333333;
+            --gold-accent: #C5A059;
+            --parchment: #FAFAFA;
+            --border-color: #DDDDDD;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #E5E5E5;
+            color: var(--charcoal);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: var(--parchment);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            padding: 60px 80px;
+            position: relative;
+            border-top: 8px solid var(--primary-navy);
+        }
+
+        @media (max-width: 768px) {
+            .document-container {
+                margin: 10px;
+                padding: 30px 20px;
+                width: calc(100% - 20px);
+            }
+        }
+
+        h1 {
+            font-size: 30pt;
+            color: var(--primary-navy);
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 24pt;
+            color: var(--primary-navy);
+            border-bottom: 2px solid var(--gold-accent);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 16pt;
+            color: var(--charcoal);
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        h3::before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: var(--gold-accent);
+            margin-right: 10px;
+        }
+
+        p, li {
+            font-size: 12pt;
+            text-align: justify;
+            margin-bottom: 12px;
+        }
+
+        .hero-summary {
+            background: linear-gradient(to right, #f4f4f4, #ffffff);
+            border-left: 4px solid var(--gold-accent);
+            padding: 20px;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 11pt;
+        }
+
+        th {
+            background-color: var(--primary-navy);
+            color: white;
+            text-align: left;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .media-box {
+            margin: 30px 0;
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            background: white;
+            transition: transform 0.3s ease;
+        }
+
+        .media-box:hover {
+            transform: scale(1.01);
+        }
+
+        .media-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .callout-box {
+            border: 1px solid var(--gold-accent);
+            background-color: #fffdf5;
+            padding: 20px;
+            margin: 25px 0;
+            position: relative;
+        }
+
+        .callout-title {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--gold-accent);
+            color: white;
+            padding: 2px 12px;
+            font-size: 10pt;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .timeline-item::after {
+            content: "";
+            position: absolute;
+            left: -7px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: var(--primary-navy);
+            border-radius: 50%;
+        }
+
+        .nav-header {
+            background: white;
+            border-bottom: 1px solid #eee;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-placeholder {
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--primary-navy);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border-radius: 4px;
+        }
+
+        .url-link {
+            color: var(--gold-accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        .conclusion {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 3px double var(--border-color);
+            text-align: center;
+        }
+
+        .badge {
+            background: var(--gold-accent);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="nav-header">
+        <div class="logo-placeholder">
+            <div class="logo-icon">AI</div>
+            <span>AI Bất Động Sản</span>
+        </div>
+        <a href="www.phamhoanganhtokens.com" target="_blank" class="url-link">WWW.PHAMHOANGANHTOKENS.COM</a>
+    </header>
+
+    <main class="document-container">
+        
+        <!-- Hero Section -->
+        <section>
+            <h1>HỒ SƠ DỰ ÁN VÀ KẾ HOẠCH CHIẾN LƯỢC ĐẦU TƯ CĂN HỘ PHÚ HOÀNG ANH</h1>
+            <div class="hero-summary">
+                Tài liệu này tổng hợp phân tích từ các góc độ kiến trúc, kỹ thuật và tài chính dựa trên dữ liệu thực tế từ hồ sơ sở hữu và tình hình thị trường khu vực Nhà Bè.
+            </div>
+        </section>
+
+        <hr class="my-8 border-gray-300">
+
+        <!-- I. TỔNG QUAN DỰ ÁN -->
+        <section>
+            <h2>I. TỔNG QUAN DỰ ÁN (PROJECT BRIEF)</h2>
+            <p>Dự án Cao ốc Phú Hoàng Anh là một trong những khu căn hộ có quy mô lớn và không gian xanh thoáng đãng nhất tại trục đường đường huyết mạch Nguyễn Hữu Thọ.</p>
+            
+            <h3>1. Thông tin chung dự án</h3>
+            <ul class="list-disc ml-6 space-y-2">
+                <li><strong>Tên dự án:</strong> Cao ốc Phú Hoàng Anh.</li>
+                <li><strong>Vị trí:</strong> Phân khu số 9, đường Nguyễn Hữu Thọ, xã Phước Kiển, huyện Nhà Bè, TP.HCM.</li>
+                <li><strong>Chủ đầu tư:</strong> Công ty Cổ phần Phú Hoàng Anh (Liên doanh Hoàng Anh Gia Lai & Phú Long).</li>
+                <li><strong>Quy mô:</strong> 7 Block, cao từ 25 - 34 tầng.</li>
+                <li><strong>Tiện ích:</strong> Hồ bơi phong cách resort (mảng xanh lớn), khu vui chơi, siêu thị nội khu, gym.</li>
+            </ul>
+
+            <h3>2. Chi tiết tài sản mục tiêu</h3>
+            <div class="media-box">
+                <img src='https://opal.google/board/blobs/d619c85b-a6df-4e32-89c8-d636ea69ca33' alt='media_1' />
+                <p class="text-center italic text-sm mt-2 text-gray-500">Hình 1: Hồ sơ pháp lý và sơ đồ vị trí căn hộ</p>
+            </div>
+            <ul class="list-disc ml-6 space-y-2">
+                <li><strong>Mã sản phẩm:</strong> Căn hộ số 17.6, Tầng 17, Khu A.</li>
+                <li><strong>Diện tích sàn:</strong> 114,7 m².</li>
+                <li><strong>Tình trạng pháp lý:</strong> Đã cấp Giấy chứng nhận (Sổ hồng) ngày 03/04/2019. Hình thức sở hữu riêng bản, lâu dài.</li>
+            </ul>
+        </section>
+
+        <!-- II. PHÂN TÍCH CHI TIẾT -->
+        <section>
+            <h2>II. PHÂN TÍCH CHI TIẾT (ANALYSIS)</h2>
+            
+            <h3>1. Khía cạnh Pháp lý & Quy hoạch</h3>
+            <p><strong>Pháp lý:</strong> Căn hộ mục tiêu là "tài sản sạch", đã có sổ hồng riêng, sẵn sàng giao dịch chuyển nhượng hoặc thế chấp ngân hàng. Đây là lợi thế lớn so với một số block/tầng khác tại dự án vẫn đang trong quá trình gỡ vướng pháp lý.</p>
+            <p><strong>Quy hoạch Hạ tầng:</strong></p>
+            <ul class="list-disc ml-6 space-y-2">
+                <li><strong>Nút giao Nguyễn Văn Linh - Nguyễn Hữu Thọ:</strong> Dự kiến hoàn thành hầm chui vào cuối năm 2024 - đầu 2025, giải quyết triệt để vấn đề ùn tắc giao thông.</li>
+                <li><strong>Tuyến Metro số 4:</strong> Chạy dọc trục Nguyễn Hữu Thọ, tăng giá trị kết nối trong tương lai.</li>
+                <li><strong>Đại đô thị đối diện:</strong> Dự án Zeitgeist Nhà Bè (350ha) đang triển khai sẽ tạo cú hích về hạ tầng xã hội (trường học quốc tế, bệnh viện, trung tâm thương mại) cho cư dân Phú Hoàng Anh.</li>
+            </ul>
+
+            <h3>2. Phân tích Kỹ thuật & Kiến trúc</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Đặc điểm</th>
+                            <th>Mô tả chi tiết</th>
+                            <th>Đánh giá</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Cấu trúc</strong></td>
+                            <td>Thiết kế diện tích lớn (114,7m² cho căn 3PN), trần cao thoáng.</td>
+                            <td><span class="text-green-700 font-bold">Ưu điểm:</span> Không gian sống rộng rãi, phù hợp gia đình đa thế hệ.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vật liệu</strong></td>
+                            <td>Sử dụng nhiều gỗ tự nhiên (đặc thù của HAGL), sàn đá granite.</td>
+                            <td><span class="text-green-700 font-bold">Ưu điểm:</span> Độ bền cao, tạo cảm giác ấm cúng.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bố trí</strong></td>
+                            <td>Bếp kín, phòng khách thông với logia giặt phơi.</td>
+                            <td><span class="text-red-700 font-bold">Hạn chế:</span> Kiểu thiết kế cũ, thiếu ban công kính hiện đại tại phòng khách.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hiện trạng</strong></td>
+                            <td>Nhà đã qua sử dụng từ 2019 (theo sổ).</td>
+                            <td><span class="text-blue-700 font-bold">Cần thiết:</span> Nên dành ngân sách cải tạo nội thất để tối ưu giá cho thuê.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="callout-box">
+                <div class="callout-title">Value Engineering</div>
+                <p><strong>Kiến nghị:</strong> Mặc dù thiết kế bếp kín mang tính truyền thống, việc mở rộng không gian phòng khách bằng cách thay thế cửa logia hiện hữu bằng hệ cửa kính lùa kịch trần sẽ giúp tăng 20% giá trị thẩm mỹ và thu hút nhóm khách hàng trẻ.</p>
+            </div>
+
+            <h3>3. Phân tích Tài chính & Thị trường (Ước tính 2024-2026)</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Chỉ số</th>
+                            <th>Giá trị ước tính</th>
+                            <th>Ghi chú</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Giá bán thị trường</strong></td>
+                            <td>28 - 35 triệu VNĐ/m²</td>
+                            <td>Đơn giá cực tốt so với các dự án mới (60-80tr/m²).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tổng giá trị căn hộ</strong></td>
+                            <td>~ 3,3 tỷ - 3,8 tỷ VNĐ</td>
+                            <td>Phù hợp đầu tư trung hạn hoặc tích lũy tài sản.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Giá cho thuê</strong></td>
+                            <td>13 - 16 triệu VNĐ/tháng</td>
+                            <td>Tương đương tỷ suất lợi nhuận đạt ~4.5 - 5%/năm.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Khả năng tăng giá</strong></td>
+                            <td>10 - 15% trong 2 năm tới</td>
+                            <td>Phụ thuộc vào tiến độ hầm chui và dự án Zeitgeist.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- III. KẾ HOẠCH CHIẾN LƯỢC -->
+        <section>
+            <h2>III. KẾ HOẠCH CHIẾN LƯỢC & TIẾN ĐỘ</h2>
+            <p>Dựa trên phân tích, kế hoạch đầu tư được chia thành 4 giai đoạn chính:</p>
+
+            <h3>1. Lộ trình thực hiện</h3>
+            <div class="mt-6">
+                <div class="timeline-item">
+                    <p><strong>Giai đoạn 1: Thẩm định & Giao dịch (Tháng 1 - Tháng 2)</strong></p>
+                    <ul class="list-disc ml-6 text-sm">
+                        <li>Kiểm tra thực tế hiện trạng nhà.</li>
+                        <div class="media-box max-w-md mx-auto my-4">
+                            <img src='https://opal.google/board/blobs/c73c4fc9-f2bd-4137-ab63-4bd08d80f057' alt='media_2' />
+                        </div>
+                        <li>Xác minh tình trạng ngăn chặn tại văn phòng đăng ký đất đất đai.</li>
+                        <li>Hoàn tất hợp đồng đặt cọc và công chứng chuyển nhượng.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <p><strong>Giai đoạn 2: Cải tạo & Nâng cấp (Tháng 3)</strong></p>
+                    <ul class="list-disc ml-6 text-sm">
+                        <li>Sơn sửa, thay thế hệ thống đèn LED, làm mới mặt sàn gỗ.</li>
+                        <li>Setup nội thất theo phong cách hiện đại để thu hút khách thuê cao cấp (Expats làm việc tại Quận 7).</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <p><strong>Giai đoạn 3: Khai thác (Tháng 4 trở đi)</strong></p>
+                    <ul class="list-disc ml-6 text-sm">
+                        <li>Triển khai kênh cho thuê dài hạn.</li>
+                        <li>Tối ưu hóa quản lý dòng tiền hàng tháng.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <p><strong>Giai đoạn 4: Đánh giá & Thoái vốn (Sau 24 - 36 tháng)</strong></p>
+                    <ul class="list-disc ml-6 text-sm">
+                        <li>Theo dõi tiến độ hạ tầng khu vực.</li>
+                        <li>Thực hiện thoái vốn khi các dự án hạ tầng lớn đi vào hoạt động ổn định.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>2. Quản trị rủi ro</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-4">
+                <div class="p-4 border border-gray-200 bg-white shadow-sm">
+                    <p class="font-bold text-red-800 mb-2">Rủi ro thanh khoản</p>
+                    <p class="text-sm">Dự án cũ thường thanh khoản chậm hơn căn hộ mới.</p>
+                    <p class="text-sm italic text-gray-600 mt-2"><strong>Giải pháp:</strong> Tập trung vào các căn có sổ hồng sẵn như hồ sơ đính kèm.</p>
+                </div>
+                <div class="p-4 border border-gray-200 bg-white shadow-sm">
+                    <p class="font-bold text-red-800 mb-2">Rủi ro quản lý</p>
+                    <p class="text-sm">Chi phí bảo trì chung cư cũ có thể tăng theo thời gian.</p>
+                    <p class="text-sm italic text-gray-600 mt-2"><strong>Giải pháp:</strong> Khảo sát kỹ quỹ bảo trì và chất lượng quản lý của Ban quản trị hiện tại.</p>
+                </div>
+            </div>
+
+            <div class="conclusion">
+                <p class="text-lg font-bold">KẾT LUẬN</p>
+                <p>Căn hộ 17.6 Block A Phú Hoàng Anh là phương án đầu tư <strong>An toàn - Giá trị thực</strong>. Với mức giá hiện hữu và đà phát triển của Nam Sài Gòn, đây là thời điểm thích hợp để mua vào trước khi hạ tầng giao thông trọng điểm hoàn thiện hoàn toàn vào năm 2025.</p>
+                
+                <div class="mt-8 flex justify-center items-center gap-10 grayscale opacity-70">
+                    <div class="text-xs uppercase tracking-widest border-t border-black pt-2 px-4">Giám đốc Thẩm định</div>
+                    <div class="text-xs uppercase tracking-widest border-t border-black pt-2 px-4">Cố vấn Chiến lược</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Simple animation to fade in sections on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.8s ease-out';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
