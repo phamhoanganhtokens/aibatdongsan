@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Dự Án Riverside Boutique Q7 - AI Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+        :root {
+            --navy: #002366;
+            --charcoal: #333333;
+            --gold: #C5A059;
+            --parchment: #FAFAFA;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            font-family: "Times New Roman", Times, serif;
+            color: var(--charcoal);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: var(--parchment);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            padding: 60px 80px;
+            position: relative;
+            border-top: 8px solid var(--navy);
+        }
+
+        @media (max-width: 768px) {
+            .document-container {
+                width: 95%;
+                margin: 10px auto;
+                padding: 30px 20px;
+            }
+        }
+
+        h1, h2, h3, h4 {
+            font-family: "Times New Roman", Times, serif;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        h1 { font-size: 30pt; font-weight: bold; line-height: 1.2; text-align: center; border-bottom: 2px solid var(--gold); padding-bottom: 20px; margin-bottom: 40px; }
+        h2 { font-size: 24pt; border-left: 5px solid var(--gold); padding-left: 15px; background: rgba(197, 160, 89, 0.05); }
+        h3 { font-size: 16pt; color: var(--charcoal); border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+
+        p, li {
+            font-size: 12pt;
+            text-align: justify;
+            margin-bottom: 12px;
+        }
+
+        .accent-box {
+            border-left: 4px solid var(--gold);
+            background-color: #fff;
+            padding: 20px;
+            margin: 25px 0;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .data-table-wrapper {
+            overflow-x: auto;
+            margin: 30px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11pt;
+        }
+
+        th {
+            background-color: var(--navy);
+            color: white;
+            font-weight: normal;
+            text-align: left;
+            padding: 12px 15px;
+            border: 1px solid #001a4d;
+            text-transform: uppercase;
+            font-size: 10pt;
+        }
+
+        td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: #fff;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .logo-placeholder {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--navy);
+            font-size: 20pt;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--navy);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-size: 14pt;
+        }
+
+        .url-text {
+            font-size: 10pt;
+            color: #888;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            padding: 4px 12px;
+            font-size: 9pt;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .media-container {
+            margin: 40px 0;
+            border: 10px solid #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .media-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .footer-minimal {
+            text-align: center;
+            padding: 40px;
+            background: #fff;
+            border-top: 1px solid #eee;
+            margin-top: 60px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 640px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Custom Bullet Styling */
+        ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--gold);
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .highlight-text {
+            color: var(--navy);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Executive Header -->
+    <header class="header-top">
+        <div class="logo-placeholder">
+            <div class="logo-icon">AI</div>
+            AI BẤT ĐỘNG SẢN
+        </div>
+        <a href="www.phamhoanganhtokens.com" target="_blank" class="url-text">WWW.PHAMHOANGANHTOKENS.COM</a>
+    </header>
+
+    <main class="document-container">
+        <!-- Hero Section -->
+        <section class="text-center">
+            <span class="status-badge">Executive Proposal | 2024-2027</span>
+            <h1>HỒ SƠ DỰ ÁN VÀ KẾ HOẠCH CHIẾN LƯỢC ĐẦU TƯ: RIVERSIDE BOUTIQUE Q7</h1>
+            <p class="italic text-center" style="text-align: center; color: #666; font-style: italic; margin-bottom: 40px;">
+                Dưới đây là Hồ sơ Dự án và Kế hoạch Chiến lược cho khu đất tại 1041/75/6/3 Trần Xuân Soạn, Quận 7, được tổng hợp từ dữ liệu thông số tài sản, bối cảnh hạ tầng và quy hoạch thực tế.
+            </p>
+        </section>
+
+        <!-- Project Brief -->
+        <section>
+            <h2>1. PROJECT BRIEF (HỒ SƠ DỰ ÁN)</h2>
+            <div class="accent-box">
+                <p><span class="highlight-text">Địa chỉ:</span> 1041/75/6/3 Trần Xuân Soạn, Phường Tân Hưng, Quận 7, TP.HCM.</p>
+                <p><span class="highlight-text">Tổng diện tích:</span> 370.8 m² (Bao gồm 3 lô liên kế: 529, 526, 525).</p>
+                <ul style="margin-left: 20px;">
+                    <li><span class="highlight-text">Đất ở đô thị (ODT):</span> 131.2 m² (Lô 529 - Đang có nhà ở hiện hữu).</li>
+                    <li><span class="highlight-text">Đất cây lâu năm (CLN):</span> 239.6 m² (Lô 525 & 526).</li>
+                </ul>
+            </div>
+            <p>
+                <span class="highlight-text">Đặc điểm vị trí:</span> Khu đất có địa thế cực đẹp với mặt tiền giáp hẻm xe hơi và mặt sau giáp trực tiếp với <span class="highlight-text">Rạch</span>, tạo lợi thế cảnh quan sông nước tự nhiên.
+            </p>
+            <p>
+                <span class="highlight-text">Mục tiêu dự án:</span> Chuyển đổi công năng, tối ưu hóa pháp lý đất đai và xây dựng tổ hợp Căn hộ dịch vụ cao cấp (Serviced Apartment) hoặc Biệt thự vườn mini ven sông để khai thác dòng tiền và đón đầu đà tăng giá từ hạ tầng khu Nam (Cầu Thủ Thiêm 4, nút giao Nguyễn Văn Linh).
+            </p>
+        </section>
+
+        <!-- Image Rendered Here -->
+        <div class="media-container">
+            <img src='https://opal.google/board/blobs/1549820a-20e8-437f-930b-32b2e2daa640' alt='Vị trí và phối cảnh dự án Riverside Boutique Q7' />
+            <p style="font-size: 9pt; text-align: center; color: #888; margin-top: 10px; font-style: italic;">Hình 1: Phân tích mặt bằng và định hướng cảnh quan ven rạch.</p>
+        </div>
+
+        <!-- Analysis -->
+        <section>
+            <h2>2. ANALYSIS (PHÂN TÍCH CHUYÊN SÂU)</h2>
+            
+            <div class="grid-container">
+                <div>
+                    <h3>2.1. Kiến trúc & Kỹ thuật</h3>
+                    <p>
+                        <span class="highlight-text">Tối ưu cảnh quan (Riverside View):</span> Với hơn 60% diện tích giáp rạch, kiến trúc dự án nên ưu tiên hướng mở. Khối công trình chính sẽ tập trung trên phần đất ở (131.2 m²), phần diện tích đất CLN giáp rạch sẽ được cải tạo thành công viên nội khu, hồ bơi tràn bờ hoặc sân vườn cafe ven sông.
+                    </p>
+                    <p>
+                        <span class="highlight-text">Thách thức địa kỹ thuật:</span> Do tiếp giáp rạch, nền đất có độ lún cao. Kỹ thuật thi công yêu cầu hệ thống cọc khoan nhồi và xây dựng <span class="highlight-text">kè chắn kiên cố</span>. Cốt nền cần nâng cao ít nhất 0.5m so với đỉnh triều cường lịch sử.
+                    </p>
+                </div>
+                <div>
+                    <h3>2.2. Pháp lý & Quy hoạch</h3>
+                    <p>
+                        <span class="highlight-text">Hành lang bảo vệ rạch:</span> Theo quy định tại Quận 7 (tháng 5/2026), hành lang bảo vệ sông rạch thường dao động từ 20m - 30m. Cần xác định chính xác ranh giới không được xây dựng kiên cố trên các lô 525, 526 để tận dụng làm công trình phụ trợ.
+                    </p>
+                    <p>
+                        <span class="highlight-text">Chiến lược chuyển đổi:</span> Lô 525 và 526 có thời hạn sử dụng đến 2058/2064. Ưu tiên hàng đầu là nộp hồ sơ chuyển mục đích sử dụng đất sang đất ở đô thị (ODT) cho phần diện tích nằm ngoài hành lang bảo vệ rạch.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accent-box" style="border-left-color: var(--navy);">
+                <h3>2.3. Góc nhìn Tài chính (Financial Perspective)</h3>
+                <p><span class="highlight-text">Định giá thị trường:</span> Giá hẻm xe hơi khu vực Tân Hưng hiện dao động từ 110 - 150 triệu VNĐ/m². Giá trị khu đất sau khi hợp khối và chuyển đổi mục đích sử dụng ước tính đạt: <span class="highlight-text" style="font-size: 14pt;">45 - 55 tỷ VNĐ</span>.</p>
+                <p><span class="highlight-text">Hiệu suất đầu tư:</span> Mô hình CHDV cao cấp tại khu vực này có thể đạt tỷ suất cho thuê (Yield) từ 7% - 8%/năm. Tiềm năng tăng giá vốn có thể đạt 15-20% trong 2 năm tới.</p>
+            </div>
+        </section>
+
+        <!-- Strategic Plan -->
+        <section>
+            <h2>3. STRATEGIC PLAN (KẾ HOẠCH CHIẾN LƯỢC)</h2>
+            <div class="data-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="30%">Giai đoạn</th>
+                            <th width="35%">Hành động chiến lược</th>
+                            <th width="35%">Mục tiêu chi tiết</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="highlight-text">Giai đoạn 1: Chuẩn bị</span><br/>(0-2 tháng)</td>
+                            <td>Thẩm định quy hoạch & Địa chính</td>
+                            <td>Kiểm tra mật độ xây dựng, tầng cao tối đa và ranh giới hành lang rạch tại UBND Quận 7.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="highlight-text">Giai đoạn 2: Pháp lý</span><br/>(3-5 tháng)</td>
+                            <td>Hợp khối & Chuyển đổi mục đích</td>
+                            <td>Nộp hồ sơ chuyển đổi các lô CLN sang ODT. Xin cấp phép xây dựng bờ kè bảo vệ đất.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="highlight-text">Giai đoạn 3: Phát triển</span><br/>(6-12 tháng)</td>
+                            <td>Thi công & Thiết kế Landscape</td>
+                            <td>Triển khai xây dựng tòa nhà chính trên lô đất ở. Tập trung hoàn thiện cảnh quan "Eco-living" ven rạch.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="highlight-text">Giai đoạn 4: Vận hành</span><br/>(Tháng 13+)</td>
+                            <td>Khai thác dòng tiền / Thoát hàng</td>
+                            <td>Đưa vào kinh doanh CHDV hoặc chào bán cho các nhà đầu tư tổ chức tìm kiếm BĐS có dòng tiền.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section>
+            <h2>4. TIMELINE (LỘ TRÌNH THỰC HIỆN)</h2>
+            <div class="data-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="15%">Thời gian</th>
+                            <th width="20%">Giai đoạn</th>
+                            <th width="50%">Công việc trọng tâm</th>
+                            <th width="15%">Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-bold">Q2/2026</td>
+                            <td>Khởi động</td>
+                            <td>Khảo sát thực tế, đo đạc địa chính và lập báo cáo FS.</td>
+                            <td style="color: #666;">Dự kiến</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Q3-Q4/2026</td>
+                            <td>Pháp lý</td>
+                            <td>Hoàn tất thủ tục chuyển đổi mục đích SDĐ và xin GPXD.</td>
+                            <td style="color: #666;">Dự kiến</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Q1-Q3/2027</td>
+                            <td>Xây dựng</td>
+                            <td>Thi công móng cọc, kè rạch và phần thô công trình.</td>
+                            <td style="color: #666;">Dự kiến</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Q4/2027</td>
+                            <td>Bàn giao</td>
+                            <td>Hoàn thiện nội thất, nghiệm thu và đi vào vận hành.</td>
+                            <td style="color: #666;">Dự kiến</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="accent-box" style="background: rgba(197, 160, 89, 0.1); border: 1px solid var(--gold);">
+                <p><strong>Khuyến nghị:</strong> Chủ đầu tư nên sớm triển khai việc xây dựng bờ kè và xin chuyển đổi mục đích sử dụng đất trong năm 2026 để tận dụng bảng giá đất hiện hành trước khi có các đợt điều chỉnh tiếp theo của TP.HCM.</p>
+            </div>
+        </section>
+
+        <!-- Internal Signature Area -->
+        <div style="margin-top: 60px; display: flex; justify-content: flex-end;">
+            <div style="text-align: center; width: 250px; border-top: 1px solid var(--charcoal); padding-top: 10px;">
+                <p style="font-size: 10pt; font-weight: bold; margin-bottom: 0;">Ban Điều Hành Dự Án</p>
+                <p style="font-size: 9pt; color: #666;">AI Bất Động Sản Strategic Team</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Professional Footer -->
+    <footer class="footer-minimal">
+        <p style="font-size: 10pt; color: #888; text-align: center;">
+            Tài liệu này được bảo mật và dành riêng cho mục đích thẩm định đầu tư.<br>
+            © 2024 AI Bất Động Sản. Địa chỉ: Quận 7, TP. Hồ Chí Minh.<br>
+            Liên hệ: <a href="www.phamhoanganhtokens.com" target="_blank" style="color: var(--navy); text-decoration: underline;">www.phamhoanganhtokens.com</a>
+        </p>
+    </footer>
+
+    <script>
+        // Subtle animation for table rows on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, tr').forEach(el => {
+            el.style.opacity = "0.9";
+            el.style.transition = "all 0.6s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
