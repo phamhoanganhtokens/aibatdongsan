@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bất Động Sản | Premium Architectural Design Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Note: Standard 'Times New Roman' is a system font, no import needed, but using a similar Serif for consistency if needed -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        champagne: '#C5A059',
+                        charcoal: '#333333',
+                        cream: '#F9F8F7',
+                        parchment: '#F2F0ED',
+                    },
+                    fontFamily: {
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #F9F8F7;
+            color: #333333;
+            scroll-behavior: smooth;
+        }
+        .luxury-justify {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .gold-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            border: none;
+            margin: 2rem 0;
+        }
+        .project-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .project-card:hover {
+            border-color: #D4AF37;
+            transform: translateY(-5px);
+            background-color: #fff;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+        .focus-box {
+            background: #f1efed;
+            border-left: 3px solid #D4AF37;
+            padding: 2rem;
+            font-style: italic;
+        }
+        .boq-table th {
+            border-bottom: 1px solid #D4AF37;
+            padding: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+        }
+        .boq-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .nav-link {
+            position: relative;
+            letter-spacing: 0.1em;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .gem-icon {
+            font-size: 1.2rem;
+            color: #D4AF37;
+            margin-right: 0.5rem;
+        }
+        /* Custom Bullet points */
+        .custom-list {
+            list-style: none;
+        }
+        .custom-list li::before {
+            content: "◆";
+            color: #D4AF37;
+            display: inline-block;
+            width: 1.5em;
+            margin-left: -1.5em;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-champagne/20">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-2xl font-bold tracking-tighter text-charcoal">
+                AI BẤT ĐỘNG SẢN
+            </div>
+            <nav class="hidden md:flex space-x-8 text-xs uppercase font-medium">
+                <a href="#projects" class="nav-link">Dự án</a>
+                <a href="#philosophy" class="nav-link">Triết lý</a>
+                <a href="www.phamhoanganhtokens.com" target="_blank" class="nav-link text-champagne">www.phamhoanganhtokens.com</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-parchment relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23d4af37&quot; fill-opacity=&quot;0.4&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2v-4h4v-2H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+            
+            <div class="max-w-4xl z-10">
+                <h2 class="text-gold uppercase tracking-[0.4em] text-sm mb-6 animate-pulse">Luxury Architectural Proposal</h2>
+                <h1 class="text-5xl md:text-8xl font-light mb-8 leading-tight">Mẫu Biệt Thự Cao Cấp</h1>
+                <p class="text-xl italic text-charcoal/70 mb-12">Kiến tạo bởi Trí Tuệ Nhân Tạo (AI Design) — 2024 Edition</p>
+                
+                <div id="philosophy" class="flex flex-wrap justify-center gap-6 md:gap-12 mt-10">
+                    <div class="flex items-center space-x-2 text-xs uppercase tracking-widest text-charcoal/60">
+                        <span class="text-gold">✦</span> <span>Veritas</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-xs uppercase tracking-widest text-charcoal/60">
+                        <span class="text-gold">✦</span> <span>Claritas</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-xs uppercase tracking-widest text-charcoal/60">
+                        <span class="text-gold">✦</span> <span>Unitas</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-xs uppercase tracking-widest text-charcoal/60">
+                        <span class="text-gold">✦</span> <span>Integritas</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-xs uppercase tracking-widest text-charcoal/60">
+                        <span class="text-gold">✦</span> <span>Consonantia</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-xs uppercase tracking-widest text-charcoal/60">
+                        <span class="text-gold">✦</span> <span>Quidditas</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-xs uppercase tracking-widest text-charcoal/60">
+                        <span class="text-gold">✦</span> <span>Splendor</span>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#projects" class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-gold">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </a>
+        </section>
+
+        <!-- Project Grid -->
+        <section id="projects" class="py-32 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h3 class="text-4xl font-light mb-4">Danh Mục Tuyệt Phẩm</h3>
+                <div class="w-24 h-px bg-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Case 1 -->
+                <a href="#project-1" class="project-card p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs text-gold uppercase tracking-widest mb-4 block">Dự án 01</span>
+                        <h4 class="text-2xl mb-4">Indochine Heritage Ven Sông</h4>
+                        <p class="text-sm text-charcoal/60 luxury-justify mb-6">Sự giao thoa hoàn hảo giữa quyền uy hoài cổ và hơi thở thượng lưu đương đại bên bờ sông Sài Gòn.</p>
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-gold font-bold">Xem Chi Tiết ➔</span>
+                </a>
+
+                <!-- Case 2 -->
+                <a href="#project-2" class="project-card p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs text-gold uppercase tracking-widest mb-4 block">Dự án 02</span>
+                        <h4 class="text-2xl mb-4">Modern Minimalism Trên Đồi</h4>
+                        <p class="text-sm text-charcoal/60 luxury-justify mb-6">Một tác phẩm điêu khắc hình học vươn mình giữa cao nguyên, dành cho những chủ nhân trân trọng sự tĩnh lặng.</p>
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-gold font-bold">Xem Chi Tiết ➔</span>
+                </a>
+
+                <!-- Case 3 -->
+                <a href="#project-3" class="project-card p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs text-gold uppercase tracking-widest mb-4 block">Dự án 03</span>
+                        <h4 class="text-2xl mb-4">Coastal Tropical Ven Biển</h4>
+                        <p class="text-sm text-charcoal/60 luxury-justify mb-6">Cảm hứng từ những khu nghỉ dưỡng siêu sang, nơi sóng biển và nhịp sống tự nhiên hòa quyện làm một.</p>
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-gold font-bold">Xem Chi Tiết ➔</span>
+                </a>
+
+                <!-- Case 4 -->
+                <a href="#project-4" class="project-card p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs text-gold uppercase tracking-widest mb-4 block">Dự án 04</span>
+                        <h4 class="text-2xl mb-4">Neo Classical Grandeur Nội Đô</h4>
+                        <p class="text-sm text-charcoal/60 luxury-justify mb-6">Biểu tượng của quyền lực tài chính và sự thịnh vượng, mang không gian cung điện Châu Âu vào lòng đô thị.</p>
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-gold font-bold">Xem Chi Tiết ➔</span>
+                </a>
+
+                <!-- Case 5 -->
+                <a href="#project-5" class="project-card p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs text-gold uppercase tracking-widest mb-4 block">Dự án 05</span>
+                        <h4 class="text-2xl mb-4">Organic Zen Garden Biệt Lập</h4>
+                        <p class="text-sm text-charcoal/60 luxury-justify mb-6">Kiệt tác kiến trúc hữu cơ, nơi trú ẩn tinh thần cho những nhà lãnh đạo tìm kiếm sự cân bằng và chữa lành.</p>
+                    </div>
+                    <span class="text-xs uppercase tracking-widest text-gold font-bold">Xem Chi Tiết ➔</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Project Details Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-5xl mx-auto px-6">
+                
+                <!-- PROJECT 1 -->
+                <article id="project-1" class="mb-40">
+                    <header class="mb-16">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <span class="text-gold font-bold">01.</span>
+                            <div class="h-px w-20 bg-gold"></div>
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-light mb-8">Dinh Thự Indochine Heritage Ven Sông</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm italic border-y border-gold/20 py-6">
+                            <div>Vị trí: Đất vàng (2500 m2) ven sông Sài Gòn</div>
+                            <div>Tổng diện tích sàn: 1200 m2</div>
+                        </div>
+                    </header>
+
+                    <div class="space-y-16">
+                        <section>
+                            <h3 class="text-xs uppercase tracking-[0.3em] text-gold mb-6 font-bold">Tổng Quan & Câu Chuyện</h3>
+                            <p class="luxury-justify leading-relaxed text-lg">
+                                Một biểu tượng của sự quý phái dành cho những chủ nhân am hiểu chiều sâu văn hóa và kiến trúc vượt thời gian. Cấu trúc gồm 3 tầng nổi và 1 tầng hầm, công trình là sự kết hợp nhuần nhuyễn giữa phong cách Indochine quyền quý và tiện nghi đương đại cao cấp nhất.
+                            </p>
+                        </section>
+
+                        <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <div>
+                                <h3 class="text-xs uppercase tracking-[0.3em] text-gold mb-6 font-bold">7 Viên Ngọc Triết Học</h3>
+                                <ul class="custom-list space-y-4 luxury-justify text-charcoal/80">
+                                    <li><strong>Vị thế:</strong> Vị trí ven sông đắc địa, khẳng định "quyền lực mềm".</li>
+                                    <li><strong>Giao cảm:</strong> Hành lang gỗ đón gió sông và hơi ẩm tự nhiên.</li>
+                                    <li><strong>Cá nhân hóa:</strong> Phù điêu gốm thủ công mang ấn ký gia tộc.</li>
+                                    <li><strong>Nguyên bản:</strong> Vật liệu địa phương: gạch thông gió, gỗ hồng đào, ngói âm dương.</li>
+                                    <li><strong>Năng lượng phong thủy:</strong> Tọa sơn hướng thủy với "minh đường" rộng mở.</li>
+                                    <li><strong>Tĩnh lặng:</strong> Tường cách âm đa lớp ẩn sau các mảng ốp gỗ sang trọng.</li>
+                                    <li><strong>Di sản:</strong> Thiết kế như một bảo tàng gia đình cho nhiều thế hệ.</li>
+                                </ul>
+                            </div>
+                            <div class="focus-box">
+                                <h3 class="text-xs uppercase tracking-[0.3em] mb-4 not-italic">Định Hướng Thị Giác 3D</h3>
+                                <p class="luxury-justify">
+                                    "Cổng gang đúc kiên cố, trục cảnh quan đối xứng dẫn lối đến đài phun nước đá xanh rêu. Đại sảnh tái hiện không gian khách sạn Indochine thập niên 30 với trần vòm cao vút, đèn chùm pha lê và quạt trần cổ điển. Tầng 2 là không gian riêng tư với sàn gỗ lim lát xương cá và tầm nhìn panorama thu trọn dòng sông."
+                                </p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 class="text-xs uppercase tracking-[0.3em] text-gold mb-6 font-bold">Bảng Dự Toán Khối Lượng (BOQ)</h3>
+                            <div class="overflow-x-auto">
+                                <table class="w-full boq-table text-left">
+                                    <thead>
+                                        <tr>
+                                            <th>Hạng Mục Chi Phí</th>
+                                            <th class="text-right">Tỷ Trọng (%)</th>
+                                            <th>Ghi Chú Kỹ Thuật</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Móng, Hầm & Chống Thấm</td>
+                                            <td class="text-right font-bold text-gold">20%</td>
+                                            <td>Yêu cầu kỹ thuật khắt khe do địa hình ven sông.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phần Thô & Xây Trát</td>
+                                            <td class="text-right font-bold text-gold">15%</td>
+                                            <td>Sử dụng bê tông mác cao và gạch thủ công.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cơ Điện (MEP) & Điều Hòa Trung Tâm</td>
+                                            <td class="text-right font-bold text-gold">15%</td>
+                                            <td>Hệ thống lọc khí và kiểm soát độ ẩm.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hoàn Thiện Nội Ngoại Thất</td>
+                                            <td class="text-right font-bold text-gold">35%</td>
+                                            <td>Gỗ quý, gạch handmade, đá tự nhiên.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cảnh Quan & Bến Du Thuyền</td>
+                                            <td class="text-right font-bold text-gold">15%</td>
+                                            <td>Bến đỗ cá nhân đạt chuẩn quốc tế.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section class="bg-parchment p-10 border border-gold/10">
+                            <h3 class="text-xs uppercase tracking-[0.3em] text-gold mb-6 font-bold">Kiến Nghị & Đề Xuất</h3>
+                            <ul class="space-y-4 luxury-justify">
+                                <li class="flex items-start"><span class="text-gold mr-3">✦</span> Sử dụng gỗ biến tính nhiệt (Thermowood) cho ngoại thất để chống chịu độ ẩm cao mà vẫn giữ được thẩm mỹ.</li>
+                                <li class="flex items-start"><span class="text-gold mr-3">✦</span> Tích hợp hệ thống điều khiển vi khí hậu thông minh tự động điều chỉnh rèm và máy lạnh theo hướng gió sông.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+
+                <hr class="gold-divider">
+
+                <!-- PROJECT 2 -->
+                <article id="project-2" class="mb-40">
+                    <header class="mb-16">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <span class="text-gold font-bold">02.</span>
+                            <div class="h-px w-20 bg-gold"></div>
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-light mb-8">Dinh Thự Modern Minimalism Trên Đồi</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm italic border-y border-gold/20 py-6">
+                            <div>Vị trí: Đồi thông biệt lập (3000 m2) Lâm Viên</div>
+                            <div>Tổng diện tích sàn: 1000 m2</div>
+                        </div>
+                    </header>
+
+                    <div class="space-y-16">
+                        <section>
+                            <h3 class="text-xs uppercase tracking-[0.3em] text-gold mb-6 font-bold">Triết Lý Thiết Kế</h3>
+                            <p class="luxury-justify leading-relaxed text-lg">
+                                Một tuyên ngôn cho giới tinh hoa trân trọng sự rõ ràng, không gian mở và triết lý của sự giản đơn. Cấu trúc 2 tầng với những nhịp dầm console táo bạo vươn mình ra không trung.
+                            </p>
+                        </section>
+
+                        <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <div class="focus-box order-2 md:order-1">
+                                <h3 class="text-xs uppercase tracking-[0.3em] mb-4 not-italic">Mô Tả 3D</h3>
+                                <p class="luxury-justify">
+                                    "Bức tường bê tông vát chéo nghệ thuật dẫn lối vào sân trong rải sỏi trắng. Hệ kính Low-E khổ lớn cao kịch trần ở ba mặt phòng khách xóa tan ranh giới với thung lũng. Hồ bơi vô cực dài 25m vươn dài ra phía vực, tạo cảm giác lơ lửng giữa những tầng mây."
+                                </p>
+                            </div>
+                            <div class="order-1 md:order-2">
+                                <h3 class="text-xs uppercase tracking-[0.3em] text-gold mb-6 font-bold">7 Viên Ngọc Triết Học</h3>
+                                <ul class="custom-list space-y-4 luxury-justify text-charcoal/80">
+                                    <li><strong>Vị thế:</strong> Cao độ cao nhất, bao quát toàn cảnh thung lũng.</li>
+                                    <li><strong>Tĩnh lặng:</strong> Linh hồn của dự án, nơi chỉ có tiếng thông reo.</li>
+                                    <li><strong>Năng lượng:</strong> Phản chiếu ánh sáng từ các hồ nước cạn.</li>
+                                    <li><strong>Giao cảm:</strong> Sự hợp nhất tuyệt đối với đường chân trời.</li>
+                                    <li><strong>Cá nhân hóa:</strong> Không gian trưng bày bộ sưu tập nghệ thuật đương đại.</li>
+                                    <li><strong>Nguyên bản:</strong> Bê tông trần kết hợp gỗ sồi, không dùng sơn phủ.</li>
+                                    <li><strong>Di sản:</strong> Di sản kiến trúc đương đại thách thức thẩm mỹ lối mòn.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 class="text-xs uppercase tracking-[0.3em] text-gold mb-6 font-bold">Bảng Dự Toán Khối Lượng (BOQ)</h3>
+                            <div class="overflow-x-auto">
+                                <table class="w-full boq-table text-left">
+                                    <thead>
+                                        <tr>
+                                            <th>Hạng Mục Chi Phí</th>
+                                            <th class="text-right">Tỷ Trọng (%)</th>
+                                            <th>Ghi Chú Kỹ Thuật</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Kết Cấu Đặc Biệt (Dầm Console, Cọc nhồi sườn đồi)</td>
+                                            <td class="text-right font-bold text-gold">30%</td>
+                                            <td>Thép cường độ cao và kỹ thuật thi công vượt nhịp.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hệ Vách Kính Khổ Lớn Low-E</td>
+                                            <td class="text-right font-bold text-gold">25%</td>
+                                            <td>Cách nhiệt, cách âm và chịu lực gió núi.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hệ Thống Cơ Điện Thông Minh (Sưởi sàn, AC tự động)</td>
+                                            <td class="text-right font-bold text-gold">15%</td>
+                                            <td>Tối ưu hóa nhiệt độ cao nguyên.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hoàn Thiện Vật Liệu (Bê tông trang trí, Gỗ sồi)</td>
+                                            <td class="text-right font-bold text-gold">20%</td>
+                                            <td>Vật liệu thô mộc cao cấp.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cảnh Quan Tối Giản & Chiếu Sáng Kiến Trúc</td>
+                                            <td class="text-right font-bold text-gold">10%</td>
+                                            <td>Tôn vinh hình khối công trình về đêm.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section class="bg-charcoal text-parchment p-10">
+                            <h3 class="text-xs uppercase tracking-[0.3em] text-gold mb-6 font-bold">Kiến Nghị & Đề Xuất</h3>
+                            <ul class="space-y-4 luxury-justify">
+                                <li class="flex items-start"><span class="text-gold mr-3">✦</span> Cần khảo sát địa chất chuyên sâu và thử nghiệm hầm gió cho các cấu trúc console trước khi thi công.</li>
+                                <li class="flex items-start"><span class="text-gold mr-3">✦</span> Đề xuất sử dụng năng lượng địa nhiệt cho sưởi sàn vào mùa đông, kết hợp thu gom nước mưa tưới tiêu.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+
+                <hr class="gold-divider">
+
+                <!-- PROJECT 5 (Sampled selection for brevity in this single document structure) -->
+                <article id="project-5" class="mb-40">
+                    <header class="mb-16">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <span class="text-gold font-bold">05.</span>
+                            <div class="h-px w-20 bg-gold"></div>
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-light mb-8">Dinh Thự Organic Zen Garden Biệt Lập</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm italic border-y border-gold/20 py-6">
+                            <div>Vị trí: Sâu trong rừng nguyên sinh (5000 m2)</div>
+                            <div>Tổng diện tích sàn: 800 m2</div>
+                        </div>
+                    </header>
+
+                    <div class="space-y-16">
+                        <section>
+                            <h3 class="text-xs uppercase tracking-[0.3em] text-gold mb-6 font-bold">Cảm Hứng Hữu Cơ</h3>
+                            <p class="luxury-justify leading-relaxed text-lg">
+                                Một tác phẩm kiến trúc hữu cơ dường như mọc lên từ lòng đất chứ không phải áp đặt lên thiên nhiên. Nơi trú ẩn tâm linh cho các nhà lãnh đạo tìm kiếm sự chữa lành và tỉnh thức.
+                            </p>
+                        </section>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2 space-y-8">
+                                <h3 class="text-xs uppercase tracking-[0.3em] text-gold mb-4 font-bold">7 Viên Ngọc Triết Học</h3>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div class="luxury-justify text-sm">
+                                        <p><strong>Tĩnh lặng:</strong> Triết lý cốt lõi, nơi thời gian dường như ngưng đọng.</p>
+                                        <p class="mt-2"><strong>Giao cảm:</strong> Những bức tường cong ôm lấy những gốc cổ thụ hiện hữu.</p>
+                                    </div>
+                                    <div class="luxury-justify text-sm">
+                                        <p><strong>Nguyên bản:</strong> Tường đất nện và mái phủ rêu xanh, hòa hợp tuyệt đối.</p>
+                                        <p class="mt-2"><strong>Năng lượng:</strong> Hội tụ qua dòng chảy phong thủy từ hồ cá Koi.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="focus-box">
+                                <h3 class="text-xs uppercase tracking-[0.3em] mb-4 not-italic">Không Khí Zen</h3>
+                                <p class="text-sm">"Yên tĩnh đến mức có thể nghe thấy tiếng một chiếc lá chạm vào mặt nước."</p>
+                            </div>
+                        </div>
+
+                        <section>
+                            <h3 class="text-xs uppercase tracking-[0.3em] text-gold mb-6 font-bold">Bảng Dự Toán Khối Lượng (BOQ)</h3>
+                            <div class="overflow-x-auto">
+                                <table class="w-full boq-table text-left">
+                                    <thead>
+                                        <tr>
+                                            <th>Hạng Mục Chi Phí</th>
+                                            <th class="text-right">Tỷ Trọng (%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Xử lý mặt bằng sinh thái & Tường đất nện</td><td class="text-right font-bold text-gold">25%</td></tr>
+                                        <tr><td>Kết cấu khung gỗ tự nhiên & Mái xanh sinh thái</td><td class="text-right font-bold text-gold">20%</td></tr>
+                                        <tr><td>Thiết kế vườn Zen, Hồ cá Koi, Hệ thống sương mù</td><td class="text-right font-bold text-gold">25%</td></tr>
+                                        <tr><td>Cơ điện thân thiện môi trường (Lọc nước tự nhiên, Solar ẩn)</td><td class="text-right font-bold text-gold">15%</td></tr>
+                                        <tr><td>Nội thất thủ công, Vách Shoji, Bồn tắm đá nguyên khối</td><td class="text-right font-bold text-gold">15%</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <div class="p-10 border-l-4 border-gold bg-parchment">
+                            <h3 class="text-xs uppercase tracking-[0.3em] text-gold mb-4 font-bold">Lời Kết Từ Kiến Trúc Sư</h3>
+                            <p class="italic luxury-justify">
+                                "Chúng tôi cam kết không sử dụng máy móc hạng nặng trong quá trình thi công để tránh làm tổn thương bộ rễ của các cổ thụ xung quanh. Ánh sáng được thiết kế theo triết lý Wabi-sabi, sử dụng các nguồn sáng gián tiếp cường độ thấp mô phỏng ánh trăng và đom đóm."
+                            </p>
+                            <p class="mt-6 font-bold uppercase tracking-widest text-xs">— AI CEO & Master Architect</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Final CTA / Contact -->
+        <section class="py-32 bg-charcoal text-white text-center">
+            <div class="max-w-3xl mx-auto px-6">
+                <h2 class="text-3xl md:text-5xl font-light mb-8">Kiến Tạo Di Sản Của Riêng Bạn</h2>
+                <p class="text-gold/80 italic mb-12">Hãy để Trí Tuệ Nhân Tạo và Tâm Hồn Nghệ Sĩ định hình không gian sống đẳng cấp nhất.</p>
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <a href="mailto:contact@phamhoanganhtokens.com" class="px-10 py-4 bg-gold text-charcoal font-bold uppercase tracking-widest hover:bg-white transition-colors duration-300">
+                        Liên Hệ Tư Vấn
+                    </a>
+                    <a href="www.phamhoanganhtokens.com" target="_blank" class="px-10 py-4 border border-gold text-gold font-bold uppercase tracking-widest hover:bg-gold hover:text-charcoal transition-colors duration-300">
+                        Khám Phá Thêm
+                    </a>
+                </div>
+                <div class="mt-20 text-xs text-white/30 tracking-[0.5em] uppercase">
+                    AI Bất Động Sản — Architectural Excellence
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Simple Interactivity -->
+    <script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple scroll reveal effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('article').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
+
