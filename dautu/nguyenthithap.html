@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bất Động Sản - Dự án Nguyễn Thị Thập</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+        :root {
+            --primary-navy: #002366;
+            --accent-gold: #C5A059;
+            --text-charcoal: #333333;
+            --bg-parchment: #FAFAFA;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #E5E5E5;
+            color: var(--text-charcoal);
+            line-height: 1.6;
+        }
+
+        .document-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: var(--bg-parchment);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            padding: 60px 80px;
+            position: relative;
+            border-top: 8px solid var(--primary-navy);
+        }
+
+        @media (max-width: 768px) {
+            .document-container {
+                margin: 0;
+                width: 100%;
+                padding: 30px 20px;
+            }
+        }
+
+        h1 {
+            font-size: 30pt;
+            color: var(--primary-navy);
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 18pt;
+            color: var(--primary-navy);
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 14pt;
+            color: var(--text-charcoal);
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        p, li {
+            font-size: 12pt;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .justified {
+            text-align: justify;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 11pt;
+        }
+
+        th {
+            background-color: var(--primary-navy);
+            color: white;
+            text-align: left;
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .callout-box {
+            border-left: 5px solid var(--accent-gold);
+            background-color: #fff9ed;
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+
+        .logo-placeholder {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .brand-name {
+            font-size: 18pt;
+            font-weight: bold;
+            color: var(--primary-navy);
+        }
+
+        .url-link {
+            font-size: 10pt;
+            color: #666;
+            text-decoration: none;
+        }
+
+        .media-container {
+            margin: 40px 0;
+            text-align: center;
+            border: 1px solid #eee;
+            padding: 10px;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .media-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: white;
+            padding: 4px 12px;
+            font-size: 10pt;
+            font-weight: bold;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 80pt;
+            color: rgba(0, 0, 0, 0.03);
+            pointer-events: none;
+            z-index: 0;
+            white-space: nowrap;
+        }
+
+        @media print {
+            body { background: white; }
+            .document-container { box-shadow: none; margin: 0; padding: 20px; }
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 600px) {
+            .table-wrapper {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="document-container">
+        <div class="watermark">BẢO MẬT</div>
+        
+        <!-- Executive Header -->
+        <header class="header-top">
+            <div class="flex items-center gap-4">
+                <div class="logo-placeholder">AI</div>
+                <div>
+                    <div class="brand-name">AI BẤT ĐỘNG SẢN</div>
+                    <a href="www.phamhoanganhtokens.com" target="_blank" class="url-link">www.phamhoanganhtokens.com</a>
+                </div>
+            </div>
+            <div class="text-right hidden sm:block">
+                <div class="text-sm font-bold">BÁO CÁO CHIẾN LƯỢC</div>
+                <div class="text-xs text-gray-500">Mã hồ sơ: Q7-2026-NQT</div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <span class="status-badge">TÀI LIỆU LƯU HÀNH NỘI BỘ</span>
+            <h1>Tóm tắt dự án & Kế hoạch chiến lược đầu tư bất động sản Quận 7</h1>
+            <p class="text-center italic text-gray-600">(Cập nhật: Tháng 5 năm 2026)</p>
+            <div class="w-24 h-1 bg-gold mx-auto mt-4" style="background-color: var(--accent-gold);"></div>
+        </section>
+
+        <!-- Executive Summary Intro -->
+        <div class="justified mb-8">
+            Dựa trên dữ liệu pháp lý từ tài sản cụ thể và thông tin thị trường Quận 7 tại thời điểm tháng 5/2026, dưới đây là bản tổng hợp kế hoạch đầu tư chi tiết dành cho các cấp quản lý và nhà đầu tư chiến lược.
+        </div>
+
+        <!-- 1. Project Brief -->
+        <section>
+            <h2>1. Tóm tắt dự án (Project Brief)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                <div>
+                    <h3>Thông tin tài sản trọng tâm:</h3>
+                    <ul class="list-disc ml-5 space-y-2">
+                        <li><strong>Địa chỉ:</strong> 156/46D Nguyễn Thị Thập, Phường Bình Thuận, Quận 7, TP.HCM.</li>
+                        <li><strong>Diện tích tổng:</strong> 225,7 m<sup>2</sup>.</li>
+                        <ul class="ml-5 mt-1 list-circle">
+                            <li><em>Đất ở đô thị (ODT):</em> 49 m<sup>2</sup>.</li>
+                            <li><em>Đất trồng cây lâu năm (CLN):</em> 176,7 m<sup>2</sup> (Hạn dùng: 16/01/2053).</li>
+                        </ul>
+                        <li><strong>Hiện trạng:</strong> Nhà cấp 4 diện tích 35,9 m<sup>2</sup>, nằm trong khu dân cư hiện hữu sầm uất.</li>
+                    </ul>
+                </div>
+                <div class="callout-box flex flex-col justify-center">
+                    <h3 class="mt-0" style="color: var(--accent-gold);">Mục tiêu đầu tư</h3>
+                    <p class="mb-0">Chuyển đổi mục đích sử dụng đất, tối ưu hóa giá trị trên mỗi m<sup>2</sup> thông qua việc xây dựng mới hoặc khai thác thương mại trung và dài hạn.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media 1 -->
+        <div class="media-container">
+            <img src='https://opal.google/board/blobs/1d2e67a5-2c97-4c7a-90d1-0003f9d55de4' alt='Sơ đồ vị trí dự án' />
+            <p class="text-xs text-gray-400 mt-2 italic">Hình 1: Sơ đồ vị trí và ranh giới thửa đất 519, Tờ 39</p>
+        </div>
+
+        <!-- 2. Analysis -->
+        <section>
+            <h2>2. Phân tích đa chiều (Analysis)</h2>
+            
+            <div class="space-y-6">
+                <div>
+                    <h3>2.1 Đối chiếu kỹ thuật & Kiến trúc (Engineering & Architecture)</h3>
+                    <p>Dựa trên sơ đồ vị trí (Thửa 519, Tờ 39), tài sản có các đặc điểm kỹ thuật sau:</p>
+                    <ul class="list-disc ml-5 space-y-2">
+                        <li><strong>Hình dạng:</strong> Đất đa giác, ranh giới rõ ràng với 13 điểm tọa độ góc ranh, tạo điều kiện thuận lợi cho việc xác định mốc lộ giới.</li>
+                        <li><strong>Khả năng tận dụng:</strong> Hiện tại công trình xây dựng chỉ chiếm khoảng 16% diện tích đất. Đây là cơ hội lớn để thiết kế một khu biệt thự sân vườn (Villa) hoặc tòa nhà căn hộ dịch vụ (CHDV) cao tầng nếu xin được giấy phép xây dựng cho diện tích đất còn lại.</li>
+                        <li><strong>Giải pháp kỹ thuật:</strong> Cần nâng nền và gia cố móng do đặc thù đất khu vực Quận 7 là đất yếu (gần sông và vùng trũng), đòi hỏi chi phí ép cọc bê tông dự ứng lực cao hơn thông thường.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>2.2 Phân tích pháp lý & Quy hoạch (Legal & Planning)</h3>
+                    <ul class="list-disc ml-5 space-y-2">
+                        <li><strong>Luật Đất đai 2024:</strong> Áp dụng bảng giá đất mới sát giá thị trường. Việc chuyển đổi 176,7 m<sup>2</sup> đất CLN sang ODT sẽ tốn chi phí cao nhưng là bước đi bắt buộc để tối đa hóa giá trị bán lại và tính thanh khoản.</li>
+                        <li><strong>Quy hoạch khu vực:</strong> Quận 7 năm 2026 đang hưởng lợi trực tiếp từ dự án <strong>Cầu Thủ Thiêm 4</strong> và mở rộng đường <strong>Nguyễn Thị Thập</strong>. Tài sản nằm gần trục thương mại lớn nên tiềm năng tăng trưởng ổn định.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>2.3 Phân tích Tài chính (Financial Perspective)</h3>
+                    <p>Bảng so sánh mặt bằng giá khu vực (Dữ liệu thực tế Tháng 5/2026):</p>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Khu vực</th>
+                                    <th>Phân khúc</th>
+                                    <th>Giá tham khảo (Triệu VND/m2)</th>
+                                    <th>Nhận định</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Nguyễn Thị Thập (Tân Quy/Bình Thuận)</strong></td>
+                                    <td>Đất hẻm xe hơi</td>
+                                    <td>150 - 200</td>
+                                    <td>Tài sản hiện tại đang ở mức cạnh tranh, tiềm năng dư địa lớn.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Him Lam / Kim Sơn</strong></td>
+                                    <td>Đất nền dự án</td>
+                                    <td>250 - 350</td>
+                                    <td>Vùng giá trần cho nhà đầu tư tham khảo khi định giá đầu ra.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Phú Mỹ Hưng</strong></td>
+                                    <td>Khu cao cấp</td>
+                                    <td>350 - 550</td>
+                                    <td>Dành cho các sản phẩm biệt thự xa xỉ, định hướng tiêu chuẩn.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-gray-100 p-6 border-r-4 border-navy" style="border-right-color: var(--primary-navy);">
+                        <p class="font-bold mb-2">Đánh giá tỷ suất sinh lời:</p>
+                        <ul class="list-none space-y-1">
+                            <li>• <strong>Giá hiện tại ước tính (mua thô):</strong> ~35-45 tỷ VNĐ (tùy vị trí hẻm).</li>
+                            <li>• <strong>Kịch bản khai thác:</strong> Sau khi chuyển đổi toàn bộ lên đất ở và xây dựng CHDV, giá trị có thể tăng thêm 30-40% nhờ dòng tiền cho thuê ổn định từ cộng đồng người nước ngoài và giới văn phòng cao cấp.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media 2 -->
+        <div class="media-container">
+            <img src='https://opal.google/board/blobs/d96cbf23-9f77-4a12-a7c8-2bf6b59fefa3' alt='Dữ liệu pháp lý tài sản' />
+            <p class="text-xs text-gray-400 mt-2 italic">Hình 2: Trích lục bản đồ địa chính và tọa độ góc ranh</p>
+        </div>
+
+        <!-- 3. Strategic Timeline -->
+        <section>
+            <h2>3. Lộ trình triển khai (Strategic Timeline)</h2>
+            <p>Kế hoạch triển khai dự kiến trong vòng 12-18 tháng nhằm tối ưu hóa dòng tiền và pháp lý:</p>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Giai đoạn</th>
+                            <th>Nội dung công việc</th>
+                            <th>Thời gian dự kiến</th>
+                            <th>Mục tiêu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Giai đoạn 1: Pháp lý</strong></td>
+                            <td>Kiểm tra quy hoạch chi tiết 1/2000, nộp hồ sơ chuyển mục đích sử dụng từ CLN sang ODT.</td>
+                            <td>3 - 5 tháng</td>
+                            <td>Hợp thức hóa 100% đất ở đô thị.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Giai đoạn 2: Thiết kế</strong></td>
+                            <td>Thuê tư vấn kiến trúc lập phương án CHDV cao cấp hoặc Biệt thự vườn. Xin cấp phép xây dựng.</td>
+                            <td>2 - 3 tháng</td>
+                            <td>Có bản vẽ kỹ thuật và giấy phép khởi công.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Giai đoạn 3: Thi công</strong></td>
+                            <td>Triển khai xây dựng phần thô và hoàn thiện nội thất theo phong cách hiện đại.</td>
+                            <td>8 - 12 tháng</td>
+                            <td>Bàn giao công trình đúng tiến độ & chất lượng.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Giai đoạn 4: Vận hành</strong></td>
+                            <td>Marketing tìm khách thuê hoặc chào bán trên các sàn giao dịch BĐS uy tín.</td>
+                            <td>2 - 4 tháng</td>
+                            <td>Thu hồi vốn và bắt đầu sinh lời.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Final Advice -->
+        <section class="mt-12 mb-8">
+            <div style="background-color: var(--primary-navy); color: white; padding: 30px;">
+                <h2 class="mt-0 text-white border-white" style="color: white; border-bottom-color: white;">Lời khuyên chiến lược</h2>
+                <ol class="list-decimal ml-6 space-y-4">
+                    <li>
+                        <strong style="color: var(--accent-gold);">Ưu tiên Pháp lý:</strong> Với Luật Đất đai 2024, cần thực hiện việc đóng tiền sử dụng đất sớm để tránh các đợt điều chỉnh bảng giá đất tăng cao trong tương lai gần.
+                    </li>
+                    <li>
+                        <strong style="color: var(--accent-gold);">Kiểm tra hạ tầng ngập:</strong> Dù đã có cống ngăn triều của thành phố, vẫn cần khảo sát thực tế cốt nền hẻm 156 để có phương án kỹ thuật móng và tầng hầm phù hợp nhất.
+                    </li>
+                    <li>
+                        <strong style="color: var(--accent-gold);">Tận dụng vị trí:</strong> Nguyễn Thị Thập là cung đường "vàng" về dịch vụ của Quận 7, hãy tập trung vào các công năng có thể cho thuê kinh doanh ở tầng trệt để tăng tỷ suất lợi nhuận trên vốn (ROI).
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Sign-off -->
+        <div class="mt-16 pt-8 border-t border-gray-300 flex justify-between items-end">
+            <div class="text-sm">
+                <p class="mb-1">Người lập báo cáo:</p>
+                <p class="font-bold text-lg">Hệ thống AI Bất Động Sản</p>
+                <p class="text-gray-500">Bộ phận Phân tích Chiến lược</p>
+            </div>
+            <div class="text-right italic text-gray-400 text-xs">
+                Tài liệu này được tạo tự động bởi công cụ phân tích dữ liệu AI.<br>
+                © 2024 AI Bất Động Sản. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts for subtle interactivity -->
+    <script>
+        // Subtle animation for table rows on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const rows = document.querySelectorAll('tr');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            rows.forEach(row => {
+                row.style.opacity = '0';
+                row.style.transform = 'translateY(10px)';
+                row.style.transition = 'all 0.5s ease-out';
+                observer.observe(row);
+            });
+        });
+    </script>
+</body>
+</html>
