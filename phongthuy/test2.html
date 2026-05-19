@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Phong Thủy Địa Thế Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+        :root {
+            --parchment: #F9F9F9;
+            --charcoal: #2C3333;
+            --jade: #2E4F4F;
+            --gold: #C5A059;
+            --soft-grey: #E5E7EB;
+        }
+
+        body {
+            background-color: var(--parchment);
+            color: var(--charcoal);
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        p, div {
+            text-align: justify;
+        }
+
+        .report-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .header-rule {
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            margin: 2rem 0;
+        }
+
+        .scenario-card {
+            background: white;
+            border: 1px solid var(--soft-grey);
+            padding: 3rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .scenario-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .scenario-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--jade);
+        }
+
+        .label-bold {
+            font-weight: 700;
+            color: var(--jade);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .markdown-block {
+            background-color: #F3F4F6;
+            padding: 1.5rem;
+            border-radius: 2px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            border-left: 3px solid var(--gold);
+            margin-top: 1rem;
+        }
+
+        .watermark {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: -1;
+            font-size: 5rem;
+            font-weight: bold;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Times New Roman', serif;
+        }
+
+        @media (max-width: 768px) {
+            .report-container {
+                padding: 2rem 1rem;
+            }
+            .scenario-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="watermark">AI PHONG THUỶ</div>
+
+    <div class="report-container">
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-slate-800">Mẫu Phong Thuỷ Địa Thế</h1>
+            <div class="header-rule"></div>
+            <p class="text-xl font-medium text-slate-600 uppercase tracking-widest">AI Software Development</p>
+            <a href="www.phamhoanganhtokens.com" target="_blank" class="text-jade-700 hover:text-gold-600 transition-colors duration-300 italic">
+                www.phamhoanganhtokens.com
+            </a>
+        </header>
+
+        <!-- Introduction -->
+        <section class="mb-20 border-b border-gray-200 pb-12">
+            <h2 class="text-2xl font-bold mb-6 text-center italic" style="color: var(--jade);">Sứ Mệnh Phân Tích</h2>
+            <p class="text-lg text-gray-700 leading-relaxed italic">
+                Dự án "AI Phong Thủy Địa Thế Master" đại diện cho sự giao thoa giữa trí tuệ nhân tạo hiện đại và học thuyết phong thủy cổ truyền. Chúng tôi cung cấp các phân tích bất động sản dựa trên cơ sở khoa học, logic và khách quan, giúp chủ sở hữu tối ưu hóa dòng năng lượng "Khí", đảm bảo sự thịnh vượng và bền vững cho mọi công trình kiến trúc.
+            </p>
+        </section>
+
+        <!-- Main Content (Test Scenarios) -->
+        <main>
+            
+            <!-- Scenario 1 -->
+            <div class="scenario-card">
+                <h3 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-100" style="color: var(--charcoal);">
+                    Mẫu 1: Chung Cư Đô Thị Mật Độ Cao - Phân Tích Áp Lực Đô Thị
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <span class="label-bold">Property Info:</span>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                            <li><strong>Vị trí:</strong> Trung tâm Singapore (Khu vực mật độ cao).</li>
+                            <li><strong>Diện tích:</strong> 950 sq. ft.</li>
+                            <li><strong>Bố cục:</strong> Căn hộ 2 phòng ngủ, tầng 38.</li>
+                            <li><strong>Năm xây dựng:</strong> 2021.</li>
+                            <li><strong>Hướng:</strong> Ban công chính 350° Bắc (Cung Khảm); Cửa chính 170° Nam (Cung Ly).</li>
+                        </ul>
+                        
+                        <span class="label-bold">Purpose Of Use:</span>
+                        <p class="text-sm text-gray-600 italic">
+                            Đánh giá tác động của "Thiên Trảm Sát" từ các tòa nhà kính lân cận và tối ưu hóa dòng "Khí" nội bộ cho chuyên gia làm việc từ xa, hướng tới sự thăng tiến sự nghiệp và ổn định tài chính.
+                        </p>
+                    </div>
+                    <div class="bg-slate-50 p-4 border border-gray-100">
+                        <span class="label-bold">Property Images:</span>
+                        <ol class="list-decimal list-inside text-xs text-gray-500 space-y-2">
+                            <li>Góc rộng phòng khách nhìn từ cửa vào.</li>
+                            <li>Toàn cảnh từ ban công tầng 38.</li>
+                            <li>Cận cảnh cửa chính và khu vực tiền sảnh.</li>
+                            <li>Góc nhìn từ trên xuống của nhà bếp (Bếp & Chậu rửa).</li>
+                            <li>Nội thất phòng ngủ và vị trí giường.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="markdown-block mt-8">
+                    // Truy vấn dữ liệu thô - Scenario 1 //
+                </div>
+            </div>
+
+            <!-- Scenario 2 -->
+            <div class="scenario-card">
+                <h3 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-100" style="color: var(--charcoal);">
+                    Mẫu 2: Tái Thiết Lập Khu Dân Cư Ngoại Ô - Phân Tích Địa Khí
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <span class="label-bold">Property Info:</span>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                            <li><strong>Vị trí:</strong> North Greenwich, London, UK.</li>
+                            <li><strong>Diện tích:</strong> 12,500 sq. ft (Lô đất); 3,200 sq. ft (Nhà).</li>
+                            <li><strong>Bố cục:</strong> 4 phòng ngủ, đa tầng, gara hầm.</li>
+                            <li><strong>Năm xây dựng:</strong> 2024 (Đang hoàn thiện).</li>
+                            <li><strong>Hướng:</strong> Mặt tiền 125° Đông Nam (Cung Tốn).</li>
+                        </ul>
+                        
+                        <span class="label-bold">Purpose Of Use:</span>
+                        <p class="text-sm text-gray-600 italic">
+                            Phân tích hình thế và "Huyền Không Phi Tinh" nhằm giảm thiểu nhiễu điện từ từ trạm biến áp lân cận và xử lý năng lượng tồn dư từ nền đất công nghiệp cũ.
+                        </p>
+                    </div>
+                    <div class="bg-slate-50 p-4 border border-gray-100">
+                        <span class="label-bold">Property Images:</span>
+                        <ol class="list-decimal list-inside text-xs text-gray-500 space-y-2">
+                            <li>Ảnh drone từ trên cao bao quát khu vực và trạm điện.</li>
+                            <li>Ảnh thực tế hố móng và địa chất.</li>
+                            <li>Bản phối cảnh 3D mặt tiền và lối vào.</li>
+                            <li>Bản đồ địa hình thể hiện độ cao của lô đất.</li>
+                            <li>Ảnh phần thô khu vực "Thái Cực" của ngôi nhà.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="markdown-block mt-8">
+                    // Truy vấn dữ liệu thô - Scenario 2 //
+                </div>
+            </div>
+
+            <!-- Scenario 3 -->
+            <div class="scenario-card">
+                <h3 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-100" style="color: var(--charcoal);">
+                    Mẫu 3: Văn Phòng Điều Hành Cấp Cao - Tối Ưu Hóa Quyền Lực
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <span class="label-bold">Property Info:</span>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                            <li><strong>Vị trí:</strong> Khu tài chính, Frankfurt, Đức.</li>
+                            <li><strong>Diện tích:</strong> 18,000 sq. ft (Toàn bộ tầng 15).</li>
+                            <li><strong>Bố cục:</strong> Không gian mở với các phòng điều hành bao quanh.</li>
+                            <li><strong>Năm cải tạo:</strong> 2023.</li>
+                            <li><strong>Hướng:</strong> Sảnh thang máy chính 90° Đông (Cung Chấn).</li>
+                        </ul>
+                        
+                        <span class="label-bold">Purpose Of Use:</span>
+                        <p class="text-sm text-gray-600 italic">
+                            Áp dụng nguyên lý "Vị trí chỉ huy" cho phòng CEO và tối ưu hóa "Cung Tài Lộc" để tăng cường khả năng ra quyết định và giữ chân nhân sự cốt cán.
+                        </p>
+                    </div>
+                    <div class="bg-slate-50 p-4 border border-gray-100">
+                        <span class="label-bold">Property Images:</span>
+                        <ol class="list-decimal list-inside text-xs text-gray-500 space-y-2">
+                            <li>Sơ đồ mặt bằng có đánh dấu hướng Bắc nam châm.</li>
+                            <li>Góc nhìn từ bàn làm việc CEO ra cửa và cửa sổ.</li>
+                            <li>Khu vực quầy lễ tân và luồng giao thông từ thang máy.</li>
+                            <li>Hệ thống nước tại giếng trời trung tâm.</li>
+                            <li>Bố cục khu vực nghỉ ngơi và pantry cho nhân viên.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="markdown-block mt-8">
+                    // Truy vấn dữ liệu thô - Scenario 3 //
+                </div>
+            </div>
+
+            <!-- Scenario 4 -->
+            <div class="scenario-card">
+                <h3 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-100" style="color: var(--charcoal);">
+                    Mẫu 4: Biệt Thự Nghỉ Dưỡng Ven Biển - Cân Bằng Thủy Thổ
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <span class="label-bold">Property Info:</span>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                            <li><strong>Vị trí:</strong> Malibu, California, USA (Vách đá ven biển).</li>
+                            <li><strong>Diện tích:</strong> 7,200 sq. ft.</li>
+                            <li><strong>Bố cục:</strong> Kiến trúc hiện đại, vách kính toàn phần.</li>
+                            <li><strong>Năm xây dựng:</strong> 2019.</li>
+                            <li><strong>Hướng:</strong> Mặt sau (hướng biển) 260° Tây (Cung Đoài).</li>
+                        </ul>
+                        
+                        <span class="label-bold">Purpose Of Use:</span>
+                        <p class="text-sm text-gray-600 italic">
+                            Phân tích sự cân bằng "Sơn - Thủy". Mục tiêu là ổn định nguyên tố "Thổ" trong cấu trúc kính để ngăn chặn sự tán khí do tầm nhìn đại dương quá rộng.
+                        </p>
+                    </div>
+                    <div class="bg-slate-50 p-4 border border-gray-100">
+                        <span class="label-bold">Property Images:</span>
+                        <ol class="list-decimal list-inside text-xs text-gray-500 space-y-2">
+                            <li>Ảnh ngoại thất từ phía đường lộ (Phần "Tọa" của nhà).</li>
+                            <li>Góc nhìn từ ban công sau hướng ra đại dương.</li>
+                            <li>Ảnh nội thất phòng khách (Tỷ lệ kính/tường).</li>
+                            <li>Cầu thang chính (Chất liệu và độ vững chãi).</li>
+                            <li>Phòng ngủ chính và hướng đầu giường so với đường bờ biển.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="markdown-block mt-8">
+                    // Truy vấn dữ liệu thô - Scenario 4 //
+                </div>
+            </div>
+
+            <!-- Scenario 5 -->
+            <div class="scenario-card">
+                <h3 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-100" style="color: var(--charcoal);">
+                    Mẫu 5: Dinh Thự Nông Thôn Truyền Thống - Hình Thế & Di Sản
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <span class="label-bold">Property Info:</span>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                            <li><strong>Vị trí:</strong> Cotswolds, Anh (Cảnh quan nông nghiệp).</li>
+                            <li><strong>Diện tích:</strong> 5.5 mẫu Anh; nhà chính 4,800 sq. ft.</li>
+                            <li><strong>Bố cục:</strong> Đá xây đặc trưng, vườn bao quanh.</li>
+                            <li><strong>Năm xây dựng:</strong> 1840 (Cải tạo năm 1995).</li>
+                            <li><strong>Hướng:</strong> Cửa chính 185° Nam (Cung Ly).</li>
+                        </ul>
+                        
+                        <span class="label-bold">Purpose Of Use:</span>
+                        <p class="text-sm text-gray-600 italic">
+                            Phân tích "Loan Đầu" ngoại cảnh (Thế tay ngai) và xác định sự tương hợp của cấu trúc cổ với "Quái số" của chủ nhân mới để duy trì sự hòa thuận đa thế hệ.
+                        </p>
+                    </div>
+                    <div class="bg-slate-50 p-4 border border-gray-100">
+                        <span class="label-bold">Property Images:</span>
+                        <ol class="list-decimal list-inside text-xs text-gray-500 space-y-2">
+                            <li>Ảnh drone rộng thể hiện "Thanh Long" và "Bạch Hổ" (Đồi núi xung quanh).</li>
+                            <li>Mặt tiền và khu vực "Minh Đường" trước cửa.</li>
+                            <li>Khu vực suối tự nhiên tại góc Đông Bắc.</li>
+                            <li>Ảnh nội thất lò sưởi và trục ống khói trung tâm.</li>
+                            <li>Điểm giao giữa phần nhà xây năm 1840 và phần mở rộng 1995.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="markdown-block mt-8">
+                    // Truy vấn dữ liệu thô - Scenario 5 //
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        // Subtle interaction for the "Markdown" blocks
+        document.querySelectorAll('.markdown-block').forEach(block => {
+            block.addEventListener('click', function() {
+                this.style.backgroundColor = '#E5E7EB';
+                setTimeout(() => {
+                    this.style.backgroundColor = '#F3F4F6';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
