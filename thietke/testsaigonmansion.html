@@ -1,1 +1,353 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bất Động Sản | Kiến Trúc Thượng Lưu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rich-black': '#1a1a1a',
+                        'champagne-gold': '#c5a059',
+                        'soft-cream': '#f9f7f2',
+                        'muted-gold': '#d4b67a',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Times New Roman', 'serif'],
+                        body: ['"Lora"', 'Times New Roman', 'serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1.2s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f9f7f2;
+            color: #1a1a1a;
+            font-family: 'Lora', 'Times New Roman', serif;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .luxury-border {
+            border: 1px solid #c5a059;
+        }
+        .text-justify {
+            text-align: justify;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #c5a059 0%, #e2c996 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .card-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(197, 160, 89, 0.15);
+        }
+        .divider {
+            width: 80px;
+            height: 1px;
+            background-color: #c5a059;
+            margin: 2rem auto;
+        }
+        .blueprint-pattern {
+            background-image: radial-gradient(#c5a059 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.1;
+        }
+        .copy-toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a1a1a;
+            color: #f9f7f2;
+            padding: 0.75rem 2rem;
+            border-radius: 2px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+            border: 1px solid #c5a059;
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen overflow-x-hidden">
+
+    <!-- Header Section -->
+    <header class="pt-16 pb-12 px-6 text-center animate-fade-in relative overflow-hidden">
+        <div class="absolute inset-0 blueprint-pattern -z-10"></div>
+        <div class="max-w-4xl mx-auto">
+            <p id="current-date" class="text-xs tracking-[0.2em] uppercase text-champagne-gold mb-4 font-body font-medium"></p>
+            <h1 class="text-4xl md:text-6xl font-serif tracking-tight text-rich-black mb-2">AI Bất Động Sản</h1>
+            <div class="flex items-center justify-center gap-4 mb-4">
+                <span class="h-[1px] w-8 bg-champagne-gold"></span>
+                <span class="text-sm italic font-serif text-gray-500 uppercase tracking-widest">The Saigon Mansion Project</span>
+                <span class="h-[1px] w-8 bg-champagne-gold"></span>
+            </div>
+            <div class="divider"></div>
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="max-w-[800px] mx-auto px-8 mb-24 animate-slide-up">
+        <div class="relative p-8 md:p-12 border border-gray-100 bg-white/50 backdrop-blur-sm">
+            <!-- Decorative Corners -->
+            <div class="absolute top-0 left-0 w-8 h-8 border-t border-l border-champagne-gold"></div>
+            <div class="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-champagne-gold"></div>
+            
+            <p class="text-justify leading-relaxed text-lg italic text-gray-800 font-body">
+                Lời chào từ <span class="text-champagne-gold font-bold">AI Bất Động Sản</span>. Với tư cách là Kiến trúc sư AI tận tâm của bạn, tôi vinh dự được trình bày một tuyển tập các mẫu thiết kế biệt thự cao cấp được thiết kế riêng để tái định nghĩa bản chất của cuộc sống thượng lưu. Phương pháp của chúng tôi kết hợp công nghệ tiên tiến với các nguyên tắc kiến trúc vượt thời gian để tạo ra những không gian không chỉ là nơi cư trú, mà là những kiệt tác thiết kế. Chúng tôi tin rằng một ngôi nhà là phản chiếu di sản của chủ nhân, và chúng tôi cam kết giúp bạn hiện thực hóa tầm nhìn về sự sang trọng và thoải mái vô song. Hãy khám phá những mẫu thiết kế đa dạng này như một điểm khởi đầu cho dự án mơ ước của bạn.
+            </p>
+            <div class="mt-8 text-center">
+                <span class="text-xs tracking-[0.3em] text-champagne-gold uppercase">Vui lòng chọn một bản mẫu dưới đây</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Template Gallery -->
+    <main class="max-w-4xl mx-auto px-6 pb-32 space-y-16">
+        
+        <!-- Template 1 -->
+        <article class="bg-white card-shadow border-l-4 border-champagne-gold p-8 md:p-12 group">
+            <header class="mb-8 border-b border-gray-100 pb-6 flex justify-between items-end">
+                <div>
+                    <span class="text-champagne-gold text-sm font-bold tracking-widest uppercase mb-2 block">Sample 01</span>
+                    <h2 class="text-2xl md:text-3xl font-serif text-rich-black italic">The Modern Tropical Sanctuary</h2>
+                </div>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c5a059" stroke-width="0.5" class="opacity-40 group-hover:rotate-45 transition-transform duration-700">
+                    <path d="M12 2L12 22M2 12L22 12M12 2L15 5M12 2L9 5" />
+                </svg>
+            </header>
+            
+            <div class="grid gap-8 mb-10">
+                <div class="space-y-2">
+                    <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Chi Tiết Khu Đất</h3>
+                    <p class="text-justify text-gray-700 font-body">Khu đất rộng 800 mét vuông nằm trong vành đai xanh ngoại ô tươi tốt với độ dốc nhẹ về phía con suối tự nhiên.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-2">
+                        <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Ngân Sách Dự Kiến</h3>
+                        <p class="text-justify text-gray-700 font-body">Ước tính từ 15 đến 18 tỷ VNĐ cho xây dựng cao cấp và hệ thống nhà thông minh tích hợp.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Yêu Cầu Đặc Biệt</h3>
+                        <p class="text-justify text-gray-700 font-body">Kết hợp tường kính từ trần đến sàn để tối đa hóa ánh sáng tự nhiên và hồ bơi vô cực hòa quyện hoàn hảo với cảnh quan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="copyTemplate(this, 1)" class="w-full py-4 border border-champagne-gold text-champagne-gold hover:bg-champagne-gold hover:text-white transition-all duration-300 tracking-[0.2em] uppercase text-xs font-bold flex items-center justify-center gap-3">
+                <span>Sao Chép Bản Mẫu 01</span>
+            </button>
+        </article>
+
+        <!-- Template 2 -->
+        <article class="bg-white card-shadow border-l-4 border-champagne-gold p-8 md:p-12 group">
+            <header class="mb-8 border-b border-gray-100 pb-6 flex justify-between items-end">
+                <div>
+                    <span class="text-champagne-gold text-sm font-bold tracking-widest uppercase mb-2 block">Sample 02</span>
+                    <h2 class="text-2xl md:text-3xl font-serif text-rich-black italic">The Neoclassical Heritage Estate</h2>
+                </div>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c5a059" stroke-width="0.5" class="opacity-40 group-hover:rotate-45 transition-transform duration-700">
+                    <path d="M12 2L12 22M2 12L22 12M12 2L15 5M12 2L9 5" />
+                </svg>
+            </header>
+            
+            <div class="grid gap-8 mb-10">
+                <div class="space-y-2">
+                    <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Chi Tiết Khu Đất</h3>
+                    <p class="text-justify text-gray-700 font-body">Lô góc đắc địa rộng 1200 mét vuông trong khu dân cư khép kín độc quyền với đại lộ rộng lớn và cảnh quan được chăm sóc tỉ mỉ.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-2">
+                        <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Ngân Sách Dự Kiến</h3>
+                        <p class="text-justify text-gray-700 font-body">Ngân sách từ 35 đến 40 tỷ VNĐ phản ánh lớp hoàn thiện bằng đá cẩm thạch cao cấp và các chi tiết thủ công tinh xảo.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Yêu Cầu Đặc Biệt</h3>
+                        <p class="text-justify text-gray-700 font-body">Đại sảnh thông tầng với cầu thang xoắn ốc đặt riêng và hầm rượu tư nhân có kiểm soát khí hậu cho lối sống tinh tế.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="copyTemplate(this, 2)" class="w-full py-4 border border-champagne-gold text-champagne-gold hover:bg-champagne-gold hover:text-white transition-all duration-300 tracking-[0.2em] uppercase text-xs font-bold flex items-center justify-center gap-3">
+                <span>Sao Chép Bản Mẫu 02</span>
+            </button>
+        </article>
+
+        <!-- Template 3 -->
+        <article class="bg-white card-shadow border-l-4 border-champagne-gold p-8 md:p-12 group">
+            <header class="mb-8 border-b border-gray-100 pb-6 flex justify-between items-end">
+                <div>
+                    <span class="text-champagne-gold text-sm font-bold tracking-widest uppercase mb-2 block">Sample 03</span>
+                    <h2 class="text-2xl md:text-3xl font-serif text-rich-black italic">The Zen Minimalist Retreat</h2>
+                </div>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c5a059" stroke-width="0.5" class="opacity-40 group-hover:rotate-45 transition-transform duration-700">
+                    <path d="M12 2L12 22M2 12L22 12M12 2L15 5M12 2L9 5" />
+                </svg>
+            </header>
+            
+            <div class="grid gap-8 mb-10">
+                <div class="space-y-2">
+                    <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Chi Tiết Khu Đất</h3>
+                    <p class="text-justify text-gray-700 font-body">Lô đất đô thị rộng 500 mét vuông được thiết kế để mang lại sự riêng tư tối đa và sử dụng không gian hiệu quả.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-2">
+                        <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Ngân Sách Dự Kiến</h3>
+                        <p class="text-justify text-gray-700 font-body">Mục tiêu từ 10 đến 12 tỷ VNĐ tập trung vào vật liệu bền vững hiệu suất cao và kỹ thuật chế tác điêu luyện.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Yêu Cầu Đặc Biệt</h3>
+                        <p class="text-justify text-gray-700 font-body">Sân trong với vườn đá Nhật Bản truyền thống và hệ thống hầm để xe ẩn để duy trì thẩm mỹ sạch sẽ của mặt tiền.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="copyTemplate(this, 3)" class="w-full py-4 border border-champagne-gold text-champagne-gold hover:bg-champagne-gold hover:text-white transition-all duration-300 tracking-[0.2em] uppercase text-xs font-bold flex items-center justify-center gap-3">
+                <span>Sao Chép Bản Mẫu 03</span>
+            </button>
+        </article>
+
+        <!-- Template 4 -->
+        <article class="bg-white card-shadow border-l-4 border-champagne-gold p-8 md:p-12 group">
+            <header class="mb-8 border-b border-gray-100 pb-6 flex justify-between items-end">
+                <div>
+                    <span class="text-champagne-gold text-sm font-bold tracking-widest uppercase mb-2 block">Sample 04</span>
+                    <h2 class="text-2xl md:text-3xl font-serif text-rich-black italic">The Mediterranean Coastal Haven</h2>
+                </div>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c5a059" stroke-width="0.5" class="opacity-40 group-hover:rotate-45 transition-transform duration-700">
+                    <path d="M12 2L12 22M2 12L22 12M12 2L15 5M12 2L9 5" />
+                </svg>
+            </header>
+            
+            <div class="grid gap-8 mb-10">
+                <div class="space-y-2">
+                    <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Chi Tiết Khu Đất</h3>
+                    <p class="text-justify text-gray-700 font-body">Bất động sản ven biển rộng 1000 mét vuông với lối đi trực tiếp ra bãi biển và tầm nhìn tuyệt đẹp ra đường chân trời.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-2">
+                        <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Ngân Sách Dự Kiến</h3>
+                        <p class="text-justify text-gray-700 font-body">Khoảng 25 đến 30 tỷ VNĐ bao gồm vật liệu chịu thời tiết chuyên dụng và sân giải trí ngoài trời rộng lớn.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Yêu Cầu Đặc Biệt</h3>
+                        <p class="text-justify text-gray-700 font-body">Mái ngói đất nung nguyên bản và cửa sổ vòm kết hợp với đài quan sát trên mái để ngắm sao và tận hưởng gió biển.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="copyTemplate(this, 4)" class="w-full py-4 border border-champagne-gold text-champagne-gold hover:bg-champagne-gold hover:text-white transition-all duration-300 tracking-[0.2em] uppercase text-xs font-bold flex items-center justify-center gap-3">
+                <span>Sao Chép Bản Mẫu 04</span>
+            </button>
+        </article>
+
+        <!-- Template 5 -->
+        <article class="bg-white card-shadow border-l-4 border-champagne-gold p-8 md:p-12 group">
+            <header class="mb-8 border-b border-gray-100 pb-6 flex justify-between items-end">
+                <div>
+                    <span class="text-champagne-gold text-sm font-bold tracking-widest uppercase mb-2 block">Sample 05</span>
+                    <h2 class="text-2xl md:text-3xl font-serif text-rich-black italic">The Indochine Elegance Manor</h2>
+                </div>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c5a059" stroke-width="0.5" class="opacity-40 group-hover:rotate-45 transition-transform duration-700">
+                    <path d="M12 2L12 22M2 12L22 12M12 2L15 5M12 2L9 5" />
+                </svg>
+            </header>
+            
+            <div class="grid gap-8 mb-10">
+                <div class="space-y-2">
+                    <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Chi Tiết Khu Đất</h3>
+                    <p class="text-justify text-gray-700 font-body">Dinh thự ven sông rộng 1500 mét vuông được bao quanh bởi cây ăn quả nhiệt đới và các yếu tố cảnh quan truyền thống tôn vinh môi trường địa phương.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-2">
+                        <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Ngân Sách Dự Kiến</h3>
+                        <p class="text-justify text-gray-700 font-body">Phân bổ ở mức 20 đến 25 tỷ VNĐ sử dụng gỗ tếch địa phương chất lượng cao và gạch xi măng trang trí mang âm hưởng lịch sử.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xs uppercase tracking-widest font-bold text-champagne-gold">Yêu Cầu Đặc Biệt</h3>
+                        <p class="text-justify text-gray-700 font-body">Hành lang rộng bao quanh để thông gió tự nhiên và bến tàu riêng để tiếp cận bằng du thuyền, đảm bảo kết nối liền mạch với đường thủy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="copyTemplate(this, 5)" class="w-full py-4 border border-champagne-gold text-champagne-gold hover:bg-champagne-gold hover:text-white transition-all duration-300 tracking-[0.2em] uppercase text-xs font-bold flex items-center justify-center gap-3">
+                <span>Sao Chép Bản Mẫu 05</span>
+            </button>
+        </article>
+
+    </main>
+
+    <!-- Simple Elegant Footer (Manual implementation to meet prompt requirement while avoiding generic footers) -->
+    <div class="max-w-4xl mx-auto px-6 pb-12">
+        <div class="h-[1px] w-full bg-gray-200 mb-8"></div>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-widest uppercase font-serif text-gray-400">
+            <a href="www.phamhoanganhtokens.com" target="_blank" class="hover:text-champagne-gold transition-colors">www.phamhoanganhtokens.com</a>
+            <div class="hidden md:block h-4 w-[1px] bg-gray-200"></div>
+            <span>Luxury Architectural AI Solutions</span>
+            <div class="hidden md:block h-4 w-[1px] bg-gray-200"></div>
+            <a href="mailto:contact@ai-batdongsan.vn" class="hover:text-champagne-gold transition-colors">contact@ai-batdongsan.vn</a>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="copy-toast">Đã sao chép vào bộ nhớ tạm</div>
+
+    <script>
+        // Set current date
+        const dateElement = document.getElementById('current-date');
+        const now = new Date();
+        const options = { day: '2-digit', month: 'long', year: 'numeric' };
+        dateElement.innerText = now.toLocaleDateString('vi-VN', options);
+
+        // Copy functionality
+        function copyTemplate(btn, id) {
+            const article = btn.closest('article');
+            const title = article.querySelector('h2').innerText;
+            const details = Array.from(article.querySelectorAll('p')).map(p => p.innerText).join('\n');
+            
+            const textToCopy = `Bản Mẫu ${id}: ${title}\n\n${details}`;
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const toast = document.getElementById('toast');
+                toast.style.opacity = '1';
+                
+                // Visual feedback on button
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<span>Đã Sao Chép Thành Công</span>';
+                btn.classList.add('bg-champagne-gold', 'text-white');
+                
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('bg-champagne-gold', 'text-white');
+                }, 2500);
+            });
+        }
+    </script>
+</body>
+</html>
 
