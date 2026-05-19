@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE SAIGON MANSION | Báo Cáo Kiến Trúc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        /* Base typography - Times New Roman is mandatory */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #F9F7F2; /* Soft Parchment */
+            color: #1A1A1A; /* Deep Charcoal */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Justified text alignment for paragraphs */
+        p, li {
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        /* Decorative Elements */
+        .double-border {
+            border: 4px double #C5A059; /* Champagne Gold */
+            padding: 2rem;
+            position: relative;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #C5A059, transparent);
+            margin: 4rem auto;
+            width: 60%;
+        }
+
+        .ornament {
+            display: block;
+            text-align: center;
+            color: #C5A059;
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        /* Typography Styles */
+        h1, h2, h3 {
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .heading-decoration {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .heading-line {
+            height: 1px;
+            background-color: #C5A059;
+            flex-grow: 1;
+            max-width: 100px;
+        }
+
+        /* Custom Components */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(5px);
+            border: 1px solid #C5A059;
+        }
+
+        .museum-plaque {
+            background-color: #F1EFE9;
+            border-left: 5px solid #C5A059;
+            padding: 2rem;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .museum-plaque:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2);
+        }
+
+        /* Budget Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #C5A059;
+        }
+
+        th {
+            background-color: #E8E4D9;
+            color: #1A1A1A;
+            font-variant: small-caps;
+            padding: 1rem;
+            border: 1px solid #C5A059;
+        }
+
+        td {
+            padding: 1rem;
+            border: 1px solid #D4D1C5;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(197, 160, 89, 0.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-section {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* Responsive scaling for justified text */
+        @media (max-width: 640px) {
+            p { text-align: left; }
+            .double-border { padding: 1rem; }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Header Section -->
+    <header class="max-w-6xl mx-auto text-center py-12 mb-16 border-b-2 border-stone-200">
+        <p class="text-stone-500 uppercase tracking-[0.3em] mb-4">AI Bất Động Sản Trình Bày</p>
+        <h1 class="text-4xl md:text-7xl font-light mb-4">THE SAIGON MANSION</h1>
+        <div class="ornament">❦</div>
+        <p class="text-gold uppercase tracking-widest text-sm mb-6">Kiến Trúc & Triết Học Beaux-Arts</p>
+        <a href="www.phamhoanganhtokens.com" target="_blank" class="text-stone-400 hover:text-stone-600 transition-colors tracking-widest text-xs">WWW.PHAMHOANGANHTOKENS.COM</a>
+    </header>
+
+    <main class="max-w-5xl mx-auto">
+        
+        <!-- Hero Section: 7 Viên Ngọc Triết Học -->
+        <section class="mb-24 animate-section">
+            <div class="heading-decoration">
+                <div class="heading-line"></div>
+                <h2 class="text-2xl text-center">7 Viên Ngọc Triết Học</h2>
+                <div class="heading-line"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                <div class="border border-stone-300 p-6 text-center hover:bg-[#C5A059] hover:text-white transition-all duration-500 group">
+                    <span class="block text-xl mb-2 font-serif italic">Veritas</span>
+                    <span class="block text-xs uppercase tracking-tighter">Chân</span>
+                </div>
+                <div class="border border-stone-300 p-6 text-center hover:bg-[#C5A059] hover:text-white transition-all duration-500 group">
+                    <span class="block text-xl mb-2 font-serif italic">Claritas</span>
+                    <span class="block text-xs uppercase tracking-tighter">Thiện</span>
+                </div>
+                <div class="border border-stone-300 p-6 text-center hover:bg-[#C5A059] hover:text-white transition-all duration-500 group">
+                    <span class="block text-xl mb-2 font-serif italic">Dignitas</span>
+                    <span class="block text-xs uppercase tracking-tighter">Mỹ</span>
+                </div>
+                <div class="border border-stone-300 p-6 text-center hover:bg-[#C5A059] hover:text-white transition-all duration-500 group">
+                    <span class="block text-xl mb-2 font-serif italic">Libertas</span>
+                    <span class="block text-xs uppercase tracking-tighter">Hòa</span>
+                </div>
+                <div class="border border-stone-300 p-6 text-center hover:bg-[#C5A059] hover:text-white transition-all duration-500 group">
+                    <span class="block text-xl mb-2 font-serif italic">Felicitas</span>
+                    <span class="block text-xs uppercase tracking-tighter">An</span>
+                </div>
+                <div class="border border-stone-300 p-6 text-center hover:bg-[#C5A059] hover:text-white transition-all duration-500 group">
+                    <span class="block text-xl mb-2 font-serif italic">Nobilitas</span>
+                    <span class="block text-xs uppercase tracking-tighter">Nhân</span>
+                </div>
+                <div class="border border-stone-300 p-6 text-center hover:bg-[#C5A059] hover:text-white transition-all duration-500 group">
+                    <span class="block text-xl mb-2 font-serif italic">Humanitas</span>
+                    <span class="block text-xs uppercase tracking-tighter">Tĩnh</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. Concept Tổng Thể & Triết Lý -->
+        <section class="mb-20 animate-section">
+            <div class="double-border">
+                <h2 class="text-xl mb-8 border-b border-stone-300 pb-2">I. Concept Tổng Thể & Triết Lý</h2>
+                <div class="grid md:grid-cols-1 gap-8">
+                    <p class="text-lg first-letter:text-5xl first-letter:float-left first-letter:mr-3 first-letter:font-serif">
+                        The Saigon Mansion không chỉ đơn thuần là một công trình lưu trú, mà là một tác phẩm nghệ thuật hiện thực hóa phong cách Beaux-Arts – biểu tượng của sự sang trọng, uy nghi và tính hàn lâm từ Pháp. Kiến trúc của dinh thự được định hình dựa trên sự đối xứng tuyệt đối, các thức cột cổ điển và hệ thống phù điêu tinh xảo, loại bỏ hoàn toàn các yếu tố tối giản hay thô mộc hiện đại.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                        <ul class="space-y-4">
+                            <li><strong>Chân:</strong> Sự chân thực của vật liệu. Tường đá tự nhiên, gỗ quý và kim loại nguyên khối khẳng định giá trị vĩnh cửu.</li>
+                            <li><strong>Thiện:</strong> Thiết kế nhân văn, hướng đến việc nuôi dưỡng sức khỏe và sự an lạc của gia chủ thông qua hệ thống lưu thông khí tự nhiên.</li>
+                            <li><strong>Mỹ:</strong> Tỉ lệ vàng trong mọi chi tiết, từ độ cao trần đến khoảng cách của các hàng cột, tạo nên vẻ đẹp chuẩn mực.</li>
+                            <li><strong>Hòa:</strong> Sự giao thoa tinh tế giữa kiến trúc hàn lâm phương Tây và bối cảnh thiên nhiên nhiệt đới ven suối.</li>
+                        </ul>
+                        <ul class="space-y-4">
+                            <li><strong>An:</strong> Những khoảng đệm kiến trúc tạo ra sự tĩnh lặng, tách biệt hoàn toàn tiếng ồn bên ngoài.</li>
+                            <li><strong>Nhân:</strong> Không gian được cá nhân hóa, phản chiếu quyền uy và di sản riêng biệt của dòng họ chủ nhân.</li>
+                            <li><strong>Tĩnh:</strong> Sự cân bằng tuyệt đối trong bố cục mặt đứng, mang lại cảm giác vững chãi, bình yên trong tâm hồn.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- 2. Phân tích Lô Đất -->
+        <section class="mb-20 animate-section">
+            <h2 class="text-xl mb-8 tracking-widest text-center">II. Phân tích Lô Đất & Ý Tưởng Quy Hoạch</h2>
+            <div class="grid md:grid-cols-12 gap-8">
+                <div class="md:col-span-12">
+                    <p class="mb-6">Khu đất rộng 800m2 tọa lạc tại vành đai xanh ngoại ô, sở hữu lợi thế hiếm có với độ dốc nhẹ hướng về phía con suối tự nhiên. Đây chính là thế đất "tọa sơn hướng thủy" mang lại vượng khí.</p>
+                </div>
+                <div class="md:col-span-4 p-6 border-r border-stone-200">
+                    <h3 class="text-sm font-bold mb-3 uppercase">Địa hình</h3>
+                    <p class="text-sm">Tận dụng độ cao chênh lệch, khối đế của dinh thự được thiết kế giật cấp theo phong cách Beaux-Arts, giúp công trình trông uy nghi hơn từ phía dòng suối.</p>
+                </div>
+                <div class="md:col-span-4 p-6 border-r border-stone-200">
+                    <h3 class="text-sm font-bold mb-3 uppercase">Cảnh quan</h3>
+                    <p class="text-sm">Vành đai xanh bao quanh được chuyển hóa thành các khu vườn kiểu Pháp đối xứng, với các lối đi lát đá và đài phun nước được bố trí theo trục chính.</p>
+                </div>
+                <div class="md:col-span-4 p-6">
+                    <h3 class="text-sm font-bold mb-3 uppercase">Hướng nhìn</h3>
+                    <p class="text-sm">Các mảng kính lùi sâu sau hàng cột tạo ra tầm nhìn Panorama 270 độ ra dòng suối, đảm bảo ánh sáng tự nhiên nhưng vẫn giữ được sự che chắn.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- 3. Mặt Bằng Tổng Thể -->
+        <section class="mb-20 animate-section bg-[#EAE7DF] p-10">
+            <h2 class="text-xl mb-12 tracking-widest text-center">III. Mặt Bằng Tổng Thể</h2>
+            <div class="space-y-8">
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <span class="text-3xl font-serif text-gold border-b-2 border-gold">01</span>
+                    <div>
+                        <h4 class="text-lg font-bold uppercase mb-2">Tầng Trệt (Grand Ground)</h4>
+                        <p>Sảnh đón (Foyer) thông tầng trung tâm, hai bên là phòng khách đại sảnh (Great Hall) và nhà bếp phong cách cổ điển kết hợp phòng ăn hoàng gia. Hồ bơi vô cực được đặt tại mặt sau, nhìn ra suối.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <span class="text-3xl font-serif text-gold border-b-2 border-gold">02</span>
+                    <div>
+                        <h4 class="text-lg font-bold uppercase mb-2">Tầng 1 (The Master Suites)</h4>
+                        <p>Gồm 3 phòng ngủ chính với phòng thay đồ (Walk-in closet) độc lập. Hành lang trung tâm dẫn đến ban công rộng lớn nhìn xuống vườn.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <span class="text-3xl font-serif text-gold border-b-2 border-gold">03</span>
+                    <div>
+                        <h4 class="text-lg font-bold uppercase mb-2">Tầng Áp Mái (Mansard Level)</h4>
+                        <p>Thư viện, phòng rượu và không gian thư giãn tĩnh lặng, sử dụng cửa sổ vòm tiêu chuẩn Beaux-Arts đặc trưng.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Các Không Gian Signature -->
+        <section class="mb-20 animate-section">
+            <h2 class="text-xl mb-12 tracking-widest text-center">IV. Các Không Gian Signature</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border-t border-stone-400 pt-6">
+                    <h4 class="italic text-lg mb-4">Đại sảnh "Vọng Cảnh"</h4>
+                    <p class="text-sm">Sử dụng hệ tường kính kịch trần với khung đồng nghệ thuật ẩn sau hàng cột Ionic. Đây là nơi ánh sáng Chân lý xuyên qua, kết nối nội thất sang trọng với dòng suối hiền hòa.</p>
+                </div>
+                <div class="border-t border-stone-400 pt-6">
+                    <h4 class="italic text-lg mb-4">Hồ bơi vô cực "Lưu Thủy"</h4>
+                    <p class="text-sm">Viền đá tự nhiên điêu khắc, kết hợp với các tượng sư tử phun nước bằng đá trắng. Dòng nước tràn qua cạnh vô cực tạo hiệu ứng hòa quyện tuyệt đối với dòng suối.</p>
+                </div>
+                <div class="border-t border-stone-400 pt-6">
+                    <h4 class="italic text-lg mb-4">Hành lang "Thế Hệ"</h4>
+                    <p class="text-sm">Một dãy Colonnade chạy dọc mặt sau tòa nhà, nơi chủ nhân có thể dạo bước ngắm nhìn cảnh quan xanh mát, đóng vai trò là khoảng đệm "An" và "Tĩnh".</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Gợi ý Prompt Hình Ảnh 3D -->
+        <section class="mb-20 animate-section">
+            <h2 class="text-xl mb-12 tracking-widest text-center">V. Gợi Ý Prompt Hình Ảnh 3D</h2>
+            <div class="space-y-12">
+                <div class="museum-plaque">
+                    <span class="text-xs uppercase tracking-widest text-stone-500 mb-2 block">Prompt 01: Ngoại Thất Chính</span>
+                    <p class="italic text-stone-700 font-serif leading-relaxed">
+                        "A majestic Beaux-Arts mansion facade with perfect symmetry, white limestone walls, intricate stone carvings, Ionic columns. Grand entrance with a large arched doorway. Tall windows with ornate bronze frames. Mansard roof with dark grey slate tiles. Lush parterre gardens in foreground. Professional architectural photography, sunset lighting, golden hour, 8k resolution, elegant and regal atmosphere."
+                    </p>
+                </div>
+                <div class="museum-plaque">
+                    <span class="text-xs uppercase tracking-widest text-stone-500 mb-2 block">Prompt 02: Hồ Bơi Vô Cực</span>
+                    <p class="italic text-stone-700 font-serif leading-relaxed">
+                        "Luxury infinity pool at the rear of a Beaux-Arts mansion, overflowing into a natural stream. Classical stone statues of lions spitting water into the pool. Large floor-to-ceiling glass walls framed by classical columns. Lush greenery and misty natural forest background. Soft morning light, hyper-realistic, rich textures of marble and stone, serene philosophy vibes."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Bảng Dự Toán Chi Tiết -->
+        <section class="mb-20 animate-section">
+            <h2 class="text-xl mb-12 tracking-widest text-center">VI. Bảng Dự Toán Chi Tiết</h2>
+            <div class="overflow-x-auto">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="text-left">Hạng Mục Công Việc</th>
+                            <th class="text-right">Ước Tính Ngân Sách (VNĐ)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Xây dựng phần thô & Kết cấu</td>
+                            <td class="text-right">6.000.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>2. Kiến trúc ngoại thất & Phù điêu</td>
+                            <td class="text-right">3.500.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>3. Hệ thống kính kịch trần & Khung đồng</td>
+                            <td class="text-right">1.800.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>4. Hoàn thiện nội thất & Đồ gỗ</td>
+                            <td class="text-right">4.000.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>5. Hồ bơi vô cực & Cảnh quan Pháp</td>
+                            <td class="text-right">1.500.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>6. Hệ thống Smart Home tích hợp</td>
+                            <td class="text-right">1.200.000.000</td>
+                        </tr>
+                        <tr class="bg-[#E8E4D9] font-bold">
+                            <td>TỔNG CỘNG</td>
+                            <td class="text-right">18.000.000.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 7. Kết Luận -->
+        <section class="mb-32 animate-section">
+            <div class="double-border text-center bg-white shadow-sm">
+                <h2 class="text-xl mb-8 tracking-widest">VII. Kết Luận & Thông Điệp</h2>
+                <div class="max-w-2xl mx-auto">
+                    <p class="mb-8 italic text-lg leading-relaxed">
+                        The Saigon Mansion là minh chứng cho sự trường tồn của các giá trị cổ điển khi được đặt trong bối cảnh đương đại. Dự án không chỉ đáp ứng hoàn hảo về mặt thẩm mỹ Beaux-Arts khắt khe mà còn mang lại một giá trị sống chiều sâu thông qua 7 Viên Ngọc Triết Học. Với sự kết hợp tài tình giữa các mảng kính lớn hiện đại và hệ thống cột trụ uy nghi, dinh thự này sẽ trở thành một di sản kiến trúc thực thụ bên dòng suối hiền hòa.
+                    </p>
+                    <div class="ornament">❦</div>
+                    <p class="uppercase tracking-[0.4em] text-xs mt-4">Di Sản Vĩnh Cửu - Giá Trị Vượt Thời Gian</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Custom Micro-interactions Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.animate-section');
+            
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                section.style.opacity = "0";
+                section.style.transform = "translateY(30px)";
+                section.style.transition = "all 0.8s ease-out";
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>
