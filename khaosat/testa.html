@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1a2b3c',
+                        charcoal: '#333333',
+                        silver: '#e5e7eb',
+                        success: '#065f46',
+                        warning: '#d97706',
+                        danger: '#991b1b',
+                    },
+                    fontFamily: {
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Times New Roman', serif; }
+        .justify-text { text-align: justify; }
+        .border-navy { border: 1px solid #1a2b3c; }
+    </style>
+</head>
+<body class="bg-gray-50 text-charcoal min-h-screen p-4 md:p-8">
 
+    <div class="max-w-5xl mx-auto bg-white shadow-2xl p-6 md:p-12 border border-gray-200">
+        
+        <!-- Header -->
+        <header class="flex justify-between items-center border-b-2 border-navy pb-6 mb-8">
+            <div>
+                <h1 class="text-2xl font-bold text-navy">AI BẤT ĐỘNG SẢN</h1>
+                <p class="text-sm text-gray-500">www.phamhoanganhtokens.com</p>
+            </div>
+            <div class="text-right text-sm font-semibold text-navy">
+                <p>Tháng 06/2026</p>
+                <p>Mã báo cáo: INV-2026-Q7-001</p>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="mb-10 text-center">
+            <h2 class="text-3xl font-bold text-navy uppercase mb-4">BÁO CÁO THẨM ĐỊNH ĐẦU TƯ BẤT ĐỘNG SẢN</h2>
+            <div class="inline-grid grid-cols-1 md:grid-cols-3 gap-4 bg-gray-100 p-4 border-navy border">
+                <div class="px-4"><span class="font-bold">Tài sản:</span> Căn hộ 2PN, Quận 7</div>
+                <div class="px-4"><span class="font-bold">Giá:</span> 3,2 tỷ VNĐ</div>
+                <div class="px-4"><span class="font-bold">Trạng thái:</span> <span class="bg-green-100 text-success px-2 py-0.5 rounded text-sm uppercase">Đã có sổ hồng</span></div>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section class="bg-blue-50 p-6 border-l-4 border-navy mb-10">
+            <h3 class="font-bold text-xl uppercase mb-3 text-navy">Tóm Tắt Thực Thi</h3>
+            <p class="justify-text leading-relaxed">
+                Cơ hội đầu tư vào căn hộ 2 phòng ngủ tại Quận 7 với mức giá 3,2 tỷ VNĐ ghi nhận sự ổn định về mặt pháp lý và tiềm năng tăng trưởng trung hạn. Tuy nhiên, hiệu suất dòng tiền trong năm đầu tiên gặp áp lực lớn do chênh lệch giữa lãi suất vay (8%) và tỷ suất vốn hóa (Cap Rate ~4,78%). Chiến lược đầu tư này tập trung vào gia tăng giá trị vốn hơn là dòng tiền hàng tháng.
+            </p>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <!-- Property Info -->
+            <div class="border p-6 shadow-sm">
+                <h4 class="font-bold uppercase border-b border-navy pb-2 mb-4">Thông tin giả định</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><strong>Tăng trưởng BĐS:</strong> 5% - 8%/năm</li>
+                    <li><strong>Tỷ lệ lấp đầy:</strong> 92%</li>
+                    <li><strong>Tăng giá thuê:</strong> 3 - 5%/năm</li>
+                    <li><strong>Chi phí vận hành:</strong> 0,5% /năm</li>
+                    <li><strong>Lãi suất vay:</strong> 8%/năm (Kỳ hạn 20 năm)</li>
+                </ul>
+            </div>
+
+            <!-- Market Analysis -->
+            <div class="border p-6 shadow-sm">
+                <h4 class="font-bold uppercase border-b border-navy pb-2 mb-4">Đánh giá thị trường</h4>
+                <p class="text-sm justify-text leading-relaxed">
+                    Hạ tầng khu vực Quận 7 với hầm chui Nguyễn Văn Linh – Nguyễn Hữu Thọ đã hoàn thiện. Sự kết nối với Thủ Thiêm thông qua cầu Thủ Thiêm 4 tạo ra dư địa tăng giá đáng kể cho phân khúc căn hộ cao cấp.
+                </p>
+            </div>
+        </div>
+
+        <!-- Financial Table -->
+        <section class="mb-10 overflow-x-auto">
+            <h3 class="font-bold text-xl uppercase mb-4 text-navy">Bảng Phân Tích Tài Chính</h3>
+            <table class="w-full border-collapse border border-gray-300 text-sm">
+                <thead>
+                    <tr class="bg-navy text-white uppercase text-left">
+                        <th class="p-3">Chỉ số</th>
+                        <th class="p-3">Thận trọng</th>
+                        <th class="p-3">Cơ sở</th>
+                        <th class="p-3">Lạc quan</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-3 font-semibold">Tỷ suất IRR</td>
+                        <td class="p-3">4,88%</td>
+                        <td class="p-3">10,77%</td>
+                        <td class="p-3">15,43%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-3 font-semibold">Cap Rate (Năm 1)</td>
+                        <td class="p-3">4,22%</td>
+                        <td class="p-3">4,78%</td>
+                        <td class="p-3">5,01%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-3 font-semibold">Cash-on-Cash</td>
+                        <td class="p-3">-8,77%</td>
+                        <td class="p-3">-7,02%</td>
+                        <td class="p-3">-6,31%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="mb-10">
+            <h3 class="font-bold text-xl uppercase mb-4 text-navy">Đối chiếu Đầu tư</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="p-4 border text-center"><div class="text-xs uppercase">Tiết kiệm</div><div class="font-bold">5.5%</div></div>
+                <div class="p-4 border text-center"><div class="text-xs uppercase">Vàng</div><div class="font-bold">Biến động</div></div>
+                <div class="p-4 border text-center bg-gray-100"><div class="text-xs uppercase">Căn hộ (IRR)</div><div class="font-bold text-navy">10.77%</div></div>
+                <div class="p-4 border text-center"><div class="text-xs uppercase">Trái phiếu</div><div class="font-bold">7%</div></div>
+            </div>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="p-8 border-4 border-warning bg-orange-50 text-center">
+            <h3 class="text-3xl font-bold uppercase text-warning mb-4">Khuyến nghị: CÂN NHẮC</h3>
+            <p class="max-w-2xl mx-auto justify-text leading-relaxed font-serif">
+                Pháp lý sạch và giá mua tốt là ưu điểm lớn. Tuy nhiên, tình trạng âm dòng tiền yêu cầu nhà đầu tư phải có nguồn thu nhập ổn định khác để bù đắp chi phí tài chính trong ngắn hạn trước khi gặt hái lợi nhuận từ tăng giá vốn dài hạn.
+            </p>
+            <button onclick="window.print()" class="mt-6 bg-navy text-white px-8 py-3 font-bold hover:bg-gray-800 transition">IN BÁO CÁO (PDF)</button>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-12 pt-6 border-t border-gray-300 text-center text-xs text-gray-400 italic">
+            <p>Báo cáo này dựa trên các dữ liệu thị trường giả định tháng 06/2026. Số liệu chỉ mang tính chất tham khảo cho việc ra quyết định cá nhân.</p>
+            <p class="mt-2 font-bold uppercase tracking-widest">Professional Investment Advisory</p>
+        </footer>
+    </div>
+
+</body>
+</html>
