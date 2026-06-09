@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư Bất Động Sản | AI Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1a2b3c',
+                        charcoal: '#374151',
+                        success: '#065f46',
+                    },
+                    fontFamily: {
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Times New Roman', serif; }
+        .justify-text { text-align: justify; }
+        .table-striped tbody tr:nth-child(odd) { background-color: #f9fafb; }
+        @media print {
+            .no-print { display: none; }
+            body { padding: 0; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-charcoal leading-relaxed">
+
+    <!-- Header Section -->
+    <header class="bg-white border-b border-gray-200 py-6 px-8 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold text-navy uppercase">AI Bất Động Sản</h1>
+                <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">www.phamhoanganhtokens.com</p>
+            </div>
+            <div class="text-right">
+                <p id="currentDate" class="text-sm font-semibold"></p>
+                <button onclick="window.print()" class="no-print mt-2 bg-navy text-white px-4 py-1 text-sm rounded hover:bg-opacity-90 transition">In Báo Cáo (PDF)</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto py-12 px-6">
+        
+        <!-- Hero/Title Section -->
+        <section class="mb-16 border-b-2 border-navy pb-8">
+            <h1 class="text-4xl font-bold text-navy uppercase mb-6">BÁO CÁO THẨM ĐỊNH ĐẦU TƯ BẤT ĐỘNG SẢN</h1>
+            <div class="grid md:grid-cols-3 gap-6 bg-white p-6 border border-gray-200 shadow-sm">
+                <div><span class="block text-xs uppercase font-bold text-gray-500">Tài sản</span>Hẻm 156/46D Nguyễn Thị Thập, Q7</div>
+                <div><span class="block text-xs uppercase font-bold text-gray-500">Pháp lý</span>Sổ hồng riêng</div>
+                <div><span class="block text-xs uppercase font-bold text-gray-500">Trạng thái</span><span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold uppercase">Đang phân tích</span></div>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section class="bg-blue-50 p-8 mb-16 border-l-4 border-navy">
+            <h2 class="text-2xl font-bold text-navy mb-4 uppercase">1. Tóm tắt thực thi</h2>
+            <p class="justify-text text-lg">Dự án đầu tư tại hẻm 156/46D Nguyễn Thị Thập là một cơ hội đặc biệt mang tính chất kinh doanh chênh lệch giá (Arbitrage) dựa trên quy hoạch hạ tầng của nhà nước. Với tổng mức đầu tư ban đầu 6,8 tỷ VNĐ, nhà đầu tư thâu tóm lô đất 225m². Đặc điểm cốt lõi của thương vụ này là "sự kiện thanh khoản" ngay trong năm đầu tiên khi nhận đền bù giải tỏa. Dòng tiền này giúp triệt tiêu rủi ro vốn gốc, tạo ra tỷ lệ hoàn vốn cực nhanh dưới 1 năm và IRR từ 23,67% đến 99,05%.</p>
+        </section>
+
+        <!-- Main Content -->
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+            <!-- Property Info -->
+            <section>
+                <h3 class="text-xl font-bold uppercase border-b border-gray-300 pb-2 mb-4">Thông tin & Giả định</h3>
+                <ul class="space-y-4">
+                    <li class="flex justify-between border-b border-dashed border-gray-300 pb-2"><span>Diện tích tổng</span><strong>225 m²</strong></li>
+                    <li class="flex justify-between border-b border-dashed border-gray-300 pb-2"><span>Quy hoạch lộ giới</span><strong>200 m²</strong></li>
+                    <li class="flex justify-between border-b border-dashed border-gray-300 pb-2"><span>Tài sản thặng dư</span><strong>25 m²</strong></li>
+                    <li class="flex justify-between border-b border-dashed border-gray-300 pb-2"><span>Tăng trưởng tài sản</span><strong>8% - 15% / năm</strong></li>
+                </ul>
+            </section>
+            
+            <!-- Financial Summary -->
+            <section>
+                <h3 class="text-xl font-bold uppercase border-b border-gray-300 pb-2 mb-4">Tóm tắt IRR (5 năm)</h3>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="border p-4 text-center">
+                        <span class="block text-xs uppercase text-gray-500">Thận trọng</span>
+                        <strong class="text-xl">23,67%</strong>
+                    </div>
+                    <div class="border p-4 text-center bg-navy text-white">
+                        <span class="block text-xs uppercase text-blue-200">Cơ sở</span>
+                        <strong class="text-xl">58,71%</strong>
+                    </div>
+                    <div class="border p-4 text-center">
+                        <span class="block text-xs uppercase text-gray-500">Lạc quan</span>
+                        <strong class="text-xl">99,05%</strong>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Financial Analysis Table -->
+        <section class="mb-16 overflow-x-auto">
+            <h3 class="text-xl font-bold uppercase mb-6">Bảng Phân Tích Tài Chính Chi Tiết</h3>
+            <table class="w-full text-sm border border-gray-200 table-striped">
+                <thead class="bg-navy text-white">
+                    <tr>
+                        <th class="p-4 text-left">Chỉ số tài chính</th>
+                        <th class="p-4">Thận trọng</th>
+                        <th class="p-4">Cơ sở</th>
+                        <th class="p-4">Lạc quan</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr><td class="p-4 text-left">Giá trị đền bù (200m²)</td><td class="p-4">7,0 tỷ</td><td class="p-4">10,0 tỷ</td><td class="p-4">13,0 tỷ</td></tr>
+                    <tr><td class="p-4 text-left">NOI</td><td class="p-4">51tr</td><td class="p-4">75tr</td><td class="p-4">114tr</td></tr>
+                    <tr><td class="p-4 text-left">Cap Rate</td><td class="p-4">0,75%</td><td class="p-4">1,11%</td><td class="p-4">1,68%</td></tr>
+                    <tr><td class="p-4 text-left">Thời gian hoàn vốn</td><td class="p-4">0,96 Năm</td><td class="p-4">0,67 Năm</td><td class="p-4">0,52 Năm</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Market & Risk -->
+        <section class="mb-16 grid md:grid-cols-2 gap-8">
+            <div class="border p-6 shadow-sm bg-white">
+                <h3 class="text-lg font-bold mb-4 uppercase text-navy">Phân tích Thị trường</h3>
+                <p class="justify-text text-sm">Trục Nguyễn Thị Thập đang hưởng lợi từ hạ tầng Cầu Thủ Thiêm 4 và lộ trình mở rộng hẻm. Tâm lý đầu tư đang tập trung vào các sản phẩm pháp lý chuẩn và có khả năng chống chịu lạm phát.</p>
+            </div>
+            <div class="border p-6 shadow-sm bg-white">
+                <h3 class="text-lg font-bold mb-4 uppercase text-navy">Rủi ro</h3>
+                <ul class="list-disc pl-4 text-sm space-y-2">
+                    <li>Rủi ro lãi suất thả nổi (9.5% - 11%).</li>
+                    <li>Rủi ro thanh khoản nếu quy hoạch bị chậm tiến độ.</li>
+                    <li>Rủi ro biến động đơn giá đền bù từ Chính phủ.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Benchmark Table -->
+        <section class="mb-16">
+            <h3 class="text-xl font-bold uppercase mb-6">Đối chuẩn đầu tư so sánh</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm border">
+                    <thead class="bg-gray-100">
+                        <tr><th class="p-4">Kênh đầu tư</th><th class="p-4">Lợi tức cho thuê</th><th class="p-4">Tiềm năng tăng trưởng</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t">
+                            <td class="p-4 font-semibold">Căn hộ hiện hữu</td><td class="p-4">4,5% - 5,2%</td><td class="p-4">2% - 4%</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="p-4 font-semibold">Nhà hẻm/CHDV</td><td class="p-4">5,0% - 6,0%</td><td class="p-4">5% - 8%</td>
+                        </tr>
+                        <tr class="border-t bg-green-50">
+                            <td class="p-4 font-bold text-success">Dự án 156/46D (Analyzed)</td><td class="p-4 font-bold text-success">0,75% - 1,68%</td><td class="p-4 font-bold text-success">IRR lên đến 99%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="bg-success text-white p-12 text-center rounded-lg shadow-xl mb-12">
+            <h3 class="text-3xl font-bold uppercase mb-6">Khuyến nghị đầu tư</h3>
+            <p class="text-xl mb-8 max-w-2xl mx-auto italic">Thương vụ chênh lệch giá (Arbitrage) với biên độ an toàn tuyệt đối nhờ quy hoạch. Pháp lý sạch, hoàn vốn nhanh, rủi ro danh mục về 0 sau giải tỏa.</p>
+            <div class="text-6xl font-black uppercase tracking-widest">NÊN MUA</div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-xs text-gray-400 mt-12 pt-8 border-t border-gray-200">
+            <p class="mb-4">Disclaimer: Báo cáo này dựa trên các dữ liệu quy hoạch sơ bộ. Nhà đầu tư nên tự kiểm chứng pháp lý trước khi xuống tiền.</p>
+            <div class="uppercase tracking-widest font-bold text-navy opacity-50">Professional Investment Advisory</div>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('currentDate').innerText = new Date().toLocaleDateString('vi-VN', {
+            year: 'numeric', month: 'long', day: 'numeric'
+        });
+    </script>
+</body>
+</html>
