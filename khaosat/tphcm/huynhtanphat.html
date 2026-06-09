@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư | AI Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: '#1a2b3c',
+                        charcoal: '#4a4a4a',
+                        silver: '#e2e8f0',
+                        amber: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            .no-print { display: none; }
+        }
+        body { background-color: #f9f9f9; color: #1a2b3c; }
+        .report-section { border-bottom: 1px solid #e2e8f0; padding-bottom: 2rem; margin-bottom: 2rem; }
+        .justify-text { text-align: justify; }
+    </style>
+</head>
+<body class="font-serif antialiased leading-relaxed">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-navy/20 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold uppercase tracking-tight text-navy">AI Bất Động Sản</h1>
+                <p class="text-xs text-charcoal uppercase tracking-widest">www.phamhoanganhtokens.com</p>
+            </div>
+            <div class="text-right">
+                <p id="current-date" class="text-sm font-semibold"></p>
+                <button onclick="window.print()" class="no-print mt-2 px-4 py-1 text-xs bg-navy text-white hover:bg-gray-800 transition shadow-lg">
+                    In Báo Cáo (PDF)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10 bg-white shadow-xl my-8">
+        
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-navy uppercase mb-6">Báo Cáo Thẩm Định Đầu Tư Bất Động Sản</h2>
+            <div class="inline-grid grid-cols-1 md:grid-cols-3 gap-6 text-sm border border-navy/10 p-6 bg-slate-50">
+                <div><p class="font-bold">Tài sản:</p><p>Villa mini – Huỳnh Tấn Phát</p></div>
+                <div><p class="font-bold">Mã ID:</p><p>HHP-Q7-001</p></div>
+                <div><p class="font-bold">Trạng thái:</p><span class="inline-block px-2 py-1 bg-amber/20 text-amber text-xs font-bold rounded">CÂN NHẮC</span></div>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section class="report-section bg-slate-50 p-8 rounded-lg border-l-4 border-navy">
+            <h3 class="text-xl font-bold mb-4 uppercase">1. Tóm tắt thực thi</h3>
+            <p class="justify-text">Dự án đầu tư tập trung vào phân khúc bất động sản nghỉ dưỡng đô thị với sản phẩm là căn villa mini diện tích 155 m2 tại khu vực Huỳnh Tấn Phát, Nhà Bè. Tài sản sở hữu lợi thế về thiết kế tối ưu cho phân khúc khách hàng cao tuổi và gia đình đa thế hệ, cùng pháp lý hoàn thiện. Tuy nhiên, về mặt tài chính, dự án hiện đang ở trạng thái đòn bẩy âm khi tỷ suất vốn hóa thấp hơn lãi suất vay ngân hàng. Hiệu quả đầu tư tổng thể phụ thuộc hoàn toàn vào triển vọng tăng trưởng giá vốn thay vì dòng tiền hàng năm.</p>
+        </section>
+
+        <!-- Main Content -->
+        <section class="report-section grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-xl font-bold mb-4 uppercase">2. Giả định đầu tư</h3>
+                <ul class="space-y-3 list-disc pl-5">
+                    <li>Thời gian nắm giữ: 05 năm</li>
+                    <li>Vốn ban đầu: 6.000.000.000 VNĐ</li>
+                    <li>Tăng giá mục tiêu: 10%/năm</li>
+                    <li>Lấp đầy cho thuê: 85%</li>
+                    <li>Lãi suất vay dự kiến: 9.5%/năm</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4 uppercase">3. Phân tích rủi ro</h3>
+                <div class="space-y-4">
+                    <div class="p-4 bg-red-50 border border-red-100">
+                        <p class="font-bold text-red-800">Đòn bẩy âm (Negative Leverage)</p>
+                        <p class="text-sm">Áp lực trả lãi vay cao hơn dòng tiền thuần (NOI).</p>
+                    </div>
+                    <div class="p-4 bg-orange-50 border border-orange-100">
+                        <p class="font-bold text-orange-800">Thanh khoản trung bình</p>
+                        <p class="text-sm">Tổng giá trị lớn hạn chế tệp khách hàng.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Analysis -->
+        <section class="report-section">
+            <h3 class="text-xl font-bold mb-6 uppercase">4. Bảng phân tích tài chính</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-navy text-white">
+                            <th class="p-4">Chỉ số</th>
+                            <th class="p-4">Thận trọng</th>
+                            <th class="p-4">Cơ sở</th>
+                            <th class="p-4">Lạc quan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-silver">
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-4 font-bold">Cap Rate</td>
+                            <td class="p-4">1.78%</td>
+                            <td class="p-4">2.50%</td>
+                            <td class="p-4">3.32%</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-4 font-bold">IRR (5 năm)</td>
+                            <td class="p-4">4.36%</td>
+                            <td class="p-4">12.16%</td>
+                            <td class="p-4">19.27%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Benchmarking -->
+        <section class="report-section">
+            <h3 class="text-xl font-bold mb-6 uppercase">5. Đối chuẩn đầu tư</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="border p-4 text-center">
+                    <p class="text-xs uppercase text-charcoal">Tiền gửi</p>
+                    <p class="text-xl font-bold">5-6%</p>
+                </div>
+                <div class="border p-4 text-center">
+                    <p class="text-xs uppercase text-charcoal">Vàng</p>
+                    <p class="text-xl font-bold">Biến động</p>
+                </div>
+                <div class="border p-4 text-center">
+                    <p class="text-xs uppercase text-charcoal">Cổ phiếu</p>
+                    <p class="text-xl font-bold">8-12%</p>
+                </div>
+                <div class="border p-4 text-center bg-navy text-white">
+                    <p class="text-xs uppercase">BĐS Villa</p>
+                    <p class="text-xl font-bold">12.16%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="bg-amber p-10 text-white text-center">
+            <h3 class="text-2xl font-bold uppercase mb-4">Khuyến nghị đầu tư: CÂN NHẮC</h3>
+            <p class="max-w-2xl mx-auto italic">
+                Nếu nhà đầu tư sử dụng tiền mặt 100%, đây là tài sản trú ẩn an toàn. Tuyệt đối không sử dụng đòn bẩy nếu không có dòng tiền dự phòng dồi dào. Chỉ thực hiện giao dịch khi đàm phán được mức giá tối ưu từ 5.2 - 5.5 tỷ VNĐ.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-12 pt-8 border-t border-navy/20 text-center text-xs text-charcoal">
+            <p class="font-bold uppercase tracking-widest mb-2">Báo cáo phân tích chuyên nghiệp</p>
+            <p class="max-w-xl mx-auto italic">Tài liệu này được soạn thảo dựa trên các dữ liệu thị trường giả định và mang tính chất tham khảo. Không cấu thành tư vấn đầu tư chính thức. Người đọc tự chịu trách nhiệm với mọi quyết định tài chính.</p>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('current-date').innerText = new Date().toLocaleDateString('vi-VN');
+    </script>
+</body>
+</html>
