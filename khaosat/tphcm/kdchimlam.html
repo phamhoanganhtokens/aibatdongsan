@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+        
+        body {
+            font-family: 'Lora', serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #1a2b3c;
+        }
+        .text-justify { text-align: justify; }
+        .border-premium { border: 1px solid #d1d5db; }
+        .nav-text { font-family: sans-serif; }
+        .print-only { display: none; }
+        @media print {
+            .no-print { display: none; }
+            .print-only { display: block; }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1a2b3c',
+                        charcoal: '#374151',
+                        silver: '#e5e7eb',
+                        amber: '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="p-4 md:p-10 lg:px-24">
+
+    <!-- Header -->
+    <header class="flex flex-col md:flex-row justify-between items-center pb-8 border-b border-gray-300 mb-10">
+        <div>
+            <h1 class="text-3xl font-bold text-navy">AI Bất Động Sản</h1>
+            <p class="text-sm nav-text text-gray-500 uppercase tracking-widest">www.phamhoanganhtokens.com</p>
+        </div>
+        <div class="text-right mt-4 md:mt-0">
+            <p class="text-sm nav-text font-semibold text-gray-700" id="current-date"></p>
+            <button onclick="window.print()" class="no-print mt-2 px-4 py-2 bg-navy text-white text-sm hover:bg-gray-800 transition-colors">
+                In Báo Cáo (PDF)
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-navy mb-6">BÁO CÁO THẨM ĐỊNH ĐẦU TƯ BẤT ĐỘNG SẢN</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white p-6 border-premium shadow-sm">
+                <p class="text-xs uppercase text-gray-500 font-bold">Property ID</p>
+                <p class="text-xl font-bold">HL-TS-001</p>
+            </div>
+            <div class="bg-white p-6 border-premium shadow-sm">
+                <p class="text-xs uppercase text-gray-500 font-bold">Location</p>
+                <p class="text-xl font-bold">Him Lam Trung Sơn</p>
+            </div>
+            <div class="bg-white p-6 border-premium shadow-sm">
+                <p class="text-xs uppercase text-gray-500 font-bold">Status</p>
+                <span class="inline-block mt-1 px-3 py-1 bg-green-100 text-green-800 text-sm font-bold rounded-full border border-green-200">Sổ Hồng Riêng</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="bg-gray-100 p-8 mb-12 border-l-4 border-navy">
+        <h3 class="text-2xl font-bold mb-4">1. Tóm Tắt Thực Thi</h3>
+        <p class="text-justify leading-relaxed">
+            Báo cáo này trình bày phân tích tài chính chi tiết cho cơ hội đầu tư bất động sản tại Khu dân cư Him Lam Trung Sơn, một khu vực cao cấp và có giá trị thương mại cao. Tài sản hiện được định giá ở mức 56.000.000.000 VNĐ. Điểm sáng lớn nhất của tài sản là tình trạng pháp lý minh bạch, đã có "Sổ hồng riêng", giúp loại bỏ hoàn toàn rủi ro về quyền sở hữu. Tuy nhiên, dưới góc độ tài chính và cấu trúc vốn hiện tại (vay 50% với lãi suất 9.5%), dự án đang rơi vào tình trạng đòn bẩy tài chính âm. Lợi suất cho thuê không đủ để bù đắp chi phí lãi vay, dẫn đến dòng tiền thuần âm trong tất cả các kịch bản. Tính khả thi của khoản đầu tư này phụ thuộc hoàn toàn vào sự tăng giá trị vốn hóa trong tương lai.
+        </p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-12">
+        <!-- Assumptions -->
+        <div class="bg-white p-8 border-premium shadow-sm">
+            <h3 class="text-2xl font-bold mb-6 border-b border-gray-200 pb-2">2. Các Giả Định</h3>
+            <ul class="space-y-4">
+                <li class="flex justify-between"><strong>Tài sản:</strong> <span>Khu dân cư Him Lam Trung Sơn</span></li>
+                <li class="flex justify-between"><strong>Định giá:</strong> <span>56.000.000.000 VNĐ</span></li>
+                <li class="flex justify-between"><strong>Cấu trúc vốn (LTV):</strong> <span>50%</span></li>
+                <li class="flex justify-between"><strong>Chi phí nợ:</strong> <span>9.5% / năm</span></li>
+                <li class="flex justify-between"><strong>Pháp lý:</strong> <span>Sổ hồng riêng</span></li>
+            </ul>
+        </div>
+
+        <!-- Market & Risk -->
+        <div class="bg-white p-8 border-premium shadow-sm">
+            <h3 class="text-2xl font-bold mb-6 border-b border-gray-200 pb-2">4. Phân Tích Rủi Ro</h3>
+            <p class="text-justify leading-relaxed">
+                Rủi ro chính nằm ở sự mất cân bằng giữa thu nhập vận hành và nghĩa vụ nợ. Với mức Cap Rate thấp hơn lãi suất vay, tài sản tạo ra dòng tiền âm hàng năm, đòi hỏi nhà đầu tư phải có tiềm lực tài chính để gánh vác các nghĩa vụ thanh toán lãi vay định kỳ.
+            </p>
+        </div>
+    </div>
+
+    <!-- Financial Table -->
+    <section class="mb-12 overflow-x-auto">
+        <h3 class="text-2xl font-bold mb-6">3. Chỉ Số Tài Chính</h3>
+        <table class="w-full border-collapse border border-gray-300">
+            <thead>
+                <tr class="bg-navy text-white">
+                    <th class="p-4 text-left">Chỉ số đo lường</th>
+                    <th class="p-4">Thận trọng</th>
+                    <th class="p-4">Cơ sở</th>
+                    <th class="p-4">Lạc quan</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+                <tr class="hover:bg-gray-50 text-center"><td class="text-left p-4">NOI hàng năm</td><td>1.07 tỷ</td><td>1.62 tỷ</td><td>2.28 tỷ</td></tr>
+                <tr class="hover:bg-gray-50 text-center"><td class="text-left p-4">Cap Rate</td><td>1.91%</td><td>2.89%</td><td>4.07%</td></tr>
+                <tr class="hover:bg-gray-50 text-center"><td class="text-left p-4">Cash-on-Cash</td><td>-6.91%</td><td>-5.07%</td><td>-2.86%</td></tr>
+                <tr class="hover:bg-gray-50 text-center font-bold"><td class="text-left p-4">IRR</td><td>-2.82%</td><td>4.29%</td><td>11.02%</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Recommendation -->
+    <section class="bg-amber p-10 text-center text-white mb-12 shadow-xl">
+        <h3 class="text-3xl font-bold mb-4 uppercase">Khuyến Nghị Đầu Tư</h3>
+        <p class="text-xl italic font-bold">CÂN NHẮC</p>
+        <p class="mt-4 max-w-2xl mx-auto text-justify">
+            Tài sản này chỉ khả thi nếu sử dụng 100% vốn tự có. Việc vay 50% với lãi suất 9.5% dẫn đến đòn bẩy âm, khiến nhà đầu tư chịu áp lực dòng tiền lớn. Khuyến nghị chỉ mua nếu có mục tiêu trú ẩn tài sản dài hạn.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 border-t border-gray-300 pt-8 mt-10">
+        <p class="text-sm">Báo cáo được thực hiện bởi bộ phận Phân tích Đầu tư.</p>
+        <p class="text-xs mt-2 italic">Thông tin mang tính chất tham khảo, dựa trên các giả định thị trường tại thời điểm lập báo cáo.</p>
+        <div class="mt-6 opacity-20 uppercase tracking-[0.5em] font-bold">Professional Investment Advisory</div>
+    </footer>
+
+    <script>
+        document.getElementById('current-date').innerText = new Date().toLocaleDateString('vi-VN', {
+            year: 'numeric', month: 'long', day: 'numeric'
+        });
+    </script>
+</body>
+</html>
