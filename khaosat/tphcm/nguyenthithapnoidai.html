@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1a2b3c',
+                        charcoal: '#333333',
+                        highlight: '#fdfbf7',
+                        amberCustom: '#f59e0b',
+                    },
+                    fontFamily: {
+                        report: ['"Times New Roman"', 'Times', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Times New Roman', serif; }
+        .justified { text-align: justify; }
+        .table-striped tbody tr:nth-child(odd) { background-color: #f3f4f6; }
+        @media print { .no-print { display: none; } }
+    </style>
+</head>
+<body class="bg-gray-100 text-charcoal p-4 md:p-10 font-report">
+
+    <div class="max-w-5xl mx-auto bg-white shadow-2xl p-8 md:p-16 border border-gray-200">
+        <!-- Header -->
+        <header class="flex justify-between items-start border-b-2 border-navy pb-6 mb-8">
+            <div>
+                <h1 class="text-3xl font-bold text-navy">AI BẤT ĐỘNG SẢN</h1>
+                <p class="text-sm text-gray-500 italic">www.phamhoanganhtokens.com</p>
+            </div>
+            <div class="text-right">
+                <p class="font-bold">Ngày báo cáo</p>
+                <p id="currentDate" class="text-gray-600"></p>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="mb-12">
+            <h2 class="text-4xl font-bold text-navy mb-4 border-l-4 border-navy pl-4">BÁO CÁO THẨM ĐỊNH ĐẦU TƯ BẤT ĐỘNG SẢN</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-gray-50 p-6 rounded border">
+                <div><span class="block text-xs uppercase text-gray-500">Mã Tài Sản</span><span class="font-bold">BĐS-2024-NT</span></div>
+                <div><span class="block text-xs uppercase text-gray-500">Vị Trí</span><span class="font-bold">Nguyễn Thập, Quận 7</span></div>
+                <div><span class="block text-xs uppercase text-gray-500">Trạng Thái</span><span class="inline-block px-2 py-1 bg-green-100 text-green-800 rounded text-sm">Đã Kiểm Định</span></div>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section class="bg-blue-50 p-8 rounded-lg mb-10 border-l-8 border-blue-900">
+            <h3 class="text-2xl font-bold text-navy mb-4">1. Tóm Tắt Thực Thi</h3>
+            <p class="justified leading-relaxed">
+                Báo cáo này đánh giá cơ hội đầu tư vào sản phẩm biệt thự tọa lạc tại khu vực trung tâm, mặt tiền đường Nguyễn Thập nối dài. Với diện tích 320 m² và mức giá chào bán 16 tỷ VNĐ, đây là một tài sản có vị trí chiến lược. Điểm ưu việt nhất của bất động sản này là tính pháp lý minh bạch (“nhà chính chủ một đời”), tạo lợi thế cạnh tranh cực lớn trong bối cảnh thị trường ưu tiên sự an toàn. Tuy nhiên, phân tích tài chính cho thấy thách thức về dòng tiền âm trong ngắn hạn do lãi suất vay cao, đòi hỏi nhà đầu tư phải dựa vào tiềm năng tăng giá vốn (capital appreciation) trong dài hạn.
+            </p>
+        </section>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-10">
+            <!-- Assumptions -->
+            <section>
+                <h3 class="text-xl font-bold border-b border-gray-300 pb-2 mb-4">2. Các Giả Định</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Thận trọng:</strong> Thuê 40tr, trống 10%, lãi 11%, tăng giá 2%/năm.</li>
+                    <li><strong>Cơ sở:</strong> Thuê 50tr, trống 5%, lãi 10%, tăng giá 5%/năm.</li>
+                    <li><strong>Lạc quan:</strong> Thuê 65tr, trống 3%, lãi 10%, tăng giá 8%/năm.</li>
+                    <li><strong>Cấu trúc vốn:</strong> Đòn bẩy 50% (8 tỷ VNĐ).</li>
+                </ul>
+            </section>
+            
+            <!-- Benchmarking -->
+            <section>
+                <h3 class="text-xl font-bold border-b border-gray-300 pb-2 mb-4">5. Đối Chuẩn Đầu Tư</h3>
+                <table class="w-full text-sm border-collapse border border-gray-200">
+                    <tr class="bg-gray-100"><th>Kênh đầu tư</th><th>Hiệu suất</th></tr>
+                    <tr><td class="p-2 border">Tiền gửi tiết kiệm</td><td class="p-2 border">5-6%/năm</td></tr>
+                    <tr><td class="p-2 border">BĐS này (Cơ sở)</td><td class="p-2 border">5.56%/năm (IRR)</td></tr>
+                </table>
+            </section>
+        </div>
+
+        <!-- Financial Table -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold text-navy mb-6">3. Chỉ Số Tài Chính</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full table-striped border border-gray-300">
+                    <thead>
+                        <tr class="bg-navy text-white text-left">
+                            <th class="p-3">Chỉ số</th>
+                            <th class="p-3">Thận trọng</th>
+                            <th class="p-3">Cơ sở</th>
+                            <th class="p-3">Lạc quan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="p-3 font-semibold">NOI Năm 1</td><td>367.2M</td><td>513.0M</td><td>696.0M</td></tr>
+                        <tr><td class="p-3 font-semibold">Cap Rate</td><td>2.30%</td><td>3.21%</td><td>4.35%</td></tr>
+                        <tr><td class="p-3 font-semibold">Cash-on-Cash</td><td>-7.50%</td><td>-4.97%</td><td>-2.02%</td></tr>
+                        <tr><td class="p-3 font-semibold">IRR 5 năm</td><td>-2.91%</td><td>5.56%</td><td>13.64%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Market & Risk -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold text-navy mb-6">4. Phân Tích Thị Trường & Rủi Ro</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-4 border rounded shadow-sm">
+                    <h4 class="font-bold text-lg">Lợi thế pháp lý</h4>
+                    <p class="text-sm justified">Tình trạng "chính chủ một đời" là bảo chứng vàng, loại bỏ rủi ro tranh chấp.</p>
+                </div>
+                <div class="p-4 border rounded shadow-sm">
+                    <h4 class="font-bold text-lg">Rủi ro dòng tiền</h4>
+                    <p class="text-sm justified">Lợi nhuận Cash-on-Cash âm trong năm đầu do chi phí vốn cao.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="bg-amberCustom text-white p-10 rounded-xl text-center mb-10">
+            <h3 class="text-3xl font-bold mb-4">Khuyến Nghị Đầu Tư</h3>
+            <p class="text-5xl font-black mb-6">CÂN NHẮC</p>
+            <p class="max-w-2xl mx-auto italic">Tài sản này không phù hợp cho nhà đầu tư lướt sóng, nhưng là "tài sản trú ẩn" tốt cho nhà đầu tư dài hạn với nguồn vốn tự có dồi dào.</p>
+        </section>
+
+        <!-- Actions -->
+        <div class="text-center no-print">
+            <button onclick="window.print()" class="bg-navy text-white px-8 py-3 rounded shadow hover:bg-black transition">In Báo Cáo PDF</button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-16 pt-8 border-t border-gray-200 text-center text-xs text-gray-400">
+            <p>Báo cáo tư vấn chuyên nghiệp - Confidential & Proprietary</p>
+            <p class="mt-2">Thông tin dựa trên các giả định thị trường tại thời điểm lập báo cáo.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('currentDate').innerText = new Date().toLocaleDateString('vi-VN');
+    </script>
+</body>
+</html>
