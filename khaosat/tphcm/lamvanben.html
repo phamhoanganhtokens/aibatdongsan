@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Libre Baskerville', serif;
+            color: #1a2b3c;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .justify-text { text-align: justify; }
+        
+        .premium-border { border: 1px solid #d1d5db; }
+        
+        .nav-link { font-family: 'Inter', sans-serif; font-size: 0.875rem; }
+
+        @media print {
+            .no-print { display: none; }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto bg-white shadow-2xl p-8 md:p-12 border border-gray-200">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-slate-900 pb-6 mb-8 gap-4">
+            <div>
+                <h1 class="text-2xl font-bold text-slate-900 tracking-tight">AI Bất Động Sản</h1>
+                <p class="text-sm text-slate-500 italic">www.phamhoanganhtokens.com</p>
+            </div>
+            <div class="text-right">
+                <p class="text-sm font-semibold text-slate-700" id="currentDate"></p>
+                <button onclick="window.print()" class="no-print mt-2 bg-slate-900 text-white px-4 py-2 text-xs font-bold uppercase hover:bg-slate-700 transition">In Báo Cáo (PDF)</button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6">Báo Cáo Thẩm Định Đầu Tư Bất Động Sản</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-slate-50 border border-slate-200">
+                <div><p class="text-xs uppercase font-bold text-slate-500">Mã Tài Sản</p><p class="font-bold">Q7-LVB-223</p></div>
+                <div><p class="text-xs uppercase font-bold text-slate-500">Địa Chỉ</p><p class="font-bold">Lâm Văn Bền, Tân Kiểng, Q7</p></div>
+                <div><p class="text-xs uppercase font-bold text-slate-500">Tình Trạng</p><p class="font-bold text-green-700">Sổ Hồng Riêng</p></div>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section class="mb-12 bg-slate-100 p-8 border-l-4 border-slate-900">
+            <h3 class="text-lg font-bold mb-4">1. Tóm Tắt Thực Thi</h3>
+            <p class="justify-text">Tài sản tọa lạc tại đường Lâm Văn Bền, phường Tân Kiểng, Quận 7, TP.HCM với diện tích 223m2, định giá chào bán ở mức 28,99 tỷ VNĐ (tương đương 130 triệu VNĐ/m2). Đây là một khoản đầu tư mang tính chất thiên về tăng trưởng vốn thay vì khai thác dòng tiền hoạt động. Yếu tố pháp lý minh bạch là điểm tựa vững chắc. Tuy nhiên, việc sử dụng đòn bẩy 70% tạo ra áp lực thâm hụt dòng tiền nghiêm trọng, đòi hỏi năng lực tài chính cực kỳ mạnh mẽ.</p>
+        </section>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <section>
+                <h3 class="text-lg font-bold mb-4 border-b border-slate-900 pb-2">2. Giả Định Cơ Bản</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><span class="font-bold">Giá giao dịch:</span> 28.990.000.000 VNĐ</li>
+                    <li><span class="font-bold">Diện tích:</span> 223 m²</li>
+                    <li><span class="font-bold">Cấu trúc vốn:</span> 30% Vốn tự có / 70% Vay</li>
+                    <li><span class="font-bold">Lãi suất vay:</span> 10%/năm</li>
+                    <li><span class="font-bold">Chu kỳ:</span> 5 năm</li>
+                </ul>
+            </section>
+            <section>
+                <h3 class="text-lg font-bold mb-4 border-b border-slate-900 pb-2">3. Phân Tích Rủi Ro</h3>
+                <div class="space-y-4 text-sm justify-text">
+                    <p><span class="font-bold">Dòng tiền:</span> Âm 1,3 - 1,9 tỷ VNĐ/năm do đòn bẩy quá cao.</p>
+                    <p><span class="font-bold">Pháp lý:</span> Sổ hồng riêng là tấm khiên bảo vệ thanh khoản.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Financial Table -->
+        <section class="mb-12 overflow-x-auto">
+            <h3 class="text-lg font-bold mb-4">4. Bảng Chỉ Số Tài Chính</h3>
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-slate-200 uppercase text-xs">
+                        <th class="p-3">Chỉ số</th>
+                        <th class="p-3">Thận trọng</th>
+                        <th class="p-3">Cơ sở</th>
+                        <th class="p-3">Lạc quan</th>
+                    </tr>
+                </thead>
+                <tbody class="text-sm">
+                    <tr class="border-b hover:bg-slate-50"><td class="p-3 font-bold">Cap Rate</td><td class="p-3">1,38%</td><td class="p-3">2,45%</td><td class="p-3">3,60%</td></tr>
+                    <tr class="border-b hover:bg-slate-50"><td class="p-3 font-bold">IRR (5 năm)</td><td class="p-3">0,28%</td><td class="p-3">9,87%</td><td class="p-3">20,83%</td></tr>
+                    <tr class="border-b hover:bg-slate-50"><td class="p-3 font-bold">Dòng tiền</td><td class="p-3 text-red-600">-1,3 tỷ</td><td class="p-3 text-red-600">-1,6 tỷ</td><td class="p-3 text-red-600">-1,9 tỷ</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="bg-amber-100 p-8 border-2 border-amber-500 rounded-sm">
+            <h3 class="text-xl font-bold mb-4 text-amber-900 uppercase">6. Khuyến Nghị Đầu Tư</h3>
+            <p class="justify-text text-amber-950 mb-6">Tài sản sở hữu nền tảng giá trị cơ bản tốt với mức giá 130 triệu/m2 tại khu vực lõi Quận 7 và pháp lý hoàn chỉnh. Sự đối lập giữa tỷ suất cho thuê thấp và tiềm năng tăng giá trị cao là đặc trưng. Giao dịch chỉ phù hợp nếu giảm tỷ trọng vốn vay xuống dưới 40%.</p>
+            <div class="text-center">
+                <span class="inline-block px-8 py-3 bg-amber-500 text-white text-2xl font-black uppercase tracking-widest shadow-lg">Cân nhắc</span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-12 pt-6 border-t border-slate-300 text-[10px] text-slate-400 text-center uppercase tracking-widest">
+            <p>Báo cáo thẩm định nội bộ - Dữ liệu chỉ mang tính chất tham khảo đầu tư</p>
+            <p class="mt-2 font-bold italic">Professional Investment Advisory</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('currentDate').innerText = new Date().toLocaleDateString('vi-VN', { 
+            year: 'numeric', month: 'long', day: 'numeric' 
+        });
+    </script>
+</body>
+</html>
