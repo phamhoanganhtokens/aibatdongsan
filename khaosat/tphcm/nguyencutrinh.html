@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1a2b3c',
+                        charcoal: '#333333',
+                        silver: '#e5e7eb',
+                        success: '#16a34a',
+                        warning: '#d97706',
+                        danger: '#dc2626',
+                    },
+                    fontFamily: {
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            .no-print { display: none; }
+        }
+        body { font-family: 'Times New Roman', serif; }
+        .justify-text { text-align: justify; }
+    </style>
+</head>
+<body class="bg-gray-50 text-charcoal leading-relaxed antialiased">
 
+    <!-- Print Button -->
+    <div class="fixed top-4 right-4 no-print z-50">
+        <button onclick="window.print()" class="bg-navy text-white px-6 py-2 shadow-lg hover:bg-black transition-all">
+            In Báo Cáo (PDF)
+        </button>
+    </div>
+
+    <main class="max-w-5xl mx-auto bg-white shadow-2xl p-8 md:p-16 my-8 border border-silver">
+        
+        <!-- Header -->
+        <header class="border-b-2 border-navy pb-6 mb-8 flex justify-between items-end">
+            <div>
+                <h1 class="text-3xl font-bold text-navy tracking-tight">AI BẤT ĐỘNG SẢN</h1>
+                <p class="text-sm text-gray-500 italic mt-1">www.phamhoanganhtokens.com</p>
+            </div>
+            <div class="text-right text-sm">
+                <p class="font-bold">Ngày báo cáo</p>
+                <p>23/05/2024</p>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="mb-12">
+            <h2 class="text-4xl font-bold text-navy uppercase mb-6 text-center underline underline-offset-8 decoration-silver">BÁO CÁO THẨM ĐỊNH ĐẦU TƯ BẤT ĐỘNG SẢN</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-gray-100 p-6 rounded border border-silver">
+                <div><span class="block font-bold uppercase text-xs text-gray-500">Địa điểm</span> Mặt tiền Nguyễn Cư Trinh, Q.1</div>
+                <div><span class="block font-bold uppercase text-xs text-gray-500">Mã Tài Sản</span> BĐS-2024-Q1-001</div>
+                <div><span class="block font-bold uppercase text-xs text-gray-500">Trạng Thái</span> Đang thẩm định</div>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section class="bg-blue-50 p-8 border-l-4 border-navy mb-12">
+            <h3 class="text-xl font-bold uppercase mb-4 text-navy">1. Tóm tắt điều hành</h3>
+            <p class="justify-text text-lg">Bất động sản tọa lạc tại vị trí đắc địa trên mặt tiền đường Nguyễn Cư Trinh, trung tâm Quận 1, cách khách sạn Pullman và phố đi bộ Bùi Viện chỉ 100m. Với lợi thế vỉa hè rộng 5m và hiện đang có hợp đồng thuê ổn định, tài sản này sở hữu giá trị thương mại và tính thanh khoản cao. Tuy nhiên, dưới góc độ tài chính, hiệu suất dòng tiền hiện tại đang ở mức thấp so với giá trị đầu tư 13 tỷ VNĐ. Việc sử dụng đòn bẩy tài chính trong bối cảnh lãi suất cao dẫn đến dòng tiền âm đáng kể, khiến lợi nhuận kỳ vọng phụ thuộc hoàn toàn vào sự tăng giá của bất động sản trong tương lai.</p>
+        </section>
+
+        <!-- Assumptions -->
+        <section class="mb-12">
+            <h3 class="text-xl font-bold uppercase mb-6 text-navy border-b border-navy pb-2">2. Các giả định</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <p><strong>Giá trị tài sản:</strong> 13.000.000.000 VNĐ</p>
+                    <p><strong>Cấu trúc vốn:</strong> Vốn tự có 30% (4.030.000.000 VNĐ); Vay ngân hàng 70% (LTV)</p>
+                    <p><strong>Điều kiện vay:</strong> Lãi suất 10%/năm, thời hạn 20 năm.</p>
+                </div>
+                <div class="bg-gray-50 p-4 border border-silver">
+                    <p class="font-bold mb-2">Kịch bản tăng trưởng (5 năm):</p>
+                    <ul class="list-disc pl-5 space-y-1 text-sm">
+                        <li>Thận trọng: Thuê +2%, Giá trị +10%</li>
+                        <li>Cơ sở: Thuê +5%, Giá trị +25%</li>
+                        <li>Lạc quan: Thuê +8%, Giá trị +50%</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Table -->
+        <section class="mb-12 overflow-x-auto">
+            <h3 class="text-xl font-bold uppercase mb-6 text-navy border-b border-navy pb-2">3. Chỉ số tài chính</h3>
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-navy text-white">
+                        <th class="p-3">Chỉ số tài chính</th>
+                        <th class="p-3">Thận trọng</th>
+                        <th class="p-3">Cơ sở</th>
+                        <th class="p-3">Lạc quan</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="p-3 font-semibold">NOI - Năm 1</td>
+                        <td class="p-3">275,4 Tr</td>
+                        <td class="p-3">307,8 Tr</td>
+                        <td class="p-3">342,0 Tr</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="p-3 font-semibold">Cap Rate</td>
+                        <td class="p-3">2,12%</td>
+                        <td class="p-3">2,37%</td>
+                        <td class="p-3">2,63%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="p-3 font-semibold">Tỷ suất lợi nhuận vốn</td>
+                        <td class="p-3 text-danger">-19,32%</td>
+                        <td class="p-3 text-danger">-18,51%</td>
+                        <td class="p-3 text-danger">-17,66%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Market & Benchmarking -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div>
+                <h3 class="text-xl font-bold uppercase mb-6 text-navy border-b border-navy pb-2">4. Phân tích rủi ro</h3>
+                <div class="space-y-4 text-justify">
+                    <p><span class="font-bold text-danger">● Rủi ro dòng tiền:</span> Đòn bẩy ngược lãi suất 10% so với Cap Rate 2,37% gây thâm hụt dòng tiền hàng tháng.</p>
+                    <p><span class="font-bold text-warning">● Rủi ro thanh khoản:</span> Tài sản thuộc phân khúc "Land Banking", khó tối ưu hóa lợi nhuận ngắn hạn.</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold uppercase mb-6 text-navy border-b border-navy pb-2">5. Đối chuẩn đầu tư</h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between border-b pb-2"><span>Tiết kiệm/Trái phiếu</span> <span class="font-bold">5-6%</span></div>
+                    <div class="flex justify-between border-b pb-2"><span>BĐS này (Cho thuê)</span> <span class="font-bold text-danger">2,37%</span></div>
+                    <div class="flex justify-between border-b pb-2"><span>Chiến lược phù hợp</span> <span class="font-bold">Tích lũy tài sản</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="bg-amber-600 text-white p-10 text-center shadow-lg">
+            <h3 class="text-3xl font-bold uppercase mb-4">Khuyến nghị: CÂN NHẮC</h3>
+            <p class="text-lg opacity-90 max-w-2xl mx-auto">Tài sản này chỉ phù hợp với nhà đầu tư có sẵn nguồn vốn lớn (vốn tự có > 60%) và mục tiêu dài hạn. Không khuyến khích sử dụng đòn bẩy cao ở thời điểm hiện tại do áp lực lãi vay vượt quá dòng tiền khai thác.</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-16 pt-8 border-t border-silver text-xs text-gray-500 italic">
+            <p><strong>Disclaimer:</strong> Báo cáo dựa trên dữ liệu giả định và thị trường. Không cấu thành lời khuyên tài chính chính thức. Bộ phận Phân tích không chịu trách nhiệm cho các quyết định đầu tư thực tế.</p>
+            <p class="mt-4 text-center font-bold uppercase tracking-widest opacity-50 italic">Professional Investment Advisory</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
