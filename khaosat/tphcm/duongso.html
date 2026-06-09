@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư | AI Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background-color: #f9f9f9;
+            color: #1a2b3c;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+        .text-justify-custom {
+            text-align: justify;
+        }
+        .institutional-border {
+            border: 1px solid #d1d5db;
+        }
+        .bg-navy { background-color: #1a2b3c; }
+        .text-navy { color: #1a2b3c; }
+        .bg-amber-custom { background-color: #fffbeb; border: 1px solid #f59e0b; }
+        .text-amber-custom { color: #d97706; }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto bg-white shadow-2xl p-8 md:p-16 institutional-border">
+        
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-navy pb-6 mb-8">
+            <div>
+                <h1 class="text-2xl font-bold tracking-tight text-navy">AI BẤT ĐỘNG SẢN</h1>
+                <p class="text-sm text-gray-500 italic">www.phamhoanganhtokens.com</p>
+            </div>
+            <div class="text-right mt-4 md:mt-0 text-sm font-medium">
+                <p>Ngày: <span id="current-date"></span></p>
+                <p class="text-gray-400">Tham chiếu: RPT-2024-Q7-001</p>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-navy mb-6">BÁO CÁO THẨM ĐỊNH ĐẦU TƯ BẤT ĐỘNG SẢN</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-gray-50 border border-gray-200">
+                <div><span class="block text-xs font-bold uppercase text-gray-500">Tài sản</span> Nhà phố (4m x 19m)</div>
+                <div><span class="block text-xs font-bold uppercase text-gray-500">Vị trí</span> Tân Kiểng, Quận 7</div>
+                <div><span class="block text-xs font-bold uppercase text-gray-500">Trạng thái</span> Sổ hồng riêng</div>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section class="mb-12 bg-gray-50 p-8 border-l-4 border-navy">
+            <h2 class="text-xl font-bold mb-4 text-navy">TÓM TẮT THỰC THI (EXECUTIVE SUMMARY)</h2>
+            <p class="text-justify-custom text-lg">
+                Báo cáo này đánh giá cơ hội đầu tư đối với tài sản nhà phố trị giá 16 tỷ VNĐ tại phường Tân Kiểng, Quận 7. Dựa trên điều kiện thị trường hiện tại, biên lợi nhuận cho thuê của tài sản (dao động từ 1.89% đến 4.00%) đang thấp hơn đáng kể so với lãi suất vay thế chấp (8%). Tình trạng đòn bẩy âm (negative leverage) này dẫn đến dòng tiền hoạt động hàng năm bị âm trong tất cả các kịch bản. Do đó, tính khả thi và hiệu quả của khoản đầu tư phụ thuộc hoàn toàn vào tiềm năng tăng giá vốn (capital appreciation) và dòng tiền thu về tại thời điểm thoái vốn sau 5 năm.
+            </p>
+        </section>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <!-- Assumptions -->
+            <div class="p-6 institutional-border">
+                <h3 class="font-bold text-navy mb-4 border-b pb-2">CÁC GIẢ ĐỊNH (ASSUMPTIONS)</h3>
+                <ul class="text-sm space-y-3">
+                    <li><strong class="text-navy">Vốn tự có:</strong> 30% giá trị trả trước + 2% chi phí giao dịch.</li>
+                    <li><strong class="text-navy">Nghĩa vụ nợ:</strong> LTV 70%, lãi suất 8%/năm, thời hạn 20 năm.</li>
+                    <li><strong class="text-navy">Kịch bản Thận trọng:</strong> Mua giá 16 tỷ, Thuê 35tr/tháng, Tăng giá 3%/năm.</li>
+                    <li><strong class="text-navy">Kịch bản Cơ sở:</strong> Mua giá 15.2 tỷ, Thuê 45tr/tháng, Tăng giá 5%/năm.</li>
+                    <li><strong class="text-navy">Kịch bản Lạc quan:</strong> Mua giá 14.4 tỷ, Thuê 55tr/tháng, Tăng giá 8%/năm.</li>
+                </ul>
+            </div>
+            <!-- Market Risk -->
+            <div class="p-6 institutional-border">
+                <h3 class="font-bold text-navy mb-4 border-b pb-2">PHÂN TÍCH THỊ TRƯỜNG & RỦI RO</h3>
+                <p class="text-justify-custom text-sm">
+                    Khu vực Tân Kiểng có hạ tầng kết nối tốt, pháp lý an toàn, tính thanh khoản cao. Tuy nhiên, giá trị đã ở mức cao, nén tỷ suất lợi nhuận cho thuê. Rủi ro chính là <strong>dòng tiền âm</strong> và <strong>áp lực lãi suất</strong>, đòi hỏi năng lực tài chính cá nhân vững mạnh.
+                </p>
+            </div>
+        </div>
+
+        <!-- Financial Table -->
+        <section class="mb-12 overflow-x-auto">
+            <h3 class="font-bold text-navy mb-4">CHỈ SỐ TÀI CHÍNH (FINANCIAL ANALYSIS)</h3>
+            <table class="w-full text-left border-collapse institutional-border">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="p-3 border">Chỉ số</th>
+                        <th class="p-3 border">Thận trọng</th>
+                        <th class="p-3 border">Cơ sở</th>
+                        <th class="p-3 border">Lạc quan</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y">
+                    <tr class="hover:bg-gray-50"><td class="p-3 font-semibold">Giá mua</td><td class="p-3">16 tỷ</td><td class="p-3">15.2 tỷ</td><td class="p-3">14.4 tỷ</td></tr>
+                    <tr class="hover:bg-gray-50"><td class="p-3 font-semibold">Tỷ suất vốn hóa (Cap Rate)</td><td class="p-3 text-red-600">1.89%</td><td class="p-3">2.87%</td><td class="p-3 text-green-600">4.00%</td></tr>
+                    <tr class="hover:bg-gray-50"><td class="p-3 font-semibold">IRR (5 năm)</td><td class="p-3 text-red-600">-2.65%</td><td class="p-3">5.00%</td><td class="p-3 text-green-600">14.36%</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="bg-amber-custom p-8 rounded-lg mb-12 border-2 border-amber-600 text-center">
+            <h2 class="text-3xl font-black text-amber-900 mb-4 tracking-tighter">KHUYẾN NGHỊ ĐẦU TƯ: CÂN NHẮC</h2>
+            <p class="text-justify-custom text-amber-950 font-medium">
+                Tài sản này chỉ hiệu quả khi nhà đầu tư thương lượng được giá mua tốt và có dòng tiền thụ động bên ngoài để bù đắp thâm hụt hàng năm. Đây là chiến lược tích lũy dài hạn, không phải tài sản tạo thu nhập tức thời.
+            </p>
+            <button onclick="window.print()" class="mt-6 px-8 py-3 bg-navy text-white font-bold rounded hover:bg-black transition-all">
+                XUẤT BÁO CÁO (PDF)
+            </button>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-xs text-gray-500 pt-6 border-t text-center">
+            <p>Báo cáo này được lập cho mục đích tư vấn đầu tư chuyên nghiệp. Các giả định dựa trên dữ liệu thị trường giả định và không cam kết lợi nhuận thực tế.</p>
+            <p class="mt-2 font-bold text-gray-400 opacity-50">WATERMARK: PROFESSIONAL INVESTMENT ADVISORY</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('current-date').innerText = new Date().toLocaleDateString('vi-VN');
+    </script>
+</body>
+</html>
