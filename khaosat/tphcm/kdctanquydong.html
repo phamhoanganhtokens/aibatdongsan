@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư | AI Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background-color: #f9f9f9;
+            color: #1a2b3c;
+            line-height: 1.6;
+        }
+        
+        .justify-text { text-align: justify; }
+        
+        .header-gradient {
+            background: linear-gradient(135deg, #1a2b3c 0%, #2c3e50 100%);
+        }
+
+        .bento-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        @media print {
+            .no-print { display: none; }
+            body { background-color: white; }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Header -->
+    <header class="border-b border-gray-300 bg-white p-6 md:px-12">
+        <div class="flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold tracking-tight text-[#1a2b3c]">AI BẤT ĐỘNG SẢN</h1>
+                <p class="text-sm text-gray-500 uppercase tracking-widest">www.phamhoanganhtokens.com</p>
+            </div>
+            <div class="text-right text-sm text-gray-600">
+                <p id="currentDate"></p>
+                <script>document.getElementById('currentDate').innerText = new Date().toLocaleDateString('vi-VN');</script>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold text-[#1a2b3c] mb-6 uppercase">Báo cáo thẩm định đầu tư bất động sản: Biệt thự Tân Quy Đông, Quận 7</h2>
+            <div class="flex flex-wrap gap-4 text-sm bg-white p-4 border border-gray-200">
+                <span class="font-bold">Mã tài sản:</span> <span>TQD-Q7-001</span>
+                <span class="mx-2">|</span>
+                <span class="font-bold">Vị trí:</span> <span>Tân Quy Đông, Quận 7, TP.HCM</span>
+                <span class="mx-2">|</span>
+                <span class="font-bold">Trạng thái:</span> <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-[10px] uppercase font-bold">An Toàn</span>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section class="bg-gray-100 p-8 border-l-4 border-[#1a2b3c] mb-12">
+            <h3 class="text-xl font-bold mb-4 uppercase">1. Tóm tắt điều hành (Executive Summary)</h3>
+            <p class="justify-text">Báo cáo này phân tích cơ hội đầu tư vào sản phẩm biệt thự tọa lạc tại khu dân cư Tân Quy Đông, Quận 7, TP.HCM, liền kề trục đường thương mại sầm uất Nguyễn Thị Thập. Với giá trị đầu tư 52 tỷ VNĐ, đây là tài sản thuộc phân khúc bất động sản cao cấp, sở hữu pháp lý hoàn chỉnh và vị trí chiến lược. Mục tiêu đầu tư tập trung vào việc bảo toàn vốn và kỳ vọng tăng trưởng giá trị tài sản dài hạn (Capital Appreciation) hơn là khai thác dòng tiền ngắn hạn.</p>
+        </section>
+
+        <!-- Content Grid -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white p-6 border border-gray-200">
+                <h3 class="font-bold border-b pb-2 mb-4 uppercase">2. Các giả định</h3>
+                <ul class="space-y-4 text-sm">
+                    <li><strong>Thận trọng:</strong> Thuê 120tr/tháng, lấp đầy 85%, tăng giá 3%/năm.</li>
+                    <li><strong>Cơ sở:</strong> Thuê 150tr/tháng, lấp đầy 92%, tăng giá 6%/năm.</li>
+                    <li><strong>Lạc quan:</strong> Thuê 180tr/tháng, lấp đầy 95%, tăng giá 10%/năm.</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 border border-gray-200">
+                <h3 class="font-bold border-b pb-2 mb-4 uppercase">4. Phân tích thị trường</h3>
+                <p class="justify-text text-sm">Khu Tân Quy Đông là vùng dân cư trí thức cao. Tiếp giáp đường Nguyễn Thị Thập tạo ra lợi thế thương mại lớn. Nhu cầu thuê cho chuyên gia nước ngoài luôn ổn định.</p>
+            </div>
+        </div>
+
+        <!-- Financial Analysis Table -->
+        <section class="mb-12 overflow-x-auto">
+            <h3 class="text-xl font-bold mb-6 uppercase">3. Chỉ số tài chính</h3>
+            <table class="w-full text-left border-collapse border border-gray-200">
+                <thead>
+                    <tr class="bg-gray-800 text-white">
+                        <th class="p-3">Chỉ số</th>
+                        <th class="p-3">Thận trọng</th>
+                        <th class="p-3">Cơ sở</th>
+                        <th class="p-3">Lạc quan</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-3">NOI</td>
+                        <td class="p-3">1,008 tỷ</td>
+                        <td class="p-3">1,440 tỷ</td>
+                        <td class="p-3">1,836 tỷ</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-3">Cap Rate</td>
+                        <td class="p-3">1,94%</td>
+                        <td class="p-3">2,77%</td>
+                        <td class="p-3">3,53%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 font-bold">
+                        <td class="p-3">IRR</td>
+                        <td class="p-3">4,52%</td>
+                        <td class="p-3">7,98%</td>
+                        <td class="p-3">12,22%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="bg-amber-100 p-10 border-2 border-amber-500 mb-12">
+            <h3 class="text-2xl font-bold mb-4 uppercase text-amber-900">6. Khuyến nghị đầu tư: CÂN NHẮC</h3>
+            <p class="justify-text text-amber-900">
+                Sản phẩm phù hợp cho nhà đầu tư có định hướng bảo toàn tài sản và sở hữu tầm nhìn dài hạn (trên 10 năm). Đối với nhà đầu tư ưu tiên dòng tiền hàng tháng ngay lập tức, Cap Rate 2,77% có thể là một thách thức. Tuy nhiên, đây là tài sản phòng thủ chất lượng cao.
+            </p>
+        </section>
+
+        <div class="text-center no-print">
+            <button onclick="window.print()" class="bg-[#1a2b3c] text-white px-8 py-3 hover:bg-gray-700 transition font-bold uppercase tracking-widest text-sm">Xuất báo cáo PDF</button>
+        </div>
+    </main>
+
+    <footer class="border-t border-gray-200 py-12 text-center text-gray-400 text-xs mt-12">
+        <p>BÁO CÁO PHÂN TÍCH ĐỘC LẬP - KHÔNG PHẢI LỜI KHUYÊN TÀI CHÍNH CÁ NHÂN</p>
+        <p class="mt-2 uppercase tracking-[0.2em] text-gray-300">Professional Investment Advisory</p>
+    </footer>
+
+</body>
+</html>
