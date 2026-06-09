@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1a2b3c',
+                        charcoal: '#334155',
+                        silver: '#e2e8f0',
+                        accent: '#c5a059',
+                        success: '#166534',
+                        warning: '#b45309',
+                        danger: '#991b1b'
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Lora', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Lora', serif; line-height: 1.8; color: #334155; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .justified { text-align: justify; }
+        @media print { .no-print { display: none; } }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen p-4 md:p-8">
+
+    <div class="max-w-5xl mx-auto bg-white shadow-2xl p-8 md:p-16 border border-gray-200">
+        <!-- Header -->
+        <header class="border-b-2 border-navy pb-6 mb-8 flex flex-col md:flex-row justify-between items-start md:items-end">
+            <div>
+                <h1 class="text-3xl font-bold text-navy tracking-tight">AI BẤT ĐỘNG SẢN</h1>
+                <p class="text-sm text-gray-500 italic">www.phamhoanganhtokens.com</p>
+            </div>
+            <div class="text-right mt-4 md:mt-0 text-sm">
+                <p id="current-date"></p>
+                <button onclick="window.print()" class="no-print mt-2 bg-navy text-white px-4 py-1 text-xs uppercase tracking-widest hover:bg-gray-800 transition">In Báo Cáo</button>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="mb-12">
+            <h2 class="text-4xl font-bold text-navy mb-6">BÁO CÁO THẨM ĐỊNH ĐẦU TƯ BẤT ĐỘNG SẢN</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-gray-100 p-6 border-l-4 border-navy">
+                <div><span class="block text-[10px] uppercase font-bold text-gray-500">Mã Tài Sản</span><span class="font-semibold">RE-2024-Q7-01</span></div>
+                <div><span class="block text-[10px] uppercase font-bold text-gray-500">Vị trí</span><span class="font-semibold">Liền kề Quận 7 (500m)</span></div>
+                <div><span class="block text-[10px] uppercase font-bold text-gray-500">Pháp lý</span><span class="font-semibold text-success">Sổ hồng riêng</span></div>
+            </div>
+        </section>
+
+        <!-- Summary -->
+        <section class="bg-blue-50 p-8 border border-blue-100 mb-12">
+            <h3 class="text-2xl mb-4 text-navy font-bold">1. Tóm Tắt Thực Thi</h3>
+            <p class="justified text-lg">Báo cáo này đánh giá hiệu quả tài chính của một tài sản bất động sản có giá trị 6.490.000.000 VNĐ, sở hữu lợi thế vị trí liền kề Quận 7 (cách 500m) và pháp lý an toàn tuyệt đối. Qua phân tích chu kỳ nắm giữ 10 năm, dự án cho thấy dòng tiền thuần từ hoạt động khai thác cho thuê không đủ bù đắp nghĩa vụ nợ do chi phí sử dụng vốn cao (lãi suất vay 10%). Mức sinh lời của tài sản này (IRR) phụ thuộc hoàn toàn vào giá trị gia tăng vốn tại thời điểm thoái vốn vào năm thứ 10.</p>
+        </section>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+            <!-- Property Info -->
+            <section>
+                <h3 class="text-xl font-bold border-b border-navy mb-4 pb-2">2. Các Giả Định</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><strong>Quy mô:</strong> 5 phòng khai thác cho thuê</li>
+                    <li><strong>Cấu trúc vốn:</strong> 30% Vốn tự có (1.947 tỷ) - 70% Vốn vay (4.543 tỷ)</li>
+                    <li><strong>Lãi suất vay:</strong> 10%/năm (Kỳ hạn 20 năm)</li>
+                    <li><strong>Nghĩa vụ nợ:</strong> 525.972.836 VNĐ/năm</li>
+                </ul>
+            </section>
+            <!-- Market Insight -->
+            <section>
+                <h3 class="text-xl font-bold border-b border-navy mb-4 pb-2">4. Phân Tích Thị Trường</h3>
+                <p class="justified text-sm">Vị trí cách Quận 7 chỉ 500m mang lại lợi thế cạnh tranh về nhu cầu thuê. Tuy nhiên, rủi ro lớn nhất nằm ở chi phí sử dụng vốn cao hơn lợi nhuận khai thác, tạo áp lực thanh khoản dòng tiền hàng tháng cho nhà đầu tư.</p>
+            </section>
+        </div>
+
+        <!-- Financial Table -->
+        <section class="mb-12 overflow-x-auto">
+            <h3 class="text-2xl mb-6 font-bold text-navy">3. Chỉ Số Tài Chính</h3>
+            <table class="w-full text-sm border-collapse">
+                <thead>
+                    <tr class="bg-navy text-white text-left">
+                        <th class="p-3">Chỉ số đo lường</th>
+                        <th class="p-3">Thận trọng</th>
+                        <th class="p-3">Cơ sở</th>
+                        <th class="p-3">Lạc quan</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="hover:bg-gray-50"><td>NOI hàng năm (Năm 1)</td><td>216 tr</td><td>339 tr</td><td>476 tr</td></tr>
+                    <tr class="hover:bg-gray-50"><td>Tỷ suất vốn hóa (Cap Rate)</td><td>3.33%</td><td>5.23%</td><td>7.34%</td></tr>
+                    <tr class="hover:bg-gray-50"><td>Hệ số nhân gộp (GRM)</td><td>21.63</td><td>15.45</td><td>12.02</td></tr>
+                    <tr class="hover:bg-gray-50 font-bold"><td>IRR 10 năm</td><td>0.28%</td><td>8.25%</td><td>17.09%</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Benchmark -->
+        <section class="mb-12">
+            <h3 class="text-2xl mb-4 font-bold text-navy">5. Đối Chuẩn Đầu Tư</h3>
+            <p class="justified">IRR 8.25% (Kịch bản Cơ sở) chỉ nhỉnh hơn lãi suất tiết kiệm dài hạn (5-6%) nhưng đối mặt rủi ro thanh khoản cao hơn. Việc sử dụng đòn bẩy khi chi phí vay (10%) vượt xa Cap Rate (3.33-7.34%) đang bào mòn lợi nhuận ròng.</p>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="bg-amber-100 p-10 text-center border-4 border-amber-500 rounded-lg shadow-inner">
+            <h2 class="text-5xl font-bold text-warning mb-2">CÂN NHẮC</h2>
+            <p class="text-xl italic font-serif">Mức sinh lời không tối ưu so với chi phí vốn vay hiện tại.</p>
+        </section>
+
+        <footer class="mt-16 border-t pt-8 text-center text-gray-400 text-xs uppercase tracking-widest">
+            <p>Professional Investment Advisory Division</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('current-date').innerText = new Date().toLocaleDateString('vi-VN');
+    </script>
+</body>
+</html>
