@@ -34,18 +34,21 @@
 <body class="min-h-screen">
 
     <!-- Header -->
-    <header class="border-b border-gray-300 bg-white p-6 md:px-12">
-        <div class="flex justify-between items-center">
+    <header class="bg-white border-b border-navy/20 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
             <div>
-                <h1 class="text-2xl font-bold tracking-tight text-[#1a2b3c]">AI BẤT ĐỘNG SẢN</h1>
-                <p class="text-sm text-gray-500 uppercase tracking-widest">www.phamhoanganhtokens.com</p>
+                <h1 class="text-2xl font-bold uppercase tracking-tight text-navy">AI Bất Động Sản</h1>
+                <p class="text-xs text-charcoal uppercase tracking-widest">www.phamhoanganhtokens.com</p>
             </div>
-            <div class="text-right text-sm text-gray-600">
-                <p id="currentDate"></p>
-                <script>document.getElementById('currentDate').innerText = new Date().toLocaleDateString('vi-VN');</script>
+            <div class="text-right">
+                <p id="current-date" class="text-sm font-semibold"></p>
+                <button onclick="window.print()" class="no-print mt-2 px-4 py-1 text-xs bg-navy text-white hover:bg-gray-800 transition shadow-lg">
+                    In Báo Cáo (PDF)
+                </button>
             </div>
         </div>
     </header>
+
 
     <main class="max-w-5xl mx-auto px-6 py-12">
         <!-- Hero Section -->
