@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư | AI Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            color: #1a2b3c;
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, .heading {
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .justify-text {
+            text-align: justify;
+        }
+
+        .premium-border {
+            border: 1px solid #d1d5db;
+        }
+
+        .bg-navy { background-color: #1a2b3c; }
+        .text-navy { color: #1a2b3c; }
+        .bg-amber-caution { background-color: #fffbeb; border: 1px solid #f59e0b; }
+    </style>
+</head>
+<body class="p-4 md:p-12">
+
+    <div class="max-w-5xl mx-auto bg-white p-8 md:p-16 shadow-xl">
+        <!-- Header Section -->
+        <header class="flex justify-between items-start border-b-2 border-slate-800 pb-6 mb-8">
+            <div>
+                <h1 class="text-3xl font-bold text-slate-800">AI Bất Động Sản</h1>
+                <p class="text-sm text-slate-500 font-sans tracking-widest uppercase">www.phamhoanganhtokens.com</p>
+            </div>
+            <div class="text-right text-sm font-sans text-slate-600">
+                <p>Ngày lập báo cáo:</p>
+                <p id="current-date"></p>
+                <script>document.getElementById('current-date').innerText = new Date().toLocaleDateString('vi-VN');</script>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl md:text-4xl font-bold mb-4">BÁO CÁO THẨM ĐỊNH ĐẦU TƯ BẤT ĐỘNG SẢN</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-sans text-sm bg-slate-50 p-4 rounded border">
+                <div><span class="font-bold">ID Tài sản:</span> KDC-BS-Q8</div>
+                <div><span class="font-bold">Vị trí:</span> KDC Bông Sao, Quận 8</div>
+                <div><span class="font-bold">Trạng thái:</span> Đang thẩm định</div>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section class="bg-slate-100 p-6 mb-12 border-l-4 border-slate-800">
+            <h3 class="font-bold mb-3">TÓM TẮT THỰC THI</h3>
+            <p class="justify-text leading-relaxed">Bất động sản tọa lạc tại Khu dân cư (KDC) Bông Sao, Phường 5, Quận 8 với diện tích 68m² (4m x 17m), giá chào bán 11,5 tỷ VNĐ (~169 triệu VNĐ/m²). Đây là khu vực có tính thanh khoản cao, hạ tầng đồng bộ và kết nối thuận tiện với các quận trung tâm. Phân tích tài chính cho thấy tài sản này có đặc thù "lợi nhuận thực tế thấp, tiềm năng tăng giá trị tích lũy cao". Tỷ suất vốn hóa (Cap Rate) dao động ở mức 2,12% - 4,28%, chỉ số hoàn vốn nội tại (IRR) có khả năng đạt 23,71% trong kịch bản tối ưu.</p>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+            <!-- Property Info & Assumptions -->
+            <section>
+                <h3 class="font-bold mb-4 pb-2 border-b">GIẢ ĐỊNH ĐẦU TƯ</h3>
+                <ul class="space-y-3 font-sans text-sm">
+                    <li><strong>Giá mua thực tế:</strong> 11.500.000.000 VNĐ</li>
+                    <li><strong>Pháp lý:</strong> Sổ hồng riêng</li>
+                    <li><strong>Thời gian nắm giữ:</strong> 10 năm</li>
+                    <li><strong>Kịch bản:</strong> Bảo thủ (100% vốn), Cơ bản (Vay 50%), Tối ưu (Vay 70%)</li>
+                </ul>
+            </section>
+
+            <!-- Market & Risk -->
+            <section>
+                <h3 class="font-bold mb-4 pb-2 border-b">PHÂN TÍCH RỦI RO</h3>
+                <div class="space-y-4">
+                    <div class="premium-border p-4">
+                        <h4 class="font-semibold text-sm mb-1">Thủy văn & Ngập úng</h4>
+                        <p class="text-sm justify-text text-slate-600">Cần kiểm tra cốt nền thực tế do khu vực Phường 5 vẫn tồn tại rủi ro ngập úng cục bộ.</p>
+                    </div>
+                    <div class="premium-border p-4">
+                        <h4 class="font-semibold text-sm mb-1">Chi phí vốn</h4>
+                        <p class="text-sm justify-text text-slate-600">Duy trì dòng tiền âm hàng tháng (nếu vay nợ) tạo áp lực lên thanh khoản cá nhân.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Financial Analysis Table -->
+        <section class="mb-12">
+            <h3 class="font-bold mb-6">BẢNG PHÂN TÍCH TÀI CHÍNH</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm font-sans border-collapse">
+                    <thead>
+                        <tr class="bg-slate-800 text-white">
+                            <th class="p-3 text-left">Chỉ số</th>
+                            <th class="p-3">Bảo thủ</th>
+                            <th class="p-3">Cơ bản</th>
+                            <th class="p-3">Tối ưu</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-semibold">NOI</td>
+                            <td class="p-3 text-center">244tr</td>
+                            <td class="p-3 text-center">362tr</td>
+                            <td class="p-3 text-center">491tr</td>
+                        </tr>
+                        <tr class="bg-gray-50 hover:bg-gray-100">
+                            <td class="p-3 font-semibold">Cap Rate</td>
+                            <td class="p-3 text-center">2,12%</td>
+                            <td class="p-3 text-center">3,15%</td>
+                            <td class="p-3 text-center">4,28%</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="p-3 font-semibold">IRR (10 năm)</td>
+                            <td class="p-3 text-center">6,72%</td>
+                            <td class="p-3 text-center">12,34%</td>
+                            <td class="p-3 text-center font-bold text-green-700">23,71%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="bg-amber-caution p-8 text-center shadow-inner mb-12">
+            <h2 class="text-3xl font-bold mb-2">KHUYẾN NGHỊ: CÂN NHẮC</h2>
+            <p class="max-w-2xl mx-auto italic justify-text text-slate-700">Sản phẩm an toàn về pháp lý nhưng cần quản trị dòng tiền chặt chẽ. Phù hợp cho nhà đầu tư dài hạn với kỳ vọng tối thiểu 5-7 năm.</p>
+            <button onclick="window.print()" class="mt-6 bg-slate-800 text-white px-8 py-3 hover:bg-slate-900 transition-colors">
+                XUẤT BÁO CÁO (PDF)
+            </button>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-[10px] text-slate-400 font-sans border-t pt-6">
+            <p>DISCLAIMER: Báo cáo này dựa trên các giả định thị trường tại thời điểm lập. Dữ liệu chỉ mang tính chất tham khảo.</p>
+            <p class="mt-2 tracking-[0.2em] opacity-50">PROFESSIONAL INVESTMENT ADVISORY WATERMARK</p>
+        </footer>
+    </div>
+
+</body>
+</html>
