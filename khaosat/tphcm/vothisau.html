@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư | AI Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a2b3c',
+                        secondary: '#718096',
+                        success: '#2f855a',
+                        warning: '#d69e2e',
+                        danger: '#c53030',
+                        bglight: '#f9f9f9'
+                    },
+                    fontFamily: {
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Times New Roman', serif; }
+        .justify-text { text-align: justify; }
+        @media print { .no-print { display: none; } }
+    </style>
+</head>
+<body class="bg-bglight text-slate-800 leading-relaxed">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 py-6 px-8 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold text-primary">AI BẤT ĐỘNG SẢN</h1>
+                <p class="text-sm text-secondary font-sans uppercase tracking-widest">www.phamhoanganhtokens.com</p>
+            </div>
+            <div class="mt-4 md:mt-0 text-right text-sm font-sans text-secondary">
+                <p id="currentDate"></p>
+                <script>document.getElementById('currentDate').innerText = new Date().toLocaleDateString('vi-VN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });</script>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
+        
+        <!-- Hero Section -->
+        <section class="mb-12 text-center border-b border-gray-300 pb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary uppercase mb-4">BÁO CÁO THẨM ĐỊNH ĐẦU TƯ BẤT ĐỘNG SẢN</h2>
+            <div class="inline-flex flex-wrap gap-4 justify-center text-sm font-sans bg-white px-6 py-2 rounded-full border border-gray-200">
+                <span class="font-bold uppercase text-primary">ID: VT-S-Q3-2024</span>
+                <span class="text-gray-400">|</span>
+                <span>Võ Thị Sáu, Quận 3, TP.HCM</span>
+                <span class="text-gray-400">|</span>
+                <span class="text-success font-semibold">TRẠNG THÁI: KHẢ THI</span>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section class="bg-gray-100 p-8 rounded border-l-4 border-primary mb-12 shadow-sm">
+            <h3 class="text-xl font-bold mb-4 uppercase">1. Tóm tắt điều hành (Executive Summary)</h3>
+            <p class="justify-text text-lg italic">
+                Sản phẩm đầu tư là bất động sản nhà ở tại hẻm xe tải trục đường Võ Thị Sáu, Quận 3 – khu vực lõi di sản và trung tâm tài chính - thương mại sầm uất bậc nhất TP.HCM. Với lợi thế tiếp giáp các trục đường huyết mạch như Phạm Ngọc Thạch, Pasteur và Nam Kỳ Khởi Nghĩa, tài sản sở hữu tọa độ vàng cho cả mục đích khai thác dòng tiền (cho thuê văn phòng, căn hộ dịch vụ cao cấp) và tích lũy tài sản dài hạn. Dựa trên phân tích các kịch bản tài chính, dự án thể hiện tỷ suất sinh lợi nội bộ (IRR) kỳ vọng đạt 7.82% ở kịch bản cơ sở, trong đó giá trị thặng dư từ tăng trưởng bất động sản đóng vai trò là động lực chính, bù đắp cho tỷ suất vốn hóa (Cap Rate) ở mức trung bình.
+            </p>
+        </section>
+
+        <!-- Assumptions -->
+        <section class="mb-12">
+            <h3 class="text-xl font-bold mb-6 border-b-2 border-primary inline-block uppercase">2. Các giả định đầu tư</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 border border-gray-200">
+                    <h4 class="font-bold text-danger mb-2 underline">Thận trọng</h4>
+                    <p class="text-sm">Giá: 8.8 tỷ | Lấp đầy: 60% | Vận hành: 40% | Tăng trưởng: 3%/năm</p>
+                </div>
+                <div class="bg-white p-6 border border-gray-200 shadow-lg border-t-4 border-primary">
+                    <h4 class="font-bold text-primary mb-2 underline">Cơ sở</h4>
+                    <p class="text-sm">Giá: 8.6 tỷ | Lấp đầy: 75% | Vận hành: 30% | Tăng trưởng: 5%/năm</p>
+                </div>
+                <div class="bg-white p-6 border border-gray-200">
+                    <h4 class="font-bold text-success mb-2 underline">Lạc quan</h4>
+                    <p class="text-sm">Giá: 8.5 tỷ | Lấp đầy: 85% | Vận hành: 25% | Tăng trưởng: 7%/năm</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Table -->
+        <section class="mb-12">
+            <h3 class="text-xl font-bold mb-6 uppercase">3. Chỉ số tài chính</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse bg-white">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th class="p-4 border">Chỉ số tài chính</th>
+                            <th class="p-4 border text-center">K.B Thận trọng</th>
+                            <th class="p-4 border text-center">K.B Cơ sở</th>
+                            <th class="p-4 border text-center">K.B Lạc quan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-4 border">Giá mua (VND)</td><td class="p-4 border text-right">8.80 tỷ</td><td class="p-4 border text-right font-bold">8.60 tỷ</td><td class="p-4 border text-right">8.50 tỷ</td></tr>
+                        <tr class="even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-4 border">Thu nhập hoạt động thuần (NOI)</td><td class="p-4 border text-right">210.2M</td><td class="p-4 border text-right font-bold">344.9M</td><td class="p-4 border text-right">465.4M</td></tr>
+                        <tr class="even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-4 border">Tỷ suất vốn hóa (Cap Rate)</td><td class="p-4 border text-center">2.39%</td><td class="p-4 border text-center font-bold">4.01%</td><td class="p-4 border text-center">5.48%</td></tr>
+                        <tr class="even:bg-gray-50 hover:bg-blue-50 transition"><td class="p-4 border">Tỷ suất sinh lợi nội bộ (IRR)</td><td class="p-4 border text-center">4.53%</td><td class="p-4 border text-center font-bold text-primary text-lg">7.82%</td><td class="p-4 border text-center">10.78%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Market & Risks -->
+        <section class="grid md:grid-cols-2 gap-8 mb-12">
+            <div>
+                <h3 class="text-xl font-bold mb-4 uppercase">4. Phân tích thị trường</h3>
+                <p class="justify-text text-sm">Quận 3 là khu vực có tính thanh khoản cao nhất đối với phân khúc nhà phố hẻm xe tải. Vị trí gần các cơ quan ngoại giao đảm bảo nguồn cầu ổn định.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4 uppercase">Rủi ro</h3>
+                <ul class="list-disc pl-5 text-sm space-y-2">
+                    <li>Rủi ro thanh khoản: Vốn hóa cao trong giai đoạn thắt chặt tiền tệ.</li>
+                    <li>Rủi ro vận hành: Phụ thuộc vào chất lượng quản lý dòng tiền hàng năm.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="bg-success text-white p-10 rounded-xl shadow-2xl text-center mb-12">
+            <h3 class="text-3xl font-bold uppercase mb-4">Khuyến nghị đầu tư</h3>
+            <p class="text-2xl font-serif italic mb-6">"Tài sản phòng thủ chiến lược tại lõi trung tâm thành phố"</p>
+            <div class="text-6xl font-black bg-white text-success py-4 px-8 inline-block rounded-lg shadow-inner">
+                NÊN MUA
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t pt-8 text-center text-xs text-gray-500 font-sans">
+            <p class="uppercase font-bold text-primary mb-2">Phạm Hoàng Anh - Real Estate Analyst</p>
+            <p class="max-w-2xl mx-auto italic">Tuyên bố miễn trừ trách nhiệm: Báo cáo này dựa trên các dữ liệu giả định và thị trường hiện tại. Không cam kết lợi nhuận chính xác. Nhà đầu tư nên tham vấn tài chính trước khi đưa ra quyết định.</p>
+            <div class="mt-8 opacity-20 text-4xl font-bold tracking-tighter">PROFESSIONAL ADVISORY</div>
+            <button onclick="window.print()" class="no-print mt-8 bg-primary text-white px-6 py-2 rounded hover:bg-gray-800 transition">Xuất báo cáo (PDF)</button>
+        </footer>
+    </main>
+
+</body>
+</html>
