@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1a2b3c',
+                        charcoal: '#333333',
+                        silver: '#e5e7eb',
+                        success: '#065f46',
+                        warning: '#92400e',
+                        danger: '#991b1b',
+                    },
+                    fontFamily: {
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Times New Roman', serif; }
+        .justified { text-align: justify; }
+        .section-padding { padding: 2.5rem 0; }
+        .report-border { border: 1px solid #d1d5db; }
+        @media print { .no-print { display: none; } }
+    </style>
+</head>
+<body class="bg-gray-50 text-charcoal">
 
+    <div class="max-w-5xl mx-auto px-6 py-8 bg-white shadow-xl my-8 min-h-screen">
+        
+        <!-- Header -->
+        <header class="flex justify-between items-end border-b-2 border-navy pb-6 mb-8">
+            <div>
+                <h1 class="text-3xl font-bold text-navy uppercase tracking-wider">AI Bất Động Sản</h1>
+                <p class="text-sm text-gray-500 mt-1">www.phamhoanganhtokens.com</p>
+            </div>
+            <div class="text-right">
+                <p class="text-sm font-semibold italic">Ngày lập: 24/05/2024</p>
+                <button onclick="window.print()" class="no-print mt-4 px-4 py-2 bg-navy text-white text-sm hover:bg-gray-800 transition shadow-md">
+                    In Báo Cáo (PDF)
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="mb-12">
+            <h2 class="text-4xl font-bold text-navy mb-6 text-center uppercase">Báo Cáo Thẩm Định Đầu Tư Bất Động Sản</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border p-4 bg-gray-50">
+                <div class="text-center"><strong>Tài sản:</strong> Đất vườn nông nghiệp (3.868 m²)</div>
+                <div class="text-center"><strong>ID:</strong> P-2024-001</div>
+                <div class="text-center text-green-700 font-bold uppercase">Trạng thái: Đang theo dõi</div>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section class="bg-gray-100 p-8 rounded-sm mb-12 border-l-4 border-navy">
+            <h3 class="text-xl font-bold mb-4 uppercase">1. Tóm Tắt Thực Thi (Executive Summary)</h3>
+            <p class="justified text-lg leading-relaxed">
+                Báo cáo này đánh giá tính khả thi tài chính và mức độ rủi ro đối với tài sản đất vườn diện tích 3.868 m², sở hữu mặt tiền 40m đường bê tông, cách tỉnh lộ 877B chưa tới 300m. Tài sản hiện có sẵn hệ sinh thái nông nghiệp gồm 2 ao thả cá và vườn dừa. Về mặt tài chính, khoản đầu tư mang tính chất đầu cơ lãi vốn do dòng tiền hoạt động (NOI) không đủ bù đắp chi phí sử dụng đòn bẩy tài chính trong mọi kịch bản.
+            </p>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="report-border p-6">
+                <h3 class="font-bold text-xl mb-4 uppercase border-b pb-2">Thông tin tài sản</h3>
+                <ul class="space-y-2 list-disc pl-5">
+                    <li>Diện tích: 3.868 m²</li>
+                    <li>Mặt tiền: 40m (đường bê tông)</li>
+                    <li>Hiện trạng: Vườn dừa, 2 ao cá</li>
+                    <li>Pháp lý: 03 sổ (Đất trồng cây lâu năm)</li>
+                </ul>
+            </div>
+            <div class="report-border p-6">
+                <h3 class="font-bold text-xl mb-4 uppercase border-b pb-2">Các giả định</h3>
+                <ul class="space-y-2 list-disc pl-5">
+                    <li>Vốn tự có (30%): 435.000.000 VNĐ</li>
+                    <li>Vốn vay (70%): 1.015.000.000 VNĐ</li>
+                    <li>Thời hạn vay: 20 năm</li>
+                    <li>Chi phí bán: 2% giá trị tài sản</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Financial Analysis Table -->
+        <section class="mb-12">
+            <h3 class="text-xl font-bold mb-6 uppercase border-b border-navy pb-2">3. Chỉ số tài chính (Financials)</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-200 text-left">
+                            <th class="p-4 border">Chỉ số (Metric)</th>
+                            <th class="p-4 border">Thận trọng</th>
+                            <th class="p-4 border">Cơ sở</th>
+                            <th class="p-4 border">Lạc quan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y">
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4 border font-bold">NOI (Năm 1)</td>
+                            <td class="p-4 border">43.5M</td>
+                            <td class="p-4 border">61.6M</td>
+                            <td class="p-4 border">94.3M</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4 border font-bold">Cap Rate</td>
+                            <td class="p-4 border">3.00%</td>
+                            <td class="p-4 border">4.25%</td>
+                            <td class="p-4 border">6.51%</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="p-4 border font-bold">IRR (5 năm)</td>
+                            <td class="p-4 border text-red-600">-11.38%</td>
+                            <td class="p-4 border">5.07%</td>
+                            <td class="p-4 border text-green-700">24.99%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Risk Analysis -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="p-4 border shadow-sm">
+                <h4 class="font-bold text-lg mb-2">Tiềm năng</h4>
+                <p class="text-sm justified">Lợi thế lớn về phát triển mô hình eco-tourism, farmstay nhờ hạ tầng và tiện ích tự nhiên sẵn có.</p>
+            </div>
+            <div class="p-4 border shadow-sm">
+                <h4 class="font-bold text-lg mb-2">Thanh khoản</h4>
+                <p class="text-sm justified">Thấp do thuộc BĐS nông thôn. Thời gian thoái vốn dự kiến có thể kéo dài 6-12 tháng.</p>
+            </div>
+            <div class="p-4 border shadow-sm">
+                <h4 class="font-bold text-lg mb-2">Pháp lý</h4>
+                <p class="text-sm justified">Rủi ro từ việc "3 sổ gộp" và sai lệch địa giới hành chính. Yêu cầu thẩm định thực địa kỹ lưỡng.</p>
+            </div>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="bg-amber-600 text-white p-10 text-center mb-12 rounded-lg">
+            <h3 class="text-3xl font-bold uppercase mb-4">Khuyến nghị: CÂN NHẮC</h3>
+            <p class="text-lg max-w-3xl mx-auto italic">
+                "Việc sử dụng đòn bẩy 70% là rủi ro. Chỉ nên tiến hành giao dịch nếu có nguồn vốn tự có đảm bảo hoặc kế hoạch kinh doanh dòng tiền thực tế."
+            </p>
+        </section>
+
+        <!-- Footer Branding -->
+        <footer class="pt-10 border-t mt-12 text-center text-sm text-gray-500">
+            <p class="font-bold text-navy uppercase mb-2">Professional Investment Advisory</p>
+            <p>Báo cáo này dựa trên các dữ liệu thị trường giả định và không thay thế cho tư vấn đầu tư chuyên sâu tại địa phương.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
