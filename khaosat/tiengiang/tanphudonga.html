@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Thẩm Định Đầu Tư | AI Bất Động Sản</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+        
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            color: #1a2b3c;
+            background-color: #f9f9f9;
+        }
+        
+        .header-font { font-family: 'Playfair Display', serif; }
+        
+        .report-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .report-container { padding: 1.5rem; margin: 0; }
+        }
+
+        .justify-text { text-align: justify; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th { background-color: #e5e7eb; padding: 0.75rem; border: 1px solid #d1d5db; text-align: left; }
+        td { padding: 0.75rem; border: 1px solid #d1d5db; }
+        tr:nth-child(even) { background-color: #f3f4f6; }
+        tr:hover { background-color: #e5e7eb; transition: 0.2s; }
+        
+        .print-btn {
+            background-color: #1a2b3c;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: opacity 0.3s;
+        }
+        .print-btn:hover { opacity: 0.9; }
+
+        .status-amber { background-color: #fbbf24; color: #78350f; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="report-container">
+    <!-- Header -->
+    <header class="flex justify-between items-center border-b-2 border-gray-900 pb-6 mb-8">
+        <div>
+            <h1 class="text-2xl font-bold header-font uppercase tracking-tight">AI Bất Động Sản</h1>
+            <p class="text-sm italic">www.phamhoanganhtokens.com</p>
+        </div>
+        <div class="text-right">
+            <p id="currentDate" class="text-sm"></p>
+        </div>
+    </header>
+
+    <!-- Title -->
+    <section class="mb-10 text-center">
+        <h2 class="text-3xl header-font font-bold uppercase mb-4">Báo Cáo Thẩm Định Đầu Tư Bất Động Sản</h2>
+        <div class="grid grid-cols-3 gap-4 text-sm border-y py-4 border-gray-300">
+            <div><span class="font-bold">Mã tài sản:</span> TIENGIANG-001</div>
+            <div><span class="font-bold">Vị trí:</span> Xã Phú Đông, Tiền Giang</div>
+            <div><span class="font-bold">Trạng thái:</span> Đang chào bán</div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="bg-gray-50 p-6 border-l-4 border-blue-900 mb-10">
+        <h3 class="font-bold text-xl uppercase mb-3 header-font">Tóm Tắt Thực Thi</h3>
+        <p class="justify-text text-lg leading-relaxed">
+            Tài sản mục tiêu là một lô đất 330m2 tại Xã Phú Đông, Huyện Tân Phú Đông, Tỉnh Tiền Giang, giá 390 triệu VNĐ. Vị trí thuận lợi mặt tiền đường nhựa, phù hợp mô hình nhà vườn nghỉ dưỡng. Pháp lý sổ hồng riêng. Phân tích tài chính cho thấy tiềm năng IRR từ 7,87% đến 34,57% trong 5 năm, phụ thuộc vào tăng trưởng giá vốn.
+        </p>
+    </section>
+
+    <!-- Financial Analysis -->
+    <section class="mb-10">
+        <h3 class="font-bold text-xl uppercase mb-4 header-font border-b border-gray-400 pb-2">Phân Tích Tài Chính (5 Năm)</h3>
+        <div class="overflow-x-auto">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Chỉ số</th>
+                        <th>Thận trọng</th>
+                        <th>Cơ sở</th>
+                        <th>Lạc quan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Tổng mức đầu tư</td><td>401,7tr</td><td>441,7tr</td><td>481,7tr</td></tr>
+                    <tr><td>Vốn chủ sở hữu</td><td>401,7tr</td><td>246,7tr</td><td>247,7tr</td></tr>
+                    <tr><td>NOI (hàng năm)</td><td>8,67tr</td><td>19,44tr</td><td>37,9tr</td></tr>
+                    <tr><td>Cap Rate</td><td>2,16%</td><td>4,40%</td><td>7,87%</td></tr>
+                    <tr><td>GRM</td><td>33,48</td><td>18,40</td><td>11,47</td></tr>
+                    <tr><td>Cash-on-Cash</td><td>2,16%</td><td>-0,81%</td><td>6,33%</td></tr>
+                    <tr><td>IRR (5 năm)</td><td class="font-bold">7,87%</td><td class="font-bold">17,79%</td><td class="font-bold">34,57%</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Market & Benchmarking -->
+    <section class="grid md:grid-cols-2 gap-8 mb-10">
+        <div>
+            <h3 class="font-bold text-lg uppercase mb-3 header-font">Phân Tích Thị Trường & Rủi Ro</h3>
+            <p class="justify-text text-sm">Tài sản sở hữu tiềm năng hạ tầng tốt. Rủi ro chính là đòn bẩy tài chính tại kịch bản Cơ sở (đòn bẩy âm 11%) và rủi ro thanh khoản nếu thị trường suy giảm.</p>
+        </div>
+        <div>
+            <h3 class="font-bold text-lg uppercase mb-3 header-font">So Sánh Đầu Tư</h3>
+            <p class="justify-text text-sm">So với tiết kiệm (thấp hơn) và chứng khoán (cạnh tranh), đây là kênh tích lũy quỹ đất có vốn đầu vào thấp, an toàn về pháp lý.</p>
+        </div>
+    </section>
+
+    <!-- Recommendation -->
+    <section class="status-amber p-8 text-center border-4 border-amber-600 rounded shadow-lg mb-10">
+        <h3 class="text-2xl uppercase header-font mb-2">Khuyến Nghị Đầu Tư</h3>
+        <p class="text-3xl font-bold uppercase tracking-widest">Cân Nhắc</p>
+        <p class="mt-4 italic">Lý tưởng cho nhà đầu tư tiền mặt nhàn rỗi, không khuyến khích vay vốn lớn.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center pt-8 border-t border-gray-300">
+        <button onclick="window.print()" class="print-btn mb-6">Xuất Báo Cáo PDF</button>
+        <p class="text-xs text-gray-500 uppercase">Professional Investment Advisory | Confidential Document</p>
+        <p class="text-[10px] mt-2 text-gray-400 italic">Dữ liệu giả định dựa trên khảo sát thị trường tại thời điểm thực hiện báo cáo.</p>
+    </footer>
+</div>
+
+<script>
+    document.getElementById('currentDate').innerText = new Date().toLocaleDateString('vi-VN', { 
+        year: 'numeric', month: 'long', day: 'numeric' 
+    });
+</script>
+
+</body>
+</html>
