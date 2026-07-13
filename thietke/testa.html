@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bất Động Sản - Digital Design Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        body { 
+            font-family: 'Tinos', serif; 
+            background-color: #F9F8F6;
+            color: #2C2C2C;
+            line-height: 1.8;
+        }
+        h1, h2, h3 { font-family: 'Tinos', serif; }
+        .text-justify { text-align: justify; }
+        .gold-border { border-bottom: 2px solid #C5A059; }
+        .gold-text { color: #C5A059; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#2C2C2C',
+                        navy: '#1A1A2E',
+                        gold: '#C5A059',
+                        ivory: '#F9F8F6',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="p-4 md:p-12">
+
+    <div class="max-w-[1000px] mx-auto bg-white shadow-2xl p-8 md:p-16 border border-gray-200">
+        
+        <!-- Header -->
+        <header class="mb-16 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-navy mb-4">AI BẤT ĐỘNG SẢN</h1>
+            <p class="text-gold tracking-widest uppercase text-sm mb-8">Báo cáo Phân tích Thiết kế Nội thất Cao cấp</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-y border-gray-300 py-6 text-sm text-gray-600">
+                <p><strong>Khách hàng:</strong> Private Client</p>
+                <p><strong>Ngày:</strong> 24/05/2024</p>
+                <p><strong>ID Dự án:</strong> AI-OASIS-2026</p>
+            </div>
+        </header>
+
+        <!-- TOC -->
+        <nav class="sticky top-0 bg-white/95 z-50 p-4 border border-gray-200 mb-12 hidden md:block">
+            <ul class="flex flex-wrap gap-4 text-xs uppercase tracking-tight text-navy justify-center">
+                <li><a href="#summary" class="hover:text-gold transition">1. Summary</a></li>
+                <li><a href="#diagnosis" class="hover:text-gold transition">2. Diagnosis</a></li>
+                <li><a href="#concept" class="hover:text-gold transition">3. Concept</a></li>
+                <li><a href="#proposal" class="hover:text-gold transition">4. Proposal</a></li>
+                <li><a href="#layout" class="hover:text-gold transition">5. Layout</a></li>
+                <li><a href="#materials" class="hover:text-gold transition">6. Materials</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content Sections -->
+        <main class="space-y-16">
+            
+            <section id="summary">
+                <h2 class="text-2xl font-bold gold-border pb-2 mb-6">1. Executive Summary (Tóm tắt dự án)</h2>
+                <div class="bg-gray-50 p-6 border-l-4 border-gold text-justify">
+                    Chào mừng quý khách đến với dự án thiết kế "Ốc đảo Nhiệt đới thu nhỏ" (Micro-Tropical Oasis). Đứng trước bài toán không gian đầy thách thức: một căn hộ 25-30m² dành cho 4 thành viên, mục tiêu của chúng tôi không chỉ là "nhồi nhét" công năng, mà là kiến tạo một tổ ấm thực thụ. Lấy cảm hứng từ sự mộc mạc của mây tre đan, sự mềm mại của rèm voan trắng và sức sống mãnh liệt của thảm thực vật, chúng tôi sẽ mang hơi thở "Tropical Modern" biến hóa không gian chật hẹp thành một chốn về bình yên, tiện nghi và trọn vẹn cảm xúc.
+                </div>
+            </section>
+
+            <section id="diagnosis">
+                <h2 class="text-2xl font-bold gold-border pb-2 mb-6">2. Diagnosis (Chẩn đoán không gian)</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="text-justify">
+                        <p class="font-bold mb-2">Hiện trạng & Thách thức:</p>
+                        Với diện tích 25-30m² cho 4 người, mật độ sinh hoạt rơi vào khoảng 6-7.5m²/người. Đây là rào cản cực kỳ lớn về sự riêng tư, lưu trữ đồ đạc và luân chuyển không khí.
+                    </div>
+                    <div>
+                        <img src='https://opal.google/board/blobs/6e70ed19-e26a-4f9d-995c-01dae6deb608' alt='media_1' class="w-full h-auto object-cover rounded-sm shadow-md" />
+                        <p class="text-xs text-gray-500 italic mt-2 text-center">Phân tích không gian thực trạng</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="concept">
+                <h2 class="text-2xl font-bold gold-border pb-2 mb-6">3. Concept (Ý tưởng thiết kế)</h2>
+                <p class="text-justify italic text-lg leading-relaxed">
+                    Ý tưởng cốt lõi là <strong>"Tropical Minimalist & Multi-functional" (Nhiệt đới tối giản & Đa năng)</strong>. Chúng tôi chắt lọc tinh thần của phong cách Tropical Modern thông qua bảng màu tự nhiên (trắng, be, xanh lá) và chất liệu (gỗ sáng, mây mắt cáo), nhưng loại bỏ hoàn toàn sự rườm rà. Thiên nhiên sẽ được đưa vào qua chiều thẳng đứng thay vì chiều ngang, nhằm giữ lại cảm giác thoáng đãng.
+                </p>
+            </section>
+
+            <section id="proposal">
+                <h2 class="text-2xl font-bold gold-border pb-2 mb-6">4. Proposal (Đề xuất giải pháp)</h2>
+                <div class="space-y-4">
+                    <p class="text-justify">• <strong>Tối ưu hóa không gian khối tích:</strong> Khai thác triệt để chiều cao trần cho việc lưu trữ kịch trần và giường tầng.</p>
+                    <p class="text-justify">• <strong>Vách ngăn linh hoạt:</strong> Thay thế tường gạch bằng hệ vách kính sọc mờ hoặc rèm vải linen để phân chia không gian.</p>
+                    <p class="text-justify">• <strong>Nội thất "Ẩn mình":</strong> Các khối nội thất lớn được thiết kế âm tường hoặc tích hợp đa năng.</p>
+                </div>
+            </section>
+
+            <section id="layout">
+                <h2 class="text-2xl font-bold gold-border pb-2 mb-6">5. Layout (Bố trí mặt bằng)</h2>
+                <img src='https://opal.google/board/blobs/62face96-a179-49cb-8107-9d2da75afe99' alt='media_2' class="w-full h-64 object-cover rounded-sm shadow-md mb-6" />
+                <ul class="list-disc pl-6 space-y-2 text-justify">
+                    <li><strong>Khu vực Đa năng:</strong> Tích hợp hệ giường gấp thông minh (Murphy bed) ẩn sau vách sofa phòng khách.</li>
+                    <li><strong>Khu vực Ngủ phụ:</strong> Sử dụng hệ giường tầng thông minh tích hợp tủ quần áo ở gầm giường.</li>
+                </ul>
+            </section>
+
+            <section id="materials">
+                <h2 class="text-2xl font-bold gold-border pb-2 mb-6">6. Materials & Budget</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-gold text-gold">
+                                <th class="p-3">Gói</th>
+                                <th class="p-3">Vật liệu chủ đạo</th>
+                                <th class="p-3">Lợi ích</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50 transition">
+                                <td class="p-3 font-bold">Basic</td>
+                                <td class="p-3">MDF phủ Melamine</td>
+                                <td class="p-3">Tiết kiệm ngân sách</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50 transition bg-gold/5">
+                                <td class="p-3 font-bold">Standard</td>
+                                <td class="p-3">Gỗ MDF xanh, Mây tự nhiên</td>
+                                <td class="p-3">Sang trọng, bền bỉ</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50 transition">
+                                <td class="p-3 font-bold">Premium</td>
+                                <td class="p-3">Gỗ tự nhiên, Kính cường lực</td>
+                                <td class="p-3">Đẳng cấp 2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="technical">
+                <h2 class="text-2xl font-bold gold-border pb-2 mb-6">11 & 12. Technical Compliance & 2026 Trends</h2>
+                <div class="grid md:grid-cols-2 gap-8 font-mono text-xs bg-navy text-white p-6">
+                    <div>
+                        <h4 class="text-gold mb-2 uppercase">Compliance (PCCC)</h4>
+                        <p>Tuân thủ tuyệt đối quy định không che chắn đầu phun Sprinkler. Hoàn thiện thi công trong 4 tuần.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-gold mb-2 uppercase">Trends 2026</h4>
+                        <p>Hyper-Modularity: Nội thất biến hình siêu linh hoạt & Sustainable Biophilia (Tự tưới thông minh).</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="mt-20 pt-10 border-t border-gray-300 text-center">
+            <p class="text-sm italic">Thiết kế bởi AI Bất Động Sản</p>
+            <p class="text-gold font-bold">www.phamhoanganhtokens.com</p>
+        </footer>
+    </div>
+
+</body>
+</html>
