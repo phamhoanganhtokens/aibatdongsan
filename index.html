@@ -1,309 +1,530 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villa L’Héritage - AI Bất Động Sản</title>
+    <title>AI BẤT ĐỘNG SẢN</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'ivory': '#F9F7F2',
-                        'beige-soft': '#F2EDE4',
-                        'taupe': '#8C857B',
-                        'charcoal': '#2C2C2C',
-                        'gold-brushed': '#C5A059',
-                        'deep-brass': '#9A7B4F',
-                        'onyx': '#1A1A1A'
+                        background: '#0A0A0F',
+                        foreground: '#FAFAFA',
+                        primary: '#28a745',
+                        muted: '#1A1A2E',
+                        accent: '#28a745',
                     },
                     fontFamily: {
-                        display: ['Playfair Display', 'serif'],
-                        serif: ['Lora', 'serif'],
-                        sans: ['Montserrat', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+
     <style>
         body {
-            background-color: #F9F7F2;
-            color: #2C2C2C;
-            scroll-behavior: smooth;
+            background-color: #0A0A0F;
+            color: #FAFAFA;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
         }
-        .glass-header {
-            background: rgba(249, 247, 242, 0.8);
+
+        .font-display { font-family: 'Outfit', sans-serif; }
+
+        .liquid-glass {
+            backdrop-filter: blur(15px);
+            background: rgba(10, 20, 40, 0.75);
+            border: 1px solid rgba(40, 167, 69, 0.25);
+        }
+
+        .neon-text {
+            color: #28a745;
+            text-shadow: 0 0 20px rgba(40, 167, 69, 0.6);
+        }
+
+        .grain {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 99;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .rainbow-text {
+            background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00bfff, #4b0082, #9400d3);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 300% 100%;
+            animation: rainbow 6s linear infinite;
+            font-weight: 800;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, minmax(200px, auto));
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid { grid-template-columns: 1fr; }
+        }
+
+        .architecture-layer {
+            transition: all 0.4s ease;
+        }
+        .architecture-layer:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 0 30px rgba(40, 167, 69, 0.3);
+        }
+
+        h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+
+        /* Scroll Progress */
+        #scroll-progress {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(10, 20, 40, 0.9);
+            border: 1px solid rgba(40, 167, 69, 0.4);
+            padding: 8px 14px;
+            border-radius: 9999px;
+            font-size: 13px;
+            font-family: monospace;
+            z-index: 1000;
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            display: none;
+            align-items: center;
+            gap: 8px;
         }
-        .hero-gradient {
-            background: linear-gradient(to bottom, rgba(249, 247, 242, 0) 0%, rgba(249, 247, 242, 1) 100%);
-        }
-        .section-divider {
-            width: 80px;
-            height: 2px;
-            background: #C5A059;
-            margin: 2rem auto;
-        }
-        .prompt-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(197, 160, 89, 0.15);
-        }
-        .prompt-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            border-color: #C5A059;
-        }
-        .letter-spacing-wide {
-            letter-spacing: 0.15em;
-        }
-        ::selection {
-            background: #C5A059;
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 80px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(145deg, #28a745, #218838);
             color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        #back-to-top:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 20px 40px rgba(40, 167, 69, 0.6);
+        }
+
+        #back-to-top.show {
+            opacity: 1;
+            visibility: visible;
         }
     </style>
 </head>
-<body class="font-serif leading-relaxed">
+<body class="antialiased">
 
-    <!-- Header -->
-    <header class="fixed top-0 w-full z-50 glass-header">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-display text-lg font-bold tracking-tighter text-gold-brushed">
-                AI BẤT ĐỘNG SẢN
-            </div>
-            <div class="font-sans text-xs uppercase tracking-widest text-taupe font-medium">
-                Phạm Hoàng Anh
-            </div>
+    <div class="grain"></div>
+
+    <!-- Background Video -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-20">
+            <source src="https://huggingface.co/datasets/phamhoanganh/video/resolve/main/bds.mp4" type="video/mp4">
+        </video>
+    </div>
+
+<!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-[100] px-6 py-4 flex justify-between items-center liquid-glass">
+        <div class="flex items-baseline gap-2">
+            <span class="font-brand text-xl font-black tracking-tighter uppercase italic rainbow-text">AI Software Development</span>
         </div>
-    </header>
+        
+        <div id="real-time-clock" class="hidden md:block font-mono text-[10px] tracking-[0.3em] text-neonCyan opacity-80"></div>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6">
-        <div class="max-w-[960px] mx-auto text-center">
-            <span class="font-sans text-xs uppercase tracking-[0.3em] text-gold-brushed mb-4 block">Architectural Concept</span>
-            <h1 class="font-display text-4xl md:text-6xl mb-8 leading-tight">Villa L’Héritage<br><span class="italic text-taupe font-normal text-3xl md:text-5xl">Sự tĩnh lặng của quyền quý</span></h1>
-            <div class="section-divider"></div>
-            <p class="text-lg md:text-xl text-charcoal/80 max-w-2xl mx-auto italic leading-relaxed">
-                Công trình là một bản giao hưởng giữa tinh thần Tân cổ điển Pháp cuối thế kỷ mười chín và triết lý sống thượng lưu kín đáo.
-            </p>
-            <p class="mt-8 text-charcoal/90 leading-loose">
-                Lấy cảm hứng từ hình tượng những quý ông miền Nam nước Pháp với phong cách lịch lãm nhưng đầy kỷ luật, không gian không phô trương bằng những chi tiết rườm rà mà khẳng định vị thế qua sự tinh tế trong tỉ lệ kiến trúc và độ hoàn thiện tinh xảo. Đây là nơi sự xa hoa được định nghĩa lại qua sự tĩnh tại và chiều sâu của tâm hồn, một di sản sống động dành cho những người trân trọng những giá trị bền vững theo thời gian.
-            </p>
+        <div class="flex items-center gap-4">
+            <a href="https://phamhoanganhtokens.github.io/aisoftwaredevelopment/index.html" 
+               target="_blank" 
+               class="text-[10px] uppercase tracking-widest hover:text-neonCyan transition-colors opacity-70 hidden sm:block">
+                CỔNG NHÀ PHÁT TRIỂN
+            </a>
+            <button onclick="document.getElementById('footer').scrollIntoView({ behavior: 'smooth' })" 
+                    class="px-5 py-2 border border-white/20 text-[10px] uppercase tracking-widest hover:bg-white hover:text-cosmic transition-all duration-500 font-brand">
+                KHỞI TẠO HỆ THỐNG
+            </button>
         </div>
-    </section>
+    </nav>
 
-    <!-- Analysis Section -->
-    <section class="py-20 bg-beige-soft/50 px-6">
-        <div class="max-w-[960px] mx-auto">
-            <h2 class="font-display text-3xl mb-10 flex items-center gap-4">
-                <span class="text-gold-brushed text-sm font-sans tracking-widest">01</span>
-                Phân tích hiện trạng
-            </h2>
-            <div class="grid md:grid-cols-2 gap-12 items-start">
-                <div class="space-y-6 text-charcoal/90">
-                    <p>Tọa lạc trên quỹ đất bốn trăm năm mươi mét vuông tại khu vực Thủ Đức, công trình sở hữu lợi thế lớn về phương hướng khi mặt tiền đón trọn luồng gió và ánh sáng tự nhiên từ hướng Đông Nam.</p>
-                    <p>Chiều cao thông tầng sáu mét rưỡi tại khu sinh hoạt chính là một đặc điểm kiến trúc đắt giá, tạo tiền đề để thiết lập những chuẩn mực không gian bề thế.</p>
-                </div>
-                <div class="border-l-2 border-gold-brushed/30 pl-8 py-2">
-                    <p class="italic text-taupe">"Thách thức đặt ra là việc chuyển hóa những thông số diện tích và độ cao ấn tượng thành một không gian ấm cúng thông qua giải pháp cân bằng giữa ánh sáng tự nhiên và các gam màu tối."</p>
-                </div>
-            </div>
+<!-- SCROLL PROGRESS INDICATOR -->
+    <div class="fixed bottom-8 left-8 z-50 hidden md:flex items-center gap-4 font-mono text-xs tracking-[2px] text-white/50">
+        <span class="uppercase">SCROLL</span>
+        <div class="w-28 h-px bg-white/20 relative overflow-hidden">
+            <div id="scrollProgress" class="absolute top-0 left-0 h-full bg-[#00FF9F] transition-all duration-200" style="width: 0%"></div>
         </div>
-    </section>
+        <span id="scrollPercent" class="w-8 text-right text-[#00FF9F]">00</span>
+        <span class="text-white/30">%</span>
+    </div>
 
-    <!-- Detailed Descriptions Section -->
-    <section class="py-24 px-6">
-        <div class="max-w-[960px] mx-auto">
-            <h2 class="font-display text-3xl mb-16 flex items-center gap-4">
-                <span class="text-gold-brushed text-sm font-sans tracking-widest">02</span>
-                Mô tả không gian chi tiết
-            </h2>
-            
-            <div class="space-y-20">
-                <!-- Grand Salon Sub-section -->
-                <div class="relative">
-                    <h3 class="font-display text-5xl mb-8 text-gold-brushed opacity-20 absolute -top-10 -left-4 pointer-events-none">Grand Salon</h3>
-                    <h3 class="font-display text-2xl mb-6 relative z-10">Thánh đường của Tri thức & Đối thoại</h3>
-                    <div class="prose prose-lg text-charcoal/90 space-y-6 max-w-none">
-                        <p>Bước vào công trình là sự phân tách mạch lạc và đầy ý đồ giữa Phòng khách tiếp khách thông thường và <strong>Grand Salon</strong>. Nếu phòng khách là nơi tiếp đón những câu chuyện xã giao đời thường, thì Grand Salon lại được thiết lập như một thánh đường của tri thức và sự đối thoại sâu sắc.</p>
-                        <p>Với trần cao sáu mét rưỡi khoáng đạt, Grand Salon hoàn toàn vắng bóng sự hiện diện của các thiết bị điện tử hay tivi để tránh sự xao nhãng. Tâm điểm của căn phòng là những hệ tủ sách bằng gỗ tự nhiên kịch trần, nơi lưu giữ kho tàng tư duy của gia chủ.</p>
-                        <p>Không gian được định vị bởi các cặp ghế đối thoại bọc da thủ công, hướng con người vào sự kết nối chân thật qua ánh mắt và ngôn từ. Những bức tranh sơn dầu khổ lớn được bố trí có tính toán trên các mảng tường cao, soi rọi dưới hệ thống chiếu sáng vàng ấm, tạo nên những khoảng chuyển tiếp nhịp nhàng giữa ánh sáng và bóng tối, khơi gợi cảm xúc trầm mặc và thanh thản trong tâm hồn.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Back to Top -->
+    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </button>
 
-    <!-- Palette Section -->
-    <section class="py-20 bg-onyx text-ivory px-6">
-        <div class="max-w-[960px] mx-auto">
-            <h2 class="font-display text-3xl mb-12 flex items-center gap-4">
-                <span class="text-gold-brushed text-sm font-sans tracking-widest">03</span>
-                Bảng vật liệu & Màu sắc
-            </h2>
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="p-6 border border-white/10 flex flex-col items-center text-center">
-                    <div class="w-12 h-12 bg-[#3D2B1F] rounded-full mb-4 shadow-xl border border-white/20"></div>
-                    <span class="font-sans text-xs tracking-widest uppercase mb-2">Primary Wood</span>
-                    <p class="font-display italic">Gỗ óc chó</p>
-                </div>
-                <div class="p-6 border border-white/10 flex flex-col items-center text-center">
-                    <div class="w-12 h-12 bg-charcoal rounded-full mb-4 shadow-xl border border-white/20"></div>
-                    <span class="font-sans text-xs tracking-widest uppercase mb-2">Flooring</span>
-                    <p class="font-display italic">Đá cẩm thạch đen</p>
-                </div>
-                <div class="p-6 border border-white/10 flex flex-col items-center text-center">
-                    <div class="w-12 h-12 bg-gold-brushed rounded-full mb-4 shadow-xl border border-white/20"></div>
-                    <span class="font-sans text-xs tracking-widest uppercase mb-2">Accents</span>
-                    <p class="font-display italic">Đồng thau nguyên bản</p>
-                </div>
-            </div>
-            <p class="text-ivory/70 leading-loose text-center max-w-3xl mx-auto italic">
-                Dự án sử dụng hệ màu trầm tối sang trọng làm chủ đạo. Sự tương phản giữa bề mặt nhám của đá và độ bóng nhẹ của lớp sơn mài tạo nên một kịch bản chất liệu phong phú, kích thích đa giác quan nhưng vẫn tuân thủ kỷ luật thẩm mỹ nghiêm ngặt.
-            </p>
-        </div>
-    </section>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="min-h-screen flex items-center justify-center px-6 pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-[-1]"></div>
 
-    <!-- Visuals Section -->
-    <section class="py-24 px-6 bg-ivory">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="font-display text-4xl mb-4">Phối cảnh Kiến trúc</h2>
-                <p class="font-sans text-xs tracking-[0.4em] uppercase text-taupe">Visual Interpretations</p>
-                <div class="section-divider"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- Image 1 -->
-                <div class="prompt-card bg-white p-6 rounded-sm shadow-sm group">
-                    <div class="overflow-hidden mb-6 aspect-[4/3] bg-beige-soft flex items-center justify-center">
-                        <img src='https://phamhoanganhtokens.github.io/aibatdongsan/matbang3d/hinhanh/7e25260b-0347-482a-ac41-46cefafa1fa5.jpg' alt='Grand Salon Overall View' class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
-                    </div>
-                    <div class="px-2">
-                        <p class="text-sm font-sans text-charcoal/70 mb-4 line-clamp-3 leading-relaxed">
-                            Grand Salon interior with 6.5m high ceiling, floor-to-ceiling bookshelves, dialogue seating arrangement, neoclassical French aesthetic, warm golden lighting.
-                        </p>
-                        <div class="pt-4 border-t border-beige-soft flex justify-between items-center">
-                            <span class="text-[10px] font-sans uppercase tracking-widest text-taupe italic">Copy prompt này dán vào Grok Imagine hoặc Flux để xem hình ngay</span>
-                            <button onclick="navigator.clipboard.writeText('Grand Salon interior with 6.5m high ceiling, floor-to-ceiling bookshelves, dialogue seating arrangement, neoclassical French aesthetic, warm golden lighting.')" class="text-gold-brushed hover:text-deep-brass transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M216,40H88a16,16,0,0,0-16,16v72a16,16,0,0,0,16,16h128a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,88H88V56H216v72ZM176,152v48H48V72H96a8,8,0,0,0,0-16H48A16,16,0,0,0,32,72V200a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V152a8,8,0,0,0-16,0Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Image 2 -->
-                <div class="prompt-card bg-white p-6 rounded-sm shadow-sm group">
-                    <div class="overflow-hidden mb-6 aspect-[4/3] bg-beige-soft flex items-center justify-center">
-                        <img src='https://phamhoanganhtokens.github.io/aibatdongsan/matbang3d/hinhanh/4d081e8b-a1a6-483a-8703-f22c9bfa75ef.jpg' alt='Material Detail' class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
-                    </div>
-                    <div class="px-2">
-                        <p class="text-sm font-sans text-charcoal/70 mb-4 line-clamp-3 leading-relaxed">
-                            Macro shot of black marble flooring meeting walnut wood paneling, brass inlay details, luxury textures, moody cinematic lighting.
-                        </p>
-                        <div class="pt-4 border-t border-beige-soft flex justify-between items-center">
-                            <span class="text-[10px] font-sans uppercase tracking-widest text-taupe italic">Copy prompt này dán vào Grok Imagine hoặc Flux để xem hình ngay</span>
-                            <button onclick="navigator.clipboard.writeText('Macro shot of black marble flooring meeting walnut wood paneling, brass inlay details, luxury textures, moody cinematic lighting.')" class="text-gold-brushed hover:text-deep-brass transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M216,40H88a16,16,0,0,0-16,16v72a16,16,0,0,0,16,16h128a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,88H88V56H216v72ZM176,152v48H48V72H96a8,8,0,0,0,0-16H48A16,16,0,0,0,32,72V200a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V152a8,8,0,0,0-16,0Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Image 3 -->
-                <div class="prompt-card bg-white p-6 rounded-sm shadow-sm group">
-                    <div class="overflow-hidden mb-6 aspect-[4/3] bg-beige-soft flex items-center justify-center">
-                        <img src='https://phamhoanganhtokens.github.io/aibatdongsan/matbang3d/hinhanh/96981273-05f9-4f25-a5d1-ff175244d41c.jpg' alt='Light and Shadow' class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
-                    </div>
-                    <div class="px-2">
-                        <p class="text-sm font-sans text-charcoal/70 mb-4 line-clamp-3 leading-relaxed">
-                            Large scale oil painting on a tall dark charcoal wall, subtle spotlight, quiet luxury atmosphere, deep shadows, refined neoclassical villa interior.
-                        </p>
-                        <div class="pt-4 border-t border-beige-soft flex justify-between items-center">
-                            <span class="text-[10px] font-sans uppercase tracking-widest text-taupe italic">Copy prompt này dán vào Grok Imagine hoặc Flux để xem hình ngay</span>
-                            <button onclick="navigator.clipboard.writeText('Large scale oil painting on a tall dark charcoal wall, subtle spotlight, quiet luxury atmosphere, deep shadows, refined neoclassical villa interior.')" class="text-gold-brushed hover:text-deep-brass transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M216,40H88a16,16,0,0,0-16,16v72a16,16,0,0,0,16,16h128a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,88H88V56H216v72ZM176,152v48H48V72H96a8,8,0,0,0,0-16H48A16,16,0,0,0,32,72V200a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V152a8,8,0,0,0-16,0Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Image 4 -->
-                <div class="prompt-card bg-white p-6 rounded-sm shadow-sm group">
-                    <div class="overflow-hidden mb-6 aspect-[4/3] bg-beige-soft flex items-center justify-center">
-                        <img src='https://phamhoanganhtokens.github.io/aibatdongsan/matbang3d/hinhanh/3307501f-2320-455e-a395-aa6c0567e602.jpg' alt='Facade Integration' class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
-                    </div>
-                    <div class="px-2">
-                        <p class="text-sm font-sans text-charcoal/70 mb-4 line-clamp-3 leading-relaxed">
-                            Villa L’Héritage facade at dusk, warm glow from 6.5m high windows, Southeast orientation, elegant neoclassical architectural lines, refined Thủ Đức neighborhood context.
-                        </p>
-                        <div class="pt-4 border-t border-beige-soft flex justify-between items-center">
-                            <span class="text-[10px] font-sans uppercase tracking-widest text-taupe italic">Copy prompt này dán vào Grok Imagine hoặc Flux để xem hình ngay</span>
-                            <button onclick="navigator.clipboard.writeText('Villa L’Héritage facade at dusk, warm glow from 6.5m high windows, Southeast orientation, elegant neoclassical architectural lines, refined Thủ Đức neighborhood context.')" class="text-gold-brushed hover:text-deep-brass transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M216,40H88a16,16,0,0,0-16,16v72a16,16,0,0,0,16,16h128a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,88H88V56H216v72ZM176,152v48H48V72H96a8,8,0,0,0,0-16H48A16,16,0,0,0,32,72V200a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V152a8,8,0,0,0-16,0Z"></path></svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Conclusion Section -->
-    <section class="py-24 px-6 bg-beige-soft relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-gold-brushed opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-        <div class="max-w-[800px] mx-auto text-center relative z-10">
-            <h2 class="font-display text-3xl mb-12">Lời kết & Lời mời</h2>
-            <div class="space-y-8 text-charcoal/90 leading-loose text-lg">
-                <p>
-                    Một không gian kiến trúc có chiều sâu không chỉ được tạo nên bởi giá trị vật chất mà còn bởi tầm vóc của người làm chủ nó. Villa L’Héritage không đơn thuần là một nơi cư ngụ, mà là bản tuyên ngôn về một lối sống văn minh và kỷ luật.
+        <div class="max-w-7xl w-full text-center relative z-10">
+            <div class="space-y-10">
+                <h1 class="text-5xl md:text-7xl font-display font-bold leading-none tracking-tight neon-text">
+                    AI BẤT ĐỘNG SẢN
+                </h1>
+                
+                <p class="max-w-3xl mx-auto text-lg md:text-xl font-light text-white/80 tracking-wide">
+                    Phân tích chuyên sâu • Dự báo thông minh • Quyết định đầu tư tối ưu
                 </p>
-                <p>
-                    Vẻ đẹp lộng lẫy của Grand Salon hay sự tĩnh mịch của những hành lang dài không nhằm mục đích phô diễn, mà là lời nhắc nhở không ngừng về việc trau dồi tri thức và hoàn thiện bản thân.
-                </p>
-                <div class="pt-6">
-                    <a href="home1.html" target="_blank" class="inline-block px-12 py-4 bg-charcoal text-ivory font-sans text-xs uppercase tracking-[0.3em] hover:bg-gold-brushed transition-all duration-500 shadow-xl">
-                        Khám phá thêm về chúng tôi
+
+                <div class="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+                    <a href="https://phamhoanganhtokens.github.io/aibatdongsan/v3.0.html" 
+                       target="_blank"
+                       class="group px-14 py-6 bg-[#28a745] text-black font-display font-bold text-lg rounded-2xl hover:scale-105 transition-all">
+                        TRẢI NGHIỆM AI PHIÊN BẢN MỚI
+                    </a>
+                    <a href="https://phamhoanganhtokens.github.io/aibatdongsan/bds210.html" 
+                       target="_blank"
+                       class="group px-14 py-6 border-2 border-white/70 hover:border-[#28a745] text-white font-display font-bold text-lg rounded-2xl transition-all">
+                        ĐĂNG KÝ TƯ VẤN MIỄN PHÍ
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Simple Elegant Footer -->
-    <footer class="py-12 border-t border-gold-brushed/10 bg-ivory text-center">
-        <div class="max-w-7xl mx-auto px-6">
-            <a href="home.html" target="_blank" class="font-sans text-xs uppercase tracking-widest text-taupe hover:text-gold-brushed transition-colors">
-                www.phamhoanganhtokens.com
+    <!-- ==================== TẦM NHÌN ==================== -->
+    <section id="vision" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20">
+                <span class="text-[#28a745] font-mono text-sm tracking-[0.3em] uppercase block mb-4">01 / TẦM NHÌN</span>
+                <h2 class="text-4xl md:text-6xl font-display">Phân Tích Bất Động Sản Thông Minh</h2>
+            </div>
+
+            <div class="bento-grid">
+                <div class="md:col-span-2 md:row-span-2 liquid-glass p-10 flex flex-col justify-end group hover:border-[#28a745]/50 transition-colors">
+                    <h3 class="text-3xl font-display mb-6">AI Phân Tích Chuyên Sâu</h3>
+                    <p class="text-white/80 text-justify-custom leading-relaxed">
+                        Sử dụng trí tuệ nhân tạo để phân tích dữ liệu thị trường, đánh giá rủi ro, tính toán đòn bẩy tài chính và dự báo tăng trưởng giá trị bất động sản một cách chính xác và nhanh chóng.
+                    </p>
+                </div>
+                
+                <div class="md:col-span-2 liquid-glass p-10 group hover:border-[#28a745]/50 transition-colors">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center text-[#28a745] text-2xl">📈</div>
+                        <span class="font-mono text-xs opacity-40">2026</span>
+                    </div>
+                    <h3 class="text-2xl font-display mb-3">Tối Ưu Hóa Quyết Định Đầu Tư</h3>
+                    <p class="text-white/70">Giúp nhà đầu tư đưa ra quyết định dựa trên dữ liệu thực tế thay vì cảm tính.</p>
+                </div>
+
+                <div class="md:col-span-1 liquid-glass p-8 group hover:border-[#28a745]/50 transition-colors">
+                    <h4 class="text-[#28a745] font-mono text-xs mb-4">GIÁ TRỊ CỐT LÕI</h4>
+                    <p class="font-display text-lg leading-snug">Dân chủ hóa phân tích bất động sản chuyên nghiệp</p>
+                </div>
+
+                <div class="md:col-span-1 liquid-glass p-8 group hover:border-[#28a745]/50 transition-colors">
+                    <h4 class="text-[#28a745] font-mono text-xs mb-4">CÔNG NGHỆ</h4>
+                    <p class="font-display text-lg leading-snug">Machine Learning • Predictive Analytics • RAG</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== KIẾN TRÚC ==================== -->
+    <section id="architecture" class="py-32 px-6 bg-white/5 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-[#28a745] font-mono text-sm tracking-[0.3em] uppercase">02 / KIẾN TRÚC</span>
+                <h2 class="text-5xl md:text-7xl font-display mt-4">Kiến Trúc AI Bất Động Sản</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="liquid-glass p-8">
+                        <h3 class="text-2xl font-display mb-6 text-[#28a745]">Phân Tầng Thông Minh</h3>
+                        <ul class="space-y-6">
+                            <li class="flex gap-4"><span class="font-mono text-[#28a745] font-bold">01</span><div><strong>Tầng Trình Bày</strong><br><span class="text-sm text-white/70">Giao diện báo cáo chuyên nghiệp</span></div></li>
+                            <li class="flex gap-4"><span class="font-mono text-[#28a745] font-bold">02</span><div><strong>Tầng Phân Tích &amp; AI Agents</strong><br><span class="text-sm text-white/70">Tính toán ROI, dự báo giá</span></div></li>
+                            <li class="flex gap-4"><span class="font-mono text-[#28a745] font-bold">03</span><div><strong>Tầng AI Core</strong><br><span class="text-sm text-white/70">Machine Learning, RAG</span></div></li>
+                            <li class="flex gap-4"><span class="font-mono text-[#28a745] font-bold">04</span><div><strong>Tầng Dữ Liệu</strong><br><span class="text-sm text-white/70">Big Data &amp; Vector Database</span></div></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="liquid-glass p-10">
+                    <div class="space-y-6">
+                        <div class="architecture-layer bg-gradient-to-r from-[#28a745]/10 to-transparent border border-[#28a745]/30 p-6 rounded-2xl flex items-center gap-4">
+                            <div class="w-5 h-5 bg-[#28a745] rounded-full"></div>
+                            <div class="flex-1 font-display">Tầng Trình Bày</div>
+                        </div>
+                        <div class="architecture-layer bg-gradient-to-r from-[#28a745]/10 to-transparent border border-[#28a745]/30 p-6 rounded-2xl flex items-center gap-4 ml-8">
+                            <div class="w-5 h-5 bg-[#28a745] rounded-full"></div>
+                            <div class="flex-1 font-display">Tầng Phân Tích &amp; AI Agents</div>
+                        </div>
+                        <div class="architecture-layer bg-gradient-to-r from-[#28a745]/10 to-transparent border border-[#28a745]/30 p-6 rounded-2xl flex items-center gap-4 ml-16">
+                            <div class="w-5 h-5 bg-[#28a745] rounded-full"></div>
+                            <div class="flex-1 font-display">Tầng AI Core</div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 ml-24">
+                            <div class="architecture-layer bg-gradient-to-r from-[#28a745]/10 to-transparent border border-[#28a745]/30 p-6 rounded-2xl text-center">Tầng Dữ Liệu</div>
+                            <div class="architecture-layer bg-gradient-to-r from-[#28a745]/10 to-transparent border border-[#28a745]/30 p-6 rounded-2xl text-center">Cơ sở hạ tầng</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GIẢI PHÁP ==================== -->
+    <section id="solutions" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                <div>
+                    <span class="text-[#28a745] font-mono text-sm tracking-[0.3em] uppercase block mb-4">03 / GIẢI PHÁP</span>
+                    <h2 class="text-5xl md:text-7xl font-display">Giải Pháp AI Cho Bất Động Sản</h2>
+                </div>
+                <div class="md:w-1/3 text-white/70 text-lg">
+                    Từ phân tích đầu tư, đánh giá rủi ro đến báo cáo chuyên sâu – tất cả chỉ trong vài phút.
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="liquid-glass p-10 hover:border-[#28a745]/50 transition-all group">
+                    <span class="font-mono text-xs text-white/40 block mb-8">03.1</span>
+                    <h3 class="text-3xl font-display mb-6 group-hover:text-[#28a745]">Phân Tích Đầu Tư Toàn Diện</h3>
+                    <p class="text-white/70">Tính toán ROI, đòn bẩy tài chính, dòng tiền cho thuê và giá trị gia tăng dài hạn.</p>
+                </div>
+                <div class="liquid-glass p-10 hover:border-[#28a745]/50 transition-all group">
+                    <span class="font-mono text-xs text-white/40 block mb-8">03.2</span>
+                    <h3 class="text-3xl font-display mb-6 group-hover:text-[#28a745]">Dự Báo Thị Trường &amp; Rủi Ro</h3>
+                    <p class="text-white/70">Dự báo xu hướng giá, thanh khoản và rủi ro pháp lý, phong thủy, vị trí.</p>
+                </div>
+                <div class="liquid-glass p-10 hover:border-[#28a745]/50 transition-all group">
+                    <span class="font-mono text-xs text-white/40 block mb-8">03.3</span>
+                    <h3 class="text-3xl font-display mb-6 group-hover:text-[#28a745]">Báo Cáo Chuyên Nghiệp</h3>
+                    <p class="text-white/70">Tự động sinh báo cáo đẹp, chi tiết, sẵn sàng trình ngân hàng và đối tác.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-40 px-6 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[#28a745]/5 blur-[150px]"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <span class="text-[#28a745] font-mono text-sm tracking-[0.3em] uppercase block mb-8">Sẵn sàng đầu tư thông minh?</span>
+            <h2 class="text-6xl md:text-8xl font-display leading-tight mb-12">
+                Để AI hỗ trợ<br>bạn đưa ra quyết định tốt nhất
+            </h2>
+            <a href="https://phamhoanganhtokens.github.io/aibatdongsan/testv3.0.html" 
+               target="_blank"
+               class="inline-block px-16 py-6 border border-[#28a745]/50 text-[#28a745] 
+                      hover:bg-[#28a745] hover:text-black 
+                      transition-all duration-300 font-display font-bold text-xl 
+                      rounded-2xl tracking-widest uppercase">
+                ĐĂNG KÝ TƯ VẤN MIỄN PHÍ
             </a>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer id="footer" class="py-20 px-6 border-t border-white/10 relative">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
+            <div class="md:col-span-5">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 bg-[#28a745] rounded-xl flex items-center justify-center text-black font-bold text-2xl">AI</div>
+                    <span class="text-3xl font-display tracking-tighter rainbow-text">BẤT ĐỘNG SẢN</span>
+                </div>
+                <p class="text-white/70 max-w-md text-lg leading-relaxed">
+                    Tiên phong công nghệ Trí tuệ Nhân tạo phân tích & đầu tư Bất Động Sản tại Việt Nam
+                </p>
+
+                <!-- Social Links -->
+                <div class="flex gap-4 mt-10">
+                    <a href="https://x.com/VGA82017" target="_blank" rel="noopener noreferrer" class="social-link w-11 h-11 border border-white/30 rounded-2xl flex items-center justify-center hover:border-[#00FF9F]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://www.facebook.com/sssssphamhoanganhsssss" target="_blank" rel="noopener noreferrer" class="social-link w-11 h-11 border border-white/30 rounded-2xl flex items-center justify-center hover:border-[#00FF9F]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://www.youtube.com/@thanlongcoins" target="_blank" rel="noopener noreferrer" class="social-link w-11 h-11 border border-white/30 rounded-2xl flex items-center justify-center hover:border-[#00FF9F]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://t.me/phamhoanganhtokens" target="_blank" rel="noopener noreferrer" class="social-link w-11 h-11 border border-white/30 rounded-2xl flex items-center justify-center hover:border-[#00FF9F]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.688 7.96c-.124.58-.46.72-.936.448L12 14.25l-2.25 2.16c-.248.248-.456.116-.456-.224l.48-3.84 7.008-6.72c.312-.288.168-.432-.432-.144L6.75 13.5l-2.25-.72c-.48-.16-.492-.48.096-.72L17.25 7.5c.336-.144.624.192.312.748z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/phạm-hoàng-anh-51bb3446" target="_blank" rel="noopener noreferrer" class="social-link w-11 h-11 border border-white/30 rounded-2xl flex items-center justify-center hover:border-[#00FF9F]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:col-span-3">
+                <h4 class="font-display uppercase tracking-widest text-sm mb-6 text-[#28a745]">Khám phá</h4>
+                <ul class="space-y-4 text-white/70">
+                    <li><a href="#vision" class="hover:text-[#28a745]">Tầm Nhìn</a></li>
+                    <li><a href="#architecture" class="hover:text-[#28a745]">Kiến Trúc</a></li>
+                    <li><a href="#solutions" class="hover:text-[#28a745]">Giải Pháp</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-4">
+                <h4 class="font-display uppercase tracking-widest text-sm mb-6 text-[#28a745]">Liên hệ</h4>
+                <ul class="space-y-4 text-white/70">
+                    <li class="flex items-start gap-3">
+                        <span class="text-[#28a745] mt-1">📍</span>
+                        <span>Quán Ngon đường 39, Phường Tân Thuận, Quận 7, TP. Hồ Chí Minh</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-[#28a745]">📞</span>
+                        <span>+84 090 33 44 55 1</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-[#28a745]">✉️</span>
+                        <a href="https://www.phamhoanganhtokens.com" target="_blank" class="text-neonCyan hover:underline">www.phamhoanganhtokens.com</a>
+                    </li>
+                </ul>
+
+                <div class="mt-8">
+                    <h5 class="text-[#28a745] text-sm mb-3">Vị trí trên bản đồ</h5>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d622.5477281090639!2d106.71737901182837!3d10.74384443005467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f8de8e1c19b%3A0x96021b3d41b2a2ac!2zTmjDoCBIw6FuZyAzOSB8IE5ow6AgSMOgbmcgxJDhurdjIFPhuqNuIFF14bqtbiA3!5e1!3m2!1sen!2sus!4v1778843997201!5m2!1sen!2sus" 
+                            width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-white/10 mt-20 pt-8 text-center text-xs text-white/40">
+            © 2026 AI Bất Động Sản • Tiên phong công nghệ Trí tuệ Nhân tạo phân tích & đầu tư Bất Động Sản tại Việt Nam
         </div>
     </footer>
 
     <script>
-        // Subtle scroll animation for elements
-        const observerOptions = {
-            threshold: 0.1
-        };
+        // Real-time Clock
+        function updateClock() {
+            const el = document.getElementById('real-time-clock');
+            const now = new Date();
+            el.textContent = `${String(now.getDate()).padStart(2,'0')}/${String(now.getMonth()+1).padStart(2,'0')}/${now.getFullYear()} - ${now.toLocaleTimeString('vi-VN',{hour12:false})}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('translate-y-10');
-                    entry.target.classList.remove('opacity-0');
-                }
-            });
-        }, observerOptions);
+// ========== SCROLL PROGRESS - PHIÊN BẢN MƯỢT & CHI TIẾT ==========
+let lastScrollY = 0;
+let ticking = false;
 
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'translate-y-10', 'opacity-0');
-            observer.observe(section);
+function updateScrollProgress() {
+    const progressBar = document.getElementById('scrollProgress');
+    const percentText = document.getElementById('scrollPercent');
+
+    if (!progressBar || !percentText) return;
+
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    if (height <= 0) {
+        progressBar.style.width = '0%';
+        percentText.textContent = '00.0';
+        return;
+    }
+
+    let scrolled = (winScroll / height) * 100;
+    scrolled = Math.min(Math.max(scrolled, 0), 100);   // Giới hạn 0-100
+
+    // Cập nhật thanh progress
+    progressBar.style.width = scrolled + '%';
+    
+    // Hiển thị % với 1 số thập phân (chi tiết hơn)
+    const displayPercent = scrolled.toFixed(1);
+    percentText.textContent = displayPercent;
+    
+    lastScrollY = winScroll;
+    ticking = false;
+}
+
+// Sử dụng requestAnimationFrame để mượt tối đa
+function requestTick() {
+    if (!ticking) {
+        requestAnimationFrame(updateScrollProgress);
+        ticking = true;
+    }
+}
+
+// Gắn event
+window.addEventListener('scroll', requestTick, { passive: true });
+
+// Khởi tạo ban đầu
+window.addEventListener('load', () => {
+    updateScrollProgress();
+});
+
+// Cập nhật lại khi resize cửa sổ
+window.addEventListener('resize', () => {
+    updateScrollProgress();
+});
+
+        // Back to Top Button
+        const backToTop = document.getElementById('back-to-top');
+
+        function toggleBackToTop() {
+            if (window.scrollY > 600) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            updateScrollProgress();
+            toggleBackToTop();
         });
+
+        // Initial call
+        updateScrollProgress();
+        toggleBackToTop();
     </script>
 </body>
 </html>
